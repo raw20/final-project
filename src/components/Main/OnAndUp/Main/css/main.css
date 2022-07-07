@@ -1,0 +1,16 @@
+.wrap {
+  width: 100%;
+  background-color: #dde3f6;
+}
+.wrap .main {
+  width: 100%;
+  height: 650px;
+}
+.wrap .main .main-img {
+  width: 100%;
+  height: 100%;
+  background-image: url(/public/img/img-main.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}/*# sourceMappingURL=main.css.map */
