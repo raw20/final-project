@@ -1,0 +1,27 @@
+$deepColor: #6f76c1;
+#nav {
+  width: 100%;
+  height: auto;
+
+  ul {
+    width: 50%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    font-size: 1rem;
+    li {
+      width: 100%;
+      height: 50px;
+      padding: 1rem 0.6rem;
+      background-color: burlywood;
+      .navList {
+        text-decoration: none;
+      }
+      .navList.on {
+        color: $deepColor;
+      }
+    }
+  }
+}

@@ -2,7 +2,10 @@
   width: 100%;
   height: 70px;
   display: flex;
-  background-color: #dde3f6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 #header .logo {
   width: 30%;
@@ -30,20 +33,24 @@
   align-items: center;
 }
 #header .side-item {
-  width: 20%;
+  width: 30%;
 }
 #header .side-item .util {
   width: 100%;
   line-height: 70px;
   display: flex;
   font-size: 0.8rem;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  margin-right: 10px;
 }
-#header .side-tab {
-  width: 10%;
+#header .side-item .util #tab-btn {
+  width: 20%;
+  height: auto;
+  background-image: url(/public/img/btn-menu.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  font-size: 0px;
   display: flex;
-  font-size: 0.8rem;
-  justify-content: center;
   align-items: center;
 }/*# sourceMappingURL=header.css.map */

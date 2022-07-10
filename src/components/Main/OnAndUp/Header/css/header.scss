@@ -5,7 +5,10 @@ $bgColor: #dde3f6;
   width: 100%;
   height: 70px;
   display: flex;
-  background-color: $bgColor;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   .logo {
     width: 30%;
     height: 70px;
@@ -32,21 +35,25 @@ $bgColor: #dde3f6;
     }
   }
   .side-item {
-    width: 20%;
+    width: 30%;
     .util {
       width: 100%;
       line-height: 70px;
       display: flex;
       font-size: 0.8rem;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
+      margin-right: 10px;
+      #tab-btn {
+        width: 20%;
+        height: auto;
+        background-image: url(/public/img/btn-menu.png);
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+        font-size: 0px;
+        display: flex;
+        align-items: center;
+      }
     }
-  }
-  .side-tab {
-    width: 10%;
-    display: flex;
-    font-size: 0.8rem;
-    justify-content: center;
-    align-items: center;
   }
 }
