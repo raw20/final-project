@@ -1,0 +1,31 @@
+.item-form {
+  width: 100%;
+  height: 100vh;
+  padding-top: 70px;
+  box-sizing: border-box;
+}
+.item-form .item-inner {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 50px 30px;
+  height: 500px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+}
+.item-form .item-inner .item-title {
+  font-size: 50px;
+  color: rgb(111, 118, 193);
+}
+.item-form .item-inner .item-btn {
+  font-size: 14px;
+  width: 140px;
+  height: 50px;
+  background-color: rgb(111, 118, 193);
+  color: #fff;
+  border-radius: 11px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.1);
+}/*# sourceMappingURL=itemForm.css.map */

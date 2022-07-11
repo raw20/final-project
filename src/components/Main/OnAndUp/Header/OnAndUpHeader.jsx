@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./css/header.css";
 import { MdSearch } from "react-icons/md";
-function Header(props) {
+function OnAndUpHeader() {
   const [item, setItem] = useState([]);
   const itemData = "./db/mainItem.json";
 
@@ -14,7 +14,7 @@ function Header(props) {
     })();
   });
   return (
-    <>
+    <div id="header">
       <NavLink className="logo" to={`/chemiverseOnUp`}>
         logo
       </NavLink>
@@ -23,7 +23,7 @@ function Header(props) {
         <ul className="gnb">
           {item.map((ele) => (
             <li>
-              <NavLink to={`/chemiverseOnUp/${ele.address}`}>
+              <NavLink to={`/chemiverseOnUp/item/${ele.address}`}>
                 {ele.menu}
               </NavLink>
             </li>
@@ -44,8 +44,8 @@ function Header(props) {
           <li id="tab-btn">탭버튼</li>
         </ul>
       </div>
-    </>
+    </div>
   );
 }
 
-export default Header;
+export default OnAndUpHeader;

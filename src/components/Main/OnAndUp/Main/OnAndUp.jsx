@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Header from "../Header/Header";
 import "./css/main.css";
 import ItemList from "./ItemList";
 import { Link } from "react-router-dom";
 
-function OnAndUp(props) {
+function OnAndUp() {
   const [data, setData] = useState([]);
   const dataURL = "./db/mainItem.json";
   useEffect(() => {
@@ -16,9 +15,6 @@ function OnAndUp(props) {
   });
   return (
     <div className="wrap">
-      <div id="header">
-        <Header />
-      </div>
       <div className="main">
         <div className="main-img">
           <ul className="main-item">

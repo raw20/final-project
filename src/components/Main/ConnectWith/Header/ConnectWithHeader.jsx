@@ -2,7 +2,7 @@ import React from "react";
 import "./css/header.css";
 import { Link } from "react-router-dom";
 import { IoCaretForwardOutline } from "react-icons/io5";
-function Header() {
+function ConnectWithHeader() {
   return (
     <div className="header">
       <Link to="/" className="logo">
@@ -16,4 +16,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default ConnectWithHeader;
