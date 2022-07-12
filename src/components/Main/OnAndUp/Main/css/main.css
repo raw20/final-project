@@ -3,8 +3,6 @@
   height: 100vh;
   padding-top: 70px;
   background-color: #dde3f6;
-  -webkit-animation: fadein 2s;
-          animation: fadein 2s;
   box-sizing: border-box;
 }
 .wrap .main {
@@ -21,6 +19,8 @@
   background-position: center;
   background-size: 70%;
   position: relative;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 .wrap .main .main-img .connect-with-btn {
   width: 150px;

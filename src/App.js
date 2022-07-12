@@ -27,14 +27,20 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
+        <Header auth={auth} />
         <Routes>
-          <Route path="/" element={<ConnectWith />} />
+          <Route
+            path="/"
+            element={<ConnectWith auth={auth} setAuth={setAuth} />}
+          />
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/companyInfo" element={<CompanyIntro />} />
           <Route path="/preparations" element={<Preparations />} />
           <Route path="/noticeBoard" element={<NoticeBoard />} />
-          <Route path="/chemiverseOnUp" element={<OnAndUp />} />
+          <Route
+            path="/chemiverseOnUp"
+            element={<OnAndUp auth={auth} setAuth={setAuth} />}
+          />
           <Route path="/chemiverseOnUp/item">
             <Route
               path="/chemiverseOnUp/item/:address"

@@ -6,7 +6,6 @@ $lightColor: #e6e0ec;
   height: 100vh;
   padding-top: 70px;
   background-color: $bgColor;
-  animation: fadein 2s;
   box-sizing: border-box;
   .main {
     width: 100%;
@@ -21,6 +20,7 @@ $lightColor: #e6e0ec;
       background-position: center;
       background-size: 70%;
       position: relative;
+      animation: fadein 2s;
       .connect-with-btn {
         width: 150px;
         height: 150px;

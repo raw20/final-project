@@ -3,7 +3,7 @@ import "./css/main.css";
 import ItemList from "./ItemList";
 import { Link } from "react-router-dom";
 
-function OnAndUp() {
+function OnAndUp({ auth, setAuth }) {
   const [data, setData] = useState([]);
   const dataURL = "./db/mainItem.json";
   useEffect(() => {
@@ -11,8 +11,9 @@ function OnAndUp() {
       const response = await fetch(dataURL);
       const json = await response.json();
       setData(json);
+      setAuth(false);
     })();
-  });
+  }, [auth]);
   return (
     <div className="wrap">
       <div className="main">
