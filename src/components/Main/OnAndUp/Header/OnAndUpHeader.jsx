@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./css/header.css";
 import { MdSearch } from "react-icons/md";
-function OnAndUpHeader() {
+import { keyboard } from "@testing-library/user-event/dist/keyboard";
+function OnAndUpHeader({ setHead }) {
   const [item, setItem] = useState([]);
   const itemData = "./db/mainItem.json";
 

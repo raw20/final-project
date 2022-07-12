@@ -1,7 +1,5 @@
 import "./App.css";
 import ConnectWith from "./components/Main/ConnectWith/Main/ConnectWith";
-import ConnectWithHeader from "./components/Main/ConnectWith/Header/ConnectWithHeader";
-import OnAndUpHeader from "./components/Main/OnAndUp/Header/OnAndUpHeader";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Welcome from "./components/Main/ConnectWith/MainItem/Welcome/Welcome";
 import CompanyIntro from "./components/Main/ConnectWith/MainItem/CompayIntro/CompanyIntro";
@@ -18,12 +16,18 @@ import Board from "./components/Main/OnAndUp/MainItem/Board/Board"; */
 import Login from "./components/Main/OnAndUp/SideItem/Login/Login";
 import Mypage from "./components/Main/OnAndUp/SideItem/MyPage/Mypage";
 import ItemForm from "./components/Main/OnAndUp/Main/ItemForm";
+import Header from "./components/Header/Header";
+import { useState } from "react";
+import { useEffect } from "react";
 function App() {
-  let num = 0;
+  const [auth, setAuth] = useState(false);
+  useEffect(() => {
+    console.log(auth);
+  }, [auth]);
   return (
     <div className="App">
       <BrowserRouter>
-        {num === 0 ? <ConnectWithHeader /> : <OnAndUpHeader />}
+        <Header />
         <Routes>
           <Route path="/" element={<ConnectWith />} />
           <Route path="/welcome" element={<Welcome />} />
@@ -37,7 +41,7 @@ function App() {
               element={<ItemForm />}
             />
           </Route>
-          {/*    <Route path="/chemiverseOnUp/eduroom" element={<EduRoom />} />
+          {/*      <Route path="/chemiverseOnUp/eduroom" element={<EduRoom />} />
           <Route path="/chemiverseOnUp/eduguide" element={<EduGudie />} />
           <Route path="/chemiverseOnUp/diagnosis" element={<Diagnosis />} />
           <Route path="/chemiverseOnUp/study" element={<Study />} />
