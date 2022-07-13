@@ -8,8 +8,11 @@ function ItemList({ item }) {
       key={item.id}
       to={`/chemiverseOnUp/item/${item.address}`}
       state={{
+        id: item.id,
         menu: item.menu,
         dep: item.dep,
+        address: item.address,
+        explanation: item.explanation,
       }}
     >
       <li className="main-item-list-rectangle">{item.menu}</li>

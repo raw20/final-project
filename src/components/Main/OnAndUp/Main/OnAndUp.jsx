@@ -13,7 +13,7 @@ function OnAndUp({ auth, setAuth }) {
       setData(json);
       setAuth(false);
     })();
-  }, [auth]);
+  }, [auth, setAuth]);
   return (
     <div className="wrap">
       <div className="main">

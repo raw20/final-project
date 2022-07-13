@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./css/header.css";
 import { MdSearch } from "react-icons/md";
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
-function OnAndUpHeader({ setHead }) {
+function OnAndUpHeader() {
   const [item, setItem] = useState([]);
   const itemData = "./db/mainItem.json";
 
@@ -19,13 +18,21 @@ function OnAndUpHeader({ setHead }) {
       <NavLink className="logo" to={`/chemiverseOnUp`}>
         logo
       </NavLink>
-
       <div className="main-item">
         <ul className="gnb">
-          {item.map((ele) => (
+          {item.map((item) => (
             <li>
-              <NavLink to={`/chemiverseOnUp/item/${ele.address}`}>
-                {ele.menu}
+              <NavLink
+                to={`/chemiverseOnUp/item/${item.address}`}
+                key={item.id}
+                state={{
+                  id: item.id,
+                  menu: item.menu,
+                  dep: item.dep,
+                  address: item.address,
+                }}
+              >
+                {item.menu}
               </NavLink>
             </li>
           ))}
