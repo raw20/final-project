@@ -4,6 +4,16 @@ import M1 from "../MainItem/Mentoring/M1";
 import M2 from "../MainItem/Mentoring/M2";
 import M3 from "../MainItem/Mentoring/M3";
 import M4 from "../MainItem/Mentoring/M4";
+
+/*
+ index : 0 = 교육장 이동
+ index : 1 = 교욱 안내
+ index : 2 = 진단
+ index : 3 = 역량학습
+ index : 4 = 케미스토리
+ index : 5 = 멘토링
+ index : 6 = 게시판
+ */
 const component = [
   {
     index: 0,

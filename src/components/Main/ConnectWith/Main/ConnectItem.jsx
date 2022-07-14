@@ -6,7 +6,14 @@ function ConnectItem({ data }) {
   const json = JSON.stringify(data.contents, null, "\n");
   return (
     <Link
-      to={`/${data.address}`}
+      to={`/item/${data.address}`}
+      state={{
+        id: data.id,
+        title: data.title,
+        img: data.img,
+        address: data.address,
+        contents: data.contents,
+      }}
       className="link-item"
       style={{ textDecoration: "none" }}
     >

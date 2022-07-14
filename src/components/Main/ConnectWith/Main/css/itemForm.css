@@ -12,11 +12,38 @@
   border-radius: 20px;
   background: #ffffff;
   box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+  position: relative;
+}
+.item-form .item-inner .item-img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.item-form .item-inner .item-img img {
+  width: 400px;
+  height: 200px;
 }
 .item-form .item-inner .item-location {
   width: 100%;
+  height: auto;
   font-size: 15px;
   color: #ccc;
+  position: relative;
+  margin-left: 20px;
+}
+.item-form .item-inner .item-location::before {
+  content: " ";
+  width: 17px;
+  height: 17px;
+  top: 0px;
+  left: -20px;
+  position: absolute;
+  background: url(/public/img/ic-check-on.png) no-repeat center/cover;
+  margin-right: 20px;
 }
 .item-form .item-inner .item-title {
   width: 100%;
@@ -34,27 +61,4 @@
   width: 700px;
   display: flex;
   margin: 50px auto;
-}
-.item-form .item-inner .item-btn {
-  width: 150px;
-  height: 50px;
-  background-color: rgb(111, 118, 193);
-  color: #fff;
-  border-radius: 11px;
-  font-size: 15px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0px auto;
-}
-.item-form .item-inner .item-box {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 50px 30px;
-  height: 100vh;
-  border-radius: 20px;
-  background: #ffffff;
 }/*# sourceMappingURL=itemForm.css.map */

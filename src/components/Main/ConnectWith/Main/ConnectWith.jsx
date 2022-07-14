@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ConnectItem from "./ConnectItem";
 import "./css/connectwith.css";
+
 function ConnectWith({ auth, setAuth }) {
   const [data, setData] = useState([]);
   const mainData = "./db/mainData.json";
