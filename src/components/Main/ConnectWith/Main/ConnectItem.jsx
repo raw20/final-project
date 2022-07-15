@@ -10,7 +10,7 @@ function ConnectItem({ data }) {
       state={{
         id: data.id,
         title: data.title,
-        img: data.img,
+        img: data.main_img,
         address: data.address,
         contents: data.contents,
       }}

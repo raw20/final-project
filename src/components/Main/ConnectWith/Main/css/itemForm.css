@@ -1,16 +1,16 @@
 .item-form {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding-top: 70px;
   box-sizing: border-box;
 }
 .item-form .item-inner {
   max-width: 1200px;
-  height: auto;
+  height: 100vw;
   margin: 30px auto;
   padding: 50px 30px;
   border-radius: 20px;
-  background: #ffffff;
+  background: #fff;
   box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
   position: relative;
 }
@@ -21,13 +21,17 @@
   justify-content: flex-end;
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: -47px;
 }
 .item-form .item-inner .item-img img {
-  width: 400px;
-  height: 200px;
+  width: 570px;
+  height: 390px;
 }
-.item-form .item-inner .item-location {
+.item-form .item-inner .item-text {
+  width: 100%;
+  margin: 30px 50px;
+}
+.item-form .item-inner .item-text .item-location {
   width: 100%;
   height: auto;
   font-size: 15px;
@@ -35,7 +39,7 @@
   position: relative;
   margin-left: 20px;
 }
-.item-form .item-inner .item-location::before {
+.item-form .item-inner .item-text .item-location::before {
   content: " ";
   width: 17px;
   height: 17px;
@@ -45,20 +49,15 @@
   background: url(/public/img/ic-check-on.png) no-repeat center/cover;
   margin-right: 20px;
 }
-.item-form .item-inner .item-title {
+.item-form .item-inner .item-text .item-title {
   width: 100%;
   font-size: 50px;
   color: rgb(111, 118, 193);
   margin-top: 50px;
 }
-.item-form .item-inner .item-contents {
+.item-form .item-inner .item-text .item-contents {
   width: 70%;
-  font-size: 25px;
+  font-size: 20px;
   color: #ccc;
-  margin-top: 30px;
-}
-.item-form .item-inner .item-btn-area {
-  width: 700px;
-  display: flex;
-  margin: 50px auto;
+  margin-top: 40px;
 }/*# sourceMappingURL=itemForm.css.map */

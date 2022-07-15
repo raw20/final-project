@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function OnAndUp({ auth, setAuth }) {
   const [data, setData] = useState([]);
-  const dataURL = "./db/mainItem.json";
+  const dataURL = "./db/onAndUpMenuData.json";
   useEffect(() => {
     (async () => {
       const response = await fetch(dataURL);

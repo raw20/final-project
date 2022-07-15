@@ -1,5 +1,6 @@
 import Bo1 from "../MainItem/Board/Bo1";
 import Bo2 from "../MainItem/Board/Bo2";
+import Chemi01 from "../MainItem/ChemiStory/Chemi01";
 import M1 from "../MainItem/Mentoring/M1";
 import M2 from "../MainItem/Mentoring/M2";
 import M3 from "../MainItem/Mentoring/M3";
@@ -33,11 +34,11 @@ const component = [
   },
   {
     index: 4,
-    content: [<Bo1 />, <M2 />, <Bo2 />, <M3 />],
+    content: [<Chemi01 />, <M2 />, <Bo2 />, <M3 />],
   },
   {
     index: 5,
-    content: [<M1 />, <M2 />, <M3 />, <M4 />],
+    content: [<M1 />, <M2 />, <M3 />],
   },
   {
     index: 6,

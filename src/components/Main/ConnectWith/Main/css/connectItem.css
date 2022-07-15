@@ -40,6 +40,10 @@
   width: 400px;
   height: 200px;
 }
+.link-item .item-list .img img:hover {
+  transition-duration: 0.5s;
+  transform: scale(120%);
+}
 
 .link-item:nth-child(2n+1) {
   background-color: #e6e0ec;

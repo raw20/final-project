@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./css/header.css";
 import { MdSearch } from "react-icons/md";
 function OnAndUpHeader() {
   const [item, setItem] = useState([]);
-  const itemData = "./db/mainItem.json";
+  const itemData = "./db/onAndUpMenuData.json";
 
   useEffect(() => {
     (async () => {
@@ -15,14 +15,14 @@ function OnAndUpHeader() {
   });
   return (
     <div id="header">
-      <NavLink className="logo" to={`/chemiverseOnUp`}>
+      <Link className="logo" to={`/chemiverseOnUp`}>
         logo
-      </NavLink>
+      </Link>
       <div className="main-item">
         <ul className="gnb">
           {item.map((item) => (
             <li>
-              <NavLink
+              <Link
                 to={`/chemiverseOnUp/item/${item.address}`}
                 key={item.id}
                 state={{
@@ -33,7 +33,7 @@ function OnAndUpHeader() {
                 }}
               >
                 {item.menu}
-              </NavLink>
+              </Link>
             </li>
           ))}
         </ul>
@@ -41,10 +41,10 @@ function OnAndUpHeader() {
       <div className="side-item">
         <ul className="util">
           <li id="mypage">
-            <NavLink to={`/chemiverseOnUp/mypage`}>마이페이지</NavLink>
+            <Link to={`/chemiverseOnUp/mypage`}>마이페이지</Link>
           </li>
           <li id="login">
-            <NavLink to={`/chemiverseOnUp/login`}>로그인</NavLink>
+            <Link to={`/chemiverseOnUp/login`}>로그인</Link>
           </li>
           <li id="search">
             <MdSearch />

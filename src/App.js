@@ -5,7 +5,7 @@ import OnAndUp from "./components/Main/OnAndUp/Main/OnAndUp";
 import Login from "./components/Main/OnAndUp/SideItem/Login/Login";
 import Mypage from "./components/Main/OnAndUp/SideItem/MyPage/Mypage";
 import ItemForm from "./components/Main/OnAndUp/Main/ItemForm";
-import ConnectWthItemForm from "./components/Main/ConnectWith/Main/itemForm";
+import ConnectWthItemForm from "./components/Main/ConnectWith/Main/ItemForm";
 import Header from "./components/Header/Header";
 import { useState } from "react";
 import { useEffect } from "react";

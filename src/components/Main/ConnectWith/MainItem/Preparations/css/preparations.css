@@ -1,0 +1,36 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap .checklist-box {
+  width: 80%;
+  height: 75vw;
+  margin: 0px auto;
+  border-radius: 30px;
+  background: url("/public/img/bg-checklist.png") no-repeat center/100%;
+  box-sizing: border-box;
+}
+.wrap .checklist-box .title {
+  padding: 50px 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+.wrap .checklist-box .contents {
+  width: 90%;
+  height: 65vw;
+  margin: 0px auto;
+  background-color: #fff;
+  border-radius: 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+.wrap .checklist-box .contents .img {
+  width: 150px;
+  height: 150px;
+  background: url(/public/img/img-person01.png) no-repeat center/cover;
+  position: absolute;
+  top: -80px;
+  right: 25px;
+}/*# sourceMappingURL=preparations.css.map */

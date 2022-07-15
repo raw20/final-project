@@ -1,7 +1,7 @@
 import React from "react";
 
 function Welcome() {
-  return <div></div>;
+  return <div>환영인사</div>;
 }
 
 export default Welcome;
