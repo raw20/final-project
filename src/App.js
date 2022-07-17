@@ -8,20 +8,17 @@ import ItemForm from "./components/Main/OnAndUp/Main/ItemForm";
 import ConnectWthItemForm from "./components/Main/ConnectWith/Main/ItemForm";
 import Header from "./components/Header/Header";
 import { useState } from "react";
-import { useEffect } from "react";
 function App() {
-  const [auth, setAuth] = useState(false);
-  useEffect(() => {
-    console.log(auth);
-  }, [auth]);
+  const [main, setMain] = useState(true);
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Header auth={auth} />
+        <Header main={main} />
         <Routes>
           <Route
             path="/"
-            element={<ConnectWith auth={auth} setAuth={setAuth} />}
+            element={<ConnectWith main={main} setMain={setMain} />}
           />
           <Route path="/item">
             <Route
@@ -31,7 +28,7 @@ function App() {
           </Route>
           <Route
             path="/chemiverseOnUp"
-            element={<OnAndUp auth={auth} setAuth={setAuth} />}
+            element={<OnAndUp main={main} setMain={setMain} />}
           />
           <Route path="/chemiverseOnUp/item">
             <Route

@@ -26,7 +26,7 @@ const EduNoticeList = ({ posts, totalPosts, content, setContent }) => {
             </thead>
             <tbody>
               {posts.map((posts, index) => (
-                <tr className="content_row">
+                <tr className="content_row" key={index}>
                   <td>{posts.id}</td>
                   <td>{posts.category}</td>
                   <td onClick={() => onClick(index)}>{posts.title}</td>
