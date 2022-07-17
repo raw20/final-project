@@ -1,0 +1,53 @@
+.edu_notice_area .edu_table {
+  width: 1200px;
+  margin: auto;
+  border-collapse: collapse;
+}
+.edu_notice_area .edu_table th {
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+.edu_notice_area .edu_table td {
+  text-align: center;
+  font-size: 12px;
+  padding: 20px;
+  border-bottom: 0.5px solid #ccc;
+  color: #888;
+}
+.edu_notice_area .edu_table td:nth-child(1) {
+  width: 60x;
+}
+.edu_notice_area .edu_table td:nth-child(2) {
+  width: 60px;
+}
+.edu_notice_area .edu_table td:nth-child(3) {
+  text-align: start;
+  font-size: 14px;
+  color: #000;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.edu_notice_area .edu_pagination {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+}
+.edu_notice_area .edu_pagination .page_item {
+  margin-top: 25px;
+}
+.edu_notice_area .edu_pagination .page_item .page_link {
+  color: #ccc;
+  font-size: 18px;
+  font-weight: 800;
+}
+.edu_notice_area .edu_pagination .page_item .page_link:hover {
+  cursor: pointer;
+  color: #6f76c1;
+}
+.edu_notice_area .edu_pagination .page_item .page_link:focus {
+  color: #6f76c1;
+}/*# sourceMappingURL=style.css.map */
