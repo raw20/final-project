@@ -1,0 +1,24 @@
+.wrap {
+  width: 100%;
+  background-color: #fff;
+  .tab-btn-area {
+    width: 700px;
+    display: flex;
+    margin: 50px auto;
+    .tab-btn {
+      width: 150px;
+      height: 50px;
+      background-color: rgba(111, 118, 193, 1);
+      color: #fff;
+      border-radius: 11px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px auto;
+    }
+  }
+}

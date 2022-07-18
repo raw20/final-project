@@ -4,6 +4,10 @@
   height: 70px;
   display: flex;
   position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
   justify-content: space-between;
   align-items: center;
   z-index: 2000;
@@ -18,11 +22,27 @@
   text-indent: -9999px;
   margin-left: 5%;
 }
-.header .title {
+.header .main-item {
   width: 100%;
-  height: auto;
-  text-align: center;
-  font-size: 0px;
+  margin-top: 10px;
+}
+.header .main-item .gnb {
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+}
+.header .main-item .gnb .item-menu {
+  width: 150px;
+  height: 70px;
+  display: flex;
+  color: #7a7a7a;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.header .main-item .gnb .item-menu.on {
+  color: #6f76c1;
 }
 .header .link {
   width: 100%;

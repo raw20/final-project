@@ -1,44 +1,51 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "address": "eduroom",
     "menu": "교육장 이동",
+    "explanation": "컨텐츠 설명글",
     "dep": ["교육장 이동"]
   },
   {
-    "id": 2,
+    "id": 1,
     "address": "eduguide",
     "menu": "교육 안내",
+    "explanation": "컨텐츠 설명글",
     "dep": ["공지사항", "시간표", "강사소개"]
   },
   {
-    "id": 3,
+    "id": 2,
     "address": "diagnosis",
     "menu": "진단",
+    "explanation": "컨텐츠 설명글",
     "dep": ["현재상태점검", "진단결과보기"]
   },
   {
-    "id": 4,
+    "id": 3,
     "address": "study",
     "menu": "역량학습",
+    "explanation": "컨텐츠 설명글",
     "dep": ["회사이해", "워크스킬", "피플스킬", "자기관리"]
   },
   {
-    "id": 5,
+    "id": 4,
     "address": "chemistory",
     "menu": "Chemi Story",
+    "explanation": "컨텐츠 설명글",
     "dep": ["Chemi Stroy란?", "작성하기", "성찰저널", "자기계발목표"]
   },
   {
-    "id": 6,
+    "id": 5,
     "address": "mentoring",
     "menu": "멘토링",
-    "dep": ["멘토링이란?", "계획서작성", "활동내용", "고민상담"]
+    "explanation": "컨텐츠 설명글",
+    "dep": ["멘토링이란?", "계획서작성", "활동내용"]
   },
   {
-    "id": 7,
+    "id": 6,
     "address": "board",
     "menu": "게시판",
+    "explanation": "컨텐츠 설명글",
     "dep": ["자유게시판", "아이디어 제시"]
   }
 ]

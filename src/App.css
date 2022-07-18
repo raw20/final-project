@@ -104,3 +104,6 @@ i {
 .blind {
   display: none;
 }
+.none {
+  text-decoration: none;
+}

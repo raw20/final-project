@@ -7,6 +7,10 @@ $deepColor: #6f76c1;
   height: 70px;
   display: flex;
   position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
   justify-content: space-between;
   align-items: center;
   z-index: 2000;
@@ -23,11 +27,27 @@ $deepColor: #6f76c1;
     text-indent: -9999px;
     margin-left: 5%;
   }
-  .title {
+  .main-item {
     width: 100%;
-    height: auto;
-    text-align: center;
-    font-size: 0px;
+    margin-top: 10px;
+    .gnb {
+      width: 100%;
+      display: flex;
+      font-size: 20px;
+      justify-content: space-between;
+      .item-menu {
+        width: 150px;
+        height: 70px;
+        display: flex;
+        color: #7a7a7a;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+      }
+      .item-menu.on {
+        color: $deepColor;
+      }
+    }
   }
   .link {
     width: 100%;
