@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/header.css";
+
 import { MdSearch } from "react-icons/md";
 function OnAndUpHeader() {
   const [item, setItem] = useState([]);
@@ -23,7 +24,7 @@ function OnAndUpHeader() {
           {item.map((item) => (
             <li>
               <Link
-                to={`/chemiverseOnUp/item/${item.address}`}
+                to={`/chemiverseOnUp/${item.address}`}
                 key={item.id}
                 state={{
                   id: item.id,

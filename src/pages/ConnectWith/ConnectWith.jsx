@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
-import ConnectItem from "./ConnectItem";
+import ConnectItem from "../../components/Main/ConnectWith/Main/ConnectItem";
+
 import "./css/connectwith.css";
 
 function ConnectWith() {
   const [data, setData] = useState([]);
   const mainData = "./db/connenctWithMenuData.json";
+  async function getMainData() {
+    const json = await (await fetch(mainData)).json();
+    setData(json);
+  }
   useEffect(() => {
-    (async () => {
-      const response = await fetch(mainData);
-      const json = await response.json();
-      setData(json);
-    })();
-  });
-
+    getMainData();
+  }, []);
   return (
     <>
       <div className="main">

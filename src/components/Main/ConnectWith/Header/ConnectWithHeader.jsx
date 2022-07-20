@@ -4,16 +4,20 @@ import { Link, NavLink } from "react-router-dom";
 import { IoCaretForwardOutline } from "react-icons/io5";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { onAndUp } from "../../../../app/headerStateSlice";
 function ConnectWithHeader() {
   const [item, setItem] = useState([]);
   const itemData = "./db/connenctWithMenuData.json";
+  const dispatch = useDispatch();
+
   useEffect(() => {
     (async () => {
       const response = await fetch(itemData);
       const json = await response.json();
       setItem(json);
     })();
-  });
+  }, []);
   return (
     <div className="header">
       <Link to="/" className="logo">
@@ -21,10 +25,10 @@ function ConnectWithHeader() {
       </Link>
       <div className="main-item">
         <ul className="gnb">
-          {item.map((item) => (
+          {item.map((item, index) => (
             <li>
               <NavLink
-                to={`/item/${item.address}`}
+                to={`/${item.address}`}
                 key={item.id}
                 className={({ isActive }) =>
                   isActive ? "item-menu on" : "item-menu"
@@ -35,6 +39,7 @@ function ConnectWithHeader() {
                   img: item.main_img,
                   address: item.address,
                   contents: item.contents,
+                  index: index,
                 }}
               >
                 {item.title}
@@ -43,7 +48,13 @@ function ConnectWithHeader() {
           ))}
         </ul>
       </div>
-      <Link to="/chemiverseOnUp" className="link">
+      <Link
+        to="/chemiverseOnUp"
+        className="link"
+        onClick={() => {
+          dispatch(onAndUp("false"));
+        }}
+      >
         Chemiverse On & Up <IoCaretForwardOutline />
       </Link>
     </div>

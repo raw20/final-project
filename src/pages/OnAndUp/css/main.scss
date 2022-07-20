@@ -1,0 +1,162 @@
+@import "./mixin";
+$bgColor: #dde3f6;
+$deepColor: #6f76c1;
+$lightColor: #e6e0ec;
+@include desktop {
+  .wrap {
+    width: 1200px;
+    height: 100vh;
+    padding: 7rem 0px;
+    background-color: $bgColor !important;
+    .main {
+      width: 100%;
+      height: 100%;
+      font-size: 20px;
+      box-sizing: border-box;
+
+      .main-img {
+        width: 1200px;
+        height: 900px;
+        background-image: url(/public/img/img-main-full.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1200px 900px;
+        margin: 0.5rem auto;
+        position: relative;
+        animation: fadein 2s;
+        .connect-with-btn {
+          width: 150px;
+          height: 150px;
+          color: $deepColor;
+          border-radius: 50%;
+          position: absolute;
+          top: 55px;
+          right: 500px;
+          text-align: center;
+          &:hover {
+            .connect-with-rectangle {
+              display: block;
+              animation: fadein 1s;
+            }
+          }
+          .connect-with-rectangle {
+            width: 196px;
+            height: 116px;
+            line-height: 92px;
+            background: url(/public/img/bg-rectangle@3x.png) no-repeat center /
+              cover;
+            display: none;
+            position: absolute;
+            top: -70px;
+            right: -27px;
+          }
+        }
+        .main-item {
+          width: 100%;
+          height: auto;
+          display: flex;
+          color: $deepColor;
+          .main-item-list {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: relative;
+            &:hover {
+              .main-item-list-rectangle {
+                display: block;
+                animation: fadein 1s;
+              }
+            }
+            .main-item-list-rectangle {
+              width: 196px;
+              height: 116px;
+              line-height: 92px;
+              background: url(/public/img/bg-rectangle@3x.png) no-repeat
+                center/cover;
+              position: absolute;
+              text-align: center;
+              display: none;
+            }
+          }
+          .main-item-list:nth-child(1) {
+            //교육장이동  (말풍선)
+            top: 270px;
+            left: 250px;
+            .main-item-list-rectangle {
+              top: -92px;
+              left: -30px;
+            }
+          }
+          .main-item-list:nth-child(2) {
+            //교욱안내 (hover 영역)
+            top: 220px;
+            left: 560px;
+            .main-item-list-rectangle {
+              top: -80px;
+              right: -30px;
+            }
+          }
+          .main-item-list:nth-child(3) {
+            //진단 (hover 영역)
+            top: 350px;
+            left: 590px;
+            .main-item-list-rectangle {
+              top: -70px;
+              right: -10px;
+            }
+          }
+          .main-item-list:nth-child(4) {
+            //역량학습 (hover 영역)
+            top: 360px;
+            left: 80px;
+            .main-item-list-rectangle {
+              top: -80px;
+              right: -30px;
+            }
+          }
+          .main-item-list:nth-child(5) {
+            //케미스트리 (hover 영역)
+            top: 480px;
+            right: 230px;
+            .main-item-list-rectangle {
+              top: -70px;
+              right: 15px;
+            }
+          }
+          .main-item-list:nth-child(6) {
+            //멘토링 (hover 영역)
+            top: 470px;
+            right: 75px;
+            .main-item-list-rectangle {
+              top: -80px;
+              left: 10px;
+            }
+          }
+          .main-item-list:nth-child(7) {
+            //게시판 (hover 영역)
+            top: 600px;
+            right: 380px;
+            .main-item-list-rectangle {
+              top: -80px;
+              right: -12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@include tablet {
+  .connect-with-btn {
+    background-color: aqua;
+  }
+}

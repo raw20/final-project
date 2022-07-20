@@ -1,41 +1,41 @@
 import "./App.css";
-import ConnectWith from "./components/Main/ConnectWith/Main/ConnectWith";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import OnAndUp from "./components/Main/OnAndUp/Main/OnAndUp";
+import ConnectWith from "./pages/ConnectWith/ConnectWith";
+import OnAndUp from "./pages/OnAndUp/OnAndUp";
 import Login from "./components/Main/OnAndUp/SideItem/Login/Login";
 import Mypage from "./components/Main/OnAndUp/SideItem/MyPage/Mypage";
-import ItemForm from "./components/Main/OnAndUp/Main/ItemForm";
-import ConnectWthItemForm from "./components/Main/ConnectWith/Main/ItemForm";
+import OnAndUpItemForm from "./components/Main/OnAndUp/Main/OnAndUpItemForm";
+import ConnectWthItemForm from "./components/Main/ConnectWith/Main/ConnectWthItemForm";
+import Welcome from "./components/Main/ConnectWith/MainItem/Welcome/Welcome";
+import CompanyIntro from "./components/Main/ConnectWith/MainItem/CompayIntro/CompanyIntro";
+import Preparations from "./components/Main/ConnectWith/MainItem/Preparations/Preparations";
+import NoticeBoard from "./components/Main/ConnectWith/MainItem/NoticeBoard/NoticeBoard";
 import Header from "./components/Header/Header";
-import { useState } from "react";
-function App() {
-  const [main, setMain] = useState(true);
 
+function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header main={main} />
+        <Header />
         <Routes>
-          <Route
-            path="/"
-            element={<ConnectWith main={main} setMain={setMain} />}
-          />
-          <Route path="/item">
-            <Route
-              path="/item/:address"
-              element={<ConnectWthItemForm />}
-            ></Route>
+          <Route path="/:address" element={<ConnectWthItemForm />}>
+            <Route path="welcome" element={<Welcome />} />
+            <Route path="companyInfo" element={<CompanyIntro />} />
+            <Route path="preparations" element={<Preparations />} />
+            <Route path="noticeBoard" element={<NoticeBoard />} />
           </Route>
-          <Route
-            path="/chemiverseOnUp"
-            element={<OnAndUp main={main} setMain={setMain} />}
-          />
-          <Route path="/chemiverseOnUp/item">
-            <Route
-              path="/chemiverseOnUp/item/:address"
-              element={<ItemForm />}
-            />
+          <Route path="/" element={<ConnectWith />} />
+          <Route path="/chemiverseOnUp/:address" element={<OnAndUpItemForm />}>
+            <Route path="eduroom" />
+            <Route path="eduguide" />
+            <Route path="diagnosis" />
+            <Route path="study" />
+            <Route path="chemistory" />
+            <Route path="mentoring" />
+            <Route path="board" />
           </Route>
+          <Route path="/chemiverseOnUp" element={<OnAndUp />} />
+
           <Route path="/chemiverseOnUp/login" element={<Login />} />
           <Route path="/chemiverseOnUp/mypage" element={<Mypage />} />
         </Routes>

@@ -4,13 +4,12 @@ import { useLocation } from "react-router-dom";
 import component from "./TabComponent";
 import "./css/itemForm.css";
 
-function ItemForm() {
+function OnAndUpItemForm() {
   const { state } = useLocation(0);
   const [tabIndex, setTabIndex] = useState();
   function currentIndex(index) {
     setTabIndex(index);
   }
-
   return (
     <div className="item-form">
       <div className="item-inner">
@@ -32,7 +31,6 @@ function ItemForm() {
             </li>
           ))}
         </ul>
-
         <div className="item-box">
           {tabIndex === undefined
             ? component[state.id].content[0]
@@ -43,4 +41,4 @@ function ItemForm() {
   );
 }
 
-export default ItemForm;
+export default OnAndUpItemForm;

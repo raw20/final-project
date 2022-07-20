@@ -1,10 +1,21 @@
-import React from "react";
-//import { useState } from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import component from "./TabComponent";
 import "./css/itemForm.css";
-function ItemForm() {
+import { useEffect } from "react";
+function ConnectWthItemForm() {
   const { state } = useLocation(0);
+  const [data, setData] = useState([]);
+  const mainData = "./db/connenctWithMenuData.json";
+
+  const getDataJson = async () => {
+    const json = await (await fetch(mainData)).json();
+    console.log(json);
+    setData(json);
+  };
+  useEffect(() => {
+    getDataJson();
+  }, []);
   return (
     <div className="item-form">
       <div className="item-inner">
@@ -18,11 +29,10 @@ function ItemForm() {
           <div className="item-title">{state.title}</div>
           <div className="item-contents">{state.contents}</div>
         </div>
-
         <div className="item-box">{component[state.id].content[0]}</div>
       </div>
     </div>
   );
 }
 
-export default ItemForm;
+export default ConnectWthItemForm;

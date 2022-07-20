@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { onAndUp } from "../../../../app/headerStateSlice";
 
-function ItemList({ item }) {
+function OnAndUpItemList({ item }) {
+  const dispatch = useDispatch();
   return (
     <Link
       className="main-item-list"
       key={item.id}
-      to={`/chemiverseOnUp/item/${item.address}`}
+      to={`/chemiverseOnUp/${item.address}`}
       state={{
         id: item.id,
         menu: item.menu,
@@ -14,10 +17,13 @@ function ItemList({ item }) {
         address: item.address,
         explanation: item.explanation,
       }}
+      onClick={() => {
+        dispatch(onAndUp("false"));
+      }}
     >
       <li className="main-item-list-rectangle">{item.menu}</li>
     </Link>
   );
 }
 
-export default ItemList;
+export default OnAndUpItemList;

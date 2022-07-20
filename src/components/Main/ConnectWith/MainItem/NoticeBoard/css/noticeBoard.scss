@@ -1,10 +1,12 @@
-.wrap {
+.tab-btn-wrap {
   width: 100%;
+  height: 100vh;
+  padding-top: 7rem;
   background-color: #fff;
   .tab-btn-area {
     width: 700px;
     display: flex;
-    margin: 50px auto;
+    margin: 0px auto;
     .tab-btn {
       width: 150px;
       height: 50px;
