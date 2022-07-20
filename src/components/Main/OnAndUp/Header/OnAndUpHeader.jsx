@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./css/header.css";
-
-import { MdSearch } from "react-icons/md";
+import { BiUser } from "react-icons/bi";
 function OnAndUpHeader() {
   const [item, setItem] = useState([]);
-  const itemData = "./db/onAndUpMenuData.json";
-
+  const itemData = "./db/mainItem.json";
   useEffect(() => {
     (async () => {
       const response = await fetch(itemData);
@@ -16,15 +14,15 @@ function OnAndUpHeader() {
   });
   return (
     <div id="header">
-      <Link className="logo" to={`/chemiverseOnUp`}>
+      <NavLink className="logo" to={`/chemiverseOnUp`}>
         logo
-      </Link>
+      </NavLink>
       <div className="main-item">
         <ul className="gnb">
           {item.map((item) => (
             <li>
-              <Link
-                to={`/chemiverseOnUp/${item.address}`}
+              <NavLink
+                to={`/chemiverseOnUp/item/${item.address}`}
                 key={item.id}
                 state={{
                   id: item.id,
@@ -32,9 +30,23 @@ function OnAndUpHeader() {
                   dep: item.dep,
                   address: item.address,
                 }}
-              >
-                {item.menu}
-              </Link>
+                >
+                <span>{item.menu}</span>
+              </NavLink>
+              <ul className="depth1">
+                <NavLink
+                to={`/chemiverseOnUp/item/${item.address}`}
+                key={item.id}
+                state={{
+                  id: item.id,
+                  menu: item.menu,
+                  dep: item.dep,
+                  address: item.address,
+                }}
+                >
+                  {item.dep.map((ele)=><li className="depth1Li">{ele}</li>)}
+                </NavLink>
+              </ul>
             </li>
           ))}
         </ul>
@@ -42,19 +54,30 @@ function OnAndUpHeader() {
       <div className="side-item">
         <ul className="util">
           <li id="mypage">
-            <Link to={`/chemiverseOnUp/mypage`}>마이페이지</Link>
+            <NavLink to={`/chemiverseOnUp/mypage`}><BiUser /></NavLink>
           </li>
           <li id="login">
-            <Link to={`/chemiverseOnUp/login`}>로그인</Link>
+            <NavLink to={`/chemiverseOnUp/login`}>로그인</NavLink>
           </li>
-          <li id="search">
-            <MdSearch />
-          </li>
-          <li id="tab-btn">탭버튼</li>
+          <button id="tab-btn">
+            <NavLink to={`/chemiverseOnUp/tab`}
+            state={
+              {id: item.id,
+              menu: item.menu,
+              dep: item.dep,
+              address: item.address,}
+            }>
+              탭버튼
+            </NavLink>
+          </button>
         </ul>
       </div>
+
+      
     </div>
+    
   );
 }
+
 
 export default OnAndUpHeader;
