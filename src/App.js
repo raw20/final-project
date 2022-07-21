@@ -26,11 +26,12 @@ function App() {
       <BrowserRouter>
         <Header LoginAuth={LoginAuth} setLoginAuth={setLoginAuth} />
         <Routes>
-          <Route path="/:address" element={<ConnectWthItemForm />}>
-            <Route path="welcome" element={<Welcome />} />
-            <Route path="companyInfo" element={<CompanyIntro />} />
-            <Route path="preparations" element={<Preparations />} />
-            <Route path="noticeBoard" element={<NoticeBoard />} />
+          <Route path="/" element={<ConnectWith />} />
+          <Route path="/item/:address" element={<ConnectWthItemForm />}>
+            <Route path="0" element={<Welcome />} />
+            <Route path="1" element={<CompanyIntro />} />
+            <Route path="2" element={<Preparations />} />
+            <Route path="3" element={<NoticeBoard />} />
           </Route>
           <Route path="/" element={<ConnectWith />} />
           <Route path="/chemiverseOnUp/:address" element={<OnAndUpItemForm />}>
