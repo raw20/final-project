@@ -11,6 +11,7 @@ import CompanyIntro from "./components/Main/ConnectWith/MainItem/CompayIntro/Com
 import Preparations from "./components/Main/ConnectWith/MainItem/Preparations/Preparations";
 import NoticeBoard from "./components/Main/ConnectWith/MainItem/NoticeBoard/NoticeBoard";
 import Header from "./components/Header/Header";
+import TabBtnMenu from "./components/Main/OnAndUp/Header/TabBtnMenu";
 
 function App() {
   return (
@@ -35,9 +36,9 @@ function App() {
             <Route path="board" />
           </Route>
           <Route path="/chemiverseOnUp" element={<OnAndUp />} />
-
           <Route path="/chemiverseOnUp/login" element={<Login />} />
           <Route path="/chemiverseOnUp/mypage" element={<Mypage />} />
+          <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
         </Routes>
       </BrowserRouter>
     </div>
