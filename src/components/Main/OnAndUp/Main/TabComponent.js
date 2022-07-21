@@ -5,6 +5,9 @@ import M1 from "../MainItem/Mentoring/M1";
 import M2 from "../MainItem/Mentoring/M2";
 import M3 from "../MainItem/Mentoring/M3";
 import M4 from "../MainItem/Mentoring/M4";
+import EduRoom from './../MainItem/EduRoom/EduRoom';
+import EduNotice from './../MainItem/EduGuide/EduNotice';
+import EduCalendar from './../MainItem/EduGuide/EduCalendar';
 
 /*
  index : 0 = 교육장 이동
@@ -18,11 +21,11 @@ import M4 from "../MainItem/Mentoring/M4";
 const component = [
   {
     index: 0,
-    content: [<M1 />],
+    content: [<EduRoom />],
   },
   {
     index: 1,
-    content: [<M1 />, <M2 />, <M3 />],
+    content: [<EduNotice />, <EduCalendar />, <M3 />],
   },
   {
     index: 2,

@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link, NavLink } from "react-router-dom";
 import "./css/header.css";
 import { BiUser } from "react-icons/bi";
-function OnAndUpHeader() {
+
+function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate('/chemiverseOnUp/login');
+  }
   const [item, setItem] = useState([]);
   const onAndUpMenuData = "/db/onAndUpMenuData.json";
   useEffect(() => {
@@ -12,7 +18,6 @@ function OnAndUpHeader() {
       setItem(json);
     })();
   }, []);
-  console.log("header-link", item);
   return (
     <div id="header">
       <Link className="logo" to="/chemiverseOnUp">
@@ -61,9 +66,11 @@ function OnAndUpHeader() {
               <BiUser />
             </NavLink>
           </li>
-          <li id="login">
-            <NavLink to={`/chemiverseOnUp/login`}>로그인</NavLink>
-          </li>
+          {
+            LoginAuth ?
+              <span onClick={() => setLoginAuth(false)}>로그아웃</span> :
+              <span onClick={() => goToLogin()}>로그인</span>
+          }
           <button id="tab-btn">
             <NavLink
               to={`/chemiverseOnUp/tab`}

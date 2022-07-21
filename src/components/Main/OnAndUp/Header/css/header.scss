@@ -41,6 +41,7 @@ $bgColor: #dde3f6;
         &:hover {
           .depth1 {
             display: block;
+            animation: fadein 1s;
           }
           span {
             color: #6f76c1;
@@ -90,14 +91,51 @@ $bgColor: #dde3f6;
       }
     }
   }
-  .tab-btn-menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #6f76c1;
-    // display: none;
+}
+
+.btn-menu-wrap {
+  animation-name: change;
+  animation-duration: 1.5s;
+  animation-delay: 0;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  height: 100vh;
+  background-color: #6f76c1;
+  display: flex;
+  padding: 80px 70px 0;
+
+  .btn-menu {
+    text-align: center;
+    margin: 300px auto;
+    font-size: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-decoration: none;
+    .btn-menu-li {
+      width: 100px;
+      font-size: 28px;
+      line-height: 30px;
+
+      &::after {
+        display: block;
+        content: "";
+        width: 140px;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 20px;
+      }
+    }
+    .depth1 {
+      margin-top: 30px;
+      font-size: 16px;
+      text-decoration: none;
+      .item-menu {
+        text-decoration: none;
+      }
+      .depth1Li {
+        margin-top: 10px;
+        text-decoration: none;
+      }
+    }
   }
 }
 
@@ -148,5 +186,14 @@ $bgColor: #dde3f6;
     justify-content: center;
     align-items: center;
     color: #656565;
+  }
+}
+
+@keyframes change {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

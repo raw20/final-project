@@ -38,9 +38,7 @@ function ConnectWithHeader() {
               <NavLink
                 to={`/item/${item.address}/${item.id}`}
                 key={item.id}
-                className={({ isActive }) =>
-                  isActive ? "item-menu on" : "item-menu"
-                }
+                className={({ isActive }) => (isActive ? "item-menu on" : "item-menu")}
                 state={{
                   id: item.id,
                   title: item.title,

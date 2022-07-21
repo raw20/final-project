@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "logoUrl": "https://www.webex.com/content/dam/wbx/us/images/rebrand/nav-footer/black.png",
+    "logoAlt": "webex",
+    "title": "5월 3일 M1, M2 강의실",
+    "url": "https://expert.com"
+  },
+  {
+    "id": "2",
+    "logoUrl": "https://zep.us/_next/image?url=%2F_assets%2Fimages%2Flight%2Flayout%2Flogo_zep.svg&w=256&q=75",
+    "logoAlt": "zep",
+    "title": "5월 12일 M1, M2 강의실",
+    "url": "https://expert.com"
+  },
+  {
+    "id": "3",
+    "logoUrl": "https://assets-global.website-files.com/60ca686c96b42034829a80d3/60d4ce90230d1b9443f8fb36_Nav%20bar%20gather%20logo.svg",
+    "logoAlt": "gather",
+    "title": "5월 13일 M1, M2 강의실",
+    "url": "https://expert.com"
+  },
+  {
+    "id": "4",
+    "logoUrl": "https://cdn.cookielaw.org/logos/65962359-ef0d-4399-9db4-572d06de08aa/7e8e1e87-57c8-4716-8844-9e3ce008c788/5744f65a-43be-4320-972a-d728d5ecde42/Zoom_Blue_Logo.png",
+    "logoAlt": "zoom",
+    "title": "5월 14일 M1, M2 강의실",
+    "url": "https://expert.com"
+  },
+  {
+    "id": "5",
+    "logoUrl": "https://www.webex.com/content/dam/wbx/us/images/rebrand/nav-footer/black.png",
+    "logoAlt": "webex",
+    "title": "5월 3일 M1, M2 강의실",
+    "url": "https://expert.com"
+  },
+  {
+    "id": "6",
+    "logoUrl": "https://zep.us/_next/image?url=%2F_assets%2Fimages%2Flight%2Flayout%2Flogo_zep.svg&w=256&q=75",
+    "logoAlt": "zep",
+    "title": "5월 12일 M1, M2 강의실",
+    "url": "https://expert.com"
+  },
+  {
+    "id": "7",
+    "logoUrl": "https://assets-global.website-files.com/60ca686c96b42034829a80d3/60d4ce90230d1b9443f8fb36_Nav%20bar%20gather%20logo.svg",
+    "logoAlt": "gather",
+    "title": "5월 13일 M1, M2 강의실",
+    "url": "https://expert.com"
+  },
+  {
+    "id": "8",
+    "logoUrl": "https://cdn.cookielaw.org/logos/65962359-ef0d-4399-9db4-572d06de08aa/7e8e1e87-57c8-4716-8844-9e3ce008c788/5744f65a-43be-4320-972a-d728d5ecde42/Zoom_Blue_Logo.png",
+    "logoAlt": "zoom",
+    "title": "5월 14일 M1, M2 강의실",
+    "url": "https://expert.com"
+  }
+]
