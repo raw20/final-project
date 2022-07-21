@@ -1,0 +1,74 @@
+$bgColor: #dde3f6;
+$deepColor: #6f76c1;
+$lightColor: #e6e0ec;
+
+.edu_wrap{
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  .edu_box{
+    height: 300px;
+    width: 500px;
+    padding: 50px;
+    box-sizing: border-box;
+    margin: 30px;
+    display: flex;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+    flex-direction: column;
+    &:hover{
+      background-color: #6f76c1; 
+      color: #fff;
+      transition: all 0.5s;
+    }
+    .img_box{
+      height: 60px;
+      width: 180px;
+      line-height: 60px;
+      .edu_logo{
+        width: 160px;
+      }
+    }
+    .edu_title{
+      margin-top: 35px;
+      font-size: 20px;
+      font-weight: bold;
+
+    }
+    .edu_url{
+      margin-top: 18px;
+      font-size: 18px;
+    }
+    .copy_area{
+      margin-top: 20px;
+      align-self: flex-end;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 130px;
+      .copy_btn{
+        border: 1px solid #ccc;
+        color: #888;
+        border-radius: 20px;
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+        background-color: #fff;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .copy_message{
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        text-align: center;
+        height: 30px;
+        width: 130px;
+        line-height: 30px;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

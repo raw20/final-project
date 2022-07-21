@@ -1,0 +1,49 @@
+$bgColor: #dde3f6;
+$deepColor: #6f76c1;
+$lightColor: #e6e0ec;
+
+.edu_notice_area{
+  width: 100%;
+  margin: auto;
+  .edu_table{
+    border-collapse: collapse;
+    tr{
+      text-align: center;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #ccc;
+      padding: 20px;
+    }
+    .th_01{
+      width: 60px;
+    }
+    .th_02{
+      width: 60px;
+    }
+    td{
+      text-align: center;
+      font-size: 12px;
+      border-bottom: 0.5px solid #CCC;
+      color: #888;
+    }
+  }
+  .edu_pagination{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 300px;
+    padding-top: 25px;
+    margin: auto;
+      .page_link{
+        color: #ccc;
+        font-size: 18px;
+        font-weight: 800;
+        &:hover {
+          cursor: pointer;
+          color: $deepColor;
+        }
+        &.active {
+          color: $deepColor;
+        }
+    }
+  }
+}
