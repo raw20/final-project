@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link, NavLink } from "react-router-dom";
-import "./css/header.css";
-import { BiUser } from "react-icons/bi";
+import React, { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
+import "./css/header.css"
+import { BiUser } from "react-icons/bi"
 
 function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const goToLogin = () => {
-    navigate('/chemiverseOnUp/login');
+    navigate("/chemiverseOnUp/login")
   }
+
   function goToLogout() {
     setLoginAuth(false)
     navigate('/');
@@ -16,13 +17,14 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
   }
   const [item, setItem] = useState([]);
   const onAndUpMenuData = "/db/onAndUpMenuData.json";
+  
   useEffect(() => {
-    (async () => {
-      const response = await fetch(onAndUpMenuData);
-      const json = await response.json();
-      setItem(json);
-    })();
-  }, []);
+    ;(async () => {
+      const response = await fetch(onAndUpMenuData)
+      const json = await response.json()
+      setItem(json)
+    })()
+  }, [])
   return (
     <div id="header">
       <Link className="logo" to="/chemiverseOnUp">
@@ -71,6 +73,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
               <BiUser />
             </NavLink>
           </li>
+
           {
             LoginAuth ?
               <span onClick={() => goToLogout()}>로그아웃</span> :
@@ -92,7 +95,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
         </ul>
       </div>
     </div>
-  );
+  )
 }
 
-export default OnAndUpHeader;
+export default OnAndUpHeader
