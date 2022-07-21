@@ -84,8 +84,8 @@ $bgColor: #dde3f6;
         width: 20%;
         height: auto;
         background: url(/public/img/btn-menu.png) no-repeat center / contain;
-        // text-indent: -9999px;
-        // font-size: 0px;
+        text-indent: -9999px;
+        font-size: 0px;
         display: flex;
         align-items: center;
       }
@@ -113,7 +113,7 @@ $bgColor: #dde3f6;
     text-decoration: none;
     .btn-menu-li {
       width: 100px;
-      font-size: 28px;
+      font-size: 25px;
       line-height: 30px;
 
       &::after {
@@ -127,13 +127,14 @@ $bgColor: #dde3f6;
     .depth1 {
       margin-top: 30px;
       font-size: 16px;
-      text-decoration: none;
-      .item-menu {
+      .depth1-menu {
         text-decoration: none;
+      }
+      .detpth1-menu on {
+        color: red;
       }
       .depth1Li {
         margin-top: 10px;
-        text-decoration: none;
       }
     }
   }
