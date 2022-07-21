@@ -6,19 +6,18 @@ import { useDispatch } from "react-redux";
 import { connectWith } from "../../app/headerStateSlice";
 import { FiSearch } from "react-icons/fi";
 
-
 function OnAndUp() {
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
-  const dataURL = "./db/onAndUpMenuData.json";
-  useEffect(() => {
-    (async () => {
-      const response = await fetch(dataURL);
-      const json = await response.json();
-      setData(json);
-    })();
-  });
+  const onAndUpMenuData = "/db/onAndUpMenuData.json";
 
+  async function getMainData() {
+    const json = await (await fetch(onAndUpMenuData)).json();
+    setData(json);
+  }
+  useEffect(() => {
+    getMainData();
+  }, []);
   return (
     <div className="wrap">
       <div className="main">
@@ -28,18 +27,14 @@ function OnAndUp() {
               <OnAndUpItemList key={item.id} item={item} />
             ))}
           </ul>
-          <Link
-            to={`/`}
-            className="connect-with-btn"
-            onClick={() => dispatch(connectWith("true"))}
-          >
+          <Link to={`/`} className="connect-with-btn" onClick={() => dispatch(connectWith("true"))}>
             <span className="connect-with-rectangle">Connect With</span>
           </Link>
         </div>
         <div className="search-box">
-          <input type="text" class="search-txt" name=""placeholder="Type to search" />
+          <input type="text" class="search-txt" name="" placeholder="Type to search" />
           <a class="search-btn" href="#">
-          <FiSearch />
+            <FiSearch />
           </a>
         </div>
       </div>

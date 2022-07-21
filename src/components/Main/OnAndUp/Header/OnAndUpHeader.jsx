@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./css/header.css";
 import { BiUser } from "react-icons/bi";
 
@@ -10,25 +10,25 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
     navigate('/chemiverseOnUp/login');
   }
   const [item, setItem] = useState([]);
-  const itemData = "./db/mainItem.json";
+  const onAndUpMenuData = "/db/onAndUpMenuData.json";
   useEffect(() => {
     (async () => {
-      const response = await fetch(itemData);
+      const response = await fetch(onAndUpMenuData);
       const json = await response.json();
       setItem(json);
     })();
-  });
+  }, []);
   return (
     <div id="header">
-      <NavLink className="logo" to={`/chemiverseOnUp`}>
+      <Link className="logo" to="/chemiverseOnUp">
         logo
-      </NavLink>
+      </Link>
       <div className="main-item">
         <ul className="gnb">
           {item.map((item) => (
             <li>
               <NavLink
-                to={`/chemiverseOnUp/item/${item.address}`}
+                to={`/chemiverseOnUp/item/${item.onAndUpItemAddress}`}
                 key={item.id}
                 state={{
                   id: item.id,
@@ -47,10 +47,12 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
                     id: item.id,
                     menu: item.menu,
                     dep: item.dep,
-                    address: item.address,
+                    address: item.onAndUpItemAddress,
                   }}
                 >
-                  {item.dep.map((ele) => <li className="depth1Li">{ele}</li>)}
+                  {item.dep.map((ele) => (
+                    <li className="depth1Li">{ele}</li>
+                  ))}
                 </NavLink>
               </ul>
             </li>
@@ -60,7 +62,9 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
       <div className="side-item">
         <ul className="util">
           <li id="mypage">
-            <NavLink to={`/chemiverseOnUp/mypage`}><BiUser /></NavLink>
+            <NavLink to={`/chemiverseOnUp/mypage`}>
+              <BiUser />
+            </NavLink>
           </li>
           {
             LoginAuth ?
@@ -68,26 +72,22 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
               <span onClick={() => goToLogin()}>로그인</span>
           }
           <button id="tab-btn">
-            <NavLink to={`/chemiverseOnUp/tab`}
-              state={
-                {
-                  id: item.id,
-                  menu: item.menu,
-                  dep: item.dep,
-                  address: item.address,
-                }
-              }>
+            <NavLink
+              to={`/chemiverseOnUp/tab`}
+              state={{
+                id: item.id,
+                menu: item.menu,
+                dep: item.dep,
+                address: item.address,
+              }}
+            >
               탭버튼
             </NavLink>
           </button>
         </ul>
       </div>
-
-
     </div>
-
   );
 }
-
 
 export default OnAndUpHeader;
