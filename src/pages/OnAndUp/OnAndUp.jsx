@@ -4,6 +4,8 @@ import OnAndUpItemList from "../../components/Main/OnAndUp/Main/OnAndUpItemList"
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { connectWith } from "../../app/headerStateSlice";
+import { FiSearch } from "react-icons/fi";
+
 
 function OnAndUp() {
   const [data, setData] = useState([]);
@@ -33,6 +35,12 @@ function OnAndUp() {
           >
             <span className="connect-with-rectangle">Connect With</span>
           </Link>
+        </div>
+        <div className="search-box">
+          <input type="text" class="search-txt" name=""placeholder="Type to search" />
+          <a class="search-btn" href="#">
+          <FiSearch />
+          </a>
         </div>
       </div>
     </div>

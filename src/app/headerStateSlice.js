@@ -4,7 +4,7 @@ export const headerStateSlice = createSlice({
   name: "headerLayout",
   initialState: {
     value: "true",
-    gnbOpacity: "0",
+    opacity: "0",
   },
   reducers: {
     onAndUp: (state, action) => {
@@ -14,7 +14,7 @@ export const headerStateSlice = createSlice({
       state.value = action.payload;
     },
     headerGnbOpcity: (state, action) => {
-      state.gnbOpacity = action.payload;
+      state.opacity = action.payload;
     },
   },
 });

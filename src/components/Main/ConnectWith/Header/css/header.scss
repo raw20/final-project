@@ -48,6 +48,9 @@ $deepColor: #6f76c1;
         color: $deepColor;
       }
     }
+    .gnb.off {
+      opacity: 0;
+    }
   }
   .link {
     width: 100%;
@@ -64,4 +67,7 @@ $deepColor: #6f76c1;
       color: #ccc;
     }
   }
+}
+.connectwith-header.off {
+  background-color: transparent;
 }

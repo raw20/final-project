@@ -44,6 +44,9 @@
 .connectwith-header .main-item .gnb .item-menu.on {
   color: #6f76c1;
 }
+.connectwith-header .main-item .gnb.off {
+  opacity: 0;
+}
 .connectwith-header .link {
   width: 100%;
   height: auto;
@@ -58,4 +61,8 @@
 }
 .connectwith-header .link:hover {
   color: #ccc;
+}
+
+.connectwith-header.off {
+  background-color: transparent;
 }/*# sourceMappingURL=header.css.map */
