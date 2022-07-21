@@ -1,21 +1,28 @@
-import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
-import component from "./TabComponent";
+import React from "react";
+import { useState, useEffect } from "react";
+import { Outlet, useLocation, useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import "./css/itemForm.css";
-import { useEffect } from "react";
+import { headerGnbOpcity } from "../../../../app/headerStateSlice";
 function ConnectWthItemForm() {
   const { state } = useLocation(0);
+  const { address } = useParams();
   const [data, setData] = useState([]);
-  const mainData = "./db/connenctWithMenuData.json";
+  const connenctWithMenuData = "/db/connenctWithMenuData.json";
+  const opacity = useSelector((state) => state.headerLayout.opacity);
+  const dispatch = useDispatch();
 
-  const getDataJson = async () => {
-    const json = await (await fetch(mainData)).json();
-    console.log(json);
+  async function getMainData() {
+    const json = await (await fetch(connenctWithMenuData)).json();
     setData(json);
-  };
+  }
   useEffect(() => {
-    getDataJson();
+    getMainData();
+    dispatch(headerGnbOpcity("1"));
   }, []);
+  console.log("ci", opacity);
+
+  console.log("state가 주소에 / 붙여도 읽혀지나아아", data);
   return (
     <div className="item-form">
       <div className="item-inner">
@@ -29,7 +36,9 @@ function ConnectWthItemForm() {
           <div className="item-title">{state.title}</div>
           <div className="item-contents">{state.contents}</div>
         </div>
-        <div className="item-box">{component[state.id].content[0]}</div>
+        <div className="item-box">
+          <Outlet context={{ address }} />
+        </div>
       </div>
     </div>
   );

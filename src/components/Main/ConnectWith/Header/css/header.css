@@ -1,5 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
-.header {
+.connectwith-header {
   width: 100%;
   height: 70px;
   display: flex;
@@ -14,7 +14,7 @@
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   color: #6f76c1;
 }
-.header .logo {
+.connectwith-header .logo {
   width: 100%;
   height: 70px;
   background: url(/public/img/logo.png) no-repeat left;
@@ -22,17 +22,17 @@
   text-indent: -9999px;
   margin-left: 5%;
 }
-.header .main-item {
+.connectwith-header .main-item {
   width: 100%;
   margin-top: 10px;
 }
-.header .main-item .gnb {
+.connectwith-header .main-item .gnb {
   width: 100%;
   display: flex;
   font-size: 20px;
   justify-content: space-between;
 }
-.header .main-item .gnb .item-menu {
+.connectwith-header .main-item .gnb .item-menu {
   width: 150px;
   height: 70px;
   display: flex;
@@ -41,10 +41,13 @@
   align-items: center;
   text-decoration: none;
 }
-.header .main-item .gnb .item-menu.on {
+.connectwith-header .main-item .gnb .item-menu.on {
   color: #6f76c1;
 }
-.header .link {
+.connectwith-header .main-item .gnb.off {
+  opacity: 0;
+}
+.connectwith-header .link {
   width: 100%;
   height: auto;
   text-align: right;
@@ -56,6 +59,10 @@
   text-decoration: none;
   color: #e6e0ec;
 }
-.header .link:hover {
+.connectwith-header .link:hover {
   color: #ccc;
+}
+
+.connectwith-header.off {
+  background-color: transparent;
 }/*# sourceMappingURL=header.css.map */
