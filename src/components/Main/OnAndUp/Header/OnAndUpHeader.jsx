@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link, NavLink } from "react-router-dom";
-import "./css/header.css";
-import { BiUser } from "react-icons/bi";
+import React, { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
+import "./css/header.css"
+import { BiUser } from "react-icons/bi"
 
 function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const goToLogin = () => {
-    navigate('/chemiverseOnUp/login');
+    navigate("/chemiverseOnUp/login")
   }
-  const [item, setItem] = useState([]);
-  const onAndUpMenuData = "/db/onAndUpMenuData.json";
+  const [item, setItem] = useState([])
+  const onAndUpMenuData = "/db/onAndUpMenuData.json"
   useEffect(() => {
-    (async () => {
-      const response = await fetch(onAndUpMenuData);
-      const json = await response.json();
-      setItem(json);
-    })();
-  }, []);
+    ;(async () => {
+      const response = await fetch(onAndUpMenuData)
+      const json = await response.json()
+      setItem(json)
+    })()
+  }, [])
   return (
     <div id="header">
       <Link className="logo" to="/chemiverseOnUp">
@@ -66,28 +66,27 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
               <BiUser />
             </NavLink>
           </li>
-          {
-            LoginAuth ?
-              <span onClick={() => setLoginAuth(false)}>로그아웃</span> :
-              <span onClick={() => goToLogin()}>로그인</span>
-          }
-          <button id="tab-btn">
-            <NavLink
-              to={`/chemiverseOnUp/tab`}
-              state={{
-                id: item.id,
-                menu: item.menu,
-                dep: item.dep,
-                address: item.address,
-              }}
-            >
-              탭버튼
-            </NavLink>
-          </button>
+          {LoginAuth ? (
+            <span onClick={() => setLoginAuth(false)}>로그아웃</span>
+          ) : (
+            <span onClick={() => goToLogin()}>로그인</span>
+          )}
+          <NavLink
+            to={`/chemiverseOnUp/tab`}
+            id="tab-btn"
+            state={{
+              id: item.id,
+              menu: item.menu,
+              dep: item.dep,
+              address: item.address,
+            }}
+          >
+            탭버튼
+          </NavLink>
         </ul>
       </div>
     </div>
-  );
+  )
 }
 
-export default OnAndUpHeader;
+export default OnAndUpHeader

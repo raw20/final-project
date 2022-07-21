@@ -12,6 +12,7 @@ function TabBtnMenu() {
       setItem(json)
     })()
   }, [])
+
   return (
     <div className="btn-menu-wrap">
       {item.map((li) => (
@@ -40,7 +41,7 @@ function TabBtnMenu() {
           </div>
         </>
       ))}
-      <span className="bottom_img">열기구</span>
+      <span className="img-balloon">열기구</span>
     </div>
   )
 }
