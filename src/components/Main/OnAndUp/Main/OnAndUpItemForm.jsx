@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import component from "./TabComponent";
 import "./css/itemForm.css";
 
@@ -12,6 +12,8 @@ function OnAndUpItemForm() {
   }
   return (
     <div className="item-form">
+        <Outlet />
+      
       <div className="item-inner">
         <div className="item-location">
           {tabIndex === undefined

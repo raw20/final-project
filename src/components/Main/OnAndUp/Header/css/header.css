@@ -41,6 +41,8 @@
 }
 #header .main-item .gnb li:hover .depth1 {
   display: block;
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
 }
 #header .main-item .gnb li:hover span {
   color: #6f76c1;
@@ -82,13 +84,54 @@
   display: flex;
   align-items: center;
 }
-#header .tab-btn-menu {
-  width: 100%;
+
+.btn-menu-wrap {
+  -webkit-animation-name: change;
+          animation-name: change;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
   background-color: #6f76c1;
+  display: flex;
+  padding: 80px 70px 0;
+}
+.btn-menu-wrap .btn-menu {
+  text-align: center;
+  margin: 300px auto;
+  font-size: 30px;
+  line-height: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+.btn-menu-wrap .btn-menu .btn-menu-li {
+  width: 100px;
+  font-size: 28px;
+  line-height: 30px;
+}
+.btn-menu-wrap .btn-menu .btn-menu-li::after {
+  display: block;
+  content: "";
+  width: 140px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 20px;
+}
+.btn-menu-wrap .btn-menu .depth1 {
+  margin-top: 30px;
+  font-size: 16px;
+  text-decoration: none;
+}
+.btn-menu-wrap .btn-menu .depth1 .item-menu {
+  text-decoration: none;
+}
+.btn-menu-wrap .btn-menu .depth1 .depth1Li {
+  margin-top: 10px;
+  text-decoration: none;
 }
 
 .search-box {
@@ -139,4 +182,22 @@
   justify-content: center;
   align-items: center;
   color: #656565;
+}
+
+@-webkit-keyframes change {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes change {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=header.css.map */

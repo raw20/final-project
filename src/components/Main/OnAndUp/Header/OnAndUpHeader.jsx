@@ -12,7 +12,6 @@ function OnAndUpHeader() {
       setItem(json);
     })();
   }, []);
-  console.log("header-link", item);
   return (
     <div id="header">
       <Link className="logo" to="/chemiverseOnUp">

@@ -11,6 +11,7 @@ import CompanyIntro from "./components/Main/ConnectWith/MainItem/CompayIntro/Com
 import Preparations from "./components/Main/ConnectWith/MainItem/Preparations/Preparations";
 import NoticeBoard from "./components/Main/ConnectWith/MainItem/NoticeBoard/NoticeBoard";
 import Header from "./components/Header/Header";
+
 import M1 from "./components/Main/OnAndUp/MainItem/Mentoring/M1";
 import Bo2 from "./components/Main/OnAndUp/MainItem/Board/Bo2";
 import Chemi01 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi01";
@@ -43,9 +44,9 @@ function App() {
             <Route path="mentoring" element={<M1 />} />
             <Route path="board" element={<Bo1 />} />
           </Route>
-
           <Route path="/chemiverseOnUp/login" element={<Login />} />
           <Route path="/chemiverseOnUp/mypage" element={<Mypage />} />
+          <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
         </Routes>
       </BrowserRouter>
     </div>
