@@ -11,12 +11,20 @@ import CompanyIntro from "./components/Main/ConnectWith/MainItem/CompayIntro/Com
 import Preparations from "./components/Main/ConnectWith/MainItem/Preparations/Preparations";
 import NoticeBoard from "./components/Main/ConnectWith/MainItem/NoticeBoard/NoticeBoard";
 import Header from "./components/Header/Header";
+import { useState, useEffect } from 'react';
+import LoginSearch from './components/Main/OnAndUp/SideItem/Login/LoginSearch';
+import LoginRedirect from './components/route/LoginRedirect';
 
 function App() {
+  const [LoginAuth, setLoginAuth] = useState(false);
+  useEffect(() => {
+    console.log('로그인인증값', LoginAuth)
+  }, [LoginAuth])
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
+        <Header LoginAuth={LoginAuth} setLoginAuth={setLoginAuth} />
         <Routes>
           <Route path="/:address" element={<ConnectWthItemForm />}>
             <Route path="welcome" element={<Welcome />} />
@@ -35,8 +43,8 @@ function App() {
             <Route path="board" />
           </Route>
           <Route path="/chemiverseOnUp" element={<OnAndUp />} />
-
-          <Route path="/chemiverseOnUp/login" element={<Login />} />
+          <Route path="/chemiverseOnUp/login" element={<Login setLoginAuth={setLoginAuth} />} />
+          <Route path="/chemiverseOnUp/login-search" element={<LoginSearch />} />
           <Route path="/chemiverseOnUp/mypage" element={<Mypage />} />
         </Routes>
       </BrowserRouter>
