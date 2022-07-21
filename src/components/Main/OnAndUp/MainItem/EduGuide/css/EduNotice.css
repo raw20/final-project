@@ -1,0 +1,45 @@
+.edu_notice_area {
+  width: 100%;
+  margin: auto;
+}
+.edu_notice_area .edu_table {
+  border-collapse: collapse;
+}
+.edu_notice_area .edu_table tr {
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+.edu_notice_area .edu_table .th_01 {
+  width: 60px;
+}
+.edu_notice_area .edu_table .th_02 {
+  width: 60px;
+}
+.edu_notice_area .edu_table td {
+  text-align: center;
+  font-size: 12px;
+  border-bottom: 0.5px solid #CCC;
+  color: #888;
+}
+.edu_notice_area .edu_pagination {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 300px;
+  padding-top: 25px;
+  margin: auto;
+}
+.edu_notice_area .edu_pagination .page_link {
+  color: #ccc;
+  font-size: 18px;
+  font-weight: 800;
+}
+.edu_notice_area .edu_pagination .page_link:hover {
+  cursor: pointer;
+  color: #6f76c1;
+}
+.edu_notice_area .edu_pagination .page_link.active {
+  color: #6f76c1;
+}/*# sourceMappingURL=EduNotice.css.map */
