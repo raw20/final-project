@@ -9,8 +9,15 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
   const goToLogin = () => {
     navigate("/chemiverseOnUp/login")
   }
-  const [item, setItem] = useState([])
-  const onAndUpMenuData = "/db/onAndUpMenuData.json"
+
+  function goToLogout() {
+    setLoginAuth(false)
+    navigate('/');
+
+  }
+  const [item, setItem] = useState([]);
+  const onAndUpMenuData = "/db/onAndUpMenuData.json";
+  
   useEffect(() => {
     ;(async () => {
       const response = await fetch(onAndUpMenuData)
@@ -66,23 +73,25 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
               <BiUser />
             </NavLink>
           </li>
-          {LoginAuth ? (
-            <span onClick={() => setLoginAuth(false)}>로그아웃</span>
-          ) : (
-            <span onClick={() => goToLogin()}>로그인</span>
-          )}
-          <NavLink
-            to={`/chemiverseOnUp/tab`}
-            id="tab-btn"
-            state={{
-              id: item.id,
-              menu: item.menu,
-              dep: item.dep,
-              address: item.address,
-            }}
-          >
-            탭버튼
-          </NavLink>
+
+          {
+            LoginAuth ?
+              <span onClick={() => goToLogout()}>로그아웃</span> :
+              <span onClick={() => goToLogin()}>로그인</span>
+          }
+          <button id="tab-btn">
+            <NavLink
+              to={`/chemiverseOnUp/tab`}
+              state={{
+                id: item.id,
+                menu: item.menu,
+                dep: item.dep,
+                address: item.address,
+              }}
+            >
+              탭버튼
+            </NavLink>
+          </button>
         </ul>
       </div>
     </div>

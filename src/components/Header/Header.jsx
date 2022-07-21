@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { connectWith, onAndUp } from "../../app/headerStateSlice";
 
-function Header() {
+function Header({ LoginAuth, setLoginAuth }) {
   const headerType = useSelector((state) => state.headerLayout.value);
   const dispatch = useDispatch();
   const location = useLocation();
@@ -18,7 +18,7 @@ function Header() {
     dispatch(onAndUp("false"));
   }
   return (
-    <>{headerType === "true" ? <ConnectWithHeader /> : <OnAndUpHeader />}</>
+    <>{headerType === "true" ? <ConnectWithHeader LoginAuth={LoginAuth} setLoginAuth={setLoginAuth} /> : <OnAndUpHeader LoginAuth={LoginAuth} setLoginAuth={setLoginAuth} />}</>
   );
 }
 
