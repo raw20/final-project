@@ -1,25 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./css/header.css";
 import { Link, NavLink } from "react-router-dom";
 import { IoCaretForwardOutline } from "react-icons/io5";
-import { useState } from "react";
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { onAndUp } from "../../../../app/headerStateSlice";
 function ConnectWithHeader() {
   const [item, setItem] = useState([]);
-  const itemData = "./db/connenctWithMenuData.json";
+  const connenctWithMenuData = "/db/connenctWithMenuData.json";
   const dispatch = useDispatch();
 
   useEffect(() => {
     (async () => {
-      const response = await fetch(itemData);
+      const response = await fetch(connenctWithMenuData);
       const json = await response.json();
       setItem(json);
     })();
   }, []);
   return (
-    <div className="header">
+    <div className="connectwith-header">
       <Link to="/" className="logo">
         logo
       </Link>
@@ -28,7 +26,7 @@ function ConnectWithHeader() {
           {item.map((item, index) => (
             <li>
               <NavLink
-                to={`/${item.address}`}
+                to={`/item/${item.address}/${item.id}`}
                 key={item.id}
                 className={({ isActive }) =>
                   isActive ? "item-menu on" : "item-menu"
@@ -39,7 +37,6 @@ function ConnectWithHeader() {
                   img: item.main_img,
                   address: item.address,
                   contents: item.contents,
-                  index: index,
                 }}
               >
                 {item.title}

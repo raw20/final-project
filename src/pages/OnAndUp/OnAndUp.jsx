@@ -8,15 +8,15 @@ import { connectWith } from "../../app/headerStateSlice";
 function OnAndUp() {
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
-  const dataURL = "./db/onAndUpMenuData.json";
-  useEffect(() => {
-    (async () => {
-      const response = await fetch(dataURL);
-      const json = await response.json();
-      setData(json);
-    })();
-  });
+  const onAndUpMenuData = "/db/onAndUpMenuData.json";
 
+  async function getMainData() {
+    const json = await (await fetch(onAndUpMenuData)).json();
+    setData(json);
+  }
+  useEffect(() => {
+    getMainData();
+  }, []);
   return (
     <div className="wrap">
       <div className="main">

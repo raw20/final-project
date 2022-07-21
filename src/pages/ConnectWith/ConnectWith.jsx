@@ -5,14 +5,16 @@ import "./css/connectwith.css";
 
 function ConnectWith() {
   const [data, setData] = useState([]);
-  const mainData = "./db/connenctWithMenuData.json";
+  const connenctWithMenuData = "/db/connenctWithMenuData.json";
+
   async function getMainData() {
-    const json = await (await fetch(mainData)).json();
+    const json = await (await fetch(connenctWithMenuData)).json();
     setData(json);
   }
   useEffect(() => {
     getMainData();
   }, []);
+
   return (
     <>
       <div className="main">

@@ -1,40 +1,40 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./css/header.css";
-
 import { MdSearch } from "react-icons/md";
 function OnAndUpHeader() {
   const [item, setItem] = useState([]);
-  const itemData = "./db/onAndUpMenuData.json";
+  const onAndUpMenuData = "/db/onAndUpMenuData.json";
 
   useEffect(() => {
     (async () => {
-      const response = await fetch(itemData);
+      const response = await fetch(onAndUpMenuData);
       const json = await response.json();
       setItem(json);
     })();
-  });
+  }, []);
+  console.log("header-link", item);
   return (
     <div id="header">
-      <Link className="logo" to={`/chemiverseOnUp`}>
+      <Link className="logo" to="/chemiverseOnUp">
         logo
       </Link>
       <div className="main-item">
         <ul className="gnb">
           {item.map((item) => (
             <li>
-              <Link
-                to={`/chemiverseOnUp/${item.address}`}
+              <NavLink
+                to={`/chemiverseOnUp/${item.onAndUpItemAddress}`}
                 key={item.id}
                 state={{
                   id: item.id,
                   menu: item.menu,
                   dep: item.dep,
-                  address: item.address,
+                  address: item.onAndUpItemAddress,
                 }}
               >
                 {item.menu}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
