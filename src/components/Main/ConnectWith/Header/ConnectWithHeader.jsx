@@ -15,15 +15,24 @@ function ConnectWithHeader() {
       const response = await fetch(connenctWithMenuData);
       const json = await response.json();
       setItem(json);
+      console.log("head-opacity", opacity);
     })();
   }, []);
   return (
-    <div className={opacity ? "connectwith-header off" : "connectwith-header"}>
-      <Link to="/" className="logo">
+    <div
+      className={
+        opacity === 1 ? "connectwith-header off" : "connectwith-header"
+      }
+    >
+      <Link
+        to="/"
+        className="logo"
+        onClick={() => dispatch(headerGnbOpcity("0"))}
+      >
         logo
       </Link>
       <div className="main-item">
-        <ul className={opacity ? "gnb off" : "gnb"}>
+        <ul className={opacity === "0" ? "gnb off" : "gnb"}>
           {item.map((item, index) => (
             <li>
               <NavLink

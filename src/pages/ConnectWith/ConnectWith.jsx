@@ -16,14 +16,14 @@ function ConnectWith() {
   useEffect(() => {
     getMainData();
     dispatch(headerGnbOpcity("0"));
+    console.log("cwa", opacity);
   }, []);
-  console.log("cw", opacity);
   return (
     <>
       <div className="main">
         <ul className="connect">
           {data.map((cnData) => (
-            <ConnectItem key={cnData.id} data={cnData} />
+            <ConnectItem key={cnData.id} data={cnData} opacity={opacity} />
           ))}
         </ul>
       </div>

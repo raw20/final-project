@@ -49,7 +49,7 @@ $deepColor: #6f76c1;
       }
     }
     .gnb.off {
-      opacity: 0;
+      visibility: hidden;
     }
   }
   .link {
@@ -69,5 +69,5 @@ $deepColor: #6f76c1;
   }
 }
 .connectwith-header.off {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
 }
