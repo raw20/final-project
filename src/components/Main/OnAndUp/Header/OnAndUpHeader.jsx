@@ -9,6 +9,11 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
   const goToLogin = () => {
     navigate('/chemiverseOnUp/login');
   }
+  function goToLogout() {
+    setLoginAuth(false)
+    navigate('/');
+
+  }
   const [item, setItem] = useState([]);
   const onAndUpMenuData = "/db/onAndUpMenuData.json";
   useEffect(() => {
@@ -68,7 +73,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
           </li>
           {
             LoginAuth ?
-              <span onClick={() => setLoginAuth(false)}>로그아웃</span> :
+              <span onClick={() => goToLogout()}>로그아웃</span> :
               <span onClick={() => goToLogin()}>로그인</span>
           }
           <button id="tab-btn">
