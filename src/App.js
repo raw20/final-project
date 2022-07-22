@@ -18,6 +18,7 @@ import TabBtnMenu from "./components/Main/OnAndUp/Header/TabBtnMenu";
 import Notice from "./components/Main/ConnectWith/MainItem/NoticeBoard/Notice";
 import AboutMe from "./components/Main/ConnectWith/MainItem/NoticeBoard/AboutMe";
 import QandA from "./components/Main/ConnectWith/MainItem/NoticeBoard/QandA";
+
 function App() {
   const [LoginAuth, setLoginAuth] = useState(false);
   useEffect(() => {
@@ -44,8 +45,8 @@ function App() {
           <Route path="/chemiverseOnUp/:address" element={<OnAndUpItemForm />}>
             <Route path="eduroom" />
             <Route path="eduguide" />
-            <Route path="diagnosis" />
-            <Route path="study" />
+            <Route path="diagnosis/*" />
+            <Route path="study/*" />
             <Route path="chemistory" />
             <Route path="mentoring" />
             <Route path="board" />

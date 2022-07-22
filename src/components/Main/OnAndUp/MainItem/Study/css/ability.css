@@ -1,0 +1,75 @@
+.item-inner {
+  box-shadow: none !important;
+}
+
+.abilityBtns {
+  width: 100%;
+  text-align: center;
+}
+.abilityBtns .active button {
+  box-shadow: 1px 1px 5px 3px #ddd !important;
+  background-color: #4c539a;
+  color: #fff;
+}
+
+.abilityBtns button {
+  margin-right: 30px;
+  box-shadow: 1px 1px 5px 3px #ddd;
+  background-color: #fff;
+  color: gray;
+}
+
+.module_box {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.module_box a {
+  width: 22%;
+}
+
+.module_card {
+  width: 100%;
+  height: 270px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 3px #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.module_cardImg {
+  width: 100%;
+  height: 200px;
+}
+.module_cardImg .cardImg_background {
+  width: 100%;
+  height: 120px;
+  position: relative;
+}
+.module_cardImg .cardImg_background .module_Img_bg {
+  width: 150px;
+  float: right;
+  z-index: 11;
+}
+.module_cardImg .cardImg_background .module_Img {
+  width: 75%;
+  height: 120px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  z-index: 12;
+}
+
+.module_cardTitle {
+  width: 80%;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  text-align: center;
+  background-color: rgba(194, 210, 245, 0.5);
+  margin-bottom: 10px;
+  font-size: 13px;
+}/*# sourceMappingURL=ability.css.map */
