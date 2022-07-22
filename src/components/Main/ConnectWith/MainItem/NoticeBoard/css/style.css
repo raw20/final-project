@@ -28,25 +28,26 @@
 .notice_table_area .notice_table td:nth-child(3):hover {
   color: #6f76c1;
 }
-.notice_table_area .notice_pagination {
+
+.notice_pagination {
   display: flex;
   justify-content: space-between;
   text-align: center;
   width: 300px;
   margin: auto;
 }
-.notice_table_area .notice_pagination .page_item {
+.notice_pagination .page_item {
   margin-top: 25px;
 }
-.notice_table_area .notice_pagination .page_item .page_link {
+.notice_pagination .page_item .page_link {
   color: #ccc;
   font-size: 18px;
   font-weight: 800;
 }
-.notice_table_area .notice_pagination .page_item .page_link:hover {
+.notice_pagination .page_item .page_link:hover {
   cursor: pointer;
   color: #6f76c1;
 }
-.notice_table_area .notice_pagination .page_item .page_link:focus {
+.notice_pagination .page_item .page_link:focus {
   color: #6f76c1;
 }/*# sourceMappingURL=style.css.map */

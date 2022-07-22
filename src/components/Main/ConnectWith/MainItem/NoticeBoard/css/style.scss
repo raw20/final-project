@@ -33,25 +33,25 @@ $lightColor: #e6e0ec;
       }
     }
   }
-  .notice_pagination {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    width: 300px;
-    margin: auto;
-    .page_item {
-      margin-top: 25px;
-      .page_link {
-        color: #ccc;
-        font-size: 18px;
-        font-weight: 800;
-        &:hover {
-          cursor: pointer;
-          color: $deepColor;
-        }
-        &:focus {
-          color: $deepColor;
-        }
+}
+.notice_pagination {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  .page_item {
+    margin-top: 25px;
+    .page_link {
+      color: #ccc;
+      font-size: 18px;
+      font-weight: 800;
+      &:hover {
+        cursor: pointer;
+        color: $deepColor;
+      }
+      &:focus {
+        color: $deepColor;
       }
     }
   }

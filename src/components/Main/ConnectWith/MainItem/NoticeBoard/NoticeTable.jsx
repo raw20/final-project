@@ -62,28 +62,31 @@ function NoticeTable({ posts, writer, setWriter, setPosts }) {
 
   return (
     <>
-      <form onSubmit={(e) => onSearch(e)}>
-        <p className="contents-type" onClick={handlerShowType}>
-          {type}
-        </p>
-        <ul className={display ? "type-tab" : "type-tab on"}>
-          {selectTypeArray.map((li, index) => (
-            <li key={index} onClick={handlerSelectType}>
-              {li.name}
-            </li>
-          ))}
-        </ul>
-        <input
-          type="text"
-          value={searchValue}
-          placeholder="검색어를 입력해주세요"
-          onChange={(e) => {
-            e.preventDefault();
-            setSearchValue(e.target.value);
-          }}
-        />
-        <button type="submit">검색</button>
-      </form>
+      <div className="table-search">
+        <form onSubmit={(e) => onSearch(e)}>
+          <p className="contents-type" onClick={handlerShowType}>
+            {type}
+          </p>
+          <ul className={display ? "type-tab" : "type-tab on"}>
+            {selectTypeArray.map((li, index) => (
+              <li key={index} onClick={handlerSelectType}>
+                {li.name}
+              </li>
+            ))}
+          </ul>
+          <input
+            type="text"
+            value={searchValue}
+            placeholder="검색어를 입력해주세요"
+            onChange={(e) => {
+              e.preventDefault();
+              setSearchValue(e.target.value);
+            }}
+          />
+          <button type="submit">검색</button>
+        </form>
+      </div>
+
       <NoticeTableList
         posts={currentPosts(posts)}
         totalPosts={posts.length}
