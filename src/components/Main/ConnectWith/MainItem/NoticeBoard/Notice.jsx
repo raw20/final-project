@@ -23,7 +23,12 @@ function Notice() {
     <>
       {!writer ? (
         <div className="edu_notice_area">
-          <NoticeTable posts={posts} writer={writer} setWriter={setWriter} />
+          <NoticeTable
+            posts={posts}
+            setPosts={setPosts}
+            writer={writer}
+            setWriter={setWriter}
+          />
         </div>
       ) : (
         <div className="edu_notice_area">

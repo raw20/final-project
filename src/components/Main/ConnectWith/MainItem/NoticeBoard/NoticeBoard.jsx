@@ -8,9 +8,9 @@ function NoticeBoard() {
   function currentIndex(index) {
     setTabIndex(index);
   }
-  console.log("tabIndex:", tabIndex);
+
   return (
-    <div className="wrap">
+    <div className="tab-btn-wrap">
       <ul className="tab-btn-area">
         {titleArray.map((title, index) => (
           <li

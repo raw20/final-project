@@ -1,34 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./css/header.css";
 import { Link, NavLink } from "react-router-dom";
 import { IoCaretForwardOutline } from "react-icons/io5";
-import { useState } from "react";
-import { useEffect } from "react";
-function ConnectWithHeader() {
+import { useDispatch, useSelector } from "react-redux";
+import { headerGnbOpcity, onAndUp } from "../../../../app/headerStateSlice";
+function ConnectWithHeader({ LoginAuth }) {
   const [item, setItem] = useState([]);
-  const itemData = "./db/connenctWithMenuData.json";
+  const connenctWithMenuData = "/db/connenctWithMenuData.json";
+  const dispatch = useDispatch();
+  const opacity = useSelector((state) => state.headerLayout.opacity);
+
   useEffect(() => {
     (async () => {
-      const response = await fetch(itemData);
+      const response = await fetch(connenctWithMenuData);
       const json = await response.json();
       setItem(json);
+      console.log("login auth : ", LoginAuth);
     })();
-  });
+  }, []);
   return (
-    <div className="header">
-      <Link to="/" className="logo">
+    <div
+      className={
+        opacity === 1 ? "connectwith-header off" : "connectwith-header"
+      }
+    >
+      <Link
+        to="/"
+        className="logo"
+        onClick={() => dispatch(headerGnbOpcity("0"))}
+      >
         logo
       </Link>
       <div className="main-item">
-        <ul className="gnb">
-          {item.map((item) => (
+        <ul className={opacity === "0" ? "gnb off" : "gnb"}>
+          {item.map((item, index) => (
             <li>
               <NavLink
-                to={`/item/${item.address}`}
+                to={`/item/${item.address}/${item.id}`}
                 key={item.id}
-                className={({ isActive }) =>
-                  isActive ? "item-menu on" : "item-menu"
-                }
+                className={({ isActive }) => (isActive ? "item-menu on" : "item-menu")}
                 state={{
                   id: item.id,
                   title: item.title,
@@ -43,7 +53,13 @@ function ConnectWithHeader() {
           ))}
         </ul>
       </div>
-      <Link to="/chemiverseOnUp" className="link">
+      <Link
+        to={LoginAuth === true ? "/chemiverseOnUp" : "/chemiverseOnUp/login"}
+        className="link"
+        onClick={() => {
+          dispatch(onAndUp("false"));
+        }}
+      >
         Chemiverse On & Up <IoCaretForwardOutline />
       </Link>
     </div>
