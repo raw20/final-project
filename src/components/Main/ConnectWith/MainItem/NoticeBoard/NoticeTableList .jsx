@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import NoticeDetail from "./NoticeDetail";
 
-const EduNoticeList = ({ posts, totalPosts, content, setContent }) => {
+const NoticeTableList = ({ posts, totalPosts, content, setContent }) => {
   const [index, setIndex] = useState();
   function onClick(index) {
     setContent(false);
@@ -11,11 +11,11 @@ const EduNoticeList = ({ posts, totalPosts, content, setContent }) => {
   return (
     <>
       {content ? (
-        <div className="table_area">
+        <div className="notice_table_area">
           <span>
             총<span className="total"> {totalPosts}</span>건
           </span>
-          <table className="edu_table">
+          <table className="notice_table">
             <thead>
               <tr>
                 <th>NO</th>
@@ -45,4 +45,4 @@ const EduNoticeList = ({ posts, totalPosts, content, setContent }) => {
   );
 };
 
-export default EduNoticeList;
+export default NoticeTableList;

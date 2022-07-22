@@ -15,6 +15,10 @@ import { useState, useEffect } from "react";
 import LoginSearch from "./components/Main/OnAndUp/SideItem/Login/LoginSearch";
 import LoginRedirect from "./components/route/LoginRedirect";
 import TabBtnMenu from "./components/Main/OnAndUp/Header/TabBtnMenu";
+import Notice from "./components/Main/ConnectWith/MainItem/NoticeBoard/Notice";
+import AboutMe from "./components/Main/ConnectWith/MainItem/NoticeBoard/AboutMe";
+import QandA from "./components/Main/ConnectWith/MainItem/NoticeBoard/QandA";
+
 function App() {
   const [LoginAuth, setLoginAuth] = useState(false);
   useEffect(() => {
@@ -33,6 +37,10 @@ function App() {
             <Route path="2" element={<Preparations />} />
             <Route path="3" element={<NoticeBoard />} />
           </Route>
+          <Route path="/board/3/notice" element={<Notice />} />
+          <Route path="/board/3/aboutme" element={<AboutMe />} />
+          <Route path="/board/3/qna" element={<QandA />} />
+
           <Route path="/" element={<ConnectWith />} />
           <Route path="/chemiverseOnUp/:address" element={<OnAndUpItemForm />}>
             <Route path="eduroom" />

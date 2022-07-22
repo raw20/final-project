@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import EduNoticePage from "./EduNoticePage";
-import EduNoticeList from "./EduNoticeList ";
+import NoticeTablePagenation from "./NoticeTablePagenation";
+import NoticeTableList from "./NoticeTableList ";
 import NoticeWriteBtn from "./NoticeWriteBtn";
 
 function NoticeTable({ posts, writer, setWriter, setPosts }) {
@@ -84,19 +84,19 @@ function NoticeTable({ posts, writer, setWriter, setPosts }) {
         />
         <button type="submit">검색</button>
       </form>
-      <EduNoticeList
+      <NoticeTableList
         posts={currentPosts(posts)}
         totalPosts={posts.length}
         content={content}
         setContent={setContent}
-      ></EduNoticeList>
+      ></NoticeTableList>
       {content ? (
         <>
-          <EduNoticePage
+          <NoticeTablePagenation
             postsPerPage={postsPerPage}
             totalPosts={posts.length}
             paginate={setCurrentPage}
-          ></EduNoticePage>
+          ></NoticeTablePagenation>
           <NoticeWriteBtn writer={writer} setWriter={setWriter} />
         </>
       ) : null}

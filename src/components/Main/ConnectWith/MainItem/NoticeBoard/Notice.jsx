@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import "./css/style.css";
-
 import NoticeWrite from "./NoticeWrite";
 import NoticeSubmiBtn from "./NoticeSubmiBtn";
 import NoticeTable from "./NoticeTable";
@@ -22,7 +21,7 @@ function Notice() {
   return (
     <>
       {!writer ? (
-        <div className="edu_notice_area">
+        <div className="notice_area">
           <NoticeTable
             posts={posts}
             setPosts={setPosts}
@@ -31,7 +30,7 @@ function Notice() {
           />
         </div>
       ) : (
-        <div className="edu_notice_area">
+        <div className="notice_area">
           <NoticeWrite />
           <NoticeSubmiBtn writer={writer} setWriter={setWriter} />
         </div>
