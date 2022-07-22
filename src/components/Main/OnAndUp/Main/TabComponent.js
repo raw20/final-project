@@ -7,6 +7,7 @@ import M3 from "../MainItem/Mentoring/M3";
 import M4 from "../MainItem/Mentoring/M4";
 import EduRoom from './../MainItem/EduRoom/EduRoom';
 import EduNotice from './../MainItem/EduGuide/EduNotice';
+import DemoApp from './../MainItem/EduGuide/DemoApp';
 import EduCalendar from './../MainItem/EduGuide/EduCalendar';
 
 /*
