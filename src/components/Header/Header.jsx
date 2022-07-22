@@ -8,6 +8,7 @@ import { connectWith, onAndUp } from "../../app/headerStateSlice";
 
 function Header() {
   const headerType = useSelector((state) => state.headerLayout.value);
+  const opacity = useSelector((state) => state.headerLayout.opacity);
   const dispatch = useDispatch();
   const location = useLocation();
   const pathName = location.pathname;
@@ -18,7 +19,13 @@ function Header() {
     dispatch(onAndUp("false"));
   }
   return (
-    <>{headerType === "true" ? <ConnectWithHeader /> : <OnAndUpHeader />}</>
+    <>
+      {headerType === "true" ? (
+        <ConnectWithHeader opacity={opacity} />
+      ) : (
+        <OnAndUpHeader opacity={opacity} />
+      )}
+    </>
   );
 }
 

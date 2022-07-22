@@ -4,11 +4,11 @@ import { Link, NavLink } from "react-router-dom";
 import "./css/header.css";
 import { BiUser } from "react-icons/bi";
 
-function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
+function OnAndUpHeader({ LoginAuth, setLoginAuth, opacity }) {
   const navigate = useNavigate();
   const goToLogin = () => {
-    navigate('/chemiverseOnUp/login');
-  }
+    navigate("/chemiverseOnUp/login");
+  };
   const [item, setItem] = useState([]);
   const onAndUpMenuData = "/db/onAndUpMenuData.json";
   useEffect(() => {
@@ -19,7 +19,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
     })();
   }, []);
   return (
-    <div id="header">
+    <div className={opacity === "0" ? "onAndUp-header off" : "onAndUp-header"}>
       <Link className="logo" to="/chemiverseOnUp">
         logo
       </Link>
@@ -66,11 +66,11 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
               <BiUser />
             </NavLink>
           </li>
-          {
-            LoginAuth ?
-              <span onClick={() => setLoginAuth(false)}>로그아웃</span> :
-              <span onClick={() => goToLogin()}>로그인</span>
-          }
+          {LoginAuth ? (
+            <span onClick={() => setLoginAuth(false)}>로그아웃</span>
+          ) : (
+            <span onClick={() => goToLogin()}>로그인</span>
+          )}
           <button id="tab-btn">
             <NavLink
               to={`/chemiverseOnUp/tab`}
