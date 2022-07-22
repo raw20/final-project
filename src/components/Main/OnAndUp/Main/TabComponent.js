@@ -5,6 +5,12 @@ import M1 from "../MainItem/Mentoring/M1";
 import M2 from "../MainItem/Mentoring/M2";
 import M3 from "../MainItem/Mentoring/M3";
 import M4 from "../MainItem/Mentoring/M4";
+import Now from '../MainItem/Diagnosis/Now';
+import Result from '../MainItem/Diagnosis/Result';
+import AboutCompany from '../MainItem/Study/AboutCompany';
+import PeopleSkill from '../MainItem/Study/PeopleSkill';
+import SelfCare from '../MainItem/Study/SelfCare';
+import WorkSkill from '../MainItem/Study/WorkSkill';
 import EduRoom from './../MainItem/EduRoom/EduRoom';
 import EduNotice from './../MainItem/EduGuide/EduNotice';
 import EduCalendar from './../MainItem/EduGuide/EduCalendar';
@@ -29,11 +35,11 @@ const component = [
   },
   {
     index: 2,
-    content: [<Bo2 />, <M2 />],
+    content: [<Now />, <Result />],
   },
   {
     index: 3,
-    content: [<M1 />, <M2 />, <M3 />, <M4 />],
+    content: [<AboutCompany />,  <WorkSkill />, <PeopleSkill />, <SelfCare />],
   },
   {
     index: 4,

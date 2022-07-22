@@ -1,36 +1,98 @@
-.wrap {
+.preparations-wrap {
   width: 100%;
   height: 100%;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
-.wrap .checklist-box {
+.preparations-wrap .preparations-checklist-box {
   width: 80%;
-  height: 75vw;
+  height: 60vw;
   margin: 0px auto;
   border-radius: 30px;
   background: url("/public/img/bg-checklist.png") no-repeat center/100%;
   box-sizing: border-box;
 }
-.wrap .checklist-box .title {
+.preparations-wrap .preparations-checklist-box .preparations-checklist-title {
   padding: 50px 0;
   font-size: 30px;
   font-weight: 600;
   color: #fff;
   text-align: center;
 }
-.wrap .checklist-box .contents {
+.preparations-wrap .preparations-checklist-box .preparations-checklist-contents {
   width: 90%;
-  height: 65vw;
+  height: 50vw;
   margin: 0px auto;
+  padding: 2rem 3rem;
   background-color: #fff;
   border-radius: 30px;
   box-sizing: border-box;
   position: relative;
 }
-.wrap .checklist-box .contents .img {
+.preparations-wrap .preparations-checklist-box .preparations-checklist-contents .preparations-checklist-img {
   width: 150px;
   height: 150px;
   background: url(/public/img/img-person01.png) no-repeat center/cover;
   position: absolute;
   top: -80px;
   right: 25px;
+}
+.preparations-wrap .preparations-checklist-box .preparations-checklist-contents .checklist-title {
+  width: 60%;
+  font-size: 1.5rem;
+  color: #6f76c1;
+  margin-top: 2rem;
+}
+.preparations-wrap .preparations-checklist-box .preparations-checklist-contents .checklist-name {
+  width: 100%;
+}
+.preparations-wrap .preparations-checklist-box .preparations-checklist-contents .checklist-name .checklist-item {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 1rem;
+  box-shadow: 3px 2px 62px 0px rgba(34, 51, 89, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+.preparations-wrap .preparations-checklist-box .preparations-checklist-contents .checklist-name .checklist-item .checklist-item-name {
+  width: 62%;
+  height: 25px;
+  display: flex;
+  margin: 1rem 2rem;
+  justify-content: start;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #888;
+}
+.preparations-wrap .preparations-checklist-box .preparations-checklist-contents .checklist-name .checklist-item .checklist-item-check {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  margin: 1rem;
+  justify-content: start;
+  align-items: center;
+}
+.preparations-wrap .preparations-checklist-box .preparations-checklist-contents .checklist-document {
+  width: 100%;
+  display: flex;
+}
+.preparations-wrap .preparations-checklist-box .preparations-checklist-contents .checklist-document .scan {
+  width: 100%;
+  font-size: 1.1rem;
+  color: #888;
+  margin-top: 2rem;
+}
+.preparations-wrap .preparations-checklist-box .preparations-checklist-contents .checklist-submit-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #9497d1;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
 }/*# sourceMappingURL=preparations.css.map */

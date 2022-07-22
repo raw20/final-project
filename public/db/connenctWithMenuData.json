@@ -10,7 +10,7 @@
   {
     "id": 1,
     "title": "회사소개",
-    "address": "companyInfo",
+    "address": "aboutCompany",
     "contents": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 @인재육성의 엑설런스 추구를 위한 @여러 영역별 사업활동을 전개해 오고 있습니다.",
     "img": "company.png",
     "main_img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8be7244c-1707-40d6-b9ad-598f7bcd1168%2F%E1%84%86%E1%85%A6%E1%86%AB%E1%84%90%E1%85%A9%E1%84%85%E1%85%B5%E1%86%BC.png?table=block&id=86aec234-3a5d-44e9-93f1-29ade8fe0d35&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"

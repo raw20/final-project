@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { connectWith } from "../../../../app/headerStateSlice";
 
-function ConnectItem({ data, opacity }) {
+function ConnectItem({ data }) {
   const json = JSON.stringify(data.contents, null, "\n");
   const dispatch = useDispatch();
-  console.log("cw", opacity);
 
   return (
     <>
