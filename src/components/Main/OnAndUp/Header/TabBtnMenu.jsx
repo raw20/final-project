@@ -1,17 +1,18 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
+import React from "react"
+import { NavLink } from "react-router-dom"
+import { useState, useEffect } from "react"
 
 function TabBtnMenu() {
-  const [item, setItem] = useState([]);
-  const itemData = "/db/onAndUpMenuData.json";
+  const [item, setItem] = useState([])
+  const itemData = "/db/onAndUpMenuData.json"
   useEffect(() => {
-    (async () => {
-      const response = await fetch(itemData);
-      const json = await response.json();
-      setItem(json);
-    })();
-  }, []);
+    ;(async () => {
+      const response = await fetch(itemData)
+      const json = await response.json()
+      setItem(json)
+    })()
+  }, [])
+
   return (
     <div className="btn-menu-wrap">
       {item.map((li) => (
@@ -22,7 +23,9 @@ function TabBtnMenu() {
               <NavLink
                 to={`/chemiverseOnUp/item/${li.address}`}
                 key={li.id}
-                className={({ isActive }) => (isActive ? "item-menu on" : "item-menu")}
+                className={({ isActive }) =>
+                  isActive ? "depth1-menu on" : "depth1-menu"
+                }
                 state={{
                   id: li.id,
                   menu: li.menu,
@@ -38,9 +41,9 @@ function TabBtnMenu() {
           </div>
         </>
       ))}
-      <img style={{ width: "100px", height: "100px" }} src="/public/img/logo.png" alt="" />
+      <span className="img-balloon">열기구</span>
     </div>
-  );
+  )
 }
 
-export default TabBtnMenu;
+export default TabBtnMenu

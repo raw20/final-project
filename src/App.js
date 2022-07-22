@@ -14,7 +14,7 @@ import Header from "./components/Header/Header";
 import { useState, useEffect } from "react";
 import LoginSearch from "./components/Main/OnAndUp/SideItem/Login/LoginSearch";
 import LoginRedirect from "./components/route/LoginRedirect";
-
+import TabBtnMenu from "./components/Main/OnAndUp/Header/TabBtnMenu";
 function App() {
   const [LoginAuth, setLoginAuth] = useState(false);
   useEffect(() => {
@@ -53,6 +53,7 @@ function App() {
             element={<LoginSearch />}
           />
           <Route path="/chemiverseOnUp/mypage" element={<Mypage />} />
+          <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
         </Routes>
       </BrowserRouter>
     </div>

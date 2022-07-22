@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { IoCaretForwardOutline } from "react-icons/io5";
 import { useDispatch } from "react-redux";
 import { headerGnbOpcity, onAndUp } from "../../../../app/headerStateSlice";
-function ConnectWithHeader({ opacity }) {
+function ConnectWithHeader({ opacity, LoginAuth }) {
   const [item, setItem] = useState([]);
   const connenctWithMenuData = "/db/connenctWithMenuData.json";
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ function ConnectWithHeader({ opacity }) {
       const response = await fetch(connenctWithMenuData);
       const json = await response.json();
       setItem(json);
-      console.log("head-opacity", opacity);
+      console.log("login auth : ", LoginAuth);
     })();
   }, []);
   return (
@@ -55,7 +55,7 @@ function ConnectWithHeader({ opacity }) {
         </ul>
       </div>
       <Link
-        to="/chemiverseOnUp"
+        to={LoginAuth === true ? "/chemiverseOnUp" : "/chemiverseOnUp/login"}
         className="link"
         onClick={() => {
           dispatch(onAndUp("false"));

@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { connectWith, onAndUp } from "../../app/headerStateSlice";
 
-function Header() {
+function Header({ LoginAuth, setLoginAuth }) {
   const headerType = useSelector((state) => state.headerLayout.value);
   const opacity = useSelector((state) => state.headerLayout.opacity);
   const dispatch = useDispatch();
@@ -21,9 +21,17 @@ function Header() {
   return (
     <>
       {headerType === "true" ? (
-        <ConnectWithHeader opacity={opacity} />
+        <ConnectWithHeader
+          opacity={opacity}
+          LoginAuth={LoginAuth}
+          setLoginAuth={setLoginAuth}
+        />
       ) : (
-        <OnAndUpHeader opacity={opacity} />
+        <OnAndUpHeader
+          opacity={opacity}
+          LoginAuth={LoginAuth}
+          setLoginAuth={setLoginAuth}
+        />
       )}
     </>
   );
