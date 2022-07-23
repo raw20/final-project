@@ -22,7 +22,10 @@ function NoticeBoard() {
           </li>
         ))}
       </ul>
-      <div className="item-box">
+      <h1 className="tab-item-title">
+        {tabIndex === undefined ? titleArray[0] : titleArray[tabIndex]}
+      </h1>
+      <div className="tab-item-box">
         {tabIndex === undefined
           ? component[0].content
           : component[tabIndex].content}

@@ -1,3 +1,6 @@
+$bgColor: #dde3f6;
+$deepColor: #6f76c1;
+$lightColor: #e6e0ec;
 .tab-btn-wrap {
   width: 100%;
   height: 100vh;
@@ -22,5 +25,12 @@
       align-items: center;
       margin: 0px auto;
     }
+  }
+  .tab-item-title {
+    width: 100%;
+    margin: 5rem auto;
+    color: $deepColor;
+    text-align: center;
+    font-size: 1.5rem;
   }
 }

@@ -23,4 +23,11 @@
   justify-content: center;
   align-items: center;
   margin: 0px auto;
+}
+.tab-btn-wrap .tab-item-title {
+  width: 100%;
+  margin: 5rem auto;
+  color: #6f76c1;
+  text-align: center;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=noticeBoard.css.map */
