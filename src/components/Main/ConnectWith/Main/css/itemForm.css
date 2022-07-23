@@ -13,6 +13,8 @@
   background: #fff;
   box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
   position: relative;
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
 }
 .item-form .item-inner .item-img {
   width: 100%;
@@ -29,6 +31,10 @@
 }
 .item-form .item-inner .item-text {
   width: 100%;
+<<<<<<< HEAD
+=======
+  height: 15%;
+>>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
   margin: 30px 50px;
 }
 .item-form .item-inner .item-text .item-location {
@@ -51,6 +57,7 @@
 }
 .item-form .item-inner .item-text .item-title {
   width: 100%;
+<<<<<<< HEAD
   font-size: 50px;
   color: rgb(111, 118, 193);
   margin-top: 50px;
@@ -58,6 +65,16 @@
 .item-form .item-inner .item-text .item-contents {
   width: 70%;
   font-size: 20px;
+=======
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgb(111, 118, 193);
+  margin-top: 7rem;
+}
+.item-form .item-inner .item-text .item-contents {
+  width: 70%;
+  font-size: 1.2rem;
+>>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
   color: #ccc;
   margin-top: 40px;
 }/*# sourceMappingURL=itemForm.css.map */

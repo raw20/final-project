@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Outlet, useLocation, useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import "./css/itemForm.css";
 import { headerGnbOpcity } from "../../../../app/headerStateSlice";
 function ConnectWthItemForm() {
@@ -9,7 +9,6 @@ function ConnectWthItemForm() {
   const { address } = useParams();
   const [data, setData] = useState([]);
   const connenctWithMenuData = "/db/connenctWithMenuData.json";
-  const opacity = useSelector((state) => state.headerLayout.opacity);
   const dispatch = useDispatch();
 
   async function getMainData() {
@@ -20,8 +19,6 @@ function ConnectWthItemForm() {
     getMainData();
     dispatch(headerGnbOpcity("1"));
   }, []);
-  console.log("ci", opacity);
-
   console.log("state가 주소에 / 붙여도 읽혀지나아아", data);
   return (
     <div className="item-form">
