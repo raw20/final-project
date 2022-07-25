@@ -18,6 +18,7 @@ function ConnectWithHeader({ opacity, LoginAuth }) {
     })();
   }, []);
   return (
+
     <div
       className={
         opacity === "0" ? "connectwith-header off" : "connectwith-header"

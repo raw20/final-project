@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { Link, NavLink } from "react-router-dom";
 import "./css/header.css";
 import { BiUser } from "react-icons/bi";
+import { IoLogInOutline } from "react-icons/io5";
+import { IoLogOutOutline } from "react-icons/io5";
 
-function OnAndUpHeader({ LoginAuth, setLoginAuth, opacity }) {
+function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
   const navigate = useNavigate();
   const goToLogin = () => {
     navigate("/chemiverseOnUp/login");
@@ -24,8 +26,11 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth, opacity }) {
       setItem(json);
     })();
   }, []);
+
+  const [viewButton, setViewButton] = useState(true);
+  const button = useState("ture") ? viewButton : setViewButton;
   return (
-    <div className={opacity === "0" ? "onAndUp-header off" : "onAndUp-header"}>
+    <div id="header">
       <Link className="logo" to="/chemiverseOnUp">
         logo
       </Link>
@@ -40,7 +45,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth, opacity }) {
                   id: item.id,
                   menu: item.menu,
                   dep: item.dep,
-                  address: item.onAndUpItemAddress,
+                  address: item.address,
                 }}
               >
                 <span>{item.menu}</span>
@@ -72,11 +77,14 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth, opacity }) {
               <BiUser />
             </NavLink>
           </li>
-
           {LoginAuth ? (
-            <span onClick={() => goToLogout()}>로그아웃</span>
+            <span onClick={() => goToLogout()}>
+              <IoLogOutOutline />
+            </span>
           ) : (
-            <span onClick={() => goToLogin()}>로그인</span>
+            <span onClick={() => goToLogin()}>
+              <IoLogInOutline />
+            </span>
           )}
           <NavLink
             to={`/chemiverseOnUp/tab`}
@@ -86,7 +94,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth, opacity }) {
               dep: item.dep,
               address: item.address,
             }}
-            id="tab-btn"
+            className={"tab-btn"}
           >
             탭버튼
           </NavLink>

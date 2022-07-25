@@ -126,6 +126,61 @@ i {
 
 
 .login-form {
-
   text-align: center;
+}
+
+.search-box {
+  padding: 10px;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  transform: translate(0, -50%);
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #6f76c1;
+  border-radius: 30px;
+  transition: 0.4s;
+  width: 30px;
+}
+
+.search-box .search-txt {
+  display: flex;
+  padding: 0;
+  width: 0px;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  font-size: 1rem;
+  line-height: 30px;
+  transition: 0.4s;
+}
+
+.search-box:hover {
+  border: none;
+  box-shadow: 0px 0px 0.5px 1px #d486ca;
+  width: 350px;
+}
+
+.search-box:hover .search-btn {
+  background-color: #fff;
+}
+
+.search-box:hover .search-txt {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.search-box .search-btn {
+  text-decoration: none;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #656565;
+  font-size: 20px;
 }
