@@ -59,8 +59,8 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
       </div>
       <div className="side-item">
         <ul className="util">
-          <li id="mypage">
-            <NavLink to={`/chemiverseOnUp/mypage`}><BiUser /></NavLink>
+          <li id="profile">
+            <NavLink to={`/chemiverseOnUp/profile`}><BiUser /></NavLink>
           </li>
           {
             LoginAuth ?
