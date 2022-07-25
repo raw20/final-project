@@ -1,0 +1,74 @@
+[
+  {
+    "id" : "1",
+    "name" : "문제연",
+    "position" : "강사",
+    "pic" : "http://expert2020.cafe24.com/resources/img/sub/lecturer_07.png",
+    "career1" : "고려대학교 언론대학원 광고PR 석사",
+    "career2" : "현 문스피치커뮤니케이션 대표"
+  },  
+  {
+    "id" : "2",
+    "name" : "김미주",
+    "position" : "책임강사",
+    "pic" : "http://expert2020.cafe24.com/resources/img/sub/lecturer_04.png",
+    "career1" : "경희대학교 경영대학원 MBA 석사",
+    "career2" : "전 LG전자 하이로지스틱스 사내강사"
+  },
+  {
+    "id" : "3",
+    "name" : "강재성",
+    "position" : "소장",
+    "pic" : "http://expert2020.cafe24.com/resources/img/sub/lecturer_01.png",
+    "career1" : "한양대학교 대학원 박사과정 (산업교육)",
+    "career2" : "LG경영 개발원 인재원 팀장(경영,진단,임원)"
+  },
+  {
+    "id" : "4",
+    "name" : "김해룡",
+    "position" : "소장",
+    "pic" : "http://expert2020.cafe24.com/resources/img/sub/lecturer_02.png",
+    "career1" : "고려대학교 경영대학원 MBA 석사 (마케팅 전공)",
+    "career2" : "전 한화호텔앤드리조트㈜ CCO"
+  },
+  {
+    "id" : "5",
+    "name" : "김석내",
+    "position" : "소장",
+    "pic" : "http://expert2020.cafe24.com/resources/img/sub/lecturer_03.png",
+    "career1" : "한국항공대학교 항공공학 석사",
+    "career2" : "전 현대자동차그룹 인재개발원 글로벌HRD 팀장"
+  },
+  {
+    "id" : "6",
+    "name" : "김혜영",
+    "position" : "강사",
+    "pic" : "http://expert2020.cafe24.com/resources/img/sub/lecturer_05.png",
+    "career1" : "현 엔게디 대표",
+    "career2" : "현 계원예술대학교 겸임교수"
+  },
+  {
+    "id" : "7",
+    "name" : "김효정",
+    "position" : "책임컨설턴트",
+    "pic" : "http://expert2020.cafe24.com/resources/img/sub/lecturer_06.png",
+    "career1" : "고려대학교 교육정보 전공 석사",
+    "career2" : "기업 및 사내 컨설턴트 대상 PPT 강의"
+  },
+  {
+    "id" : "8",
+    "name" : "박민우",
+    "position" : "소장",
+    "pic" : "http://expert2020.cafe24.com/resources/img/sub/lecturer_08.png",
+    "career1" : "광운대학교 상담심리치료학 석사",
+    "career2" : "전 ㈜HSP 컨설팅 유답 연구위원/전임강사"
+  },
+  {
+    "id" : "9",
+    "name" : "정종식",
+    "position" : "부사장",
+    "pic" : "http://expert2020.cafe24.com/resources/img/sub/lecturer_09.png",
+    "career1" : "홍익대학교 경영학과 박사 (마케팅 전공)",
+    "career2" : "전 중앙일보 HTA 대표이사"
+  }
+]
