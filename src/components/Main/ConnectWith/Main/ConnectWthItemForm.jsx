@@ -1,40 +1,46 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { Outlet, useLocation, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useEffect } from "react";
+import { Outlet, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import "./css/itemForm.css";
 import { headerGnbOpcity } from "../../../../app/headerStateSlice";
-function ConnectWthItemForm() {
-  const { state } = useLocation(0);
-  const { address } = useParams();
-  const [data, setData] = useState([]);
-  const connenctWithMenuData = "/db/connenctWithMenuData.json";
-  const dispatch = useDispatch();
 
-  async function getMainData() {
-    const json = await (await fetch(connenctWithMenuData)).json();
-    setData(json);
-  }
+function ConnectWthItemForm() {
+  const dispatch = useDispatch();
+  const [item, setItem] = useState([]);
+  const connenctWithMenuData = "/db/connenctWithMenuData.json";
+  const { id } = useParams();
+
   useEffect(() => {
-    getMainData();
+    (async () => {
+      const response = await fetch(connenctWithMenuData);
+      const json = await response.json();
+      setItem(json);
+    })();
     dispatch(headerGnbOpcity("1"));
-  }, []);
-  console.log("state가 주소에 / 붙여도 읽혀지나아아", data);
+  });
+
   return (
-    <div className="item-form">
-      <div className="item-inner">
-        <div className="item-img">
-          <img src={`${state.img}`} alt={state.title} />
+    <div className="connectwith-item-form">
+      <div className="connectwith-item-inner">
+        <div className="connectwith-item-img">
+          <img src={`${item[id]?.main_img}`} alt={item[id]?.title} />
         </div>
-        <div className="item-text">
-          <div className="item-location">
-            {`Connect With Me ▶ ${state.title} `}
+        <div className="connectwith-item-text">
+          <div className="connectwith-item-location">
+            {`Connect With Me ▶ ${item[id]?.title} `}
           </div>
-          <div className="item-title">{state.title}</div>
-          <div className="item-contents">{state.contents}</div>
+          <div className="connectwith-item-title">
+            {item[id]?.title}
+            <span className="connectwith-item-eng-title">
+              {item[id]?.engTitle}
+            </span>
+          </div>
+
+          <div className="connectwith-item-contents">{item[id]?.contents}</div>
         </div>
-        <div className="item-box">
-          <Outlet context={{ address }} />
+        <div className="connectwith-item-box">
+          <Outlet />
         </div>
       </div>
     </div>

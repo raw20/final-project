@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./css/tableSearchBar.css";
 
-function NoticeTableSearchBar({ posts, setPosts }) {
+function NoticeTableSearchBar({ posts, copyPosts, setPosts }) {
   const [display, setDisplay] = useState(true);
   const [searchValue, setSearchValue] = useState("");
   const [type, setType] = useState("전체");
@@ -26,7 +26,6 @@ function NoticeTableSearchBar({ posts, setPosts }) {
       );
       setPosts(filterData);
     }
-    setSearchValue("");
   }
   function handlerSelectType(e) {
     setType((typeName) => (typeName = e.target.innerText));
@@ -34,6 +33,11 @@ function NoticeTableSearchBar({ posts, setPosts }) {
   }
   function handlerShowType() {
     setDisplay((display) => !display);
+  }
+  function handlerChanegeData(e) {
+    if (e.key === "Backspace") {
+      setPosts(copyPosts);
+    }
   }
   const selectTypeArray = [
     {
@@ -78,6 +82,7 @@ function NoticeTableSearchBar({ posts, setPosts }) {
             e.preventDefault();
             setSearchValue(e.target.value);
           }}
+          onKeyDown={handlerChanegeData}
         />
         <button type="submit" className="table-search-submit">
           버튼

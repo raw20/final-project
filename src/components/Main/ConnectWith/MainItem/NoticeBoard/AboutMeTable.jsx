@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import TablePagenation from "./TablePagenation";
-import NoticeTableList from "./NoticeTableList";
+import AboutMeTableList from "./AboutMeTableList";
+import WriteBtn from "./WriteBtn";
 
-function NoticeTable({ posts, copyPosts, setPosts }) {
+function Table({ posts, copyPosts, writer, setWriter, setPosts }) {
   const [content, setContent] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(10);
@@ -17,14 +18,14 @@ function NoticeTable({ posts, copyPosts, setPosts }) {
 
   return (
     <>
-      <NoticeTableList
+      <AboutMeTableList
         posts={currentPosts(posts)}
         totalPosts={posts.length}
         content={content}
         setContent={setContent}
         copyPosts={copyPosts}
         setPosts={setPosts}
-      ></NoticeTableList>
+      ></AboutMeTableList>
       {content ? (
         <>
           <TablePagenation
@@ -32,10 +33,11 @@ function NoticeTable({ posts, copyPosts, setPosts }) {
             totalPosts={posts.length}
             paginate={setCurrentPage}
           ></TablePagenation>
+          <WriteBtn writer={writer} setWriter={setWriter} />
         </>
       ) : null}
     </>
   );
 }
 
-export default NoticeTable;
+export default Table;

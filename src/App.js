@@ -31,15 +31,16 @@ function App() {
         <Header LoginAuth={LoginAuth} setLoginAuth={setLoginAuth} />
         <Routes>
           <Route path="/" element={<ConnectWith />} />
-          <Route path="/item/:address" element={<ConnectWthItemForm />}>
-            <Route path="0" element={<Welcome />} />
-            <Route path="1" element={<AboutCompany />} />
-            <Route path="2" element={<Preparations />} />
-            <Route path="3" element={<NoticeBoard />} />
+          <Route path="/:id" element={<ConnectWthItemForm />}>
+            <Route path="welcome" element={<Welcome />} />
+            <Route path="aboutCompany" element={<AboutCompany />} />
+            <Route path="preparations" element={<Preparations />} />
+            <Route path="noticeBoard/" element={<NoticeBoard />}>
+              <Route path="notice" element={<Notice />} />
+              <Route path="aboutme" element={<AboutMe />} />
+              <Route path="qna" element={<QandA />} />
+            </Route>
           </Route>
-          <Route path="/board/3/notice" element={<Notice />} />
-          <Route path="/board/3/aboutme" element={<AboutMe />} />
-          <Route path="/board/3/qna" element={<QandA />} />
 
           <Route path="/" element={<ConnectWith />} />
           <Route path="/chemiverseOnUp/:address" element={<OnAndUpItemForm />}>

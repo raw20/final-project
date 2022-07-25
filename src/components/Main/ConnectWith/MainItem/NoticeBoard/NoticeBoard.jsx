@@ -1,34 +1,49 @@
 import React from "react";
 import { useState } from "react";
-import component from "./TabComponent";
 import "./css/noticeBoard.css";
+import { Outlet } from "react-router";
+import { NavLink } from "react-router-dom";
+
 function NoticeBoard() {
   const [tabIndex, setTabIndex] = useState();
   const titleArray = ["공지사항", "자기소개", "Q&A"];
+  const addressArray = ["notice", "aboutme", "qna"];
+  /*  const dataArray = [
+    {
+      title: "공지사항",
+      address: "notice",
+    },
+    {
+      title: "자기소개",
+      address: "aboutme",
+    },
+    {
+      title: "Q&A",
+      address: "qna",
+    },
+  ]; */
   function currentIndex(index) {
     setTabIndex(index);
   }
-
   return (
     <div className="tab-btn-wrap">
       <ul className="tab-btn-area">
         {titleArray.map((title, index) => (
-          <li
-            className="tab-btn"
-            key={index}
-            onClick={() => currentIndex(index)}
+          <NavLink
+            to={`/3/noticeBoard/${addressArray[index]}`}
+            className={({ isActive }) => (isActive ? "tab-btn on" : "tab-btn")}
           >
-            {title}
-          </li>
+            <li key={index} onClick={() => currentIndex(index)}>
+              {title}
+            </li>
+          </NavLink>
         ))}
       </ul>
       <h1 className="tab-item-title">
         {tabIndex === undefined ? titleArray[0] : titleArray[tabIndex]}
       </h1>
       <div className="tab-item-box">
-        {tabIndex === undefined
-          ? component[0].content
-          : component[tabIndex].content}
+        <Outlet />
       </div>
     </div>
   );

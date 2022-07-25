@@ -40,7 +40,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth, opacity }) {
                   id: item.id,
                   menu: item.menu,
                   dep: item.dep,
-                  address: item.address,
+                  address: item.onAndUpItemAddress,
                 }}
               >
                 <span>{item.menu}</span>

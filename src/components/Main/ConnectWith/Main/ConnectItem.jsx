@@ -11,14 +11,11 @@ function ConnectItem({ data }) {
   return (
     <>
       <Link
-        to={`/item/${data.address}/${data.id}`}
-        state={{
-          id: data.id,
-          title: data.title,
-          img: data.main_img,
-          address: data.address,
-          contents: data.contents,
-        }}
+        to={
+          data.id === 3
+            ? `/${data.id}/${data.address}/notice`
+            : `/${data.id}/${data.address}`
+        }
         className="link-item"
         style={{ textDecoration: "none" }}
       >
@@ -31,7 +28,7 @@ function ConnectItem({ data }) {
           <div className="title">{data.title}</div>
           <div className="content">{data.contents.replace("@", "\n")}</div>
           <div className="img">
-            <img src={`./img/${data.img}`} alt={data.title} />
+            <img src={`${data.img}`} alt={data.title} />
           </div>
         </li>
       </Link>

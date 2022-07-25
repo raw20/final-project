@@ -3,6 +3,7 @@
   height: 100%;
   -webkit-animation: fadein 2s;
           animation: fadein 2s;
+  padding-top: 2rem;
 }
 .preparations-wrap .preparations-checklist-box {
   width: 80%;
