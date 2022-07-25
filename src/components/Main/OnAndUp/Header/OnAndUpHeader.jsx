@@ -1,40 +1,49 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./css/header.css";
 import { BiUser } from "react-icons/bi";
+import { IoLogInOutline } from "react-icons/io5";
+import { IoLogOutOutline } from "react-icons/io5";
 
-function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
+function OnAndUpHeader({ LoginAuth, setLoginAuth, opacity }) {
   const navigate = useNavigate();
   const goToLogin = () => {
-    navigate('/chemiverseOnUp/login');
+    navigate("/chemiverseOnUp/login");
+  };
+
+  function goToLogout() {
+    setLoginAuth(false);
+    navigate("/");
   }
   const [item, setItem] = useState([]);
-  const itemData = "./db/mainItem.json";
+  const onAndUpMenuData = "/db/onAndUpMenuData.json";
+
   useEffect(() => {
     (async () => {
-      const response = await fetch(itemData);
+      const response = await fetch(onAndUpMenuData);
       const json = await response.json();
       setItem(json);
     })();
-  });
+  }, []);
+
   return (
-    <div id="header">
-      <NavLink className="logo" to={`/chemiverseOnUp`}>
+    <div className={opacity === "0" ? "onAndUp-header off" : "onAndUp-header"}>
+      <Link className="logo" to="/chemiverseOnUp">
         logo
-      </NavLink>
+      </Link>
       <div className="main-item">
         <ul className="gnb">
           {item.map((item) => (
             <li>
               <NavLink
-                to={`/chemiverseOnUp/item/${item.address}`}
+                to={`/chemiverseOnUp/item/${item.onAndUpItemAddress}`}
                 key={item.id}
                 state={{
                   id: item.id,
                   menu: item.menu,
                   dep: item.dep,
-                  address: item.address,
+                  address: item.onAndUpItemAddress,
                 }}
               >
                 <span>{item.menu}</span>
@@ -47,10 +56,12 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
                     id: item.id,
                     menu: item.menu,
                     dep: item.dep,
-                    address: item.address,
+                    address: item.onAndUpItemAddress,
                   }}
                 >
-                  {item.dep.map((ele) => <li className="depth1Li">{ele}</li>)}
+                  {item.dep.map((ele) => (
+                    <li className="depth1Li">{ele}</li>
+                  ))}
                 </NavLink>
               </ul>
             </li>
@@ -79,15 +90,32 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
               }>
               탭버튼
             </NavLink>
-          </button>
+          </li>
+          {LoginAuth ? (
+            <span onClick={() => goToLogout()}>
+              <IoLogOutOutline />
+            </span>
+          ) : (
+            <span onClick={() => goToLogin()}>
+              <IoLogInOutline />
+            </span>
+          )}
+          <NavLink
+            to={`/chemiverseOnUp/tab`}
+            state={{
+              id: item.id,
+              menu: item.menu,
+              dep: item.dep,
+              address: item.address,
+            }}
+            className={"tab-btn"}
+          >
+            탭버튼
+          </NavLink>
         </ul>
       </div>
-
-
     </div>
-
   );
 }
-
 
 export default OnAndUpHeader;

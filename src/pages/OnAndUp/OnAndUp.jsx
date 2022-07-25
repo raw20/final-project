@@ -5,20 +5,21 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { connectWith } from "../../app/headerStateSlice";
 import { FiSearch } from "react-icons/fi";
-
+import { headerGnbOpcity } from "../../app/headerStateSlice";
 
 function OnAndUp() {
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
-  const dataURL = "./db/onAndUpMenuData.json";
-  useEffect(() => {
-    (async () => {
-      const response = await fetch(dataURL);
-      const json = await response.json();
-      setData(json);
-    })();
-  });
+  const onAndUpMenuData = "/db/onAndUpMenuData.json";
 
+  async function getMainData() {
+    const json = await (await fetch(onAndUpMenuData)).json();
+    setData(json);
+    dispatch(headerGnbOpcity("0"));
+  }
+  useEffect(() => {
+    getMainData();
+  }, []);
   return (
     <div className="wrap">
       <div className="main">
@@ -37,10 +38,13 @@ function OnAndUp() {
           </Link>
         </div>
         <div className="search-box">
-          <input type="text" class="search-txt" name=""placeholder="Type to search" />
-          <a class="search-btn" href="#">
+          <input
+            type="text"
+            class="search-txt"
+            name=""
+            placeholder="Type to search"
+          />
           <FiSearch />
-          </a>
         </div>
       </div>
     </div>
