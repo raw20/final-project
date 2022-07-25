@@ -7,7 +7,7 @@ import Mypage from "./components/Main/OnAndUp/SideItem/MyPage/Mypage";
 import OnAndUpItemForm from "./components/Main/OnAndUp/Main/OnAndUpItemForm";
 import ConnectWthItemForm from "./components/Main/ConnectWith/Main/ConnectWthItemForm";
 import Welcome from "./components/Main/ConnectWith/MainItem/Welcome/Welcome";
-import CompanyIntro from "./components/Main/ConnectWith/MainItem/CompayIntro/CompanyIntro";
+import AboutCompany from "./components/Main/ConnectWith/MainItem/AboutCompany/AboutCompany";
 import Preparations from "./components/Main/ConnectWith/MainItem/Preparations/Preparations";
 import NoticeBoard from "./components/Main/ConnectWith/MainItem/NoticeBoard/NoticeBoard";
 import Header from "./components/Header/Header";
@@ -16,6 +16,9 @@ import LoginSearch from "./components/Main/OnAndUp/SideItem/Login/LoginSearch";
 import LoginRedirect from "./components/route/LoginRedirect";
 import TabBtnMenu from "./components/Main/OnAndUp/Header/TabBtnMenu";
 import { FiSearch } from "react-icons/fi";
+import Notice from "./components/Main/ConnectWith/MainItem/NoticeBoard/Notice";
+import AboutMe from "./components/Main/ConnectWith/MainItem/NoticeBoard/AboutMe";
+import QandA from "./components/Main/ConnectWith/MainItem/NoticeBoard/QandA";
 
 function App() {
   const [LoginAuth, setLoginAuth] = useState(false);
@@ -29,18 +32,23 @@ function App() {
         <Header LoginAuth={LoginAuth} setLoginAuth={setLoginAuth} />
         <Routes>
           <Route path="/" element={<ConnectWith />} />
-          <Route path="/item/:address" element={<ConnectWthItemForm />}>
-            <Route path="0" element={<Welcome />} />
-            <Route path="1" element={<CompanyIntro />} />
-            <Route path="2" element={<Preparations />} />
-            <Route path="3" element={<NoticeBoard />} />
+          <Route path="/:id" element={<ConnectWthItemForm />}>
+            <Route path="welcome" element={<Welcome />} />
+            <Route path="aboutCompany" element={<AboutCompany />} />
+            <Route path="preparations" element={<Preparations />} />
+            <Route path="noticeBoard/" element={<NoticeBoard />}>
+              <Route path="notice" element={<Notice />} />
+              <Route path="aboutme" element={<AboutMe />} />
+              <Route path="qna" element={<QandA />} />
+            </Route>
           </Route>
+
           <Route path="/" element={<ConnectWith />} />
           <Route path="/chemiverseOnUp/:address" element={<OnAndUpItemForm />}>
             <Route path="eduroom" />
             <Route path="eduguide" />
-            <Route path="diagnosis" />
-            <Route path="study" />
+            <Route path="diagnosis/*" />
+            <Route path="study/*" />
             <Route path="chemistory" />
             <Route path="mentoring" />
             <Route path="board" />

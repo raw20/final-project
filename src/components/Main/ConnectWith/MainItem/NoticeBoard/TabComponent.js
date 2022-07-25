@@ -1,4 +1,4 @@
-import MyIntro from "./MyIntro";
+import AboutMe from "./AboutMe";
 import Notice from "./Notice";
 import QandA from "./QandA";
 
@@ -15,7 +15,7 @@ const component = [
   },
   {
     index: 1,
-    content: [<MyIntro />],
+    content: [<AboutMe />],
   },
   {
     index: 2,

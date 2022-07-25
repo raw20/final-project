@@ -2,60 +2,52 @@ $bgColor: #dde3f6;
 $deepColor: #6f76c1;
 $lightColor: #e6e0ec;
 
-.edu_notice_area {
-  .edu_table {
-    width: 1200px;
-    margin: auto;
-    border-collapse: collapse;
-    th {
-      text-align: center;
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #ccc;
-      padding: 20px;
-    }
-    td {
-      text-align: center;
-      font-size: 12px;
-      padding: 20px;
-      border-bottom: 0.5px solid #ccc;
-      color: #888;
-    }
-    td:nth-child(1) {
-      width: 60x;
-    }
-    td:nth-child(2) {
-      width: 60px;
-    }
-    td:nth-child(3) {
-      text-align: start;
-      font-size: 14px;
-      color: #000;
-      padding-left: 30px;
-      cursor: pointer;
-    }
-    td:nth-child(4) {
-    }
-  }
-  .edu_pagination {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    width: 300px;
-    margin: auto;
-    .page_item {
-      margin-top: 25px;
-      .page_link {
-        color: #ccc;
-        font-size: 18px;
-        font-weight: 800;
-        &:hover {
-          cursor: pointer;
-          color: $deepColor;
-        }
-        &:focus {
-          color: $deepColor;
-        }
+.table_pagination {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  .page_item {
+    margin-top: 25px;
+    .page_link {
+      color: #ccc;
+      font-size: 18px;
+      font-weight: 800;
+      &:hover {
+        cursor: pointer;
+        color: $deepColor;
+      }
+      &:focus {
+        color: $deepColor;
       }
     }
   }
+}
+.notice-btn {
+  width: 70px;
+  height: 30px;
+  font-size: 0.7rem;
+  background-color: rgba(111, 118, 193, 1);
+  color: #fff;
+  border: none;
+  box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.notice-btn.temporary,
+.notice-btn.tab-like {
+  border: 1px solid #ccc;
+  background-color: $lightColor;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart {
+  margin-left: 0.4rem;
 }

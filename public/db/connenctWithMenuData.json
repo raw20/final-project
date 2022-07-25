@@ -2,33 +2,37 @@
   {
     "id": 0,
     "title": "환영인사",
+    "eng_title": "welcome",
     "address": "welcome",
     "contents": "입사를 축하드립니다. @Chemiverse 로 입사를 준비해보세요.",
-    "img": "welcome.png",
+    "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffa47afa6-3c60-4209-94d2-ce749c5480fc%2FCW_%E1%84%92%E1%85%AA%E1%86%AB%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A1.png?table=block&id=7ee9df74-8e1c-4f78-bf1e-cda78430adec&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=1200&userId=&cache=v2",
     "main_img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F20346dd4-eaa8-4319-b8f9-bc09152741d0%2F%E1%84%80%E1%85%A6%E1%84%89%E1%85%B5%E1%84%91%E1%85%A1%E1%86%AB.png?table=block&id=0a834483-1478-4779-8449-67389c35e003&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
   {
     "id": 1,
     "title": "회사소개",
-    "address": "companyInfo",
+    "eng_title": "About Company",
+    "address": "aboutCompany",
     "contents": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 @인재육성의 엑설런스 추구를 위한 @여러 영역별 사업활동을 전개해 오고 있습니다.",
-    "img": "company.png",
+    "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F95531951-c23d-4291-8dd7-f1f3063046d3%2FCW_%E1%84%92%E1%85%AC%E1%84%89%E1%85%A1%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2.png?table=block&id=f676c3f5-0200-4ada-91b9-9d28398a3f6e&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=1200&userId=&cache=v2",
     "main_img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8be7244c-1707-40d6-b9ad-598f7bcd1168%2F%E1%84%86%E1%85%A6%E1%86%AB%E1%84%90%E1%85%A9%E1%84%85%E1%85%B5%E1%86%BC.png?table=block&id=86aec234-3a5d-44e9-93f1-29ade8fe0d35&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
   {
     "id": 2,
     "title": "입사 전 준비사항",
+    "eng_title": "Preparations",
     "address": "preparations",
     "contents": "체크리스트를 활용하여 입사에 필요한 사항을 점검해봅시다.",
-    "img": "preparations.png",
+    "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F71a4de50-b199-4775-9791-ecdb3a88dddb%2FCW_%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%89%E1%85%A1%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%8C%E1%85%AE%E1%86%AB%E1%84%87%E1%85%B5%E1%84%89%E1%85%A1%E1%84%92%E1%85%A1%E1%86%BC.png?table=block&id=8fde27c6-9dd8-43e8-9941-4598fcce2219&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=1200&userId=&cache=v2",
     "main_img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa24292b2-7499-4b47-a7bf-b5aa9d639be1%2F%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%83%E1%85%A1%E1%86%AB.png?table=block&id=45cdd1ef-030e-4fc2-8c30-f002011f029a&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
   {
     "id": 3,
     "title": "게시판",
+    "eng_title": "Notice Board",
     "address": "noticeBoard",
     "contents": "회사에 대한 궁금한 점을 물어보세요. @나의 동료와 다양한 이야기를 나누어보세요.",
-    "img": "notice.png",
+    "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7b0a6d67-0523-431d-9120-366b8eb221b9%2FCW_%E1%84%80%E1%85%A6%E1%84%89%E1%85%B5%E1%84%91%E1%85%A1%E1%86%AB.png?table=block&id=0b6a04b0-5c94-4f03-a180-09e2d462ec23&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=1200&userId=&cache=v2",
     "main_img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd8871225-f64c-4f68-84ce-9e1e740cba82%2F%E1%84%80%E1%85%AD%E1%84%8B%E1%85%B2%E1%86%A8%E1%84%8B%E1%85%A1%E1%86%AB%E1%84%82%E1%85%A2_%E1%84%80%E1%85%AE%E1%84%85%E1%85%B3%E1%86%B7.png?table=block&id=f9a140bc-fa40-461d-bb87-5226c3f18577&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   }
 ]

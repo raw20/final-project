@@ -6,7 +6,7 @@ import { BiUser } from "react-icons/bi";
 import { IoLogInOutline } from "react-icons/io5";
 import { IoLogOutOutline } from "react-icons/io5";
 
-function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
+function OnAndUpHeader({ LoginAuth, setLoginAuth, opacity }) {
   const navigate = useNavigate();
   const goToLogin = () => {
     navigate("/chemiverseOnUp/login");
@@ -27,10 +27,8 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
     })();
   }, []);
 
-  const [viewButton, setViewButton] = useState(true);
-  const button = useState("ture") ? viewButton : setViewButton;
   return (
-    <div id="header">
+    <div className={opacity === "0" ? "onAndUp-header off" : "onAndUp-header"}>
       <Link className="logo" to="/chemiverseOnUp">
         logo
       </Link>
@@ -45,7 +43,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
                   id: item.id,
                   menu: item.menu,
                   dep: item.dep,
-                  address: item.address,
+                  address: item.onAndUpItemAddress,
                 }}
               >
                 <span>{item.menu}</span>

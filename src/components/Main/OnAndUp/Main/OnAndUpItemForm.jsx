@@ -1,19 +1,25 @@
 import React from "react";
 import { useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import component from "./TabComponent";
 import "./css/itemForm.css";
+import { useEffect } from "react";
+import { headerGnbOpcity } from "../../../../app/headerStateSlice";
 
 function OnAndUpItemForm() {
   const { state } = useLocation(0);
   const [tabIndex, setTabIndex] = useState();
+  const dispatch = useDispatch();
+
   function currentIndex(index) {
     setTabIndex(index);
   }
+  useEffect(() => {
+    dispatch(headerGnbOpcity("1"));
+  });
   return (
     <div className="item-form">
-        <Outlet />
-      
       <div className="item-inner">
         <div className="item-location">
           {tabIndex === undefined

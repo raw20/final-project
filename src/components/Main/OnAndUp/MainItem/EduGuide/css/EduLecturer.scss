@@ -1,0 +1,79 @@
+$bgColor: #dde3f6;
+$deepColor: #6f76c1;
+$lightColor: #e6e0ec;
+
+.lectuerer_area{
+width: 1200px;
+margin: auto;
+  .lecturer_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    .card{
+      width: calc(50% - 50px);
+      height: 300px;
+      border-radius: 20px;
+      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+      padding: 70px 30px;
+      box-sizing: border-box;
+      margin: 0 25px 25px 0;
+      &:hover{
+        background-color: #6f76c1;
+        color: #fff;
+        transition: all 0.5s;
+      }
+      &:hover>select{
+        background-color: #6f76c1;
+        color: #fff;
+      }
+      .lec_box{
+        display: flex;
+        .img_box{
+          height: 150px;
+          margin-right: 20px;
+          .img{
+            height: 150px;
+          }
+        }
+        .info_box{
+          .name{
+            font-size: 20px;
+            font-weight: bold;
+          }
+          .career_box{
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+            span:first-child{
+              font-weight: 600;
+              font-size: 14px;
+              margin-bottom: 8px;
+            }
+          }
+        }
+        .module_box{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          height: 55px;
+          span{
+            font-weight: 600;
+            font-size: 14px;
+          }
+          select{
+            width: 300px;
+            height: 45px;
+            border-radius: 5px;
+            appearance: none;
+            outline: none;
+            padding: 0 15px;
+            margin-top: 8px;
+            border: none;
+            box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+            background-color: #eef3fa;
+          }
+        }
+      }
+    }
+  }
+
+}
