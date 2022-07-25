@@ -12,12 +12,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 
-function AboutCompanyDetail({datas, setSelectedImgIndex}) {
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [openModalId, setOpenModalId] = useState(0);
+function AboutCompanyDetail({datas, setSelectedImgIndex, moduleItem}) {
+    const [cardNewsModalIsOpen, setCardNewsModalIsOpen] = useState(false);
+    const [microLearningModalIsOpen, setMicroLearningModalIsOpen] = useState(false);
     const [moduleId, setmoduleId] = useState(0);
     const [isNew, setIsNew] = useState(true);
     const { id } = useParams();
+    
 
     useEffect(() => {
         datas.map((el, index, data) => {
@@ -35,19 +36,14 @@ function AboutCompanyDetail({datas, setSelectedImgIndex}) {
 
     SwiperCore.use([Pagination, Navigation]);
 
-    // JSON.parse(getItem('reviewData')).map((el, index, data) => {
-    //     if(id == el.id) {
-    //         //idx = index;
-    //         flag = 1;
-    //         // content = JSON.parse(getItem('reviewData'))[idx].content_text;
-    //         // content = content.replace('</p>','');
-    //         // content = content.replace('<p>','');
-    //     }
-    // })
+    function handleCardNewsModal(e) {
+        //setOpenModalId(e.target.id);
+        setCardNewsModalIsOpen(true);
+    }
 
-    function handleModal(e) {
-        setOpenModalId(e.target.id);
-        setModalIsOpen(true);
+    function handleMicroLearningModal(e) {
+        //setOpenModalId(e.target.id);
+        setMicroLearningModalIsOpen(true);
     }
 
     return (
@@ -66,25 +62,17 @@ function AboutCompanyDetail({datas, setSelectedImgIndex}) {
                 <div className="detail_cardNews">	
                     <div className="detail_cardNews">	
                         <div className="detail_cardNews_title">학습 (마이크로러닝/카드뉴스)</div>	
-                        {
-                            modalIsOpen ?
-                            null 
-                            :
-                            <Swiper
-                                pagination={{ clickable: true }}
-                                navigation={true}
-                                slidesPerView={3}
-                            >
-                                <SwiperSlide>
-                                    <img id="1" src="/img/cardNews1.png" onClick={handleModal} />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <img id="2" src="/img/cardNews2.png" onClick={handleModal}/>
-                                </SwiperSlide>
-                                <SwiperSlide>Slide 3</SwiperSlide>
-                                <SwiperSlide>Slide 4</SwiperSlide>
-                            </Swiper>
-                        }
+                        <div className="detail_content">
+                            <div className="detail_content_cardNews" onClick={handleCardNewsModal}>
+                                <img className="detail_content_cardNews_img" src='/img/no-data.png'></img>
+                                <div className="detail_content_cardNews_title">카드뉴스</div>
+                            </div>
+                            <div className="detail_content_microLearning" onClick={handleMicroLearningModal}>
+                                <img className="detail_content_cardNews_img" src='/img/cardNews1.png'></img>
+                                <div className="detail_content_cardNews_title">마이크로러닝</div>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div className="detail_practice">	
@@ -108,8 +96,70 @@ function AboutCompanyDetail({datas, setSelectedImgIndex}) {
             </div>
             <Modal 
                 className="cardnewsModal"
-                isOpen={modalIsOpen}
-                onRequestClose={()=> setModalIsOpen(false)} // 오버레이나 esc를 누르면 핸들러 동작
+                isOpen={cardNewsModalIsOpen}
+                onRequestClose={()=> setCardNewsModalIsOpen(false)} // 오버레이나 esc를 누르면 핸들러 동작
+                ariaHideApp={false}
+                style={{
+                    overlay: {
+                      position: "fixed",
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      backgroundColor: "rgba(15, 15, 15, 0.79)",
+                    },
+                    content: {
+                      position: "absolute",
+                      top: "150px",
+                      left: "calc(50% - 400px)",
+                      width: "800px",
+                      height: "60%",
+                      border: "1px solid #ccc",
+                      background: "#fff",
+                      overflow: "auto",
+                      WebkitOverflowScrolling: "touch",
+                      borderRadius: "4px",
+                      outline: "none",
+                      padding: "20px",
+                    },
+                  }}
+            >
+                <div className='ModalCards'>
+                    <div className="ModalCards_btn">
+                        <button onClick={()=> setCardNewsModalIsOpen(false)}>X</button>
+                    </div>
+                    <div className='ModalCards_Title'>카드뉴스</div>
+                    <div className="ModalCards_swiper">
+                        <Swiper
+                            pagination={{ 
+                                clickable: true,
+                                type: "fraction"
+                             }}
+                            navigation={true}
+                            slidesPerView={3}
+                            spaceBetween= {20}
+                            slidesOffsetBefore= {50}
+                            slidesOffsetAfter= {50}
+                        >
+                            <SwiperSlide>
+                                <img id="1" src="/img/cardNews1.png" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img id="2" src="/img/cardNews2.png"/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img id="3" src="/img/cardNews2.png"/>
+                            </SwiperSlide>
+                            <SwiperSlide>Slide 4</SwiperSlide>
+                        </Swiper>
+                    </div>
+
+                </div>
+            </Modal>
+            <Modal 
+                className="microLearningModal"
+                isOpen={microLearningModalIsOpen}
+                onRequestClose={()=> setMicroLearningModalIsOpen(false)} // 오버레이나 esc를 누르면 핸들러 동작
                 ariaHideApp={false}
                 style={{
                     overlay: {
@@ -137,12 +187,16 @@ function AboutCompanyDetail({datas, setSelectedImgIndex}) {
                   }}
             >
                 <div className='ModalCards'>
-                    {openModalId}
-                    <button onClick={()=> setModalIsOpen(false)}>X</button>
-                    <div className='ModalCards_Title'>카드뉴스</div>
+                    <div className="ModalCards_btn">
+                        <button onClick={()=> setMicroLearningModalIsOpen(false)}>X</button>
+                    </div>
+                    <div className='ModalCards_Title'>마이크로러닝</div>
+                    <div className="ModalCards_microLearning">
+                        <img className="detail_content_cardNews_img" src='/img/cardNews1.png'></img>
+                    </div>
+                    
                 </div>
             </Modal>
-
         </>
 
     );

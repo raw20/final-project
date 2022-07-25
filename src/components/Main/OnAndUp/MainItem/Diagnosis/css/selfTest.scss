@@ -93,6 +93,30 @@
 .nowContainer {
     width: 100%;
 }
+.beforeTest_btnArea {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tempSaveBtn {
+    width: 70px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-right: 5px;
+    border: 0.5px solid #888;
+    cursor: pointer;
+}
+
+.writeBtn {
+    width: 70px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: #4c539a;
+    color: #fff;
+    cursor: pointer;
+}
 .beforeTest_desc {
     width: 100%;
     height: 100px;
@@ -129,14 +153,24 @@
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
-    div{
+    .beforeResult_abilityResult_box{
         width: 23.089%;
         height: 270px;
         text-align: center;
         box-shadow: 1px 1px 5px 3px #ddd;
         margin-right: 15px;
     }
-    // :nth-child(4){margin-left: 0;} tlqldldlqkf
+    .beforeResult_abilityResult_box:nth-child(4){
+        margin-left: 0;
+    }
+    .beforeResult_abilityResult_box_title {
+        height: 30px;
+        line-height: 30px;
+    }
+}
+.beforeResult_chart {
+    box-shadow: none;
+    margin: 0;
 }
 .beforeResult_analysisBox{
     width: 100%;

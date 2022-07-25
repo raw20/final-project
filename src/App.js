@@ -7,7 +7,8 @@ import Profile from "./components/Main/OnAndUp/SideItem/Profile/Profile";
 import OnAndUpItemForm from "./components/Main/OnAndUp/Main/OnAndUpItemForm";
 import ConnectWthItemForm from "./components/Main/ConnectWith/Main/ConnectWthItemForm";
 import Welcome from "./components/Main/ConnectWith/MainItem/Welcome/Welcome";
-import AboutCompany from "./components/Main/ConnectWith/MainItem/AboutCompany/AboutCompany";
+import Now from "./components/Main/OnAndUp/MainItem/Diagnosis/Now";
+import AboutCompany from "./components/Main/OnAndUp/MainItem/Study/AboutCompany";
 import Preparations from "./components/Main/ConnectWith/MainItem/Preparations/Preparations";
 import NoticeBoard from "./components/Main/ConnectWith/MainItem/NoticeBoard/NoticeBoard";
 import Header from "./components/Header/Header";
@@ -45,11 +46,11 @@ function App() {
           </Route>
 
           <Route path="/" element={<ConnectWith />} />
-          <Route path="/chemiverseOnUp/:address" element={<OnAndUpItemForm />}>
+          <Route path="/chemiverseOnUp/:address/*" element={<OnAndUpItemForm />}>
             <Route path="eduroom" />
             <Route path="eduguide" />
-            <Route path="diagnosis/*" />
-            <Route path="study/*" />
+            <Route path="diagnosis/*" element={<Now />}/>
+            <Route path="study/*" element={<AboutCompany />}/>
             <Route path="chemistory" />
             <Route path="mentoring" />
             <Route path="board" />
@@ -70,7 +71,7 @@ function App() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default App;

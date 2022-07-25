@@ -36,8 +36,8 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
       </Link>
       <div className="main-item">
         <ul className="gnb">
-          {item.map((item) => (
-            <li>
+          {item.map((item, index) => (
+            <li key={index}>
               <NavLink
                 to={`/chemiverseOnUp/item/${item.onAndUpItemAddress}`}
                 key={item.id}
@@ -61,8 +61,8 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
                     address: item.onAndUpItemAddress,
                   }}
                 >
-                  {item.dep.map((ele) => (
-                    <li className="depth1Li">{ele}</li>
+                  {item.dep.map((ele, index) => (
+                    <li key={index} className="depth1Li">{ele}</li>
                   ))}
                 </NavLink>
               </ul>
@@ -101,7 +101,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
         </ul>
       </div>
     </div>
-  );
+  )
 }
 
-export default OnAndUpHeader;
+export default OnAndUpHeader
