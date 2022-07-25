@@ -16,12 +16,13 @@ function AboutMe() {
   const dispatch = useDispatch();
   const dataUrl = "/db/boardData.json";
   useEffect(() => {
-    dispatch(getLike())(async () => {
+    (async () => {
       const response = await fetch(dataUrl);
       const json = await response.json();
       setPosts(json);
       setCopyPosts(json);
     })();
+    dispatch(getLike());
   }, []);
 
   return (
