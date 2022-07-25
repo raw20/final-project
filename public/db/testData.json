@@ -1,0 +1,56 @@
+[
+    {
+    "id": 1,
+    "userId": 1,
+    "date": 2021,
+    "result": [
+            {
+                "title": "컴퓨터 활용 능력",
+                "score": 80
+            },
+            {
+                "title": "기술 능력",
+                "score": 70
+            },
+            {
+                "title": "분석 능력",
+                "score": 65
+            },
+            {
+                "title": "관리 능력",
+                "score": 30
+            },
+            {
+                "title": "글쓰기 능력",
+                "score": 40
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "userId": 1,
+        "date": 2022,
+        "result": [
+                {
+                    "title": "컴퓨터 활용 능력",
+                    "score": 90
+                },
+                {
+                    "title": "기술 능력",
+                    "score": 75
+                },
+                {
+                    "title": "분석 능력",
+                    "score": 60
+                },
+                {
+                    "title": "관리 능력",
+                    "score": 70
+                },
+                {
+                    "title": "글쓰기 능력",
+                    "score": 50
+                }
+            ]
+        }
+]

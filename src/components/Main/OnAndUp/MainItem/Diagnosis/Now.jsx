@@ -8,15 +8,15 @@ import AfterTest from './AfterTest';
 
 function Now(props) {
     const [selectedTab, setSelectedTab] = useState(0);
-    const { pathname } = useLocation(0);
-
+    const { pathname, state } = useLocation(0);
     useEffect(() => {
         if (pathname.indexOf('after') > 0) { //path에 after가 있으면 사후가 selected 되었다고 상태관리
             setSelectedTab(1)
         }  
+
     },[])
-
-
+    console.log('now',state)
+console.log('dw')
     return (
         <div className="nowContainer">
             <div className="selfTestContainer_title">현재상태 점검하기</div>
@@ -35,9 +35,9 @@ function Now(props) {
                 <div className="selfTestContainer_content">
 
                     <Routes>
-                        <Route path="diagnosis/*" element={<BeforeTest />} />
+                        <Route path="*" element={<BeforeTest />} />
                         <Route path="now/before" element={<BeforeTest />} />
-                        <Route path="now/after" element={<AfterTest />} />
+                        <Route path="diagnosis/now/after" element={<AfterTest />} />
                     </Routes>
 
                 </div>

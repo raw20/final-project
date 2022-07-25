@@ -2,14 +2,12 @@ import React from 'react';
 
 import { Routes, Route, Link } from "react-router-dom";
 
-import PeopleSkillDetail from './PeopleSkillDetail';
-import PeopleSkillModuleList from './PeopleSkillModuleList';
+import ModuleList from './ModuleList';
 
 function PeopleSkill(props) {
     return (
         <Routes>                       
-            <Route path="*" element={<PeopleSkillModuleList />}/>
-            {/* <Route path="peopleSkill/:id" element={<PeopleSkillDetail />} /> */}
+            <Route path="*" element={<ModuleList moduleID={2}/>}/>
         </Routes>
     );
 }
