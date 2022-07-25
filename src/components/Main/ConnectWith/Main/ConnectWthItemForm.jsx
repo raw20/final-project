@@ -33,7 +33,7 @@ function ConnectWthItemForm() {
           <div className="connectwith-item-title">
             {item[id]?.title}
             <span className="connectwith-item-eng-title">
-              {item[id]?.engTitle}
+              {item[id]?.eng_title}
             </span>
           </div>
 

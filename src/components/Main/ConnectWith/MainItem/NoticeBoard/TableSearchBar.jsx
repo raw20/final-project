@@ -53,6 +53,7 @@ function NoticeTableSearchBar({ posts, copyPosts, setPosts }) {
       name: "제목",
     },
   ];
+
   return (
     <div className="table-search">
       <form className="table-search-form" onSubmit={(e) => onSearch(e)}>

@@ -8,20 +8,7 @@ function NoticeBoard() {
   const [tabIndex, setTabIndex] = useState();
   const titleArray = ["공지사항", "자기소개", "Q&A"];
   const addressArray = ["notice", "aboutme", "qna"];
-  /*  const dataArray = [
-    {
-      title: "공지사항",
-      address: "notice",
-    },
-    {
-      title: "자기소개",
-      address: "aboutme",
-    },
-    {
-      title: "Q&A",
-      address: "qna",
-    },
-  ]; */
+
   function currentIndex(index) {
     setTabIndex(index);
   }
@@ -33,7 +20,11 @@ function NoticeBoard() {
             to={`/3/noticeBoard/${addressArray[index]}`}
             className={({ isActive }) => (isActive ? "tab-btn on" : "tab-btn")}
           >
-            <li key={index} onClick={() => currentIndex(index)}>
+            <li
+              className="tab-btn-list"
+              key={index}
+              onClick={() => currentIndex(index)}
+            >
               {title}
             </li>
           </NavLink>

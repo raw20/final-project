@@ -3,20 +3,19 @@ import "./css/style.css";
 import "./css/aboutMeDetail.css";
 import { MdFavorite } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { checkIndex, clickLike } from "../../../../../app/detailSlice";
+import { clickLike } from "../../../../../app/detailSlice";
 
 function AboutMeDetail({ posts, setContent }) {
   const favListColor = [{ color: "#ccc" }, { color: "#f20" }];
   const [like, setLike] = useState(0);
+  const [select, setSelect] = useState([]);
   const likeValue = useSelector((state) => state.item.likes);
-  const indexValue = useSelector((state) => state.item.index);
   const dispatch = useDispatch();
   function handlerLikeFnc() {
     setLike(like === 0 ? 1 : 0);
     dispatch(clickLike(like === 0 ? 1 : 0));
-    dispatch(checkIndex(posts.id));
   }
-  console.log(indexValue);
+
   return (
     <div className="aboutMe-wrap">
       <div className="aboutMe-header">
@@ -40,7 +39,15 @@ function AboutMeDetail({ posts, setContent }) {
         <button className="notice-btn" onClick={() => setContent(true)}>
           목록보기
         </button>
-        <button className="notice-btn tab-like" onClick={handlerLikeFnc}>
+        <button
+          className="notice-btn tab-like"
+          onClick={() => {
+            !select.includes(posts.id)
+              ? setSelect((select) => [...select, posts.id])
+              : setSelect(select.filter((button) => button !== posts.id));
+            handlerLikeFnc();
+          }}
+        >
           좋아요
           <MdFavorite className="heart" style={favListColor[likeValue]} />
         </button>

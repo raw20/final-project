@@ -3,16 +3,20 @@ import "./css/aboutMe.css";
 import SubmitBtn from "./SubmitBtn";
 import AboutMeTable from "./AboutMeTable";
 import AboutMeWrite from "./AboutMeWrite";
+import { useDispatch, useSelector } from "react-redux";
+import { getLike } from "../../../../../app/detailSlice";
 
 function AboutMe() {
   const [posts, setPosts] = useState([]);
   const [copyPosts, setCopyPosts] = useState([]);
+  const postData = useSelector((state) => state.item);
   const [writer, setWriter] = useState(false);
   const [aboutMetitle, setAboutMeTitle] = useState("");
   const [aboutMeContents, setAboutMeContents] = useState("");
+  const dispatch = useDispatch();
   const dataUrl = "/db/boardData.json";
   useEffect(() => {
-    (async () => {
+    dispatch(getLike())(async () => {
       const response = await fetch(dataUrl);
       const json = await response.json();
       setPosts(json);

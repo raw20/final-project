@@ -51,9 +51,9 @@ const AboutMeTableList = ({
                     <td>{posts.id}</td>
                     <td>{posts.writer}</td>
                     <td onClick={() => onClick(index)}>{posts.title}</td>
-                    <td>{viewCount}</td>
+                    <td>{posts.views}</td>
                     <td>{posts.date}</td>
-                    <td>{likeValue}</td>
+                    <td>{posts.like}</td>
                   </tr>
                 ))
               )}

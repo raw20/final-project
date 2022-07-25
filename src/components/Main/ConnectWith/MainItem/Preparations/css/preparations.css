@@ -3,7 +3,7 @@
   height: 100%;
   -webkit-animation: fadein 2s;
           animation: fadein 2s;
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 .preparations-wrap .preparations-checklist-box {
   width: 80%;
@@ -56,6 +56,7 @@
   box-shadow: 2px 2px 2px 2px rgba(34, 51, 89, 0.1);
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .preparations-wrap .preparations-checklist-box .preparations-checklist-contents .checklist-name .checklist-item .checklist-item-name {
   width: 62%;
@@ -96,4 +97,21 @@
   justify-content: center;
   align-items: center;
   margin: 2rem auto;
+  cursor: pointer;
+}
+
+.checklist-item-check {
+  width: 25px;
+  height: 25px;
+  background: url(/public/img/ic-check.png) no-repeat center/70%;
+  text-indent: -9999px;
+  font-size: 0px;
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.checklist-item-check.on {
+  background: url(/public/img/ic-check-on.png) no-repeat center/70%;
 }/*# sourceMappingURL=preparations.css.map */
