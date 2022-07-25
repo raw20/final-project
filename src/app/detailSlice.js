@@ -13,7 +13,7 @@ export const getLike = createAsyncThunk("GET_LIKE", async () => {
 });
 export const addLike = createAsyncThunk("ADD_LIKE", async (newList) => {
   try {
-    const res = await axios.get(
+    const res = await axios.post(
       "https://my-json-server.typicode.com/raw20/final-project/boardData",
       newList
     );
@@ -24,7 +24,7 @@ export const addLike = createAsyncThunk("ADD_LIKE", async (newList) => {
 });
 export const deleteLike = createAsyncThunk("DELETE_LIKE", async (id) => {
   try {
-    const res = await axios.get(
+    const res = await axios.post(
       `https://my-json-server.typicode.com/raw20/final-project/boardData${id}`
     );
     return id;

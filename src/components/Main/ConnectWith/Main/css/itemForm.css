@@ -1,73 +1,225 @@
-.connectwith-item-form {
-  width: 100%;
-  height: 100%;
-  padding-top: 70px;
-  box-sizing: border-box;
+@media (min-width: 1024px) {
+  .connectwith-item-form {
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    box-sizing: border-box;
+  }
+  .connectwith-item-form .connectwith-item-inner {
+    max-width: 1200px;
+    height: 100vw;
+    margin: 30px auto;
+    padding: 50px 30px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+    position: relative;
+    -webkit-animation: fadein 1s;
+            animation: fadein 1s;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0px;
+    right: -47px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-img img {
+    width: 570px;
+    height: 390px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text {
+    width: 100%;
+    height: 15%;
+    margin: 30px 50px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-location {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    color: #ccc;
+    position: relative;
+    margin-left: 20px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-location::before {
+    content: " ";
+    width: 17px;
+    height: 17px;
+    top: 0px;
+    left: -20px;
+    position: absolute;
+    background: url(/public/img/ic-check-on.png) no-repeat center/cover;
+    margin-right: 20px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-title {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(111, 118, 193);
+    margin-top: 7rem;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-title .connectwith-item-eng-title {
+    margin-left: 1.5rem;
+    font-size: 2.2rem;
+    color: #e6e0ec;
+    font-weight: 300;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-contents {
+    width: 70%;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 40px;
+  }
 }
-.connectwith-item-form .connectwith-item-inner {
-  max-width: 1200px;
-  height: 100vw;
-  margin: 30px auto;
-  padding: 50px 30px;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
-  position: relative;
-  -webkit-animation: fadein 1s;
-          animation: fadein 1s;
+@media (min-width: 758px) and (max-width: 1023px) {
+  .connectwith-item-form {
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    box-sizing: border-box;
+  }
+  .connectwith-item-form .connectwith-item-inner {
+    max-width: 1200px;
+    height: 80vw;
+    margin: 20px auto;
+    padding: 50px 30px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+    position: relative;
+    -webkit-animation: fadein 1s;
+            animation: fadein 1s;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0px;
+    right: -47px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-img img {
+    width: 370px;
+    height: 250px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text {
+    width: 100%;
+    height: 15%;
+    margin: 30px 50px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-location {
+    width: 100%;
+    height: auto;
+    font-size: 13px;
+    color: #ccc;
+    position: relative;
+    margin-left: 20px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-location::before {
+    content: " ";
+    width: 17px;
+    height: 17px;
+    top: 0px;
+    left: -20px;
+    position: absolute;
+    background: url(/public/img/ic-check-on.png) no-repeat center/cover;
+    margin-right: 20px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-title {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(111, 118, 193);
+    margin-top: 7rem;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-title .connectwith-item-eng-title {
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    color: #e6e0ec;
+    font-weight: 300;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-contents {
+    width: 70%;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 40px;
+  }
 }
-.connectwith-item-form .connectwith-item-inner .connectwith-item-img {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  top: 0px;
-  right: -47px;
-}
-.connectwith-item-form .connectwith-item-inner .connectwith-item-img img {
-  width: 570px;
-  height: 390px;
-}
-.connectwith-item-form .connectwith-item-inner .connectwith-item-text {
-  width: 100%;
-  height: 15%;
-  margin: 30px 50px;
-}
-.connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-location {
-  width: 100%;
-  height: auto;
-  font-size: 15px;
-  color: #ccc;
-  position: relative;
-  margin-left: 20px;
-}
-.connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-location::before {
-  content: " ";
-  width: 17px;
-  height: 17px;
-  top: 0px;
-  left: -20px;
-  position: absolute;
-  background: url(/public/img/ic-check-on.png) no-repeat center/cover;
-  margin-right: 20px;
-}
-.connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-title {
-  width: 100%;
-  font-size: 3rem;
-  font-weight: 600;
-  color: rgb(111, 118, 193);
-  margin-top: 7rem;
-}
-.connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-title .connectwith-item-eng-title {
-  margin-left: 1.5rem;
-  font-size: 2.2rem;
-  color: #e6e0ec;
-  font-weight: 300;
-}
-.connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-contents {
-  width: 70%;
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-top: 40px;
+@media (min-width: 335px) and (max-width: 757px) {
+  .connectwith-item-form {
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    box-sizing: border-box;
+  }
+  .connectwith-item-form .connectwith-item-inner {
+    max-width: 1200px;
+    height: 100vw;
+    margin: 30px auto;
+    padding: 50px 30px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+    position: relative;
+    -webkit-animation: fadein 1s;
+            animation: fadein 1s;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0px;
+    right: -47px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-img img {
+    width: 220px;
+    height: 150px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text {
+    width: 100%;
+    height: 15%;
+    margin: 30px 50px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-location {
+    width: 100%;
+    height: auto;
+    font-size: 10px;
+    color: #ccc;
+    position: relative;
+    margin-left: 20px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-location::before {
+    content: " ";
+    width: 17px;
+    height: 17px;
+    top: 0px;
+    left: -20px;
+    position: absolute;
+    background: url(/public/img/ic-check-on.png) no-repeat center/cover;
+    margin-right: 20px;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-title {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(111, 118, 193);
+    margin-top: 7rem;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-title .connectwith-item-eng-title {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    color: #e6e0ec;
+    font-weight: 300;
+  }
+  .connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-contents {
+    width: 70%;
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-top: 40px;
+  }
 }/*# sourceMappingURL=itemForm.css.map */
