@@ -15,6 +15,7 @@ import { useState, useEffect } from "react";
 import LoginSearch from "./components/Main/OnAndUp/SideItem/Login/LoginSearch";
 import LoginRedirect from "./components/route/LoginRedirect";
 import TabBtnMenu from "./components/Main/OnAndUp/Header/TabBtnMenu";
+import { FiSearch } from "react-icons/fi";
 import Notice from "./components/Main/ConnectWith/MainItem/NoticeBoard/Notice";
 import AboutMe from "./components/Main/ConnectWith/MainItem/NoticeBoard/AboutMe";
 import QandA from "./components/Main/ConnectWith/MainItem/NoticeBoard/QandA";
@@ -53,18 +54,18 @@ function App() {
             <Route path="board" />
           </Route>
           <Route path="/chemiverseOnUp" element={<OnAndUp />} />
-          <Route
-            path="/chemiverseOnUp/login"
-            element={<Login setLoginAuth={setLoginAuth} />}
-          />
-          <Route
-            path="/chemiverseOnUp/login-search"
-            element={<LoginSearch />}
-          />
+          <Route path="/chemiverseOnUp/login" element={<Login setLoginAuth={setLoginAuth} />} />
+          <Route path="/chemiverseOnUp/login-search" element={<LoginSearch />} />
           <Route path="/chemiverseOnUp/mypage" element={<Mypage />} />
           <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
         </Routes>
       </BrowserRouter>
+      <div className="search-box">
+        <input type="text" class="search-txt" name="" placeholder="Type to search" />
+        <div class="search-btn">
+          <FiSearch />
+        </div>
+      </div>
     </div>
   );
 }
