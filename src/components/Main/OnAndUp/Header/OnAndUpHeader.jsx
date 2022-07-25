@@ -70,9 +70,25 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth, opacity }) {
       </div>
       <div className="side-item">
         <ul className="util">
-          <li id="mypage">
-            <NavLink to={`/chemiverseOnUp/mypage`}>
-              <BiUser />
+          <li id="profile">
+            <NavLink to={`/chemiverseOnUp/profile`}><BiUser /></NavLink>
+          </li>
+          {
+            LoginAuth ?
+              <span onClick={() => setLoginAuth(false)}>로그아웃</span> :
+              <span onClick={() => goToLogin()}>로그인</span>
+          }
+          <button id="tab-btn">
+            <NavLink to={`/chemiverseOnUp/tab`}
+              state={
+                {
+                  id: item.id,
+                  menu: item.menu,
+                  dep: item.dep,
+                  address: item.address,
+                }
+              }>
+              탭버튼
             </NavLink>
           </li>
           {LoginAuth ? (

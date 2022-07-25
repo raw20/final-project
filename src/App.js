@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ConnectWith from "./pages/ConnectWith/ConnectWith";
 import OnAndUp from "./pages/OnAndUp/OnAndUp";
 import Login from "./components/Main/OnAndUp/SideItem/Login/Login";
-import Mypage from "./components/Main/OnAndUp/SideItem/MyPage/Mypage";
+import Profile from "./components/Main/OnAndUp/SideItem/Profile/Profile";
 import OnAndUpItemForm from "./components/Main/OnAndUp/Main/OnAndUpItemForm";
 import ConnectWthItemForm from "./components/Main/ConnectWith/Main/ConnectWthItemForm";
 import Welcome from "./components/Main/ConnectWith/MainItem/Welcome/Welcome";
@@ -25,6 +25,7 @@ function App() {
   useEffect(() => {
     console.log("로그인인증값", LoginAuth);
   }, [LoginAuth]);
+
 
   return (
     <div className="App">
@@ -56,8 +57,10 @@ function App() {
           <Route path="/chemiverseOnUp" element={<OnAndUp />} />
           <Route path="/chemiverseOnUp/login" element={<Login setLoginAuth={setLoginAuth} />} />
           <Route path="/chemiverseOnUp/login-search" element={<LoginSearch />} />
-          <Route path="/chemiverseOnUp/mypage" element={<Mypage />} />
+
+          <Route path="/chemiverseOnUp/profile" element={<Profile />} />
           <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
+
         </Routes>
       </BrowserRouter>
       <div className="search-box">
