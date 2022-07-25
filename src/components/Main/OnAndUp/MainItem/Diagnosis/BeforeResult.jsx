@@ -3,7 +3,7 @@ import React from 'react';
 function BeforeResult(props) {
     return (
         <div className="beforeResult_box">        
-            <div class="beforeResult_boxs">
+            <div className="beforeResult_boxs">
                 <div className='beforeResult_abilityResult'>
                     <div>회사이해</div>
                     <div>워크스킬</div>

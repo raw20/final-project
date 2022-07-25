@@ -19,7 +19,7 @@ function Header({ LoginAuth, setLoginAuth }) {
     dispatch(onAndUp("false"));
   }
   return (
-    <>
+    <div>
       {headerType === "true" ? (
         <ConnectWithHeader
           opacity={opacity}
@@ -33,7 +33,7 @@ function Header({ LoginAuth, setLoginAuth }) {
           setLoginAuth={setLoginAuth}
         />
       )}
-    </>
+    </div>
   );
 }
 

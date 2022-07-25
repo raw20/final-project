@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Routes, Route, Link } from "react-router-dom";
 import debounce from 'lodash.debounce';
 
-import AboutCompanyModuleList from './AboutCompanyModuleList';
+import ModuleList from './ModuleList';
 import AboutCompanyDetail from './AboutCompanyDetail';
 import ReviewEdit from "./ReviewEdit";
 
@@ -17,6 +17,7 @@ function AboutCompany(props) {
         {   id: 3, content: '3번' }
     ]
     const [datas, setDatas] = useState(getItem('reviewData') ||  defaultData);
+    const [moduleItem, setModuleItem] = useState({});
     const [selectedImgIndex, setSelectedImgIndex] = useState(0);
 
     const setData = useCallback((newData) => {
@@ -38,12 +39,17 @@ function AboutCompany(props) {
         setItem('reviewData',datas)
     }
     
+    useEffect(() => {
+        console.log('item',moduleItem)
+    },[moduleItem])
+    
     return (
         <>
             <Routes>                       
-                <Route path="*" element={<AboutCompanyModuleList />}/>
+                <Route path="*" element={<ModuleList moduleID={0} setModuleItem={setModuleItem} />}/>
                 <Route path="aboutCompany/:id/*" element={
                     <AboutCompanyDetail 
+                        moduleItem={moduleItem}
                         datas={datas}
                         setSelectedImgIndex={setSelectedImgIndex}
                         selectedImgIndex={selectedImgIndex}

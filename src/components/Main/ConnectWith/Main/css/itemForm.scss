@@ -31,10 +31,7 @@ $lightColor: #e6e0ec;
     }
     .item-text {
       width: 100%;
-<<<<<<< HEAD
-=======
       height: 15%;
->>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
       margin: 30px 50px;
       .item-location {
         width: 100%;
@@ -56,15 +53,6 @@ $lightColor: #e6e0ec;
       }
       .item-title {
         width: 100%;
-<<<<<<< HEAD
-        font-size: 50px;
-        color: rgba(111, 118, 193, 1);
-        margin-top: 50px;
-      }
-      .item-contents {
-        width: 70%;
-        font-size: 20px;
-=======
         font-size: 3rem;
         font-weight: 600;
         color: rgba(111, 118, 193, 1);
@@ -73,7 +61,6 @@ $lightColor: #e6e0ec;
       .item-contents {
         width: 70%;
         font-size: 1.2rem;
->>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
         color: #ccc;
         margin-top: 40px;
       }

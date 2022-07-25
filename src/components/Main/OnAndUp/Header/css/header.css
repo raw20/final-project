@@ -3,10 +3,7 @@
   height: 70px;
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-=======
   background-color: #fff;
->>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
   position: fixed;
   top: 0;
   left: 0;
@@ -38,40 +35,6 @@
   align-items: center;
   padding: 3px 0;
   position: relative;
-<<<<<<< HEAD
-}
-#header .main-item .gnb li a {
-  text-decoration: none;
-  color: #656565;
-}
-#header .main-item .gnb li:hover .depth1 {
-  display: block;
-  -webkit-animation: fadein 1s;
-          animation: fadein 1s;
-}
-#header .main-item .gnb li:hover span {
-  color: #6f76c1;
-}
-#header .main-item .gnb li .depth1 {
-  width: 100%;
-  background-color: #fff;
-  position: absolute;
-  top: 50px;
-  text-align: center;
-  display: none;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  color: #656565;
-  z-index: 1000;
-}
-#header .main-item .gnb li .depth1 .depth1Li {
-  font-size: 15px;
-  height: 30px;
-}
-#header .main-item .gnb li .depth1 .depth1Li:hover {
-  color: #6f76c1;
-=======
->>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
 }
 .onAndUp-header .main-item .gnb li a {
   text-decoration: none;
@@ -225,13 +188,10 @@
   color: #656565;
 }
 
-<<<<<<< HEAD
-=======
 .onAndUp-header.off {
   background-color: rgba(255, 255, 255, 0);
 }
 
->>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
 @-webkit-keyframes change {
   0% {
     opacity: 0;

@@ -1,16 +1,9 @@
 @media (min-width: 1024px) {
   .wrap {
-<<<<<<< HEAD
-    width: 1200px;
-    height: 100vh;
-    padding: 7rem 0px;
-    background-color: #dde3f6 !important;
-=======
     width: 100%;
     height: 100vh;
     padding: 7rem 0px;
     background-color: #dde3f6;
->>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
   }
   .wrap .main {
     width: 100%;
