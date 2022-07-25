@@ -32,6 +32,7 @@ function OnAndUpItemForm() {
     if(state == null) {
       
       item.map((el) => {
+        console.log('pathname',pathname,'el.onAndUpItemAddress',el.onAndUpItemAddress)
         if(pathname.indexOf(el.onAndUpItemAddress) > 0) {
           console.log('el',el)
           setTmpState(el);
@@ -39,6 +40,9 @@ function OnAndUpItemForm() {
         }
       })
       console.log(tmp)
+    }
+    else {
+      console.log('state',state)
     }
   },[item]);
 
@@ -49,7 +53,11 @@ function OnAndUpItemForm() {
   useEffect(() => {
     dispatch(headerGnbOpcity("1"));
   });
-  
+  useEffect(() => {
+    console.log('tmpState',tmpState)
+  },[tmpState])
+
+
   return (
     <div className="item-form">
       <div className="item-inner">
@@ -68,16 +76,25 @@ function OnAndUpItemForm() {
         <ul className="item-btn-area">
           {
             state ? 
-            tmpStateDep.map((item, index) => (
-              <li
-                key={index}
-                className="item-btn"
-                onClick={() => currentIndex(index)}
-              >
-                {item}
-              </li>
-              ))
-            : null
+              state.dep.map((item, index) => (
+                <li
+                  key={index}
+                  className="item-btn"
+                  onClick={() => currentIndex(index)}
+                >
+                  {item}
+                </li>
+                ))
+              : 
+              tmpStateDep.map((item, index) => (
+                <li
+                  key={index}
+                  className="item-btn"
+                  onClick={() => currentIndex(index)}
+                >
+                  {item}
+                </li>
+                ))
             }
         </ul>
         <div className="item-box">
@@ -87,7 +104,9 @@ function OnAndUpItemForm() {
               ? component[state.id].content[0]
               : component[state.id].content[tabIndex]
             :
-            null
+            tabIndex === undefined
+              ? component[tmpState.id] && component[tmpState.id].content[0]
+              : component[tmpState.id] && component[tmpState.id].content[tabIndex]
             }
         </div>
       </div>

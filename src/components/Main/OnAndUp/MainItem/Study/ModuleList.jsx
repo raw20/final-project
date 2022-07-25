@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { NavLink } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function ModuleList({moduleID, setModuleItem}) {
     console.log(moduleID)
@@ -12,15 +12,15 @@ function ModuleList({moduleID, setModuleItem}) {
         (async () => {
         const response = await fetch(itemData);
         const json = await response.json();
+        console.log('json',json)
         setData(json[ID])
         })();
     },[]);
 
     useEffect(() => {
-        console.log(data)
+        console.log('data',data)
         if (data) {
             setModuleData(data.module);
-            setModuleItem(data.module)
         }
     },[data])
 
@@ -29,7 +29,7 @@ function ModuleList({moduleID, setModuleItem}) {
                 {
                     moduleData && moduleData.map((el,index) => {
                         return (
-                                <NavLink key={index} to={`${data.address}/${index+1}`} state={moduleData}>
+                                <Link key={index} to={`study/${data.address}/${index+1}`}>
                                     <div className="module_card">
                                         <div className='module_cardImg'>
                                             <div className='cardImg_background'>
@@ -45,7 +45,7 @@ function ModuleList({moduleID, setModuleItem}) {
                                         <div className="module_cardTitle">{el.mtitle}</div>
                                         <div className='module_cardTitle_sub'>{el.mgoal}</div>
                                     </div>
-                                </NavLink>
+                                </Link>
                         )
                     })
                 }
