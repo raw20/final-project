@@ -19,16 +19,8 @@ function ConnectWithHeader({ LoginAuth }) {
     })();
   }, []);
   return (
-    <div
-      className={
-        opacity === 1 ? "connectwith-header off" : "connectwith-header"
-      }
-    >
-      <Link
-        to="/"
-        className="logo"
-        onClick={() => dispatch(headerGnbOpcity("0"))}
-      >
+    <div className={opacity === 1 ? "connectwith-header off" : "connectwith-header"}>
+      <Link to="/" className="logo" onClick={() => dispatch(headerGnbOpcity("0"))}>
         logo
       </Link>
       <div className="main-item">
