@@ -1,12 +1,14 @@
 import React from "react";
-
+import "./css/style.css";
 function NoticeWriteBtn({ auth, setWriter }) {
   function convertBoolean() {
     setWriter(true);
   }
   return (
     <>
-      <button onClick={convertBoolean}>작성하기</button>
+      <button className="notice-btn" onClick={convertBoolean}>
+        작성하기
+      </button>
     </>
   );
 }

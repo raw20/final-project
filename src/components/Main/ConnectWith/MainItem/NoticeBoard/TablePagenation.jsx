@@ -1,6 +1,6 @@
 import React from "react";
 
-const EduNoticePage = ({ postsPerPage, totalPosts, paginate }) => {
+const TablePagenation = ({ postsPerPage, totalPosts, paginate }) => {
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i);
@@ -9,7 +9,7 @@ const EduNoticePage = ({ postsPerPage, totalPosts, paginate }) => {
   return (
     <div>
       <nav>
-        <ul className="edu_pagination">
+        <ul className="table_pagination">
           {pageNumbers.map((number) => (
             <li key={number} className="page_item">
               <button onClick={() => paginate(number)} className="page_link">
@@ -23,4 +23,4 @@ const EduNoticePage = ({ postsPerPage, totalPosts, paginate }) => {
   );
 };
 
-export default EduNoticePage;
+export default TablePagenation;

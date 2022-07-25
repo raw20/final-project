@@ -18,6 +18,7 @@ function ConnectWithHeader({ opacity, LoginAuth }) {
     })();
   }, []);
   return (
+
     <div
       className={
         opacity === "0" ? "connectwith-header off" : "connectwith-header"
@@ -35,18 +36,15 @@ function ConnectWithHeader({ opacity, LoginAuth }) {
           {item.map((item, index) => (
             <li>
               <NavLink
-                to={`/item/${item.address}/${item.id}`}
+                to={
+                  item.id === 3
+                    ? `/${item.id}/${item.address}/notice`
+                    : `/${item.id}/${item.address}`
+                }
                 key={item.id}
                 className={({ isActive }) =>
                   isActive ? "item-menu on" : "item-menu"
                 }
-                state={{
-                  id: item.id,
-                  title: item.title,
-                  img: item.main_img,
-                  address: item.address,
-                  contents: item.contents,
-                }}
               >
                 {item.title}
               </NavLink>

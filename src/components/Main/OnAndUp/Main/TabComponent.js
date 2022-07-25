@@ -13,6 +13,7 @@ import SelfCare from '../MainItem/Study/SelfCare';
 import WorkSkill from '../MainItem/Study/WorkSkill';
 import EduRoom from './../MainItem/EduRoom/EduRoom';
 import EduNotice from './../MainItem/EduGuide/EduNotice';
+import DemoApp from './../MainItem/EduGuide/DemoApp';
 import EduCalendar from './../MainItem/EduGuide/EduCalendar';
 
 /*

@@ -1,0 +1,74 @@
+.lectuerer_area {
+  width: 1200px;
+  margin: auto;
+}
+.lectuerer_area .lecturer_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.lectuerer_area .lecturer_wrap .card {
+  width: calc(50% - 50px);
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+  padding: 70px 30px;
+  box-sizing: border-box;
+  margin: 0 25px 25px 0;
+}
+.lectuerer_area .lecturer_wrap .card:hover {
+  background-color: #6f76c1;
+  color: #fff;
+  transition: all 0.5s;
+}
+.lectuerer_area .lecturer_wrap .card:hover > select {
+  background-color: #6f76c1;
+  color: #fff;
+}
+.lectuerer_area .lecturer_wrap .card .lec_box {
+  display: flex;
+}
+.lectuerer_area .lecturer_wrap .card .lec_box .img_box {
+  height: 150px;
+  margin-right: 20px;
+}
+.lectuerer_area .lecturer_wrap .card .lec_box .img_box .img {
+  height: 150px;
+}
+.lectuerer_area .lecturer_wrap .card .lec_box .info_box .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.lectuerer_area .lecturer_wrap .card .lec_box .info_box .career_box {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.lectuerer_area .lecturer_wrap .card .lec_box .info_box .career_box span:first-child {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.lectuerer_area .lecturer_wrap .card .lec_box .module_box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 55px;
+}
+.lectuerer_area .lecturer_wrap .card .lec_box .module_box span {
+  font-weight: 600;
+  font-size: 14px;
+}
+.lectuerer_area .lecturer_wrap .card .lec_box .module_box select {
+  width: 300px;
+  height: 45px;
+  border-radius: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  padding: 0 15px;
+  margin-top: 8px;
+  border: none;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+  background-color: #eef3fa;
+}/*# sourceMappingURL=EduLecturer.css.map */

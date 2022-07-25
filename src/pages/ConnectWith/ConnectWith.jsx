@@ -8,12 +8,13 @@ function ConnectWith() {
   const [data, setData] = useState([]);
   const connenctWithMenuData = "/db/connenctWithMenuData.json";
   const dispatch = useDispatch();
-  async function getMainData() {
-    const json = await (await fetch(connenctWithMenuData)).json();
-    setData(json);
-  }
+
   useEffect(() => {
-    getMainData();
+    (async () => {
+      const response = await fetch(connenctWithMenuData);
+      const json = await response.json();
+      setData(json);
+    })();
     dispatch(headerGnbOpcity("0"));
   }, []);
   return (

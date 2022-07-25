@@ -1,7 +1,9 @@
 .welcome-wrap {
-  width: 100%;
+  width: 90%;
   height: 100vh;
   animation: fadein 2s;
+  margin: 0 auto;
+  padding-top: 2rem;
 
   .welcome-content {
     width: 100%;

@@ -1,10 +1,10 @@
-.item-form {
+.connectwith-item-form {
   width: 100%;
   height: 100%;
   padding-top: 70px;
   box-sizing: border-box;
 }
-.item-form .item-inner {
+.connectwith-item-form .connectwith-item-inner {
   max-width: 1200px;
   height: 100vw;
   margin: 30px auto;
@@ -16,7 +16,7 @@
   -webkit-animation: fadein 1s;
           animation: fadein 1s;
 }
-.item-form .item-inner .item-img {
+.connectwith-item-form .connectwith-item-inner .connectwith-item-img {
   width: 100%;
   height: auto;
   display: flex;
@@ -25,16 +25,16 @@
   top: 0px;
   right: -47px;
 }
-.item-form .item-inner .item-img img {
+.connectwith-item-form .connectwith-item-inner .connectwith-item-img img {
   width: 570px;
   height: 390px;
 }
-.item-form .item-inner .item-text {
+.connectwith-item-form .connectwith-item-inner .connectwith-item-text {
   width: 100%;
   height: 15%;
   margin: 30px 50px;
 }
-.item-form .item-inner .item-text .item-location {
+.connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-location {
   width: 100%;
   height: auto;
   font-size: 15px;
@@ -42,7 +42,7 @@
   position: relative;
   margin-left: 20px;
 }
-.item-form .item-inner .item-text .item-location::before {
+.connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-location::before {
   content: " ";
   width: 17px;
   height: 17px;
@@ -52,14 +52,20 @@
   background: url(/public/img/ic-check-on.png) no-repeat center/cover;
   margin-right: 20px;
 }
-.item-form .item-inner .item-text .item-title {
+.connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-title {
   width: 100%;
   font-size: 3rem;
   font-weight: 600;
   color: rgb(111, 118, 193);
   margin-top: 7rem;
 }
-.item-form .item-inner .item-text .item-contents {
+.connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-title .connectwith-item-eng-title {
+  margin-left: 1.5rem;
+  font-size: 2.2rem;
+  color: #e6e0ec;
+  font-weight: 300;
+}
+.connectwith-item-form .connectwith-item-inner .connectwith-item-text .connectwith-item-contents {
   width: 70%;
   font-size: 1.2rem;
   color: #ccc;
