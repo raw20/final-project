@@ -8,6 +8,7 @@ import OnAndUpItemForm from "./components/Main/OnAndUp/Main/OnAndUpItemForm";
 import ConnectWthItemForm from "./components/Main/ConnectWith/Main/ConnectWthItemForm";
 import Welcome from "./components/Main/ConnectWith/MainItem/Welcome/Welcome";
 import Now from "./components/Main/OnAndUp/MainItem/Diagnosis/Now";
+import AboutCompanyConnect from "./components/Main/ConnectWith/MainItem/AboutCompany/AboutCompany";
 import AboutCompany from "./components/Main/OnAndUp/MainItem/Study/AboutCompany";
 import Preparations from "./components/Main/ConnectWith/MainItem/Preparations/Preparations";
 import NoticeBoard from "./components/Main/ConnectWith/MainItem/NoticeBoard/NoticeBoard";
@@ -27,7 +28,6 @@ function App() {
     console.log("로그인인증값", LoginAuth);
   }, [LoginAuth]);
 
-
   return (
     <div className="App">
       <BrowserRouter>
@@ -36,7 +36,7 @@ function App() {
           <Route path="/" element={<ConnectWith />} />
           <Route path="/:id" element={<ConnectWthItemForm />}>
             <Route path="welcome" element={<Welcome />} />
-            <Route path="aboutCompany" element={<AboutCompany />} />
+            <Route path="aboutCompany" element={<AboutCompanyConnect />} />
             <Route path="preparations" element={<Preparations />} />
             <Route path="noticeBoard/" element={<NoticeBoard />}>
               <Route path="notice" element={<Notice />} />
@@ -46,32 +46,45 @@ function App() {
           </Route>
 
           <Route path="/" element={<ConnectWith />} />
-          <Route path="/chemiverseOnUp/:address/*" element={<OnAndUpItemForm />}>
+          <Route
+            path="/chemiverseOnUp/:address/*"
+            element={<OnAndUpItemForm />}
+          >
             <Route path="eduroom" />
             <Route path="eduguide" />
-            <Route path="diagnosis/*" element={<Now />}/>
-            <Route path="study/*" element={<AboutCompany />}/>
+            <Route path="diagnosis/*" element={<Now />} />
+            <Route path="study/*" element={<AboutCompany />} />
             <Route path="chemistory" />
             <Route path="mentoring" />
             <Route path="board" />
           </Route>
           <Route path="/chemiverseOnUp" element={<OnAndUp />} />
-          <Route path="/chemiverseOnUp/login" element={<Login setLoginAuth={setLoginAuth} />} />
-          <Route path="/chemiverseOnUp/login-search" element={<LoginSearch />} />
+          <Route
+            path="/chemiverseOnUp/login"
+            element={<Login setLoginAuth={setLoginAuth} />}
+          />
+          <Route
+            path="/chemiverseOnUp/login-search"
+            element={<LoginSearch />}
+          />
 
           <Route path="/chemiverseOnUp/profile" element={<Profile />} />
           <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
-
         </Routes>
       </BrowserRouter>
       <div className="search-box">
-        <input type="text" class="search-txt" name="" placeholder="Type to search" />
+        <input
+          type="text"
+          class="search-txt"
+          name=""
+          placeholder="Type to search"
+        />
         <div class="search-btn">
           <FiSearch />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default App;

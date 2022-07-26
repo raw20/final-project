@@ -17,3 +17,8 @@
     @content;
   }
 }
+@mixin square($size) {
+  $calculated: 32px * $size;
+  width: $calculated;
+  height: $calculated;
+}

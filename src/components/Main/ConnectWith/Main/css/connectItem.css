@@ -176,11 +176,11 @@
     line-height: 30px;
   }
   .link-item .item-list .img {
-    width: 100%;
+    width: 80%;
     height: auto;
     position: absolute;
     bottom: 0px;
-    right: 0px;
+    left: 27.5%;
   }
   .link-item .item-list .img img {
     width: 300px;
