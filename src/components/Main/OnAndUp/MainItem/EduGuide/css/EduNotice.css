@@ -1,0 +1,60 @@
+.edu_notice_wrap {
+  width: 85%;
+  margin: 0 auto;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+}
+.edu_notice_wrap .edu_notice_area {
+  width: 100%;
+  margin: 0 auto;
+}
+.edu_notice_wrap .edu_notice_area .edu_table {
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+}
+.edu_notice_wrap .edu_notice_area .edu_table th {
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+.edu_notice_wrap .edu_notice_area .edu_table td {
+  width: 10%;
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 20px;
+  border-bottom: 0.5px solid #ccc;
+  color: #888;
+}
+.edu_notice_wrap .edu_notice_area .edu_table td:nth-child(3) {
+  width: 80%;
+  text-align: start;
+  font-size: 0.9rem;
+  color: #000;
+  padding-left: 5.5rem;
+  cursor: pointer;
+}
+.edu_notice_wrap .edu_notice_area .edu_table td:nth-child(3):hover {
+  color: #6f76c1;
+}
+.edu_notice_wrap .edu_pagination {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 300px;
+  padding-top: 25px;
+  margin: auto;
+}
+.edu_notice_wrap .edu_pagination .page_link {
+  color: #ccc;
+  font-size: 18px;
+  font-weight: 800;
+}
+.edu_notice_wrap .edu_pagination .page_link:hover {
+  cursor: pointer;
+  color: #6f76c1;
+}
+.edu_notice_wrap .edu_pagination .page_link.active {
+  color: #6f76c1;
+}/*# sourceMappingURL=EduNotice.css.map */
