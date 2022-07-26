@@ -1,0 +1,53 @@
+$bgColor: #dde3f6;
+$deepColor: #6f76c1;
+$lightColor: #e6e0ec;
+
+.table_pagination {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  .page_item {
+    margin-top: 25px;
+    .page_link {
+      color: #ccc;
+      font-size: 18px;
+      font-weight: 800;
+      &:hover {
+        cursor: pointer;
+        color: $deepColor;
+      }
+      &:focus {
+        color: $deepColor;
+      }
+    }
+  }
+}
+.notice-btn {
+  width: 70px;
+  height: 30px;
+  font-size: 0.7rem;
+  background-color: rgba(111, 118, 193, 1);
+  color: #fff;
+  border: none;
+  box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.notice-btn.temporary,
+.notice-btn.tab-like {
+  border: 1px solid #ccc;
+  background-color: $lightColor;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart {
+  margin-left: 0.4rem;
+}
