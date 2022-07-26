@@ -67,7 +67,6 @@ function App() {
             path="/chemiverseOnUp/login-search"
             element={<LoginSearch />}
           />
-
           <Route path="/chemiverseOnUp/profile" element={<Profile />} />
           <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
         </Routes>
