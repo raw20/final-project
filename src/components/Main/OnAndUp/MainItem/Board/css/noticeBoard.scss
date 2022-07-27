@@ -1,0 +1,47 @@
+$bgColor: #dde3f6;
+$deepColor: #6f76c1;
+$lightColor: #e6e0ec;
+.tab-btn-wrap {
+  width: 100%;
+  height: 100vh;
+  padding-top: 7rem;
+  background-color: #fff;
+  .tab-btn-area {
+    width: 700px;
+    display: flex;
+    margin: 0px auto;
+    .tab-btn {
+      width: 150px;
+      height: 50px;
+      color: #111;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 2px 2px rgb(34 51 89 / 10%);
+      border-radius: 11px;
+      font-size: 15px;
+      cursor: pointer;
+      margin: 0px auto;
+      text-decoration: none;
+      .tab-btn-list {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .tab-btn.on {
+      background-color: rgba(111, 118, 193, 1);
+      color: #fff;
+      border: none;
+      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+    }
+  }
+  .tab-item-title {
+    width: 100%;
+    margin: 5rem auto;
+    color: $deepColor;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
