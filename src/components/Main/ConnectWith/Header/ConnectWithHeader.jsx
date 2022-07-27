@@ -59,6 +59,9 @@ function ConnectWithHeader({ opacity, LoginAuth }) {
       >
         Chemiverse On & Up <IoCaretForwardOutline />
       </Link>
+      <Link to="/headertab" className="connect-with-header-tab">
+        내비
+      </Link>
     </div>
   );
 }
