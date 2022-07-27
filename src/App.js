@@ -21,6 +21,9 @@ import { FiSearch } from "react-icons/fi";
 import Notice from "./components/Main/ConnectWith/MainItem/NoticeBoard/Notice";
 import AboutMe from "./components/Main/ConnectWith/MainItem/NoticeBoard/AboutMe";
 import QandA from "./components/Main/ConnectWith/MainItem/NoticeBoard/QandA";
+import EduRoom from "./components/Main/OnAndUp/MainItem/EduRoom/EduRoom";
+import EduNotice from "./components/Main/OnAndUp/MainItem/EduGuide/EduNotice";
+import EduCalendar from "./components/Main/OnAndUp/MainItem/EduGuide/EduCalendar";
 
 function App() {
   const [LoginAuth, setLoginAuth] = useState(false);
@@ -46,14 +49,13 @@ function App() {
           </Route>
 
           <Route path="/" element={<ConnectWith />} />
-          <Route
-            path="/chemiverseOnUp/:address/*"
-            element={<OnAndUpItemForm />}
-          >
-            <Route path="eduroom" />
-            <Route path="eduguide" />
-            <Route path="diagnosis/*" element={<Now />} />
-            <Route path="study/*" element={<AboutCompany />} />
+          <Route path="/chemiverseOnUp/:id" element={<OnAndUpItemForm />}>
+            <Route path="eduroom/0" element={<EduRoom />} />
+            <Route path="eduguide/0" element={<EduNotice />} />
+            <Route path="eduguide/1" element={<EduCalendar />} />
+
+            <Route path="diagnosis" element={<Now />} />
+            <Route path="study" element={<AboutCompany />} />
             <Route path="chemistory" />
             <Route path="mentoring" />
             <Route path="board" />
@@ -74,11 +76,11 @@ function App() {
       <div className="search-box">
         <input
           type="text"
-          class="search-txt"
+          className="search-txt"
           name=""
           placeholder="Type to search"
         />
-        <div class="search-btn">
+        <div className="search-btn">
           <FiSearch />
         </div>
       </div>

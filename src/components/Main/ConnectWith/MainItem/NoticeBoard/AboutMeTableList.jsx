@@ -13,7 +13,7 @@ const AboutMeTableList = ({
 }) => {
   const [viewCount, setViewCount] = useState(0);
   const [index, setIndex] = useState();
-  const likeValue = useSelector((state) => state.item.likes);
+  const likeValue = useSelector((state) => state.item.data);
   function onClick(index) {
     setContent(false);
     setIndex(index);

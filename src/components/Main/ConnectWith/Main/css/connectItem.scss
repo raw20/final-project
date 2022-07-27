@@ -32,12 +32,12 @@ $lightColor: #e6e0ec;
       .img {
         width: 100%;
         height: auto;
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
         img {
-          width: 400px;
+          width: 350px;
           height: 200px;
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
           &:hover {
             transition-duration: 0.5s;
             transform: scale(120%);
@@ -81,6 +81,7 @@ $lightColor: #e6e0ec;
       height: 100vh;
       overflow: hidden;
       position: relative;
+
       .title {
         margin-top: 20%;
         line-height: 30px;
@@ -97,12 +98,13 @@ $lightColor: #e6e0ec;
       .img {
         width: 100%;
         height: auto;
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
+
         img {
-          width: 400px;
+          width: 250px;
           height: 200px;
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
           &:hover {
             transition-duration: 0.5s;
             transform: scale(120%);
@@ -160,12 +162,12 @@ $lightColor: #e6e0ec;
       .img {
         width: 80%;
         height: auto;
-        position: absolute;
-        bottom: 0px;
-        left: 27.5%;
         img {
-          width: 300px;
-          height: 200px;
+          width: 370px;
+          height: 250px;
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
         }
       }
     }

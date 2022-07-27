@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { connectWith } from "../../../../app/headerStateSlice";
 
-function ConnectItem({ data, opacity }) {
-  const json = JSON.stringify(data.contents, null, "\n");
+function ConnectItem({ data }) {
+  const json = JSON.stringify(data.contents);
+  const contents = json.split("\\n").join("<br>");
   const dispatch = useDispatch();
-
   return (
     <>
       <Link
@@ -26,7 +26,7 @@ function ConnectItem({ data, opacity }) {
           }}
         >
           <div className="title">{data.title}</div>
-          <div className="content">{data.contents.replace("@", "\n")}</div>
+          <div className="content">{contents}</div>
           <div className="img">
             <img src={`${data.img}`} alt={data.title} />
           </div>

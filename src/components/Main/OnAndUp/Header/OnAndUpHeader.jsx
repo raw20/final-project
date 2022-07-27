@@ -29,6 +29,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
 
   const [viewButton, setViewButton] = useState(true);
   const button = useState("ture") ? viewButton : setViewButton;
+  item.map((e) => console.log(e.onAndUpSubAddress));
   return (
     <div id="header">
       <Link className="logo" to="/chemiverseOnUp">
@@ -39,8 +40,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
           {item.map((item, index) => (
             <li key={index}>
               <NavLink
-                to={`/chemiverseOnUp/item/${item.onAndUpItemAddress}`}
-                key={item.id}
+                to={`/chemiverseOnUp/${item.id}/${item.onAndUpItemAddress}/0`}
                 state={{
                   id: item.id,
                   menu: item.menu,
@@ -51,20 +51,21 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
                 <span>{item.menu}</span>
               </NavLink>
               <ul className="depth1">
-                <NavLink
-                  to={`/chemiverseOnUp/item/${item.address}`}
-                  key={item.id}
-                  state={{
-                    id: item.id,
-                    menu: item.menu,
-                    dep: item.dep,
-                    address: item.onAndUpItemAddress,
-                  }}
-                >
-                  {item.dep.map((ele, index) => (
-                    <li key={index} className="depth1Li">{ele}</li>
-                  ))}
-                </NavLink>
+                {item.dep.map((ele, index) => (
+                  <li key={index} className="depth1Li">
+                    <NavLink
+                      to={`/chemiverseOnUp/${item.id}/${item.onAndUpItemAddress}/${index}`}
+                      state={{
+                        id: item.id,
+                        menu: item.menu,
+                        dep: item.dep,
+                        address: item.onAndUpItemAddress,
+                      }}
+                    >
+                      {ele}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
             </li>
           ))}
@@ -101,7 +102,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default OnAndUpHeader
+export default OnAndUpHeader;
