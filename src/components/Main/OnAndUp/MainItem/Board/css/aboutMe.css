@@ -1,0 +1,43 @@
+.aboutMe_area {
+  width: 85%;
+  margin: 0 auto;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+}
+.aboutMe_area .aboutMe_table_area {
+  width: 100%;
+  margin: 0 auto;
+}
+.aboutMe_area .aboutMe_table_area .aboutMe_table {
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+}
+.aboutMe_area .aboutMe_table_area .aboutMe_table th {
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+.aboutMe_area .aboutMe_table_area .aboutMe_table td {
+  width: 10%;
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 20px;
+  border-bottom: 0.5px solid #ccc;
+  color: #888;
+}
+.aboutMe_area .aboutMe_table_area .aboutMe_table td:nth-child(2) {
+  width: 16%;
+}
+.aboutMe_area .aboutMe_table_area .aboutMe_table td:nth-child(3) {
+  width: 80%;
+  text-align: start;
+  font-size: 0.9rem;
+  color: #000;
+  padding-left: 5.5rem;
+  cursor: pointer;
+}
+.aboutMe_area .aboutMe_table_area .aboutMe_table td:nth-child(3):hover {
+  color: #6f76c1;
+}/*# sourceMappingURL=aboutMe.css.map */

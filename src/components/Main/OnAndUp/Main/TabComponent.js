@@ -1,20 +1,20 @@
-import Bo1 from "../MainItem/Board/Bo1";
-import Bo2 from "../MainItem/Board/Bo2";
 import Chemi01 from "../MainItem/ChemiStory/Chemi01";
 import M1 from "../MainItem/Mentoring/M1";
 import M2 from "../MainItem/Mentoring/M2";
 import M3 from "../MainItem/Mentoring/M3";
 import M4 from "../MainItem/Mentoring/M4";
-import Now from '../MainItem/Diagnosis/Now';
-import Result from '../MainItem/Diagnosis/Result';
-import AboutCompany from '../MainItem/Study/AboutCompany';
-import PeopleSkill from '../MainItem/Study/PeopleSkill';
-import SelfCare from '../MainItem/Study/SelfCare';
-import WorkSkill from '../MainItem/Study/WorkSkill';
-import EduRoom from './../MainItem/EduRoom/EduRoom';
-import EduNotice from './../MainItem/EduGuide/EduNotice';
-import DemoApp from './../MainItem/EduGuide/DemoApp';
-import EduCalendar from './../MainItem/EduGuide/EduCalendar';
+import Now from "../MainItem/Diagnosis/Now";
+import Result from "../MainItem/Diagnosis/Result";
+import AboutCompany from "../MainItem/Study/AboutCompany";
+import PeopleSkill from "../MainItem/Study/PeopleSkill";
+import SelfCare from "../MainItem/Study/SelfCare";
+import WorkSkill from "../MainItem/Study/WorkSkill";
+import EduRoom from "./../MainItem/EduRoom/EduRoom";
+import EduNotice from "./../MainItem/EduGuide/EduNotice";
+import DemoApp from "./../MainItem/EduGuide/DemoApp";
+import EduCalendar from "./../MainItem/EduGuide/EduCalendar";
+import Board from "../MainItem/Board/\bBoard";
+import Idea from "../MainItem/Board/Idea";
 
 /*
  index : 0 = 교육장 이동
@@ -40,11 +40,11 @@ const component = [
   },
   {
     index: 3,
-    content: [<AboutCompany />,  <WorkSkill />, <PeopleSkill />, <SelfCare />],
+    content: [<AboutCompany />, <WorkSkill />, <PeopleSkill />, <SelfCare />],
   },
   {
     index: 4,
-    content: [<Chemi01 />, <M2 />, <Bo2 />, <M3 />],
+    content: [<Chemi01 />, <M2 />, <M3 />],
   },
   {
     index: 5,
@@ -52,7 +52,7 @@ const component = [
   },
   {
     index: 6,
-    content: [<Bo1 />, <Bo2 />],
+    content: [<Board />, <Idea />],
   },
 ];
 
