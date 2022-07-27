@@ -10,7 +10,6 @@ const Login = ({ setLoginAuth }) => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   /*  const loginSubmit = (e) => {
      // e.preventDefault();
      console.log('로그인되었습니다.');
@@ -20,14 +19,10 @@ const Login = ({ setLoginAuth }) => {
   const LoginSearch = () => {
     navigate('/chemiverseOnUp/login-search')
   }
-
+  console.log(id)
   const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(login({
-      id: id,
-      password: password,
-    })
-    );
+    e.preventDefault(e);
+    dispatch(login({ id: id, pw: password }))
     setLoginAuth(true);
     navigate('/chemiverseOnUp');
   };
@@ -65,7 +60,7 @@ const Login = ({ setLoginAuth }) => {
           <button id='searchBtn' onClick={LoginSearch}>ID/PW찾기</button>
         </div>
         <div>
-          <button className="login-button" type="submit" value="로그인">로그인</button>
+          <button className="login-button" type="submit" value="로그인" >로그인</button>
         </div>
       </form>
     </div>

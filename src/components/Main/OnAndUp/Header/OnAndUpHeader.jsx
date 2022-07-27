@@ -73,7 +73,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
       <div className="side-item">
         <ul className="util">
           <li id="mypage">
-            <NavLink to={`/chemiverseOnUp/mypage`}>
+            <NavLink to={`/chemiverseOnUp/Profile`}>
               <BiUser />
             </NavLink>
           </li>
