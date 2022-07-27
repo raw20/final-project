@@ -1,6 +1,6 @@
-import Board from "./\bBoard";
-import AboutMe from "./AboutMe";
-import QandA from "./QandA";
+import Board from './Board';
+import AboutMe from './AboutMe';
+import QandA from './QandA';
 
 /*
  index : 0 = 공지사항
@@ -9,18 +9,18 @@ import QandA from "./QandA";
 
  */
 const component = [
-  {
-    index: 0,
-    content: [<Board />],
-  },
-  {
-    index: 1,
-    content: [<AboutMe />],
-  },
-  {
-    index: 2,
-    content: [<QandA />],
-  },
+	{
+		index: 0,
+		content: [<Board />],
+	},
+	{
+		index: 1,
+		content: [<AboutMe />],
+	},
+	{
+		index: 2,
+		content: [<QandA />],
+	},
 ];
 
 export default component;
