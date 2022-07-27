@@ -61,7 +61,6 @@ function App() {
           <Route path="/chemiverseOnUp" element={<OnAndUp />} />
           <Route path="/chemiverseOnUp/login" element={<Login setLoginAuth={setLoginAuth} />} />
           <Route path="/chemiverseOnUp/login-search" element={<LoginSearch />} />
-
           <Route path="/chemiverseOnUp/profile" element={<Profile />} />
           <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
         </Routes>
