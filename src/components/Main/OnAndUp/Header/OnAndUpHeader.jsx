@@ -27,8 +27,6 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
     })();
   }, []);
 
-  const [viewButton, setViewButton] = useState(true);
-  const button = useState("ture") ? viewButton : setViewButton;
   return (
     <div id="header">
       <Link className="logo" to="/chemiverseOnUp">
@@ -39,7 +37,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
           {item.map((item, index) => (
             <li key={index}>
               <NavLink
-                to={`/chemiverseOnUp/item/${item.onAndUpItemAddress}`}
+                to={`/chemiverseOnUp/${item.onAndUpItemAddress}`}
                 key={item.id}
                 state={{
                   id: item.id,
@@ -52,7 +50,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
               </NavLink>
               <ul className="depth1">
                 <NavLink
-                  to={`/chemiverseOnUp/item/${item.address}`}
+                  to={`/chemiverseOnUp/${item.address}`}
                   key={item.id}
                   state={{
                     id: item.id,
@@ -62,7 +60,9 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
                   }}
                 >
                   {item.dep.map((ele, index) => (
-                    <li key={index} className="depth1Li">{ele}</li>
+                    <li key={index} className="depth1Li">
+                      {ele}
+                    </li>
                   ))}
                 </NavLink>
               </ul>
@@ -101,7 +101,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default OnAndUpHeader
+export default OnAndUpHeader;

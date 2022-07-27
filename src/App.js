@@ -46,39 +46,27 @@ function App() {
           </Route>
 
           <Route path="/" element={<ConnectWith />} />
-          <Route
-            path="/chemiverseOnUp/:address/*"
-            element={<OnAndUpItemForm />}
-          >
+          <Route path="/chemiverseOnUp/:address/*" element={<OnAndUpItemForm />}>
             <Route path="eduroom" />
             <Route path="eduguide" />
             <Route path="diagnosis/*" element={<Now />} />
             <Route path="study/*" element={<AboutCompany />} />
             <Route path="chemistory" />
             <Route path="mentoring" />
-            <Route path="board" />
+            <Route path="noticeBoard/" element={<NoticeBoard />}>
+              <Route path="notice" element={<Notice />} />
+              <Route path="aboutme" element={<AboutMe />} />
+            </Route>
           </Route>
           <Route path="/chemiverseOnUp" element={<OnAndUp />} />
-          <Route
-            path="/chemiverseOnUp/login"
-            element={<Login setLoginAuth={setLoginAuth} />}
-          />
-          <Route
-            path="/chemiverseOnUp/login-search"
-            element={<LoginSearch />}
-          />
-
+          <Route path="/chemiverseOnUp/login" element={<Login setLoginAuth={setLoginAuth} />} />
+          <Route path="/chemiverseOnUp/login-search" element={<LoginSearch />} />
           <Route path="/chemiverseOnUp/profile" element={<Profile />} />
           <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
         </Routes>
       </BrowserRouter>
       <div className="search-box">
-        <input
-          type="text"
-          class="search-txt"
-          name=""
-          placeholder="Type to search"
-        />
+        <input type="text" class="search-txt" name="" placeholder="Type to search" />
         <div class="search-btn">
           <FiSearch />
         </div>
