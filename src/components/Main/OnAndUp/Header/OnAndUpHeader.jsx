@@ -27,79 +27,79 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
 		})();
 	}, []);
 
-	return (
-		<div id="header">
-			<Link className="logo" to="/chemiverseOnUp">
-				logo
-			</Link>
-			<div className="main-item">
-				<ul className="gnb">
-					{item.map((item, index) => (
-						<li key={index}>
-							<NavLink
-								to={`/chemiverseOnUp/${item.id}/${item.onAndUpItemAddress}/0`}
-								state={{
-									id: item.id,
-									menu: item.menu,
-									dep: item.dep,
-									address: item.address,
-								}}
-							>
-								<span>{item.menu}</span>
-							</NavLink>
-							<ul className="depth1">
-								{item.dep.map((ele, index) => (
-									<li key={index} className="depth1Li">
-										<NavLink
-											to={`/chemiverseOnUp/${item.id}/${item.onAndUpItemAddress}/${index}`}
-											state={{
-												id: item.id,
-												menu: item.menu,
-												dep: item.dep,
-												address: item.onAndUpItemAddress,
-											}}
-										>
-											{ele}
-										</NavLink>
-									</li>
-								))}
-							</ul>
-						</li>
-					))}
-				</ul>
-			</div>
-			<div className="side-item">
-				<ul className="util">
-					<li id="mypage">
-						<NavLink to={`/chemiverseOnUp/mypage`}>
-							<BiUser />
-						</NavLink>
-					</li>
-					{LoginAuth ? (
-						<span onClick={() => goToLogout()}>
-							<IoLogOutOutline />
-						</span>
-					) : (
-						<span onClick={() => goToLogin()}>
-							<IoLogInOutline />
-						</span>
-					)}
-					<NavLink
-						to={`/chemiverseOnUp/tab`}
-						state={{
-							id: item.id,
-							menu: item.menu,
-							dep: item.dep,
-							address: item.address,
-						}}
-						className={'tab-btn'}
-					>
-						탭버튼
-					</NavLink>
-				</ul>
-			</div>
-		</div>
-	);
+  return (
+    <div id="header">
+      <Link className="logo" to="/chemiverseOnUp">
+        logo
+      </Link>
+      <div className="main-item">
+        <ul className="gnb">
+          {item.map((item, index) => (
+            <li key={index}>
+              <NavLink
+                to={`/chemiverseOnUp/item/${item.onAndUpItemAddress}`}
+                key={item.id}
+                state={{
+                  id: item.id,
+                  menu: item.menu,
+                  dep: item.dep,
+                  address: item.address,
+                }}
+              >
+                <span>{item.menu}</span>
+              </NavLink>
+              <ul className="depth1">
+                <NavLink
+                  to={`/chemiverseOnUp/item/${item.address}`}
+                  key={item.id}
+                  state={{
+                    id: item.id,
+                    menu: item.menu,
+                    dep: item.dep,
+                    address: item.onAndUpItemAddress,
+                  }}
+                >
+                  {item.dep.map((ele, index) => (
+                    <li key={index} className="depth1Li">{ele}</li>
+                  ))}
+                </NavLink>
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="side-item">
+        <ul className="util">
+          <li id="mypage">
+            <NavLink to={`/chemiverseOnUp/Profile`}>
+              <BiUser />
+            </NavLink>
+          </li>
+          {LoginAuth ? (
+            <span onClick={() => goToLogout()}>
+              <IoLogOutOutline />
+            </span>
+          ) : (
+            <span onClick={() => goToLogin()}>
+              <IoLogInOutline />
+            </span>
+          )}
+          <NavLink
+            to={`/chemiverseOnUp/tab`}
+            state={{
+              id: item.id,
+              menu: item.menu,
+              dep: item.dep,
+              address: item.address,
+            }}
+            className={"tab-btn"}
+          >
+            탭버튼
+          </NavLink>
+        </ul>
+      </div>
+    </div>
+  );
 }
 
 export default OnAndUpHeader;
