@@ -8,10 +8,10 @@
   }
   .preparations-wrap .preparations-checklist-box {
     width: 80%;
-    height: 82vw;
+    height: 1000px;
     margin: 0px auto;
     border-radius: 30px;
-    background: url("/public/img/bg-checklist.png") no-repeat center/100%;
+    background: url("/public/img/bg-checklist.png") no-repeat center/cover;
     box-sizing: border-box;
   }
   .preparations-wrap .preparations-checklist-box .preparations-checklist-title {
@@ -23,7 +23,7 @@
   }
   .preparations-wrap .preparations-checklist-box .preparations-checklist-contents {
     width: 90%;
-    height: 65vw;
+    height: 800px;
     margin: 0px auto;
     padding: 2rem 3rem;
     background-color: #fff;
@@ -95,7 +95,7 @@
     margin-top: 2rem;
   }
   .preparations-wrap .preparations-checklist-box .preparations-checklist-contents .checklist-submit-btn {
-    width: 100%;
+    width: 30%;
     height: 3.4722vw;
     background-color: #9497d1;
     border-radius: 10px;
@@ -121,7 +121,7 @@
     height: 90vw;
     margin: 0px auto;
     border-radius: 30px;
-    background: url("/public/img/bg-checklist.png") no-repeat center/100%;
+    background: url("/public/img/bg-checklist.png") no-repeat center/cover;
     box-sizing: border-box;
   }
   .preparations-wrap .preparations-checklist-box .preparations-checklist-title {
@@ -205,7 +205,7 @@
     margin-top: 2rem;
   }
   .preparations-wrap .preparations-checklist-box .preparations-checklist-contents .checklist-submit-btn {
-    width: 100%;
+    width: 30%;
     height: 3.4722vw;
     background-color: #9497d1;
     border-radius: 10px;
@@ -230,11 +230,11 @@
     height: 130vw;
     margin: 0px auto;
     border-radius: 30px;
-    background: url("/public/img/bg-checklist.png") no-repeat center/100%;
+    background: url("/public/img/bg-checklist.png") no-repeat center/cover;
     box-sizing: border-box;
   }
   .preparations-wrap .preparations-checklist-box .preparations-checklist-title {
-    padding-top: 6.5rem;
+    padding-top: 3.5rem;
     padding-bottom: 2rem;
     font-size: 1.7rem;
     font-weight: 600;
@@ -243,7 +243,7 @@
   }
   .preparations-wrap .preparations-checklist-box .preparations-checklist-contents {
     width: 90%;
-    height: 90vw;
+    height: 100vw;
     margin: 0px auto;
     padding: 1.2rem 2.3rem;
     background-color: #fff;
@@ -315,7 +315,7 @@
     margin-top: 2rem;
   }
   .preparations-wrap .preparations-checklist-box .preparations-checklist-contents .checklist-submit-btn {
-    width: 100%;
+    width: 30%;
     height: 5.4722vw;
     background-color: #9497d1;
     border-radius: 10px;

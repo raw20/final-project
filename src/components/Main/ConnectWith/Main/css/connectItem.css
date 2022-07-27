@@ -99,7 +99,7 @@
     font-weight: 600;
   }
   .link-item .item-list .content {
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 20px;
     padding: 1.5rem 2rem;
     line-height: 1.3rem;
@@ -147,7 +147,7 @@
 @media (min-width: 335px) and (max-width: 757px) {
   .link-item {
     width: 100%;
-    height: 25%;
+    height: 100%;
     -webkit-animation-duration: 1.5s;
             animation-duration: 1.5s;
     -webkit-animation-delay: 0;
@@ -160,18 +160,19 @@
   }
   .link-item .item-list {
     width: 100%;
-    height: 80vh;
+    height: 40vh;
     overflow: hidden;
     position: relative;
   }
   .link-item .item-list .title {
-    margin-top: 20%;
-    font-size: 1.8rem;
+    margin-top: 5%;
+    font-size: 2.5rem;
     padding: 1.5rem 1rem;
     font-weight: 600;
   }
   .link-item .item-list .content {
-    font-size: 1.5rem;
+    width: 30%;
+    font-size: 1rem;
     padding: 1rem 1.2rem;
     line-height: 30px;
   }

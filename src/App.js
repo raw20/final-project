@@ -24,6 +24,10 @@ import QandA from './components/Main/ConnectWith/MainItem/NoticeBoard/QandA';
 import EduRoom from './components/Main/OnAndUp/MainItem/EduRoom/EduRoom';
 import EduNotice from './components/Main/OnAndUp/MainItem/EduGuide/EduNotice';
 import EduCalendar from './components/Main/OnAndUp/MainItem/EduGuide/EduCalendar';
+import Result from './components/Main/OnAndUp/MainItem/Diagnosis/Result';
+import WorkSkill from './components/Main/OnAndUp/MainItem/Study/WorkSkill';
+import PeopleSkill from './components/Main/OnAndUp/MainItem/Study/PeopleSkill';
+import SelfCare from './components/Main/OnAndUp/MainItem/Study/SelfCare';
 
 function App() {
 	const [LoginAuth, setLoginAuth] = useState(false);
@@ -50,19 +54,26 @@ function App() {
 
 					<Route path="/" element={<ConnectWith />} />
 					<Route path="/chemiverseOnUp/:id" element={<OnAndUpItemForm />}>
+						{/* 교육장이동 */}
 						<Route path="eduroom/0" element={<EduRoom />} />
+						{/* 교욱안내 */}
 						<Route path="eduguide/0" element={<EduNotice />} />
 						<Route path="eduguide/1" element={<EduCalendar />} />
-
-						<Route path="diagnosis" element={<Now />} />
-						<Route path="study" element={<AboutCompany />} />
-
+						<Route path="eduguide/2" element={<EduCalendar />} />
+						{/* 진단 */}
+						<Route path="diagnosis/0" element={<Now />} />
+						<Route path="diagnosis/1" element={<Result />} />
+						{/* 역량학습 */}
+						<Route path="study/0" element={<AboutCompany />} />
+						<Route path="study/1" element={<WorkSkill />} />
+						<Route path="study/2" element={<PeopleSkill />} />
+						<Route path="study/3" element={<SelfCare />} />
+						{/* 케미스토리 */}
 						<Route path="chemistory" />
+						{/* 멘토링 */}
 						<Route path="mentoring" />
-						<Route path="noticeBoard/" element={<NoticeBoard />}>
-							<Route path="notice" element={<Notice />} />
-							<Route path="aboutme" element={<AboutMe />} />
-						</Route>
+						{/* 게시판 */}
+						<Route path="noticeBoard/" element={<NoticeBoard />} />
 					</Route>
 					<Route path="/chemiverseOnUp" element={<OnAndUp />} />
 
