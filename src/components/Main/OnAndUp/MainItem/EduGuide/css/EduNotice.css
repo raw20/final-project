@@ -16,7 +16,7 @@
 .edu_notice_wrap .edu_notice_area .edu_table th {
   text-align: center;
   border-top: 1px solid #000;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #dcdce6;
   padding: 20px;
 }
 .edu_notice_wrap .edu_notice_area .edu_table td {
@@ -24,8 +24,8 @@
   text-align: center;
   font-size: 0.7rem;
   padding: 20px;
-  border-bottom: 0.5px solid #ccc;
-  color: #888;
+  border-bottom: 0.5px solid #dcdce6;
+  color: #aeaeba;
 }
 .edu_notice_wrap .edu_notice_area .edu_table td:nth-child(3) {
   width: 80%;
@@ -37,6 +37,57 @@
 }
 .edu_notice_wrap .edu_notice_area .edu_table td:nth-child(3):hover {
   color: #6f76c1;
+}
+.edu_notice_wrap .edu_notice_area .edu_detail_wrap .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.edu_notice_wrap .edu_notice_area .edu_detail_wrap .header .title_area {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 20px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #dcdce6;
+  background-color: #f5f5fa;
+}
+.edu_notice_wrap .edu_notice_area .edu_detail_wrap .header .title_area .category {
+  font-size: 14px;
+  margin-right: 20px;
+  color: #aeaeba;
+}
+.edu_notice_wrap .edu_notice_area .edu_detail_wrap .header .title_area .title {
+  font-size: 14px;
+}
+.edu_notice_wrap .edu_notice_area .edu_detail_wrap .header .date {
+  padding: 15px 20px;
+  border-bottom: 1px solid #dcdce6;
+  color: #aeaeba;
+}
+.edu_notice_wrap .edu_notice_area .edu_detail_wrap .main {
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dcdce6;
+  font-size: 12px;
+  line-height: 20px;
+}
+.edu_notice_wrap .edu_notice_area .edu_detail_wrap .main img {
+  width: 60vw;
+  margin-bottom: 20px;
+}
+.edu_notice_wrap .edu_notice_area .edu_detail_wrap .footer .btn {
+  width: 120px;
+  height: 40px;
+  border: 1px solid #dcdce6;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #6f76c1;
+}
+.edu_notice_wrap .edu_notice_area .edu_detail_wrap .footer .btn:hover {
+  border: 1px solid #6f76c1;
 }
 .edu_notice_wrap .edu_pagination {
   display: flex;
@@ -57,4 +108,47 @@
 }
 .edu_notice_wrap .edu_pagination .page_link.active {
   color: #6f76c1;
+}
+
+@media (min-width: 758px) and (max-width: 1023px) {
+  .edu_notice_wrap {
+    width: 100%;
+  }
+}
+@media (min-width: 335px) and (max-width: 757px) {
+  .edu_notice_wrap {
+    margin-top: 40px;
+    min-width: 100%;
+  }
+  .edu_notice_wrap .edu_notice_area .edu_table thead {
+    display: none;
+  }
+  .edu_notice_wrap .edu_notice_area .edu_table .tbody {
+    border-top: 1px solid #000;
+  }
+  .edu_notice_wrap .edu_notice_area .edu_table .tbody .body_row {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    border-bottom: 1px solid #dcdce6;
+  }
+  .edu_notice_wrap .edu_notice_area .edu_table .tbody .body_row td {
+    border: none;
+  }
+  .edu_notice_wrap .edu_notice_area .edu_table .tbody .body_row .idName {
+    display: none;
+  }
+  .edu_notice_wrap .edu_notice_area .edu_table .tbody .body_row .list_cat {
+    margin-top: 10px;
+    padding: 9px 0;
+  }
+  .edu_notice_wrap .edu_notice_area .edu_table .tbody .body_row .list_title {
+    width: 100%;
+    padding: 9px;
+    font-size: 14px;
+  }
+  .edu_notice_wrap .edu_notice_area .edu_table .tbody .body_row .list_date {
+    padding: 9px;
+    align-self: flex-end;
+  }
 }/*# sourceMappingURL=EduNotice.css.map */

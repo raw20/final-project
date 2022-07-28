@@ -1,11 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import axios from "axios";
-import LecturerCard from './LecturerCard';
+import EduLecturerCard from './EduLecturerCard';
 import './css/EduLecturer.css'
+import EduLecturerDetail from './EduLecturerDetail';
 
 function EduLecturer() {
   const [lecData, setLecData] = useState([]);
+  const [lecCardIndex, setLecCardIndex] = useState(0);
+  const [viewDetail ,setViewDetail] =useState(false)
   const dataUrl = '/db/lecturer.json';
     useEffect(()=>{
       (async () => {
@@ -15,12 +18,24 @@ function EduLecturer() {
   },[]);
 
     return (
-    <div className="lectuerer_area">
-      <ul className="lecturer_wrap">
+    <div className="lecturer_area">
+      {!viewDetail ? 
+      (<ul className="lecturer_wrap">
         {
-          lecData.map((lec)=><LecturerCard key={lec.id} lec={lec} />)
+          lecData.map((lec, index)=>
+          <EduLecturerCard key={index} 
+          lec={lec} 
+          setViewDetail={setViewDetail} 
+          index={index} 
+          setLecCardIndex={setLecCardIndex} 
+          lecCardIndex={lecCardIndex} />)
         }
-      </ul>
+      </ul>) : (
+      <EduLecturerDetail 
+      setViewDetail={setViewDetail}
+      lecData={lecData} 
+      lecCardIndex={lecCardIndex} />)}
+      
     </div>
     );
 };
