@@ -1,74 +1,301 @@
-.lectuerer_area {
-  width: 1200px;
-  margin: auto;
-}
-.lectuerer_area .lecturer_wrap {
+.lecturer_area .lecturer_wrap {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
-.lectuerer_area .lecturer_wrap .card {
-  width: calc(50% - 50px);
+.lecturer_area .lecturer_wrap .card {
+  width: calc(50% - 20px);
   height: 300px;
   border-radius: 20px;
   box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
-  padding: 70px 30px;
+  padding: 30px 20px;
   box-sizing: border-box;
-  margin: 0 25px 25px 0;
+  margin-bottom: 25px;
 }
-.lectuerer_area .lecturer_wrap .card:hover {
+.lecturer_area .lecturer_wrap .card:hover {
   background-color: #6f76c1;
   color: #fff;
   transition: all 0.5s;
 }
-.lectuerer_area .lecturer_wrap .card:hover > select {
-  background-color: #6f76c1;
-  color: #fff;
-}
-.lectuerer_area .lecturer_wrap .card .lec_box {
+.lecturer_area .lecturer_wrap .card .lec_box {
   display: flex;
+  height: 250px;
 }
-.lectuerer_area .lecturer_wrap .card .lec_box .img_box {
-  height: 150px;
+.lecturer_area .lecturer_wrap .card .lec_box .img_box {
+  height: 200px;
   margin-right: 20px;
 }
-.lectuerer_area .lecturer_wrap .card .lec_box .img_box .img {
-  height: 150px;
+.lecturer_area .lecturer_wrap .card .lec_box .img_box .img {
+  height: 170px;
 }
-.lectuerer_area .lecturer_wrap .card .lec_box .info_box .name {
+.lecturer_area .lecturer_wrap .card .lec_box .info_box {
+  width: 50%;
+}
+.lecturer_area .lecturer_wrap .card .lec_box .info_box .name {
   font-size: 20px;
   font-weight: bold;
 }
-.lectuerer_area .lecturer_wrap .card .lec_box .info_box .career_box {
+.lecturer_area .lecturer_wrap .card .lec_box .info_box .career_box {
   display: flex;
   flex-direction: column;
   margin: 20px 0;
 }
-.lectuerer_area .lecturer_wrap .card .lec_box .info_box .career_box span:first-child {
+.lecturer_area .lecturer_wrap .card .lec_box .info_box .career_box span:first-child {
   font-weight: 600;
   font-size: 14px;
   margin-bottom: 8px;
 }
-.lectuerer_area .lecturer_wrap .card .lec_box .module_box {
+.lecturer_area .lecturer_wrap .card .lec_box .module_box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   height: 55px;
 }
-.lectuerer_area .lecturer_wrap .card .lec_box .module_box span {
+.lecturer_area .lecturer_wrap .card .lec_box .module_box .contents-type {
+  width: 80%;
+  height: 18px;
+  border-radius: 5px;
+  color: rgba(79, 79, 79, 0.486);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+  background-color: rgba(255, 255, 255, 0.336);
+}
+.lecturer_area .lecturer_wrap .card .lec_box .module_box .contents-type .type-tab {
+  width: 84.2%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  color: #ccc;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  position: absolute;
+  display: none;
+  top: 25px;
+  right: 0px;
+  border-radius: 5px;
+}
+.lecturer_area .lecturer_wrap .card .lec_box .module_box .contents-type .type-tab .type-tab-list {
+  margin-top: 0.7rem;
+  cursor: pointer;
+}
+.lecturer_area .lecturer_wrap .card .lec_box .module_box .contents-type .type-tab .type-tab-list:hover {
+  color: #6f76c1;
+  font-weight: 500;
+}
+.lecturer_area .lecturer_wrap .card .lec_box .module_box .contents-type .type-tab.on {
+  display: block;
+}
+.lecturer_area .lecturer_wrap .card .lec_box .module_box .contents-type.on {
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+  background-color: rgb(255, 255, 255);
+}
+.lecturer_area .lecturer_wrap .card .lec_box .module_box span {
   font-weight: 600;
   font-size: 14px;
 }
-.lectuerer_area .lecturer_wrap .card .lec_box .module_box select {
-  width: 300px;
-  height: 45px;
-  border-radius: 5px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: none;
-  padding: 0 15px;
-  margin-top: 8px;
-  border: none;
+.lecturer_area .lecturer_wrap .card .movebtn_box {
+  position: relative;
+  align-self: flex-end;
+}
+.lecturer_area .lecturer_wrap .card .movebtn_box .detail_btn {
+  width: 51px;
+  height: 51px;
+  margin-left: 30px;
+  background: url(/public/img/link.png);
+  background-color: rgba(0, 0, 0, 0.205);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.lecturer_area .detail_box {
+  width: 80%;
+  margin: auto;
+}
+.lecturer_area .detail_box .profile {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.lecturer_area .detail_box .profile .img_box {
+  margin-right: 40px;
+}
+.lecturer_area .detail_box .profile .img_box img {
+  border-radius: 20px;
   box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
-  background-color: #eef3fa;
+}
+.lecturer_area .detail_box .profile .detail_info {
+  margin-top: 40px;
+}
+.lecturer_area .detail_box .profile .detail_info .position {
+  font-size: 1rem;
+  color: #6f76c1;
+}
+.lecturer_area .detail_box .profile .detail_info .name {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+.lecturer_area .detail_box .profile .detail_info .career_box {
+  padding: 0 20px;
+  margin-top: 15px;
+}
+.lecturer_area .detail_box .profile .detail_info .career_box .career_list {
+  list-style-type: square;
+  font-size: 15px;
+  line-height: 40px;
+  color: #8d8d99;
+}
+.lecturer_area .detail_box .video_box {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.lecturer_area .detail_box .video_box .lec_video {
+  width: 100%;
+  height: 30vw;
+  border-radius: 15px;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.15);
+}
+.lecturer_area .detail_box .subinfo_box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 30px;
+}
+.lecturer_area .detail_box .subinfo_box .subinfo_one, .lecturer_area .detail_box .subinfo_box .subinfo_two {
+  width: calc(50% - 40px);
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.15);
+  padding: 40px;
+  box-sizing: border-box;
+}
+.lecturer_area .detail_box .subinfo_box .edu_title, .lecturer_area .detail_box .subinfo_box .dlec_title {
+  color: #6f76c1;
+  font-weight: 500;
+}
+.lecturer_area .detail_box .subinfo_box .edu_list, .lecturer_area .detail_box .subinfo_box .dlec_list {
+  list-style-type: square;
+  margin: 20px;
+  color: #8d8d99;
+}
+.lecturer_area .detail_box .list_btn {
+  width: 150px;
+  height: 50px;
+  background-color: #fff;
+  border: 0.5px solid #ccc;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.15);
+  border-radius: 30px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.lecturer_area .detail_box .list_btn:hover {
+  color: #6f76c1;
+}
+
+@media (min-width: 758px) and (max-width: 1023px) {
+  .lecturer_area .card {
+    min-width: 100%;
+  }
+  .lecturer_area .card .lec_box .info_box {
+    min-width: 65%;
+  }
+  .lecturer_area .card .lec_box .movebtn_box .detail_btn {
+    margin: 0px !important;
+  }
+  .lecturer_area .card .lec_box .module_box .contents-type {
+    background-color: #dde3f6;
+  }
+  .lecturer_area .card .lec_box .module_box .contents-type .type-tab {
+    min-width: 89.8%;
+    background-color: #dde3f6;
+  }
+  .lecturer_area .card .lec_box .module_box .contents-type.on {
+    background-color: #dde3f6;
+  }
+  .lecturer_area .subinfo_box {
+    flex-wrap: wrap;
+  }
+  .lecturer_area .subinfo_box .subinfo_one, .lecturer_area .subinfo_box .subinfo_two {
+    min-width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  .lecturer_area .video_box {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .lecturer_area .video_box .lec_video {
+    width: 100%;
+    height: 60vw;
+    border-radius: 15px;
+    box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.15);
+  }
+  .lecturer_area .detail_box .list_btn {
+    width: 130px;
+    height: 50px;
+  }
+}
+@media (min-width: 335px) and (max-width: 757px) {
+  .lecturer_area .card {
+    min-width: 100%;
+  }
+  .lecturer_area .card .lec_box {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .lecturer_area .card .lec_box .img_box {
+    max-width: 40%;
+  }
+  .lecturer_area .card .lec_box .img_box img {
+    width: 100%;
+  }
+  .lecturer_area .card .lec_box .info_box {
+    width: 54%;
+  }
+  .lecturer_area .card .lec_box .info_box .career_box {
+    font-size: 12px;
+  }
+  .lecturer_area .card .lec_box .info_box .module_box .contents-type {
+    background-color: #dde3f6;
+  }
+  .lecturer_area .card .lec_box .info_box .module_box .contents-type .type-tab {
+    max-width: 75%;
+    background-color: #dde3f6;
+  }
+  .lecturer_area .card .lec_box .info_box .module_box .contents-type.on {
+    background-color: #dde3f6;
+  }
+  .lecturer_area .card .lec_box .movebtn_box .detail_btn {
+    margin: 0px !important;
+  }
+  .lecturer_area .detail_box {
+    margin: auto;
+  }
+  .lecturer_area .detail_box .subinfo_box {
+    flex-wrap: wrap;
+  }
+  .lecturer_area .detail_box .subinfo_box .subinfo_one, .lecturer_area .detail_box .subinfo_box .subinfo_two {
+    min-width: 100%;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 15px;
+  }
+  .lecturer_area .detail_box .video_box {
+    margin-bottom: 20px;
+  }
+  .lecturer_area .detail_box .video_box .lec_video {
+    height: 40vw;
+  }
+  .lecturer_area .detail_box .list_btn {
+    width: 100px;
+    height: 50px;
+  }
 }/*# sourceMappingURL=EduLecturer.css.map */
