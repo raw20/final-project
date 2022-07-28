@@ -1,334 +1,337 @@
-@import './mixin';
+@import "./mixin";
 $bgColor: #dde3f6;
 $deepColor: #6f76c1;
 $lightColor: #e6e0ec;
 
 @include desktop {
-	.preparations-wrap {
-		width: 100%;
-		height: 100%;
-		animation: fadein 2s;
-		padding-top: 10rem;
-		.preparations-checklist-box {
-			width: 80%;
-			height: 1000px;
-			margin: 0px auto;
-			border-radius: 30px;
-			background: url('/public/img/bg-checklist.png') no-repeat center / cover;
-			box-sizing: border-box;
-			.preparations-checklist-title {
-				padding: 50px 0;
-				font-size: 2.5rem;
-				font-weight: 600;
-				color: #fff;
-				text-align: center;
-			}
-			.preparations-checklist-contents {
-				width: 90%;
-				height: 800px;
-				margin: 0px auto;
-				padding: 2rem 3rem;
-				background-color: #fff;
-				border-radius: 30px;
-				box-sizing: border-box;
-				position: relative;
-				.preparations-checklist-img {
-					width: 10.4167vw;
-					height: 10.4167vw;
-					background: url(/public/img/img-person01.png) no-repeat center / cover;
-					position: absolute;
-					top: -80px;
-					right: 25px;
-				}
-				.checklist-title {
-					width: 80%;
-					font-size: 1.5rem;
-					color: $deepColor;
-					margin-top: 2rem;
-				}
-				.checklist-name {
-					width: 100%;
-					.checklist-item {
-						width: 100%;
-						height: 3.4722vw;
-						border: 1px solid #ccc;
-						border-radius: 5px;
-						margin-top: 1rem;
-						box-shadow: 2px 2px 2px 2px rgb(34 51 89 / 10%);
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-						position: relative;
-						.checklist-item-name {
-							width: 62%;
-							height: 1.7361vw;
-							display: flex;
-							margin: 1rem 2rem;
-							justify-content: start;
-							align-items: center;
-							font-size: 1rem;
-							color: #888;
-						}
-						.checklist-item-check {
-							width: 2.563rem;
-							height: 2.563rem;
-							background: url(/public/img/ic-check.png) no-repeat center / 70%;
-							text-indent: -9999px;
-							font-size: 0px;
-							position: absolute;
-							top: 2%;
-							right: 2%;
-							cursor: pointer;
-						}
+  .preparations-wrap {
+    width: 100%;
+    height: 100%;
+    animation: fadein 2s;
+    padding-top: 5rem;
+    .preparations-checklist-box {
+      width: 80%;
+      height: 66.5rem;
+      margin: 0px auto;
+      border-radius: 30px;
+      background: url("/public/img/bg-checklist.png") no-repeat center / cover;
+      box-sizing: border-box;
+      .preparations-checklist-title {
+        padding: 50px 0;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+      }
+      .preparations-checklist-contents {
+        width: 90%;
+        height: 55rem;
+        margin: 0px auto;
+        padding: 2rem 3rem;
+        background-color: #fff;
+        border-radius: 30px;
+        box-sizing: border-box;
+        position: relative;
+        .preparations-checklist-img {
+          width: 10.4167vw;
+          height: 10.4167vw;
+          background: url(/public/img/img-person01.png) no-repeat center / cover;
+          position: absolute;
+          top: -80px;
+          right: 25px;
+        }
+        .checklist-title {
+          width: 80%;
+          font-size: 1.5rem;
+          color: $deepColor;
+          margin-top: 2rem;
+        }
+        .checklist-name {
+          width: 100%;
+          .checklist-item {
+            width: 100%;
+            height: 3.4722vw;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 1rem;
+            box-shadow: 2px 2px 2px 2px rgb(34 51 89 / 10%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            .checklist-item-name {
+              width: 62%;
+              height: 1.7361vw;
+              display: flex;
+              margin: 1rem 2rem;
+              justify-content: start;
+              align-items: center;
+              font-size: 1rem;
+              color: #888;
+            }
+            .checklist-item-check {
+              width: 2.563rem;
+              height: 2.563rem;
+              background: url(/public/img/ic-check.png) no-repeat center / 70%;
+              text-indent: -9999px;
+              font-size: 0px;
+              position: absolute;
+              top: 2%;
+              right: 2%;
+              cursor: pointer;
+            }
 
-						.checklist-item-check.on {
-							background: url(/public/img/ic-check-on.png) no-repeat center / 70%;
-						}
-					}
-				}
-				.checklist-document {
-					width: 100%;
-					display: flex;
-					.scan {
-						width: 100%;
-						font-size: 1.1rem;
-						color: #888;
-						margin-top: 2rem;
-					}
-				}
-				.checklist-submit-btn {
-					width: 30%;
-					height: 3.4722vw;
-					background-color: #9497d1;
-					border-radius: 10px;
-					color: #fff;
-					font-size: 1.1rem;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					margin: 2rem auto;
-					cursor: pointer;
-				}
-			}
-		}
-	}
+            .checklist-item-check.on {
+              background: url(/public/img/ic-check-on.png) no-repeat center /
+                70%;
+            }
+          }
+        }
+        .checklist-document {
+          width: 100%;
+          display: flex;
+          .scan {
+            width: 100%;
+            font-size: 1.1rem;
+            color: #888;
+            margin-top: 2rem;
+          }
+        }
+        .checklist-submit-btn {
+          width: 30%;
+          height: 3.4722vw;
+          background-color: #9497d1;
+          border-radius: 10px;
+          color: #fff;
+          font-size: 1.1rem;
+          margin: 3rem auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 @include tablet {
-	.preparations-wrap {
-		width: 100%;
-		height: 100%;
-		animation: fadein 2s;
-		padding-top: 10rem;
-		.preparations-checklist-box {
-			width: 80%;
-			height: 90vw;
-			margin: 0px auto;
-			border-radius: 30px;
-			background: url('/public/img/bg-checklist.png') no-repeat center / cover;
-			box-sizing: border-box;
-			.preparations-checklist-title {
-				padding: 50px 0;
-				font-size: 2.1rem;
-				font-weight: 600;
-				color: #fff;
-				text-align: center;
-			}
-			.preparations-checklist-contents {
-				width: 90%;
-				height: 72vw;
-				margin: 0px auto;
-				padding: 2rem 3rem;
-				background-color: #fff;
-				border-radius: 30px;
-				box-sizing: border-box;
-				position: relative;
-				.preparations-checklist-img {
-					width: 10.4167vw;
-					height: 10.4167vw;
-					background: url(/public/img/img-person01.png) no-repeat center / cover;
-					position: absolute;
-					top: -80px;
-					right: 25px;
-				}
-				.checklist-title {
-					width: 60%;
-					font-size: 1rem;
-					color: $deepColor;
-					margin-top: 2rem;
-				}
-				.checklist-name {
-					width: 100%;
-					.checklist-item {
-						width: 100%;
-						height: 3.4722vw;
-						border: 1px solid #ccc;
-						border-radius: 5px;
-						margin-top: 1rem;
-						box-shadow: 2px 2px 2px 2px rgb(34 51 89 / 10%);
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-						position: relative;
-						.checklist-item-name {
-							width: 62%;
-							height: 1.7361vw;
-							display: flex;
-							margin: 0.7rem 1.5rem;
-							justify-content: start;
-							align-items: center;
-							font-size: 0.66rem;
-							color: #888;
-						}
-						.checklist-item-check {
-							width: 1.863rem;
-							height: 1.863rem;
-							background: url(/public/img/ic-check.png) no-repeat center / 70%;
-							text-indent: -9999px;
-							font-size: 0px;
-							position: absolute;
-							top: 2%;
-							right: 2%;
-							cursor: pointer;
-						}
+  .preparations-wrap {
+    width: 100%;
+    height: 100%;
+    animation: fadein 2s;
+    padding-top: 5rem;
+    .preparations-checklist-box {
+      width: 80%;
+      height: 47rem;
+      margin: 0px auto;
+      border-radius: 30px;
+      background: url("/public/img/bg-checklist.png") no-repeat center / cover;
+      box-sizing: border-box;
+      .preparations-checklist-title {
+        padding: 50px 0;
+        font-size: 2.1rem;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+      }
+      .preparations-checklist-contents {
+        width: 90%;
+        height: auto;
+        margin: 0px auto;
+        padding: 2rem 3rem;
+        background-color: #fff;
+        border-radius: 30px;
+        box-sizing: border-box;
+        position: relative;
+        .preparations-checklist-img {
+          width: 10.4167vw;
+          height: 10.4167vw;
+          background: url(/public/img/img-person01.png) no-repeat center / cover;
+          position: absolute;
+          top: -80px;
+          right: 25px;
+        }
+        .checklist-title {
+          width: 60%;
+          font-size: 1rem;
+          color: $deepColor;
+          margin-top: 2rem;
+        }
+        .checklist-name {
+          width: 100%;
+          .checklist-item {
+            width: 100%;
+            height: 3.4722vw;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 1rem;
+            box-shadow: 2px 2px 2px 2px rgb(34 51 89 / 10%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            .checklist-item-name {
+              width: 62%;
+              height: 1.7361vw;
+              display: flex;
+              margin: 0.7rem 1.5rem;
+              justify-content: start;
+              align-items: center;
+              font-size: 0.66rem;
+              color: #888;
+            }
+            .checklist-item-check {
+              width: 1.863rem;
+              height: 1.863rem;
+              background: url(/public/img/ic-check.png) no-repeat center / 70%;
+              text-indent: -9999px;
+              font-size: 0px;
+              position: absolute;
+              top: 2%;
+              right: 2%;
+              cursor: pointer;
+            }
 
-						.checklist-item-check.on {
-							background: url(/public/img/ic-check-on.png) no-repeat center / 70%;
-						}
-					}
-				}
-				.checklist-document {
-					width: 100%;
-					display: flex;
-					.scan {
-						width: 100%;
-						font-size: 0.8rem;
-						color: #888;
-						margin-top: 2rem;
-					}
-				}
-				.checklist-submit-btn {
-					width: 30%;
-					height: 3.4722vw;
-					background-color: #9497d1;
-					border-radius: 10px;
-					color: #fff;
-					font-size: 0.7rem;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					margin: 2rem auto;
-					cursor: pointer;
-				}
-			}
-		}
-	}
+            .checklist-item-check.on {
+              background: url(/public/img/ic-check-on.png) no-repeat center /
+                70%;
+            }
+          }
+        }
+        .checklist-document {
+          width: 100%;
+          display: flex;
+          .scan {
+            width: 100%;
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 2rem;
+          }
+        }
+        .checklist-submit-btn {
+          width: 30%;
+          height: 3.4722vw;
+          background-color: #9497d1;
+          border-radius: 10px;
+          color: #fff;
+          font-size: 0.7rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 2rem auto;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 @include mobile {
-	.preparations-wrap {
-		width: 100%;
-		height: 100%;
-		animation: fadein 2s;
-		.preparations-checklist-box {
-			width: 80%;
-			height: 130vw;
-			margin: 0px auto;
-			border-radius: 30px;
-			background: url('/public/img/bg-checklist.png') no-repeat center / cover;
-			box-sizing: border-box;
-			.preparations-checklist-title {
-				padding-top: 3.5rem;
-				padding-bottom: 2rem;
-				font-size: 1.7rem;
-				font-weight: 600;
-				color: #fff;
-				text-align: center;
-			}
-			.preparations-checklist-contents {
-				width: 90%;
-				height: 100vw;
-				margin: 0px auto;
-				padding: 1.2rem 2.3rem;
-				background-color: #fff;
-				border-radius: 30px;
-				box-sizing: border-box;
-				position: relative;
-				.preparations-checklist-img {
-					width: 10.4167vw;
-					height: 10.4167vw;
-					background: url(/public/img/img-person01.png) no-repeat center / cover;
-					position: absolute;
-					top: -80px;
-					right: 25px;
-				}
-				.checklist-title {
-					width: 60%;
-					font-size: 0.7rem;
-					color: $deepColor;
-					margin-top: 2rem;
-				}
-				.checklist-name {
-					width: 100%;
-					.checklist-item {
-						width: 100%;
-						height: 5.4722vw;
-						border: 1px solid #ccc;
-						border-radius: 5px;
-						margin-top: 1rem;
-						box-shadow: 2px 2px 2px 2px rgb(34 51 89 / 10%);
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-						position: relative;
-						.checklist-item-name {
-							width: 70%;
-							height: 1.7361vw;
-							display: flex;
-							margin: 0.3rem 0.6rem;
-							justify-content: start;
-							align-items: center;
-							font-size: 0.4rem;
-							color: #888;
-						}
-						.checklist-item-check {
-							width: 1.963rem;
-							height: 1.963rem;
-							background: url(/public/img/ic-check.png) no-repeat center / 70%;
-							text-indent: -9999px;
-							font-size: 0px;
-							position: absolute;
-							top: 2%;
-							right: 2%;
-							cursor: pointer;
-						}
-						.checklist-item-check.on {
-							background: url(/public/img/ic-check-on.png) no-repeat center / 70%;
-						}
-					}
-				}
-				.checklist-document {
-					width: 100%;
-					display: flex;
-					.scan {
-						width: 100%;
-						font-size: 0.8rem;
-						color: #888;
-						margin-top: 2rem;
-					}
-				}
-				.checklist-submit-btn {
-					width: 30%;
-					height: 5.4722vw;
-					background-color: #9497d1;
-					border-radius: 10px;
-					color: #fff;
-					font-size: 1.1rem;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					margin: 2rem auto;
-					cursor: pointer;
-				}
-			}
-		}
-	}
+  .preparations-wrap {
+    width: 100%;
+    height: 100%;
+    animation: fadein 2s;
+    .preparations-checklist-box {
+      width: 80%;
+      height: 130vw;
+      margin: 0px auto;
+      border-radius: 30px;
+      background: url("/public/img/bg-checklist.png") no-repeat center / cover;
+      box-sizing: border-box;
+      .preparations-checklist-title {
+        padding-top: 3.5rem;
+        padding-bottom: 2rem;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+      }
+      .preparations-checklist-contents {
+        width: 90%;
+        height: 100vw;
+        margin: 0px auto;
+        padding: 1.2rem 2.3rem;
+        background-color: #fff;
+        border-radius: 30px;
+        box-sizing: border-box;
+        position: relative;
+        .preparations-checklist-img {
+          width: 10.4167vw;
+          height: 10.4167vw;
+          background: url(/public/img/img-person01.png) no-repeat center / cover;
+          position: absolute;
+          top: -80px;
+          right: 25px;
+        }
+        .checklist-title {
+          width: 60%;
+          font-size: 0.7rem;
+          color: $deepColor;
+          margin-top: 2rem;
+        }
+        .checklist-name {
+          width: 100%;
+          .checklist-item {
+            width: 100%;
+            height: 5.4722vw;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 1rem;
+            box-shadow: 2px 2px 2px 2px rgb(34 51 89 / 10%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            .checklist-item-name {
+              width: 70%;
+              height: 1.7361vw;
+              display: flex;
+              margin: 0.3rem 0.6rem;
+              justify-content: start;
+              align-items: center;
+              font-size: 0.4rem;
+              color: #888;
+            }
+            .checklist-item-check {
+              width: 1.963rem;
+              height: 1.963rem;
+              background: url(/public/img/ic-check.png) no-repeat center / 70%;
+              text-indent: -9999px;
+              font-size: 0px;
+              position: absolute;
+              top: 2%;
+              right: 2%;
+              cursor: pointer;
+            }
+            .checklist-item-check.on {
+              background: url(/public/img/ic-check-on.png) no-repeat center /
+                70%;
+            }
+          }
+        }
+        .checklist-document {
+          width: 100%;
+          display: flex;
+          .scan {
+            width: 100%;
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 2rem;
+          }
+        }
+        .checklist-submit-btn {
+          width: 30%;
+          height: 5.4722vw;
+          background-color: #9497d1;
+          border-radius: 10px;
+          color: #fff;
+          font-size: 1.1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 2rem auto;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
