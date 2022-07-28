@@ -24,7 +24,6 @@ import QandA from './components/Main/ConnectWith/MainItem/NoticeBoard/QandA';
 import EduRoom from './components/Main/OnAndUp/MainItem/EduRoom/EduRoom';
 import EduNotice from './components/Main/OnAndUp/MainItem/EduGuide/EduNotice';
 import EduCalendar from './components/Main/OnAndUp/MainItem/EduGuide/EduCalendar';
-import EduLecturer from './components/Main/OnAndUp/MainItem/EduGuide/EduLecturer';
 import Result from './components/Main/OnAndUp/MainItem/Diagnosis/Result';
 import WorkSkill from './components/Main/OnAndUp/MainItem/Study/WorkSkill';
 import PeopleSkill from './components/Main/OnAndUp/MainItem/Study/PeopleSkill';
@@ -60,7 +59,7 @@ function App() {
 						{/* 교욱안내 */}
 						<Route path="eduguide/0" element={<EduNotice />} />
 						<Route path="eduguide/1" element={<EduCalendar />} />
-						<Route path="eduguide/2" element={<EduLecturer />} />
+						<Route path="eduguide/2" element={<EduCalendar />} />
 						{/* 진단 */}
 						<Route path="diagnosis/0" element={<Now />} />
 						<Route path="diagnosis/1" element={<Result />} />
