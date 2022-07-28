@@ -19,12 +19,13 @@ function ConnectWthItemForm() {
     getMainData();
     dispatch(headerGnbOpcity("1"));
   }, []);
+  console.log("ㅡㅡ",state?.main_img)
   console.log("state가 주소에 / 붙여도 읽혀지나아아", data);
   return (
     <div className="item-form">
       <div className="item-inner">
         <div className="item-img">
-          <img src={`${state.img}`} alt={state.title} />
+          <img src={`${state.main_img}`} alt={state.title} />
         </div>
         <div className="item-text">
           <div className="item-location">

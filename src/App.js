@@ -7,6 +7,7 @@ import Mypage from "./components/Main/OnAndUp/SideItem/MyPage/Mypage";
 import OnAndUpItemForm from "./components/Main/OnAndUp/Main/OnAndUpItemForm";
 import ConnectWthItemForm from "./components/Main/ConnectWith/Main/ConnectWthItemForm";
 import Welcome from "./components/Main/ConnectWith/MainItem/Welcome/Welcome";
+import Now from "./components/Main/OnAndUp/MainItem/Diagnosis/Now";
 import AboutCompany from "./components/Main/ConnectWith/MainItem/AboutCompany/AboutCompany";
 import Preparations from "./components/Main/ConnectWith/MainItem/Preparations/Preparations";
 import NoticeBoard from "./components/Main/ConnectWith/MainItem/NoticeBoard/NoticeBoard";
@@ -29,25 +30,16 @@ function App() {
           <Route path="/" element={<ConnectWith />} />
           <Route path="/item/:address" element={<ConnectWthItemForm />}>
             <Route path="0" element={<Welcome />} />
-<<<<<<< HEAD
-            <Route path="1" element={<CompanyIntro />} />
-=======
             <Route path="1" element={<AboutCompany />} />
->>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
             <Route path="2" element={<Preparations />} />
             <Route path="3" element={<NoticeBoard />} />
           </Route>
           <Route path="/" element={<ConnectWith />} />
-          <Route path="/chemiverseOnUp/:address" element={<OnAndUpItemForm />}>
+          <Route path="/chemiverseOnUp/:address/*" element={<OnAndUpItemForm />}>
             <Route path="eduroom" />
             <Route path="eduguide" />
-<<<<<<< HEAD
-            <Route path="diagnosis/*" />
-            <Route path="study/*" />
-=======
-            <Route path="diagnosis" />
-            <Route path="study" />
->>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
+            <Route path="diagnosis/*" element={<Now />}/>
+            <Route path="study/*" element={<AboutCompany />}/>
             <Route path="chemistory" />
             <Route path="mentoring" />
             <Route path="board" />

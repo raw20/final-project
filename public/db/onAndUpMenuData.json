@@ -4,48 +4,62 @@
     "onAndUpItemAddress": "eduroom",
     "menu": "교육장 이동",
     "explanation": "컨텐츠 설명글",
-    "dep": ["교육장 이동"]
+    "dep": ["교육장 이동"],
+    "contents": "입사를 축하드립니다. @Chemiverse 로 입사를 준비해보세요.",
+    "main_img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4264bc6f-f96b-43d8-9c2f-2cc0f324ab45%2Fimg-login.png?table=block&id=fc5a191c-209f-416f-9c66-439da98001d7&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=480&userId=&cache=v2"
   },
   {
     "id": 1,
     "onAndUpItemAddress": "eduguide",
     "menu": "교육 안내",
     "explanation": "컨텐츠 설명글",
-    "dep": ["공지사항", "시간표", "강사소개"]
+    "dep": ["공지사항", "시간표", "강사소개"],
+    "contents": "입사를 축하드립니다. @Chemiverse 로 입사를 준비해보세요.",
+    "main_img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd8871225-f64c-4f68-84ce-9e1e740cba82%2F%E1%84%80%E1%85%AD%E1%84%8B%E1%85%B2%E1%86%A8%E1%84%8B%E1%85%A1%E1%86%AB%E1%84%82%E1%85%A2_%E1%84%80%E1%85%AE%E1%84%85%E1%85%B3%E1%86%B7.png?table=block&id=f9a140bc-fa40-461d-bb87-5226c3f18577&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
   {
     "id": 2,
     "onAndUpItemAddress": "diagnosis",
     "menu": "진단",
     "explanation": "컨텐츠 설명글",
-    "dep": ["현재상태점검", "진단결과보기"]
+    "dep": ["현재상태점검", "진단결과보기"],
+    "contents": "입사를 축하드립니다. @Chemiverse 로 입사를 준비해보세요.",
+    "main_img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F1ec0f4e5-6bca-4f67-ae30-4c030e5e788c%2F%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6.png?table=block&id=9431cbe9-b564-4443-8eb6-33db1b2dc85a&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
   {
     "id": 3,
     "onAndUpItemAddress": "study",
     "menu": "역량학습",
     "explanation": "컨텐츠 설명글",
-    "dep": ["회사이해", "워크스킬", "피플스킬", "자기관리"]
+    "dep": ["회사이해", "워크스킬", "피플스킬", "자기관리"],
+    "contents": "입사를 축하드립니다. @Chemiverse 로 입사를 준비해보세요.",
+    "main_img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0eb7886b-4e08-4084-83b0-17411b679d56%2F%E1%84%8F%E1%85%A1%E1%84%89%E1%85%A6%E1%86%AB%E1%84%90%E1%85%A5.png?table=block&id=60d9ef1b-9d1f-4a77-a761-346cf3957421&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
   {
     "id": 4,
     "onAndUpItemAddress": "chemistory",
     "menu": "Chemi Story",
     "explanation": "컨텐츠 설명글",
-    "dep": ["Chemi Stroy란?", "작성하기", "성찰저널", "자기계발목표"]
+    "dep": ["Chemi Stroy란?", "작성하기", "성찰저널", "자기계발목표"],
+    "contents": "입사를 축하드립니다. @Chemiverse 로 입사를 준비해보세요.",
+    "main_img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6f99334d-6753-4400-a4b4-dee87740313d%2Fimg-pop-cardnews.png?table=block&id=1ff6d376-ca43-45e6-b62f-76ef92da6370&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=1180&userId=&cache=v2"
   },
   {
     "id": 5,
     "onAndUpItemAddress": "mentoring",
     "menu": "멘토링",
     "explanation": "컨텐츠 설명글",
-    "dep": ["멘토링이란?", "계획서작성", "활동내용"]
+    "dep": ["멘토링이란?", "계획서작성", "활동내용"],
+    "contents": "입사를 축하드립니다. @Chemiverse 로 입사를 준비해보세요.",
+    "main_img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fbe65c691-15d8-4209-9080-861459ac4f8a%2Fimg-pop-about.png?table=block&id=cb4fb2db-6a15-46da-a043-bc3d69f6c25c&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=480&userId=&cache=v2"
   },
   {
     "id": 6,
     "onAndUpItemAddress": "board",
     "menu": "게시판",
     "explanation": "컨텐츠 설명글",
-    "dep": ["자유게시판", "아이디어 제시"]
+    "dep": ["자유게시판", "아이디어 제시"],
+    "contents": "입사를 축하드립니다. @Chemiverse 로 입사를 준비해보세요.",
+    "main_img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2ca3a8cc-0dc6-4130-954c-6f93c3a16114%2Fimg-pop-quiz.png?table=block&id=cc03c1df-6916-4472-8690-1061e5fc80b7&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=1120&userId=&cache=v2"
   }
 ]

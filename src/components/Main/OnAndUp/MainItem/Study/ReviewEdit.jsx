@@ -17,14 +17,14 @@ function ReviewEdit({datas, addData, setData, saveReviewData}) {
                 setIsNew(false);
             }
         })
-        console.log('dwd',datas[moduleId])
+        console.log('dwd',datas)
     },[])
 
 
     return (
         <div>
             <Editor id={id} isNew={isNew} data={ isNew ? '' : datas[moduleId]} addData={addData} setData={setData} />
-            <Link to = {`../aboutCompany/${id}`} className="submitBtnArea">
+            <Link to = {`../study/aboutCompany/${id}`} className="submitBtnArea">
                 <button className='submitBtn' onClick={saveReviewData}>제출하기</button>
             </Link>
         </div>

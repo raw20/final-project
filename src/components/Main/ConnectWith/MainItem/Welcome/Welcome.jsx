@@ -2,9 +2,6 @@ import React from "react";
 import "./css/welcome.css";
 
 function Welcome() {
-<<<<<<< HEAD
-  return <div>환영인사</div>;
-=======
   return (
     <div className="welcome-wrap">
       <div className="welcome-content">
@@ -30,7 +27,6 @@ function Welcome() {
       </div>
     </div>
   );
->>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
 }
 
 export default Welcome;

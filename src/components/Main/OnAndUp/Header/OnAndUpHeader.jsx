@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Link, NavLink } from "react-router-dom";
 import "./css/header.css";
 import { BiUser } from "react-icons/bi";
+import { IoLogInOutline } from "react-icons/io5";
+import { IoLogOutOutline } from "react-icons/io5";
 
 function OnAndUpHeader({ LoginAuth, setLoginAuth, opacity }) {
   const navigate = useNavigate();
@@ -17,20 +19,6 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth, opacity }) {
   const [item, setItem] = useState([]);
   const onAndUpMenuData = "/db/onAndUpMenuData.json";
 
-function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
-  const navigate = useNavigate()
-  const goToLogin = () => {
-    navigate("/chemiverseOnUp/login")
-  }
-
-  function goToLogout() {
-    setLoginAuth(false)
-    navigate('/');
-
-  }
-  const [item, setItem] = useState([]);
-  const onAndUpMenuData = "/db/onAndUpMenuData.json";
-  
   useEffect(() => {
     (async () => {
       const response = await fetch(onAndUpMenuData);
@@ -38,6 +26,9 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
       setItem(json);
     })();
   }, []);
+
+  // const [viewButton, setViewButton] = useState(true);
+  // const button = useState("true") ? viewButton : setViewButton;
   return (
     <div className={opacity === "0" ? "onAndUp-header off" : "onAndUp-header"}>
       <Link className="logo" to="/chemiverseOnUp">
@@ -45,8 +36,8 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
       </Link>
       <div className="main-item">
         <ul className="gnb">
-          {item.map((item) => (
-            <li>
+          {item.map((item, index) => (
+            <li key={index}>
               <NavLink
                 to={`/chemiverseOnUp/item/${item.onAndUpItemAddress}`}
                 key={item.id}
@@ -54,7 +45,9 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
                   id: item.id,
                   menu: item.menu,
                   dep: item.dep,
+                  img: item.main_img,
                   address: item.address,
+                  contents: item.contents,
                 }}
               >
                 <span>{item.menu}</span>
@@ -70,8 +63,8 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
                     address: item.onAndUpItemAddress,
                   }}
                 >
-                  {item.dep.map((ele) => (
-                    <li className="depth1Li">{ele}</li>
+                  {item.dep.map((ele, index) => (
+                    <li key={index} className="depth1Li">{ele}</li>
                   ))}
                 </NavLink>
               </ul>

@@ -1,0 +1,226 @@
+[
+    {
+    "id": 1,
+    "userId": 1,
+    "title": "회사 이해",
+    "date": "before",
+    "result": [
+            {
+                "question": "I",
+                "score": 80
+            },
+            {
+                "question": "N",
+                "score": 70
+            },
+            {
+                "question": "T",
+                "score": 65
+            },
+            {
+                "question": "P",
+                "score": 30
+            },
+            {
+                "question": "A",
+                "score": 10
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "userId": 1,
+        "title": "피플스킬",
+        "date": "before",
+        "result": [
+                {
+                    "question": "I",
+                    "score": 60
+                },
+                {
+                    "question": "N",
+                    "score": 75
+                },
+                {
+                    "question": "T",
+                    "score": 55
+                },
+                {
+                    "question": "P",
+                    "score": 40
+                },
+                {
+                    "question": "A",
+                    "score": 70
+                }
+            ]
+    },
+    {
+        "id": 3,
+        "userId": 1,
+        "title": "워크스킬",
+        "date": "before",
+        "result": [
+                {
+                    "question": "I",
+                    "score": 90
+                },
+                {
+                    "question": "N",
+                    "score": 100
+                },
+                {
+                    "question": "T",
+                    "score": 30
+                },
+                {
+                    "question": "P",
+                    "score": 60
+                },
+                {
+                    "question": "A",
+                    "score": 90
+                }
+        ]
+    },
+    {
+        "id": 4,
+        "userId": 1,
+        "title": "자기관리",
+        "date": "before",
+        "result": [
+                {
+                    "question": "I",
+                    "score": 20
+                },
+                {
+                    "question": "N",
+                    "score": 30
+                },
+                {
+                    "question": "T",
+                    "score": 40
+                },
+                {
+                    "question": "P",
+                    "score": 50
+                },
+                {
+                    "question": "A",
+                    "score":40
+                }
+        ]
+    },
+    {
+        "id": 5,
+        "userId": 1,
+        "title": "회사 이해",
+        "date": "after",
+        "result": [
+                {
+                    "question": "I",
+                    "score": 20
+                },
+                {
+                    "question": "N",
+                    "score": 30
+                },
+                {
+                    "question": "T",
+                    "score": 40
+                },
+                {
+                    "question": "P",
+                    "score": 50
+                },
+                {
+                    "question": "A",
+                    "score": 60
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "userId": 1,
+            "title": "피플스킬",
+            "date": "after",
+            "result": [
+                    {
+                        "question": "I",
+                        "score": 70
+                    },
+                    {
+                        "question": "N",
+                        "score": 75
+                    },
+                    {
+                        "question": "T",
+                        "score": 80
+                    },
+                    {
+                        "question": "P",
+                        "score": 90
+                    },
+                    {
+                        "question": "A",
+                        "score": 100
+                    }
+                ]
+        },
+        {
+            "id": 7,
+            "userId": 1,
+            "title": "워크스킬",
+            "date": "after",
+            "result": [
+                    {
+                        "question": "I",
+                        "score": 10
+                    },
+                    {
+                        "question": "N",
+                        "score": 100
+                    },
+                    {
+                        "question": "T",
+                        "score": 20
+                    },
+                    {
+                        "question": "P",
+                        "score": 50
+                    },
+                    {
+                        "question": "A",
+                        "score": 90
+                    }
+            ]
+        },
+        {
+            "id": 8,
+            "userId": 1,
+            "title": "자기관리",
+            "date": "after",
+            "result": [
+                    {
+                        "question": "I",
+                        "score": 50
+                    },
+                    {
+                        "question": "N",
+                        "score": 40
+                    },
+                    {
+                        "question": "T",
+                        "score": 60
+                    },
+                    {
+                        "question": "P",
+                        "score": 30
+                    },
+                    {
+                        "question": "A",
+                        "score": 55
+                    }
+            ]
+        }
+]

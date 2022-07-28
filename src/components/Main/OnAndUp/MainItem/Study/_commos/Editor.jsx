@@ -7,7 +7,7 @@ function Editor({ id, isNew, data, addData, setData }) {
 
     function handleChange(EditorData) {
         if (isNew) {
-            addData({ id: id, content: EditorData})
+            addData({ id: Number(id), content: EditorData})
         }
         else {
             setData({

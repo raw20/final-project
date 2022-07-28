@@ -20,11 +20,7 @@ function ConnectWithHeader({ opacity, LoginAuth }) {
   return (
     <div
       className={
-<<<<<<< HEAD
-        opacity === 1 ? "connectwith-header off" : "connectwith-header"
-=======
         opacity === "0" ? "connectwith-header off" : "connectwith-header"
->>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
       }
     >
       <Link
@@ -41,13 +37,9 @@ function ConnectWithHeader({ opacity, LoginAuth }) {
               <NavLink
                 to={`/item/${item.address}/${item.id}`}
                 key={item.id}
-<<<<<<< HEAD
-                className={({ isActive }) => (isActive ? "item-menu on" : "item-menu")}
-=======
                 className={({ isActive }) =>
                   isActive ? "item-menu on" : "item-menu"
                 }
->>>>>>> 2bffd4158cf098020727d7c5f8c4c88dee29c2fb
                 state={{
                   id: item.id,
                   title: item.title,
