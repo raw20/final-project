@@ -35,10 +35,14 @@ function ConnectWthItemForm() {
               {item[id]?.eng_title}
             </span>
           </div>
-
-          <div className="connectwith-item-contents">
-            <pre>{contents}</pre>
-          </div>
+          {item[id]?.contents.split("\n").map((line) => {
+            return (
+              <div className="connectwith-item-contents">
+                {line}
+                <br />
+              </div>
+            );
+          })}
         </div>
         <div className="connectwith-item-box">
           <Outlet />

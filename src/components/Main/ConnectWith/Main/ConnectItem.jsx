@@ -5,10 +5,7 @@ import { useDispatch } from "react-redux";
 import { connectWith } from "../../../../app/headerStateSlice";
 
 function ConnectItem({ data }) {
-  const json = JSON.stringify(data.contents);
-  const content = json.split("\\n").join("<br>");
   const dispatch = useDispatch();
-  console.log(content);
   return (
     <>
       <Link
@@ -27,7 +24,14 @@ function ConnectItem({ data }) {
           }}
         >
           <div className="title">{data.title}</div>
-          <pre className="content">{data.contents}</pre>
+          {data.contents.split("\n").map((line) => {
+            return (
+              <div className="content">
+                {line}
+                <br />
+              </div>
+            );
+          })}
           <div className="img">
             <img src={`${data.img}`} alt={data.title} />
           </div>
