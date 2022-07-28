@@ -1,8 +1,13 @@
-import Chemi01 from '../MainItem/ChemiStory/Chemi01';
-import M1 from '../MainItem/Mentoring/M1';
-import M2 from '../MainItem/Mentoring/M2';
-import M3 from '../MainItem/Mentoring/M3';
-import M4 from '../MainItem/Mentoring/M4';
+import Bo1 from "../MainItem/Board/Bo1";
+import Bo2 from "../MainItem/Board/Bo2";
+import Chemi1 from "../MainItem/Chemi/Chemi1";
+import Chemi2 from "../MainItem/Chemi/Chemi2";
+import Chemi3 from "../MainItem/Chemi/Chemi3";
+import Chemi4 from "../MainItem/Chemi/Chemi4";
+import M1 from "../MainItem/Mentoring/M1";
+import M2 from "../MainItem/Mentoring/M2";
+import M3 from "../MainItem/Mentoring/M3";
+
 import Now from '../MainItem/Diagnosis/Now';
 import Result from '../MainItem/Diagnosis/Result';
 import AboutCompany from '../MainItem/Study/AboutCompany';
@@ -13,8 +18,6 @@ import EduRoom from './../MainItem/EduRoom/EduRoom';
 import EduNotice from './../MainItem/EduGuide/EduNotice';
 import DemoApp from './../MainItem/EduGuide/DemoApp';
 import EduCalendar from './../MainItem/EduGuide/EduCalendar';
-import Board from '../MainItem/Board/Board';
-import Idea from '../MainItem/Board/Idea';
 
 /*
  index : 0 = 교육장 이동
@@ -26,34 +29,34 @@ import Idea from '../MainItem/Board/Idea';
  index : 6 = 게시판
  */
 const component = [
-	{
-		index: 0,
-		content: [<EduRoom />],
-	},
-	{
-		index: 1,
-		content: [<EduNotice />, <EduCalendar />, <M3 />],
-	},
-	{
-		index: 2,
-		content: [<Now />, <Result />],
-	},
-	{
-		index: 3,
-		content: [<AboutCompany />, <WorkSkill />, <PeopleSkill />, <SelfCare />],
-	},
-	{
-		index: 4,
-		content: [<Chemi01 />, <M2 />, <M3 />],
-	},
-	{
-		index: 5,
-		content: [<M1 />, <M2 />, <M3 />],
-	},
-	{
-		index: 6,
-		content: [<Board />, <Idea />],
-	},
+  {
+    index: 0,
+    content: [<EduRoom />],
+  },
+  {
+    index: 1,
+    content: [<EduNotice />, <EduCalendar />, <M3 />],
+  },
+  {
+    index: 2,
+    content: [<Now />, <Result />],
+  },
+  {
+    index: 3,
+    content: [<AboutCompany />,  <WorkSkill />, <PeopleSkill />, <SelfCare />],
+  },
+  {
+    index: 4,
+    content: [<Chemi1 />, <Chemi2 />, <Chemi3 />, <Chemi4 />],
+  },
+  {
+    index: 5,
+    content: [<M1 />, <M2 />, <M3 />],
+  },
+  {
+    index: 6,
+    content: [<Bo1 />, <Bo2 />],
+  },
 ];
 
 export default component;
