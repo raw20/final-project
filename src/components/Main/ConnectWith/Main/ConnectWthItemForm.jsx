@@ -36,7 +36,9 @@ function ConnectWthItemForm() {
             </span>
           </div>
 
-          <div className="connectwith-item-contents">{contents}</div>
+          <div className="connectwith-item-contents">
+            <pre>{contents}</pre>
+          </div>
         </div>
         <div className="connectwith-item-box">
           <Outlet />

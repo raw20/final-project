@@ -6,8 +6,9 @@ import { connectWith } from "../../../../app/headerStateSlice";
 
 function ConnectItem({ data }) {
   const json = JSON.stringify(data.contents);
-  const contents = json.split("\\n").join("<br>");
+  const content = json.split("\\n").join("<br>");
   const dispatch = useDispatch();
+  console.log(content);
   return (
     <>
       <Link
@@ -26,7 +27,7 @@ function ConnectItem({ data }) {
           }}
         >
           <div className="title">{data.title}</div>
-          <div className="content">{contents}</div>
+          <pre className="content">{data.contents}</pre>
           <div className="img">
             <img src={`${data.img}`} alt={data.title} />
           </div>

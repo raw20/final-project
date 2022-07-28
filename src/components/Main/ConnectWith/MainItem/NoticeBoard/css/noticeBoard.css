@@ -6,7 +6,7 @@
     background-color: #fff;
   }
   .tab-btn-wrap .tab-btn-area {
-    width: 40%;
+    width: 55%;
     display: flex;
     margin: 0px auto;
   }
@@ -54,7 +54,7 @@
   .tab-btn-wrap .tab-btn-area {
     width: 70%;
     display: flex;
-    margin: 0px 1rem;
+    margin: 0px auto;
   }
   .tab-btn-wrap .tab-btn-area .tab-btn {
     width: 8.375rem;
