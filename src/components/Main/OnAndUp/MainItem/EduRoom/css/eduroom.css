@@ -1,15 +1,14 @@
 .edu_wrap {
-  width: 1200px;
-  margin: auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .edu_wrap .edu_box {
   height: 300px;
-  width: 500px;
+  width: calc(50% - 1vw);
   padding: 50px;
   box-sizing: border-box;
-  margin: 30px;
+  margin-bottom: 2vw;
   display: flex;
   border-radius: 20px;
   background: #ffffff;
@@ -66,4 +65,10 @@
   line-height: 30px;
   border-radius: 5px;
   margin-top: 5px;
+}
+
+@media (min-width: 300px) and (max-width: 1023px) {
+  .edu_box {
+    min-width: 100%;
+  }
 }/*# sourceMappingURL=eduroom.css.map */
