@@ -1,5 +1,5 @@
+import Board from "./\bBoard";
 import AboutMe from "./AboutMe";
-import Notice from "./Notice";
 import QandA from "./QandA";
 
 /*
@@ -11,7 +11,7 @@ import QandA from "./QandA";
 const component = [
   {
     index: 0,
-    content: [<Notice />],
+    content: [<Board />],
   },
   {
     index: 1,

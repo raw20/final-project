@@ -25,19 +25,19 @@ $lightColor: #e6e0ec;
         font-weight: 600;
       }
       .content {
-        font-size: 1rem;
-        padding: 1.5rem 2rem;
+        font-size: 1.1rem;
+        padding: 0 2rem;
         line-height: 1.3rem;
       }
       .img {
         width: 100%;
         height: auto;
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
         img {
-          width: 400px;
+          width: 350px;
           height: 200px;
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
           &:hover {
             transition-duration: 0.5s;
             transform: scale(120%);
@@ -81,6 +81,7 @@ $lightColor: #e6e0ec;
       height: 100vh;
       overflow: hidden;
       position: relative;
+
       .title {
         margin-top: 20%;
         line-height: 30px;
@@ -89,20 +90,21 @@ $lightColor: #e6e0ec;
         font-weight: 600;
       }
       .content {
-        font-size: 0.8rem;
+        font-size: 1rem;
         line-height: 20px;
-        padding: 1.5rem 2rem;
+        padding: 0 2rem;
         line-height: 1.3rem;
       }
       .img {
         width: 100%;
         height: auto;
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
+
         img {
-          width: 400px;
+          width: 250px;
           height: 200px;
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
           &:hover {
             transition-duration: 0.5s;
             transform: scale(120%);
@@ -135,7 +137,7 @@ $lightColor: #e6e0ec;
 @include mobile {
   .link-item {
     width: 100%;
-    height: 25%;
+    height: 100%;
     animation-duration: 1.5s;
     animation-delay: 0;
     animation-play-state: running;
@@ -143,29 +145,30 @@ $lightColor: #e6e0ec;
     display: flex;
     .item-list {
       width: 100%;
-      height: 80vh;
+      height: 40vh;
       overflow: hidden;
       position: relative;
       .title {
-        margin-top: 20%;
-        font-size: 1.8rem;
+        margin-top: 5%;
+        font-size: 2.5rem;
         padding: 1.5rem 1rem;
         font-weight: 600;
       }
       .content {
-        font-size: 1.5rem;
-        padding: 1rem 1.2rem;
+        width: 45%;
+        font-size: 0.94rem;
+        padding: 0 1.2rem;
         line-height: 30px;
       }
       .img {
-        width: 100%;
+        width: 80%;
         height: auto;
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
         img {
-          width: 300px;
-          height: 200px;
+          width: 370px;
+          height: 250px;
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
         }
       }
     }

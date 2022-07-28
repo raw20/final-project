@@ -14,7 +14,8 @@ function AboutMe() {
   const [aboutMetitle, setAboutMeTitle] = useState("");
   const [aboutMeContents, setAboutMeContents] = useState("");
   const dispatch = useDispatch();
-  const dataUrl = "/db/boardData.json";
+  const dataUrl =
+    "https://my-json-server.typicode.com/raw20/final-project/aboutMeList";
   useEffect(() => {
     (async () => {
       const response = await fetch(dataUrl);

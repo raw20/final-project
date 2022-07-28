@@ -1,0 +1,51 @@
+.table_pagination {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+}
+.table_pagination .page_item {
+  margin-top: 25px;
+}
+.table_pagination .page_item .page_link {
+  color: #ccc;
+  font-size: 18px;
+  font-weight: 800;
+}
+.table_pagination .page_item .page_link:hover {
+  cursor: pointer;
+  color: #6f76c1;
+}
+.table_pagination .page_item .page_link:focus {
+  color: #6f76c1;
+}
+
+.notice-btn {
+  width: 70px;
+  height: 30px;
+  font-size: 0.7rem;
+  background-color: rgb(111, 118, 193);
+  color: #fff;
+  border: none;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.notice-btn.temporary,
+.notice-btn.tab-like {
+  border: 1px solid #ccc;
+  background-color: #e6e0ec;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart {
+  margin-left: 0.4rem;
+}/*# sourceMappingURL=style.css.map */

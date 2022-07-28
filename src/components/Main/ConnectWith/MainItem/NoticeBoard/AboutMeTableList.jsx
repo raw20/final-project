@@ -13,7 +13,7 @@ const AboutMeTableList = ({
 }) => {
   const [viewCount, setViewCount] = useState(0);
   const [index, setIndex] = useState();
-  const likeValue = useSelector((state) => state.item.likes);
+  const likeValue = useSelector((state) => state.item.data);
   function onClick(index) {
     setContent(false);
     setIndex(index);
@@ -48,7 +48,7 @@ const AboutMeTableList = ({
               ) : (
                 posts.map((posts, index) => (
                   <tr className="content_row" key={index}>
-                    <td>{posts.id}</td>
+                    <td>{posts.writer === "교육담당자" ? "필독" : posts.id}</td>
                     <td>{posts.writer}</td>
                     <td onClick={() => onClick(index)}>{posts.title}</td>
                     <td>{posts.views}</td>
@@ -62,7 +62,11 @@ const AboutMeTableList = ({
         </div>
       ) : (
         <div>
-          <AboutMeDetail setContent={setContent} posts={posts[index]} />
+          <AboutMeDetail
+            setContent={setContent}
+            posts={posts[index]}
+            id={posts[index].id}
+          />
         </div>
       )}
     </>

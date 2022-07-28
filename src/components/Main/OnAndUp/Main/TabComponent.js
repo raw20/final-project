@@ -1,10 +1,13 @@
-import Bo1 from "../MainItem/Board/Bo1";
-import Bo2 from "../MainItem/Board/Bo2";
-import Chemi01 from "../MainItem/ChemiStory/Chemi01";
+import Board from "../MainItem/Board/Board";
+import Idea from "../MainItem/Board/Idea";
+import Chemi1 from "../MainItem/ChemiStory/Chemi1";
+import Chemi2 from "../MainItem/ChemiStory/Chemi2";
+import Chemi3 from "../MainItem/ChemiStory/Chemi3";
+import Chemi4 from "../MainItem/ChemiStory/Chemi4";
 import M1 from "../MainItem/Mentoring/M1";
 import M2 from "../MainItem/Mentoring/M2";
 import M3 from "../MainItem/Mentoring/M3";
-import M4 from "../MainItem/Mentoring/M4";
+
 import Now from '../MainItem/Diagnosis/Now';
 import Result from '../MainItem/Diagnosis/Result';
 import AboutCompany from '../MainItem/Study/AboutCompany';
@@ -44,7 +47,7 @@ const component = [
   },
   {
     index: 4,
-    content: [<Chemi01 />, <M2 />, <Bo2 />, <M3 />],
+    content: [<Chemi1 />, <Chemi2 />, <Chemi3 />, <Chemi4 />],
   },
   {
     index: 5,
@@ -52,7 +55,7 @@ const component = [
   },
   {
     index: 6,
-    content: [<Bo1 />, <Bo2 />],
+    content: [<Board />, <Idea />],
   },
 ];
 

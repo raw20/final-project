@@ -10,7 +10,7 @@ function ConnectWthItemForm() {
   const [item, setItem] = useState([]);
   const connenctWithMenuData = "/db/connenctWithMenuData.json";
   const { id } = useParams();
-
+  const contents = item[id]?.contents.split("\\n").join("<br>");
   useEffect(() => {
     (async () => {
       const response = await fetch(connenctWithMenuData);
@@ -19,7 +19,6 @@ function ConnectWthItemForm() {
     })();
     dispatch(headerGnbOpcity("1"));
   });
-
   return (
     <div className="connectwith-item-form">
       <div className="connectwith-item-inner">
@@ -36,8 +35,14 @@ function ConnectWthItemForm() {
               {item[id]?.eng_title}
             </span>
           </div>
-
-          <div className="connectwith-item-contents">{item[id]?.contents}</div>
+          {item[id]?.contents.split("\n").map((line) => {
+            return (
+              <div className="connectwith-item-contents">
+                {line}
+                <br />
+              </div>
+            );
+          })}
         </div>
         <div className="connectwith-item-box">
           <Outlet />
