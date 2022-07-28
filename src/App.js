@@ -28,6 +28,7 @@ import Result from './components/Main/OnAndUp/MainItem/Diagnosis/Result';
 import WorkSkill from './components/Main/OnAndUp/MainItem/Study/WorkSkill';
 import PeopleSkill from './components/Main/OnAndUp/MainItem/Study/PeopleSkill';
 import SelfCare from './components/Main/OnAndUp/MainItem/Study/SelfCare';
+import EduLecturer from './components/Main/OnAndUp/MainItem/EduGuide/EduLecturer';
 
 function App() {
 	const [LoginAuth, setLoginAuth] = useState(false);
@@ -59,7 +60,7 @@ function App() {
 						{/* 교욱안내 */}
 						<Route path="eduguide/0" element={<EduNotice />} />
 						<Route path="eduguide/1" element={<EduCalendar />} />
-						<Route path="eduguide/2" element={<EduCalendar />} />
+						<Route path="eduguide/2" element={<EduLecturer />} />
 						{/* 진단 */}
 						<Route path="diagnosis/0" element={<Now />} />
 						<Route path="diagnosis/1" element={<Result />} />
