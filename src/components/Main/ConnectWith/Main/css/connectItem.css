@@ -34,13 +34,13 @@
   .link-item .item-list .img {
     width: 100%;
     height: auto;
+  }
+  .link-item .item-list .img img {
+    width: 350px;
+    height: 200px;
     position: absolute;
     bottom: 0px;
     right: 0px;
-  }
-  .link-item .item-list .img img {
-    width: 400px;
-    height: 200px;
   }
   .link-item .item-list .img img:hover {
     transition-duration: 0.5s;
@@ -107,13 +107,13 @@
   .link-item .item-list .img {
     width: 100%;
     height: auto;
+  }
+  .link-item .item-list .img img {
+    width: 250px;
+    height: 200px;
     position: absolute;
     bottom: 0px;
     right: 0px;
-  }
-  .link-item .item-list .img img {
-    width: 400px;
-    height: 200px;
   }
   .link-item .item-list .img img:hover {
     transition-duration: 0.5s;
@@ -178,13 +178,13 @@
   .link-item .item-list .img {
     width: 80%;
     height: auto;
-    position: absolute;
-    bottom: 0px;
-    left: 27.5%;
   }
   .link-item .item-list .img img {
-    width: 300px;
-    height: 200px;
+    width: 370px;
+    height: 250px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
   }
   .link-item:nth-child(2n+1) {
     background-color: #e6e0ec;

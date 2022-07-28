@@ -6,13 +6,13 @@ $lightColor: #e6e0ec;
   .connectwith-item-form {
     width: 100%;
     height: 100%;
-    padding-top: 70px;
+    padding-top: 4.35rem;
     box-sizing: border-box;
     .connectwith-item-inner {
-      max-width: 1200px;
-      height: 100vw;
-      margin: 30px auto;
-      padding: 50px 30px;
+      max-width: 80%;
+      height: 130vw;
+      margin: 1.875rem auto;
+      padding: 3.125rem 1.875rem;
       border-radius: 20px;
       background: #fff;
       box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
@@ -23,25 +23,25 @@ $lightColor: #e6e0ec;
         height: auto;
         display: flex;
         justify-content: flex-end;
-        position: absolute;
-        top: 0px;
-        right: -47px;
         img {
           width: 570px;
           height: 390px;
+          position: absolute;
+          top: 0px;
+          right: -50px;
         }
       }
       .connectwith-item-text {
         width: 100%;
         height: 15%;
-        margin: 30px 50px;
+        margin: 1.875rem 3.125rem;
         .connectwith-item-location {
           width: 100%;
           height: auto;
           font-size: 15px;
           color: #ccc;
           position: relative;
-          margin-left: 20px;
+          margin-left: 1.25rem;
           &::before {
             content: " ";
             width: 17px;
@@ -51,7 +51,7 @@ $lightColor: #e6e0ec;
             position: absolute;
             background: url(/public/img/ic-check-on.png) no-repeat center /
               cover;
-            margin-right: 20px;
+            margin-right: 1.25rem;
           }
         }
         .connectwith-item-title {
@@ -71,7 +71,7 @@ $lightColor: #e6e0ec;
           width: 70%;
           font-size: 1.2rem;
           color: #ccc;
-          margin-top: 40px;
+          margin-top: 2.5rem;
         }
       }
     }
@@ -81,13 +81,13 @@ $lightColor: #e6e0ec;
   .connectwith-item-form {
     width: 100%;
     height: 100%;
-    padding-top: 70px;
+    padding-top: 4.375rem;
     box-sizing: border-box;
     .connectwith-item-inner {
-      max-width: 700px;
-      height: 80vw;
-      margin: 20px auto;
-      padding: 50px 30px;
+      max-width: 80%;
+      height: 150vw;
+      margin: 1.875rem auto;
+      padding: 3.125rem 1.875rem;
       border-radius: 20px;
       background: #fff;
       box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
@@ -98,25 +98,25 @@ $lightColor: #e6e0ec;
         height: auto;
         display: flex;
         justify-content: flex-end;
-        position: absolute;
-        top: 0px;
-        right: -47px;
         img {
           width: 370px;
           height: 250px;
+          position: absolute;
+          top: 0px;
+          right: -30px;
         }
       }
       .connectwith-item-text {
         width: 100%;
         height: 15%;
-        margin: 30px 50px;
+        margin: 1.875rem 3.125rem;
         .connectwith-item-location {
           width: 100%;
           height: auto;
-          font-size: 13px;
+          font-size: 0.813rem;
           color: #ccc;
           position: relative;
-          margin-left: 20px;
+          margin-left: 1.25rem;
           &::before {
             content: " ";
             width: 17px;
@@ -126,15 +126,15 @@ $lightColor: #e6e0ec;
             position: absolute;
             background: url(/public/img/ic-check-on.png) no-repeat center /
               cover;
-            margin-right: 20px;
+            margin-right: 1.25rem;
           }
         }
         .connectwith-item-title {
           width: 100%;
-          font-size: 1.8rem;
+          font-size: 2.2rem;
           font-weight: 600;
           color: rgba(111, 118, 193, 1);
-          margin-top: 7rem;
+          margin-top: 4rem;
           .connectwith-item-eng-title {
             margin-left: 1.5rem;
             font-size: 1.5rem;
@@ -146,7 +146,7 @@ $lightColor: #e6e0ec;
           width: 70%;
           font-size: 1.2rem;
           color: #ccc;
-          margin-top: 40px;
+          margin-top: 2.5rem;
         }
       }
     }
@@ -156,13 +156,13 @@ $lightColor: #e6e0ec;
   .connectwith-item-form {
     width: 100%;
     height: 100%;
-    padding-top: 70px;
+    padding-top: 4.375rem;
     box-sizing: border-box;
     .connectwith-item-inner {
-      max-width: 1200px;
-      height: 100vw;
-      margin: 30px auto;
-      padding: 50px 30px;
+      max-width: 80%;
+      height: 200vw;
+      margin: 1.875rem auto;
+      padding: 2.125rem 1.875rem;
       border-radius: 20px;
       background: #fff;
       box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
@@ -173,25 +173,25 @@ $lightColor: #e6e0ec;
         height: auto;
         display: flex;
         justify-content: flex-end;
-        position: absolute;
-        top: 0px;
-        right: -47px;
         img {
-          width: 220px;
-          height: 150px;
+          width: 270px;
+          height: 180px;
+          position: absolute;
+          top: 0px;
+          right: -25px;
         }
       }
       .connectwith-item-text {
         width: 100%;
         height: 15%;
-        margin: 30px 50px;
+        margin: 1.875rem 1.525rem;
         .connectwith-item-location {
           width: 100%;
           height: auto;
-          font-size: 10px;
+          font-size: 0.688rem;
           color: #ccc;
           position: relative;
-          margin-left: 20px;
+          margin-left: 1.25rem;
           &::before {
             content: " ";
             width: 17px;
@@ -201,7 +201,7 @@ $lightColor: #e6e0ec;
             position: absolute;
             background: url(/public/img/ic-check-on.png) no-repeat center /
               cover;
-            margin-right: 20px;
+            margin-right: 1.25rem;
           }
         }
         .connectwith-item-title {
@@ -209,7 +209,7 @@ $lightColor: #e6e0ec;
           font-size: 1.2rem;
           font-weight: 600;
           color: rgba(111, 118, 193, 1);
-          margin-top: 7rem;
+          margin-top: 3rem;
           .connectwith-item-eng-title {
             margin-left: 1.5rem;
             font-size: 1rem;
@@ -221,7 +221,7 @@ $lightColor: #e6e0ec;
           width: 70%;
           font-size: 0.8rem;
           color: #ccc;
-          margin-top: 40px;
+          margin-top: 1.25rem;
         }
       }
     }

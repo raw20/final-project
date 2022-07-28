@@ -63,6 +63,12 @@
   .connectwith-header .link:hover {
     color: #ccc;
   }
+  .connectwith-header .connect-with-header-tab {
+    display: none;
+  }
+  .connectwith-header.off {
+    background-color: rgba(255, 255, 255, 0);
+  }
 }
 @media (min-width: 758px) and (max-width: 1023px) {
   .connectwith-header {
@@ -89,17 +95,17 @@
     margin-left: 5%;
   }
   .connectwith-header .main-item {
-    width: 100%;
+    width: 80%;
     margin-top: 10px;
   }
   .connectwith-header .main-item .gnb {
-    width: 100%;
+    width: 80%;
     display: flex;
-    font-size: 20px;
-    justify-content: space-between;
+    font-size: 1rem;
+    justify-content: space-around;
   }
   .connectwith-header .main-item .gnb .item-menu {
-    width: 150px;
+    width: 7.375rem;
     height: 70px;
     display: flex;
     color: #7a7a7a;
@@ -127,6 +133,12 @@
   }
   .connectwith-header .link:hover {
     color: #ccc;
+  }
+  .connectwith-header .connect-with-header-tab {
+    display: none;
+  }
+  .connectwith-header.off {
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 @media (min-width: 335px) and (max-width: 757px) {
@@ -158,28 +170,23 @@
     margin-top: 10px;
   }
   .connectwith-header .main-item .gnb {
-    width: 100%;
-    display: flex;
-    font-size: 20px;
-    justify-content: space-between;
     display: none;
   }
   .connectwith-header .link {
-    width: 100%;
-    height: auto;
-    text-align: right;
-    margin-right: 5%;
-    font-size: 0.9rem;
+    display: none;
+  }
+  .connectwith-header .connect-with-header-tab {
+    width: 150px;
+    height: 150px;
+    background: url(/public/img/btn-menu.png) no-repeat center/80%;
+    text-indent: -9999px;
+    font-size: 0px;
+    margin-right: 2rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    text-decoration: none;
-    color: #e6e0ec;
   }
-  .connectwith-header .link:hover {
-    color: #ccc;
+  .connectwith-header.off {
+    background-color: #fff;
   }
-}
-.connectwith-header.off {
-  background-color: rgba(255, 255, 255, 0);
 }/*# sourceMappingURL=header.css.map */

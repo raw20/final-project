@@ -10,7 +10,7 @@ function OnAndUpItemList({ item }) {
       <Link
         className="main-item-list"
         key={item.id}
-        to={`/chemiverseOnUp/${item.onAndUpItemAddress}`}
+        to={`/chemiverseOnUp/${item.id}/${item.onAndUpItemAddress}`}
         state={{
           id: item.id,
           menu: item.menu,
