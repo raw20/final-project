@@ -29,6 +29,10 @@ import WorkSkill from "./components/Main/OnAndUp/MainItem/Study/WorkSkill";
 import PeopleSkill from "./components/Main/OnAndUp/MainItem/Study/PeopleSkill";
 import SelfCare from "./components/Main/OnAndUp/MainItem/Study/SelfCare";
 import EduLecturer from "./components/Main/OnAndUp/MainItem/EduGuide/EduLecturer";
+import Chemi1 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi1";
+import Chemi2 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi2";
+import Chemi3 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi3";
+import Chemi4 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi4";
 
 function App() {
   const [LoginAuth, setLoginAuth] = useState(false);
@@ -70,7 +74,11 @@ function App() {
             <Route path="study/2" element={<PeopleSkill />} />
             <Route path="study/3" element={<SelfCare />} />
             {/* 케미스토리 */}
-            <Route path="chemistory" />
+            <Route path="chemistory/0" element={<Chemi1 />} />
+            <Route path="chemistory/1" element={<Chemi2 />} />
+            <Route path="chemistory/2" element={<Chemi3 />} />
+            <Route path="chemistory/3" element={<Chemi4 />} />
+
             {/* 멘토링 */}
             <Route path="mentoring" />
             {/* 게시판 */}
