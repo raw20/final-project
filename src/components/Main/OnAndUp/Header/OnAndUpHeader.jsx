@@ -27,6 +27,83 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
 		})();
 	}, []);
 
+<<<<<<< HEAD
+  const [viewButton, setViewButton] = useState(true);
+  const button = useState("ture") ? viewButton : setViewButton;
+  return (
+    <div id="header">
+      <Link className="logo" to="/chemiverseOnUp">
+        logo
+      </Link>
+      <div className="main-item">
+        <ul className="gnb">
+          {item.map((item, index) => (
+            <li key={index}>
+              <NavLink
+                to={`/chemiverseOnUp/item/${item.onAndUpItemAddress}`}
+                key={item.id}
+                state={{
+                  id: item.id,
+                  menu: item.menu,
+                  dep: item.dep,
+                  address: item.address,
+                }}
+              >
+                <span>{item.menu}</span>
+              </NavLink>
+              <ul className="depth1">
+                <NavLink
+                  to={`/chemiverseOnUp/item/${item.address}`}
+                  key={item.id}
+                  state={{
+                    id: item.id,
+                    menu: item.menu,
+                    dep: item.dep,
+                    address: item.onAndUpItemAddress,
+                  }}
+                >
+                  {item.dep.map((ele, index) => (
+                    <li key={index} className="depth1Li">{ele}</li>
+                  ))}
+                </NavLink>
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="side-item">
+        <ul className="util">
+          <li id="mypage">
+            <NavLink to={`/chemiverseOnUp/Profile`}>
+              <BiUser />
+            </NavLink>
+          </li>
+          {LoginAuth ? (
+            <span onClick={() => goToLogout()}>
+              <IoLogOutOutline />
+            </span>
+          ) : (
+            <span onClick={() => goToLogin()}>
+              <IoLogInOutline />
+            </span>
+          )}
+          <NavLink
+            to={`/chemiverseOnUp/tab`}
+            state={{
+              id: item.id,
+              menu: item.menu,
+              dep: item.dep,
+              address: item.address,
+            }}
+            className={"tab-btn"}
+          >
+            탭버튼
+          </NavLink>
+        </ul>
+      </div>
+    </div>
+  )
+=======
 	return (
 		<div id="header">
 			<Link className="logo" to="/chemiverseOnUp">
@@ -102,6 +179,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
 			</div>
 		</div>
 	);
+>>>>>>> cb4b04271314afd374c1be9fa5aa7776965a2584
 }
 
 export default OnAndUpHeader;

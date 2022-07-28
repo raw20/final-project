@@ -1,5 +1,5 @@
 import React from "react";
-import './css/PwContent.css';
+import './css/search.css';
 
 const PasswordUpdate = () => {
 
@@ -11,7 +11,7 @@ const PasswordUpdate = () => {
         <input type="userOriginPass" id="origin-pass" placeholder='현재비밀번호' />
         <input type="userChangePass" id='change-pass' placeholder='변경비밀번호' />
         <input type="userChangePass" id='change-pass' placeholder='비밀번호확인' />
-        <button id='pwBtn' type="button">확인</button>
+        <button type="submit" id='pwBtn' >확인</button>
       </form>
     </div>
   );
@@ -19,3 +19,5 @@ const PasswordUpdate = () => {
 
 
 export default PasswordUpdate;
+
+
