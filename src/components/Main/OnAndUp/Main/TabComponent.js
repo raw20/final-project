@@ -1,9 +1,9 @@
-import Bo1 from "../MainItem/Board/Bo1";
-import Bo2 from "../MainItem/Board/Bo2";
-import Chemi1 from "../MainItem/Chemi/Chemi1";
-import Chemi2 from "../MainItem/Chemi/Chemi2";
-import Chemi3 from "../MainItem/Chemi/Chemi3";
-import Chemi4 from "../MainItem/Chemi/Chemi4";
+import Board from "../MainItem/Board/Board";
+import Idea from "../MainItem/Board/Idea";
+import Chemi1 from "../MainItem/ChemiStory/Chemi1";
+import Chemi2 from "../MainItem/ChemiStory/Chemi2";
+import Chemi3 from "../MainItem/ChemiStory/Chemi3";
+import Chemi4 from "../MainItem/ChemiStory/Chemi4";
 import M1 from "../MainItem/Mentoring/M1";
 import M2 from "../MainItem/Mentoring/M2";
 import M3 from "../MainItem/Mentoring/M3";
@@ -55,7 +55,7 @@ const component = [
   },
   {
     index: 6,
-    content: [<Bo1 />, <Bo2 />],
+    content: [<Board />, <Idea />],
   },
 ];
 
