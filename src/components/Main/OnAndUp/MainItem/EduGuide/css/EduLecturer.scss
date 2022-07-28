@@ -1,41 +1,40 @@
-@import "./variables";
 $bgColor: #dde3f6;
 $deepColor: #6f76c1;
 $lightColor: #e6e0ec;
-$lightgray:#dcdce6;
-$textgray:#aeaeba;
-$textdarkgray: #8d8d99;
 
-.lecturer_area{
+.lectuerer_area{
+width: 1200px;
+margin: auto;
   .lecturer_wrap{
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     .card{
-      width:calc(50% - 20px) ;
+      width: calc(50% - 50px);
       height: 300px;
       border-radius: 20px;
       box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
-      padding: 30px 20px;
+      padding: 70px 30px;
       box-sizing: border-box;
-      margin-bottom: 25px;
+      margin: 0 25px 25px 0;
       &:hover{
         background-color: #6f76c1;
         color: #fff;
         transition: all 0.5s;
       }
+      &:hover>select{
+        background-color: #6f76c1;
+        color: #fff;
+      }
       .lec_box{
         display: flex;
-        height: 250px;
         .img_box{
-          height: 200px;
+          height: 150px;
           margin-right: 20px;
           .img{
-            height: 170px;
+            height: 150px;
           }
         }
         .info_box{
-          width: 50%;
           .name{
             font-size: 20px;
             font-weight: bold;
@@ -56,276 +55,25 @@ $textdarkgray: #8d8d99;
           flex-direction: column;
           align-items: flex-start;
           height: 55px;
-          .contents-type {
-            width: 80%;
-            height: 18px;
-            border-radius: 5px;
-            color: rgba(79, 79, 79, 0.486);
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            font-size: 0.8rem;
-            padding: 0.5rem 1.2rem;
-            position: relative;
-            cursor: pointer;
-            box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
-            background-color: rgba(255, 255, 255, 0.336);
-            .type-tab {
-              width: 84.2%;
-              height: auto;
-              background-color: rgb(255, 255, 255);
-              color: #ccc;
-              justify-content: start;
-              align-items: center;
-              font-size: 0.8rem;
-              padding: 0.5rem 1.2rem;
-              position: absolute;
-              display: none;
-              top: 25px;
-              right: 0px;
-              border-radius: 5px;
-              .type-tab-list {
-                margin-top: 0.7rem;
-                cursor: pointer;
-                &:hover{
-                  color: #6f76c1;
-                  font-weight: 500;
-                }
-              }
-            }
-            .type-tab.on {
-              display: block;
-            }
-          }
-          .contents-type.on {
-            box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
-            background-color: rgb(255, 255, 255);
-          }
           span{
             font-weight: 600;
             font-size: 14px;
           }
-        }
-      }
-        .movebtn_box{
-          .detail_btn{
-            width: 51px;
-            height: 51px;
-            margin-left: 30px;
-            background: url(/public/img/link.png);
-            background-color: rgba(0, 0, 0, 0.205);
-            border-radius: 50%;
-            cursor: pointer;
-          }
-          position: relative;
-          align-self: flex-end;
-        }
-      }
-    }
-    .detail_box{
-      width: 80%;
-      margin: auto;
-      .profile{
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 50px;
-        .img_box{
-          margin-right: 40px;
-          img{
-            border-radius: 20px;
+          select{
+            width: 300px;
+            height: 45px;
+            border-radius: 5px;
+            appearance: none;
+            outline: none;
+            padding: 0 15px;
+            margin-top: 8px;
+            border: none;
             box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+            background-color: #eef3fa;
           }
-        }
-        .detail_info{
-          margin-top: 40px;
-          .position{
-            font-size: 1rem;
-            color: $deepColor;
-          }
-          .name{
-            font-size: 1.5rem;
-            margin: 20px 0;
-          }
-          .career_box{
-            padding: 0 20px;
-            margin-top: 15px;
-            .career_list{
-              list-style-type:square;
-              font-size: 15px;
-              line-height: 40px;
-              color: $textdarkgray;
-            }
-          }
-        }
-      }
-      .video_box{
-        width: 100%;
-        margin-bottom: 40px;
-        .lec_video{
-          width: 100%;
-          height: 30vw;
-          border-radius: 15px;
-          box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 15%);
-        }
-      }
-      .subinfo_box{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        font-size: 16px;
-        line-height: 30px;
-        .subinfo_one, .subinfo_two{
-          width: calc(50% - 40px);
-          height: auto;
-          border-radius: 20px;
-          box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 15%);
-          padding: 40px;
-          box-sizing: border-box;
-        }
-        .edu_title, .dlec_title{
-          color: $deepColor;
-          font-weight: 500;
-        }
-        .edu_list, .dlec_list{
-          list-style-type: square;
-          margin: 20px;
-          color: $textdarkgray;
-        }
-      }
-      .list_btn{
-        width: 150px;
-        height: 50px;
-        background-color: #fff;
-        border: 0.5px solid #ccc;
-        box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 15%);
-        border-radius: 30px;
-        margin-top: 40px;
-        cursor: pointer;
-        &:hover{
-          color: $deepColor;
         }
       }
     }
-}
+  }
 
-
-@media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
-  .lecturer_area{
-  .card{
-    min-width: 100%;
-    .lec_box{
-      .info_box{
-        min-width: 65%;
-      }
-      .movebtn_box{
-        .detail_btn{
-          margin: 0px !important;
-        }
-      }
-      .module_box{
-        .contents-type {
-          background-color: $bgColor;
-          .type-tab {
-            min-width: 89.8%;
-            background-color: $bgColor;
-          }
-        }
-        .contents-type.on {
-          background-color: $bgColor;
-        }
-      }
-    }
-  }
-  .subinfo_box{
-    flex-wrap: wrap;
-    .subinfo_one, .subinfo_two{
-      min-width: 100%;
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-  }
-  .video_box{
-    width: 100%;
-    margin-bottom: 40px;
-    .lec_video{
-      width: 100%;
-      height: 60vw;
-      border-radius: 15px;
-      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 15%);
-    }
-  }
-  .detail_box{
-    .list_btn{
-      width: 130px;
-      height: 50px;
-    }
-  }
 }
-}
-  
-
-@media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
-  .lecturer_area{
-  .card{
-    min-width: 100%;
-    .lec_box{
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .img_box{
-        max-width: 40%;
-        img{
-          width : 100%;
-        }
-      }
-      .info_box{
-        width: 54%;
-        .career_box{
-          font-size: 12px;
-        }
-        .module_box{
-          .contents-type {
-            background-color: $bgColor;
-            .type-tab {
-              max-width: 75%;
-              background-color: $bgColor;
-            }
-          }
-          .contents-type.on {
-            background-color: $bgColor;
-          }
-        }
-      }
-      .movebtn_box{
-        .detail_btn{
-          margin: 0px !important;
-        }
-      }
-    }
-  }
-  .detail_box{
-    margin: auto;
-    .subinfo_box{
-      flex-wrap: wrap;
-      .subinfo_one, .subinfo_two{
-        min-width: 100%;
-        margin-bottom: 20px;
-        font-size: 12px;
-        line-height: 20px;
-        padding: 15px;
-      }
-    }
-    .video_box{
-      margin-bottom: 20px;
-      .lec_video{
-        height: 40vw;
-      }
-    }
-    .list_btn{
-      width: 100px;
-      height: 50px;
-    }
-  }
-}
-}
-
