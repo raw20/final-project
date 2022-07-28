@@ -1,0 +1,518 @@
+
+
+
+.chemi-wrap1{
+  .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(111, 118, 193, 1);
+    h2{
+      font-size: 30px;
+      padding-bottom: 50px;
+    }
+    h3{
+      font-size: 20px;
+    }
+  }
+ 
+
+      .boxlist{
+       
+        .box{
+          max-width: 1200px;
+          height: auto;
+          margin: 30px auto;
+          padding: 30px 30px;
+          border-radius: 20px;
+          background: #ffffff;
+          box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+          font-size: 15px;
+          position: relative;
+          .col-box{
+            width: 10px;
+           height: auto;
+             border-radius: 15px 0 0 15px;
+           padding: 40px 10px;
+           position: absolute;
+           left: 0;
+           top:0;
+            background-color: rgba(111, 118, 193, 1);
+          }
+          .light{
+           background-color:  #e6e0ec;
+          }
+
+          .img-box{
+            background: url(./../../../../../../../public/img/ic-check.png) center / cover ;
+            width: 25px;
+            height: 25px;
+            z-index: 1;
+            position: absolute;
+            left: 17px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          p{
+            text-indent: 20px;
+          }
+        }
+      }
+      .box{
+        max-width: 1200px;
+        height: auto;
+        margin: 30px auto;
+        padding: 50px 30px;
+        border-radius: 20px;
+        background: #ffffff;
+        box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+        font-size: 15px;
+        color:#202020;
+      }
+}
+.chemi-wrap2{
+  .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(111, 118, 193, 1);
+    h2{
+      font-size: 30px;
+      padding-bottom: 50px;
+    }
+    h3{
+      font-size: 20px;
+    }
+  }
+  .dep1-hide{
+    display: none;
+  }
+   .dep1{   
+  /*                                                                                                              
+    .box{
+      max-width: 1200px;
+      height: auto;
+      margin: 30px auto;
+      padding: 50px 30px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+    font-size: 15px;
+  } */
+  .chemi-btn{
+    display: flex;
+    justify-content: flex-end;
+    width: 100px;
+    float: right;
+    button{
+        width: 80px;
+        height: 30px;
+        font-size: 10px;
+   
+        background-color: #d9d9d9;
+        color: #000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 2px;
+        &:hover{
+            background-color: rgba(111, 118, 193, 1);
+            color: #fff;
+        }
+    }
+  } 
+   }
+   .dep2-show{
+    display: block;
+   }
+   .dep2{
+    display: none;
+    .box{
+      max-width: 1200px;
+    height: auto;
+    margin: 30px auto;
+    padding: 50px 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+  font-size: 15px;
+    }
+    .chemi-btn{
+      display: flex;
+      justify-content: flex-end;
+      width: 100px;
+      float: right;
+      button{
+          width: 80px;
+          height: 30px;
+          font-size: 10px;
+     
+          background-color: #d9d9d9;
+          color: #000;
+          border-radius: 5px;
+          border: none;
+          cursor: pointer;
+          text-align: center;
+          box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0px 2px;
+          &:hover{
+              background-color: rgba(111, 118, 193, 1);
+              color: #fff;
+          }
+      }
+    } 
+   }
+                                                                           
+    
+}
+.chemi-wrap3{
+  .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(111, 118, 193, 1);
+    h2{
+      font-size: 30px;
+      padding-bottom: 50px;
+    }
+    h3{
+      font-size: 20px;
+    }
+  }
+      .boxlist{
+        .box{
+          max-width: 1200px;
+          height: auto;
+          margin: 30px auto;
+          padding: 30px 30px;
+          border-radius: 20px;
+          background: #ffffff;
+          box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+          font-size: 15px;
+          position: relative;
+        }
+        .col-box{
+            width: 10px;
+           height: auto;
+             border-radius: 15px 0 0 15px;
+           padding: 46px 10px;
+           position: absolute;
+           left: 0;
+           top:0;
+            background-color: rgba(111, 118, 193, 1);
+          }
+          .light{
+            background-color:  #e6e0ec;
+           }
+          .img-box{
+            background: url(./../../../../../../../public/img/ic-check.png) center / cover ;
+            width: 25px;
+            height: 25px;
+            z-index: 1;
+            position: absolute;
+            left: 17px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          input{
+            width: 400px;
+            height: 20px;
+            
+            margin-left: 20px;
+            padding: 5px;
+          }
+          
+      }
+      .chemi-btn{
+        display: flex;
+        justify-content: flex-end;
+        width: 100px;
+        float: right;
+        button{
+            width: 80px;
+            height: 30px;
+            font-size: 10px;
+       
+            background-color: #d9d9d9;
+            color: #000;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 2px;
+            &:hover{
+                background-color: rgba(111, 118, 193, 1);
+                color: #fff;
+            }
+        }
+      } 
+    
+     
+      
+    }
+.chemi-wrap4{      
+  .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(111, 118, 193, 1);
+    h2{
+      font-size: 30px;
+      padding-bottom: 50px;
+    }
+    h3{
+      font-size: 20px;
+    }
+  }
+          .dep1{
+            .box{
+                max-width: 1200px;
+              height: auto;
+              margin: 30px auto;
+         
+              padding: 50px 30px;
+              border-radius: 20px;
+              background: #ffffff;
+              box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+              font-size: 15px;
+            }
+            .chemi-btn{
+              display: flex;
+              justify-content: flex-end;
+              width: 100px;
+              float: right;
+              button{
+                  width: 80px;
+                  height: 30px;
+                  font-size: 10px;
+             
+                  background-color: #d9d9d9;
+                  color: #000;
+                  border-radius: 5px;
+                  border: none;
+                  cursor: pointer;
+                  text-align: center;
+                  box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 0px 2px;
+                  &:hover{
+                      background-color: rgba(111, 118, 193, 1);
+                      color: #fff;
+                  }
+              }
+            } 
+          }
+         
+    }
+
+
+    .DiaryEditor{
+     
+     
+      padding: 20px;
+     
+     .chemi-table{
+      text-align: center;
+     
+      table{
+        max-width: 1200px;
+        height: auto;
+        margin: 30px auto;
+        padding: 100px 30px 40px;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+      font-size: 15px;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      
+      .table-title{
+        max-width: 1200px;
+        width: 100%;
+background-color: #6F76C1;
+height: 60px;
+border-radius: 15px 15px 0 0;
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+    justify-content: center;
+    align-items: center;
+p{
+  color: #fff;
+}
+
+
+      }
+      .diff{
+        background-color: #E6E0EC;
+       
+        p{
+          color: #999;
+        }
+      }
+      .chemi-table-inner{
+        max-width: 700px;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+              tr{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+        width: 100%;
+        &:first-of-type td:first-of-type{
+          margin-left: 13px;
+        }
+      }
+      }
+
+      }
+      
+     }
+    
+    input{
+   
+      height: 30px;
+      padding: 10px;
+      width: 600px;
+      border: 1px solid #999;
+    }
+    .chemi-name{
+      display: flex;
+       justify-content: flex-end;
+       margin-bottom: 30px;
+      input{ 
+        height: 15px;
+        width: 120px;
+        border: 1px solid #999;
+  
+      }
+    }
+  
+    }
+    .chemi-btn{
+      display: flex;
+       justify-content: flex-end;
+      width: 100px;
+      float: right;
+      button{
+        width: 80px;
+        height: 30px;
+        font-size: 10px;
+   
+        background-color: #d9d9d9;
+        color: #000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 2px;
+        &:hover{
+            background-color: rgba(111, 118, 193, 1);
+            color: #fff;
+        }
+      }
+    }
+   
+  
+    /* 리스트 */
+    .DiaryList{
+      max-width: 1200px;
+      height: auto;
+      margin: 30px 20px;
+      padding: 100px 30px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+    font-size: 15px;
+      padding: 20px;
+      margin-top: 20px;
+      h2{
+        text-align: center;
+      }
+      h4{
+        padding-left: 20px;
+      }
+    }
+  
+    /* 아이템 */
+    .DiaryItem{
+    
+      margin-bottom: 10px;
+      padding: 20px;
+      .info{
+        border-bottom: 1px solid gray;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+      .chemi-content{
+        font-size: 15px;
+        p{
+          font-weight: bold;
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+        &:nth-of-type(3n+2){
+          margin-top: 30px;
+        }
+        input{
+          border: 1px solid #999;
+        }
+      }
+      .chemi-btn{
+        display: flex;
+        justify-content: flex-end;
+       width: 100px;
+       float: right;
+       button{
+        width: 80px;
+        height: 30px;
+        font-size: 10px;
+   
+        background-color: #d9d9d9;
+        color: #000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 2px;
+        &:hover{
+            background-color: rgba(111, 118, 193, 1);
+            color: #fff;
+        }
+      }
+      }
+    }
+    
+  
+ 
