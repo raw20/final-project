@@ -1,15 +1,1 @@
-.about-company-wrap {
-  width: 90%;
-  height: 100vh;
-  -webkit-animation: fadein 2s;
-          animation: fadein 2s;
-  margin: 0 auto;
-  padding-top: 2rem;
-}
-.about-company-wrap .about-company-content {
-  width: 100%;
-  margin: 4rem auto;
-  font-size: 1.2rem;
-  line-height: 30px;
-  color: #888;
-}/*# sourceMappingURL=aboutCompany.css.map */
+/*# sourceMappingURL=aboutCompany.css.map */
