@@ -4,7 +4,7 @@ import TablePagenation from "./TablePagenation";
 import AboutMeTableList from "./AboutMeTableList";
 import WriteBtn from "./WriteBtn";
 
-function Table({ posts, copyPosts, writer, setWriter, setPosts }) {
+function AboutMeTable({ posts, copyPosts, writer, setWriter, setPosts }) {
   const [content, setContent] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(10);
@@ -13,9 +13,10 @@ function Table({ posts, copyPosts, writer, setWriter, setPosts }) {
   function currentPosts(posts) {
     let currentPosts = 0;
     currentPosts = posts.slice(indexOfFirst, indexOfLast);
+    console.log("cuurent post : ", currentPosts);
     return currentPosts;
   }
-
+  console.log(posts);
   return (
     <>
       <AboutMeTableList
@@ -40,4 +41,4 @@ function Table({ posts, copyPosts, writer, setWriter, setPosts }) {
   );
 }
 
-export default Table;
+export default AboutMeTable;

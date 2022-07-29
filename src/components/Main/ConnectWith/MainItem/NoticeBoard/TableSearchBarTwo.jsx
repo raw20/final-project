@@ -1,26 +1,32 @@
 import React from "react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import "./css/tableSearchBar.css";
 
 function TableSearchBarTwo({ posts, copyPosts, setPosts }) {
   const [display, setDisplay] = useState(true);
   const [searchValue, setSearchValue] = useState("");
-  console.log("posts", posts);
   const [type, setType] = useState("전체");
+  const listdata = useSelector((state) => state.item.data);
+  console.log("listdata : ", listdata.length, "posts:", posts.length);
   function onSearch(e) {
     e.preventDefault();
     if (searchValue === null || searchValue === " ") {
       console.log("no data");
     } else if (type === selectTypeArray[1].name) {
-      const filterData = posts.filter((ele) =>
+      console.log("1111");
+      const filterData = listdata.filter((ele) =>
         ele.writer.includes(searchValue)
       );
+      console.log(filterData);
       setPosts(filterData);
     } else if (type === selectTypeArray[2].name) {
-      const filterData = posts.filter((ele) => ele.title.includes(searchValue));
+      const filterData = listdata.filter((ele) =>
+        ele.title.includes(searchValue)
+      );
       setPosts(filterData);
     } else if (type === selectTypeArray[0].name) {
-      const filterData = posts.filter(
+      const filterData = listdata.filter(
         (ele) =>
           ele.title.includes(searchValue) || ele.writer.includes(searchValue)
       );
@@ -36,7 +42,7 @@ function TableSearchBarTwo({ posts, copyPosts, setPosts }) {
   }
   function handlerChanegeData(e) {
     if (e.key === "Backspace") {
-      setPosts(copyPosts);
+      setPosts(listdata);
     }
   }
   const selectTypeArray = [
