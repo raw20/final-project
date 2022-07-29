@@ -9,28 +9,32 @@
         "mtitle": "신입사원의 매너",
         "mpic": "",
         "mgoal": "조직에서 함께 일하기 위한 업무 기본 스킬 교육",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/768294a0-26ac-4eea-a87b-32dedf43657f/bg01.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011621Z&X-Amz-Expires=86400&X-Amz-Signature=6d9dab852311c16a19b9a26d9ddea31b6e5ccc2337905d278eeede3b86afbe20&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg01.jpg%22&x-id=GetObject"
       },
       {
         "mid": "M2",
         "mtitle": "선배와의 관계 형성과 팔로워십",
         "mpic": "",
         "mgoal": "조직에서 함께 일하기 위한 업무 기본 스킬 교육",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/639e97be-2940-4bff-a539-cdb7a2545dcd/bg02.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011727Z&X-Amz-Expires=86400&X-Amz-Signature=ca109fde5e3929235e0ab5aa03acd52d452d856e8b4bbc57a1ba11fd611023dd&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg02.jpg%22&x-id=GetObject"
       },
       {
         "mid": "M3",
         "mtitle": "협업 방식 및 마인드",
         "mpic": "",
         "mgoal": "조직에서 함께 일하기 위한 업무 기본 스킬 교육",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0b90e636-48df-49b7-a89c-6e3991119564/bg03.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011754Z&X-Amz-Expires=86400&X-Amz-Signature=a43ba1506445ea4b2d2b8769c458e26fba6fc7313543cb69fed7ee69b6d096a1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg03.jpg%22&x-id=GetObject"
       },
       {
         "mid": "M4",
         "mtitle": "조직 커뮤니케이션 스킬",
         "mpic": "",
         "mgoal": "조직에서 함께 일하기 위한 업무 기본 스킬 교육",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/edfba3b2-e194-4f50-b826-09f517f672a4/bg04.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011820Z&X-Amz-Expires=86400&X-Amz-Signature=fd06753d748d65139831e75c311168dab82a909dd3f0d3e39da30825b82c2909&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg04.jpg%22&x-id=GetObject"
       }
     ]
   },
@@ -44,28 +48,32 @@
         "mtitle": "직무 스킬 강화",
         "mpic": "",
         "mgoal": "일잘러가 되기 위한 실전 온보딩",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/768294a0-26ac-4eea-a87b-32dedf43657f/bg01.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011621Z&X-Amz-Expires=86400&X-Amz-Signature=6d9dab852311c16a19b9a26d9ddea31b6e5ccc2337905d278eeede3b86afbe20&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg01.jpg%22&x-id=GetObject"
       },
       {
         "mid": "M6",
         "mtitle": "워크 스킬 강화",
         "mpic": "",
         "mgoal": "일잘러가 되기 위한 실전 온보딩",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/639e97be-2940-4bff-a539-cdb7a2545dcd/bg02.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011727Z&X-Amz-Expires=86400&X-Amz-Signature=ca109fde5e3929235e0ab5aa03acd52d452d856e8b4bbc57a1ba11fd611023dd&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg02.jpg%22&x-id=GetObject"
       },
       {
         "mid": "M7",
         "mtitle": "커뮤니케이션 스킬",
         "mpic": "",
         "mgoal": "일잘러가 되기 위한 실전 온보딩",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0b90e636-48df-49b7-a89c-6e3991119564/bg03.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011754Z&X-Amz-Expires=86400&X-Amz-Signature=a43ba1506445ea4b2d2b8769c458e26fba6fc7313543cb69fed7ee69b6d096a1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg03.jpg%22&x-id=GetObject"
       },
       {
         "mid": "M8",
         "mtitle": "셀프 리더십 스킬",
         "mpic": "",
         "mgoal": "일잘러가 되기 위한 실전 온보딩",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/edfba3b2-e194-4f50-b826-09f517f672a4/bg04.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011820Z&X-Amz-Expires=86400&X-Amz-Signature=fd06753d748d65139831e75c311168dab82a909dd3f0d3e39da30825b82c2909&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg04.jpg%22&x-id=GetObject"
       }
     ]
   },
@@ -79,28 +87,32 @@
         "mtitle": "신입사원의 매너",
         "mpic": "",
         "mgoal": "조직에서 함께 일하기 위한 업무 기본 스킬 교육",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/768294a0-26ac-4eea-a87b-32dedf43657f/bg01.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011621Z&X-Amz-Expires=86400&X-Amz-Signature=6d9dab852311c16a19b9a26d9ddea31b6e5ccc2337905d278eeede3b86afbe20&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg01.jpg%22&x-id=GetObject"
       },
       {
         "mid": "M10",
         "mtitle": "선배와의 관계 형성과 팔로워십",
         "mpic": "",
         "mgoal": "조직에서 함께 일하기 위한 업무 기본 스킬 교육",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/639e97be-2940-4bff-a539-cdb7a2545dcd/bg02.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011727Z&X-Amz-Expires=86400&X-Amz-Signature=ca109fde5e3929235e0ab5aa03acd52d452d856e8b4bbc57a1ba11fd611023dd&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg02.jpg%22&x-id=GetObject"
       },
       {
         "mid": "M11",
         "mtitle": "협업 방식 및 마인드",
         "mpic": "",
         "mgoal": "조직에서 함께 일하기 위한 업무 기본 스킬 교육",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0b90e636-48df-49b7-a89c-6e3991119564/bg03.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011754Z&X-Amz-Expires=86400&X-Amz-Signature=a43ba1506445ea4b2d2b8769c458e26fba6fc7313543cb69fed7ee69b6d096a1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg03.jpg%22&x-id=GetObject"
       },
       {
         "mid": "M12",
         "mtitle": "조직 커뮤니케이션 스킬",
         "mpic": "",
         "mgoal": "조직에서 함께 일하기 위한 업무 기본 스킬 교육",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/edfba3b2-e194-4f50-b826-09f517f672a4/bg04.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011820Z&X-Amz-Expires=86400&X-Amz-Signature=fd06753d748d65139831e75c311168dab82a909dd3f0d3e39da30825b82c2909&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg04.jpg%22&x-id=GetObject"
       }
     ]
   },
@@ -114,28 +126,32 @@
         "mtitle": "직무 스킬 강화",
         "mpic": "",
         "mgoal": "일잘러가 되기 위한 실전 온보딩",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/768294a0-26ac-4eea-a87b-32dedf43657f/bg01.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011621Z&X-Amz-Expires=86400&X-Amz-Signature=6d9dab852311c16a19b9a26d9ddea31b6e5ccc2337905d278eeede3b86afbe20&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg01.jpg%22&x-id=GetObject"
       },
       {
         "mid": "M14",
         "mtitle": "워크 스킬 강화",
         "mpic": "",
         "mgoal": "일잘러가 되기 위한 실전 온보딩",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/639e97be-2940-4bff-a539-cdb7a2545dcd/bg02.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011727Z&X-Amz-Expires=86400&X-Amz-Signature=ca109fde5e3929235e0ab5aa03acd52d452d856e8b4bbc57a1ba11fd611023dd&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg02.jpg%22&x-id=GetObject"
       },
       {
         "mid": "M15",
         "mtitle": "커뮤니케이션 스킬",
         "mpic": "",
         "mgoal": "일잘러가 되기 위한 실전 온보딩",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0b90e636-48df-49b7-a89c-6e3991119564/bg03.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011754Z&X-Amz-Expires=86400&X-Amz-Signature=a43ba1506445ea4b2d2b8769c458e26fba6fc7313543cb69fed7ee69b6d096a1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg03.jpg%22&x-id=GetObject"
       },
       {
         "mid": "M16",
         "mtitle": "셀프 리더십 스킬",
         "mpic": "",
         "mgoal": "일잘러가 되기 위한 실전 온보딩",
-        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다."
+        "mconcept": "엑스퍼트컨설팅은 국내조직의 경영혁신 및 인재육성의 엑설런스 추구를 위한 여러 영역별 사업활동을 전개해 오고 있습니다.",
+        "card_image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/edfba3b2-e194-4f50-b826-09f517f672a4/bg04.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T011820Z&X-Amz-Expires=86400&X-Amz-Signature=fd06753d748d65139831e75c311168dab82a909dd3f0d3e39da30825b82c2909&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg04.jpg%22&x-id=GetObject"
       }
     ]
   }

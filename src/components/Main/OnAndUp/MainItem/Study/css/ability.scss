@@ -4,10 +4,9 @@
 
     .active button {
         box-shadow: 1px 1px 5px 3px #ddd;
-        background-color: #4c539a;
+        background-color: rgb(111, 118, 193);
         color: #fff;
     }
-    
 }
 .abilityBtns button {
     margin-right: 30px;
@@ -16,66 +15,59 @@
     color: gray;
 }
 .module_box {
-    width: 100%;
+    width: 1000px;
     height: 300px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     a {
-        width: 22%;
+        width: 235px;
+        margin-right: 20px;
     }
+    a:nth-child(4n){margin-right: 0;}
 }
 .module_card {
     width: 100%;
-    height: 270px;
+    height: 320px;
     border-radius: 10px;
     box-shadow: 1px 1px 5px 3px #ddd;
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 25px;
-}
-.module_card:hover {
-    
-    text-decoration: none;
+    margin-bottom: 20px;
 }
 .module_cardImg {
     width: 100%;
     height: 100%;
+
     .cardImg_background {
         width: 100%;
-        height: 120px;
-        position: relative;
+        height: 100%;
 
-        .module_Img_bg {
-            width: 150px;
-            float: right;
-            z-index: 11;
-        }
-        .module_Img {
-            width: 75%;
-            height: 120px;
-            position: absolute;
-            top: 20px;
-            right: 10px;
-            z-index: 12;
+        Img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px 10px 0 0;
         }
     }
 }
 .module_cardTitle_txt{
-    padding-left: 3px;
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
     .module_cardTitle {
-        font-size: 14px;
-        color: #4C539A;
+        font-size: 15px;
+        color: rgb(111, 118, 193);
         font-weight: bold;
-        padding-bottom: 5px;
+        padding-bottom: 10px;
     }
     .module_cardTitle_sub {
-        font-size: 12px;
+        font-size: 13px;
         color: #888;
-        overflow: hidden;
         display: block;
         white-space: nowrap;
+        overflow: hidden;
         text-overflow: ellipsis;
     }
 }
@@ -89,7 +81,7 @@
     height: 150px;
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 
     img {
         width: 150px;
@@ -110,34 +102,34 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 
     .detail_cardNews_title {
-        font-size: 17px;
-        margin-bottom: 50px;
+        padding-left: 5px;
+        font-size: 18px;
+        margin-bottom: 30px;
         margin-left: 8px;
+        color: rgb(111, 118, 193);
+        font-weight: 500;
     }
     .detail_content {
         width: 100%;
         display: flex;
     }
     .detail_content_cardNews {
-        height: 400px;
-        width: 30%;
-        margin-right: 5%;
+        width: 45%;
+        margin-right: 3%;
         cursor: pointer;
-
     }
     .detail_content_microLearning {
-        height: 400px;
-        width: 65%;
+        width: 55%;
         cursor: pointer;
     }
     .detail_content_cardNews_img {
         width: 100%;
         height: 320px;
+        border-radius: 15px;
     }
-
     .detail_content_cardNews_title {
         width: 100%;
         text-align: center;
@@ -158,14 +150,17 @@
     margin-bottom: 100px;
 
     .detail_practice_title {
-        font-size: 17px;
+        font-size: 18px;
+        margin-left: 5px;
+        color: rgb(111, 118, 193);
+        font-weight: 500;
         margin-bottom: 10px;
-        margin-left: 8px;
     }
 
     .detail_practice_desc {
         color: gray;
         margin-left: 5px;
+        margin-bottom: 30px;
     }
 
     .detail_practice_textArea {
@@ -177,12 +172,13 @@
     }
 
     .tempSaveBtn {
-        width: 70px;
+        min-width: 130px;
+        width: 6.843vw;
         height: 25px;
         border-radius: 3px;
         background-color: #fff;
         margin-right: 5px;
-        border: 0.5px solid #888;
+        border: 0.5px solid #d0d0d0;
         cursor: pointer;
     }
 
@@ -192,10 +188,11 @@
         justify-content: flex-end;
     }
     .writeBtn {
-        width: 70px;
+        min-width: 130px;
+        width: 6.843vw;
         height: 25px;
         border-radius: 3px;
-        background-color: #4c539a;
+        background-color: rgb(111, 118, 193);
         color: #fff;
         cursor: pointer;
     }
@@ -210,50 +207,63 @@
     width: 70px;
     height: 25px;
     border-radius: 3px;
-    background-color: #4c539a;
+    background-color: rgb(111, 118, 193);
     color: #fff;
 }
 .aboutCompany_detail_summary {
     width: 100%;
     height: 100%;
     display: flex;
-    padding: 20px 30px;
-    margin-bottom: 50px;
+    margin: 50px 0 150px;
 
     img {
-        width: 500px;
+        width: 300px;
         height: 250px;
         border-radius: 10px;
     }
     .aboutCompany_detail_text {
-        padding: 25px;
+        padding: 30px 25px 25px;
         margin-left: 50px;
         width: calc(100% - 150px);
         border-radius: 10px;
         box-shadow: 1px 1px 5px 3px #ddd;
     }
     .aboutCompany_detail_title {
-        font-size: 17px;
-        margin-bottom: 15px;
-        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 25px;
+        font-weight: 500;
+        color: rgb(111, 118, 193);
     }
-    .learning{
-        font-size: 13px;
-        padding-bottom: 5px;
-        div {
-            padding-top: 3px;
-            font-size: 12px;
+    .aboutCompany_detail_goal{
+        display: flex;
+        font-size: 14px;
+        padding-bottom: 14px;
+        line-height: 1.2;
+        width: 100%;
+        dt{
+            width: 10%;
+            font-weight: 500;
+        }
+        dd{
+            width: 90%;
         }
     }
-    .basic{
-        font-size: 12px;
-        div {
-            padding-top: 3px;
-            font-size: 12px;
+    .aboutCompany_detail_concept{
+        display: flex;
+        font-size: 14px;
+        line-height: 1.2;
+        width: 100%;
+        dt{
+            width: 10%;
+            font-weight: 500;
+        }
+        dd{
+            width: 90%;
         }
     }
 }
 .ModalCards{
+    position: relative;
     .ModalCards_btn {
         width: 100%;
         display:flex;
@@ -282,17 +292,16 @@
 
         img {
             width: 100%;
-
         }
     }
 }
-.swiper {
-    width: 100%;
+.modal_swiper_name {
+    width: 80%;
+    margin: auto;
     height: 300px;
     background-color: #fff;
-}
+
 .swiper-slide {
-    flex-shrink: unset;
     height: 250px;
     cursor: pointer;
 
@@ -301,12 +310,97 @@
         height: 100%;
     }
 }
-.swiper-pagination-bullet {
-    background: red !important;
 }
-.swiper-pagination-bullet-active {
-background: yellow !important;
+.prev-arrow, .next-arrow {
+    position: absolute;
+    width: 20px;
+    top : 55%;
+    cursor: pointer;
+    
+    img {
+        width: 100%;
+    }
 }
-.swiper-button-next, .swiper-button-prev {
-   color: gray;
+.prev-arrow {
+    left: 20px;
+}
+.next-arrow {
+    right: 20px;
+}
+
+@media (min-width: 335px) and (max-width: 757px) {
+    .module_card{
+        width: 84.552vw;
+        }
+    .module_box{
+        justify-content: center;
+        width: 300px;
+        margin: auto;
+        a {
+        margin-bottom: 25px;
+        margin-right: 0;
+        }
+    }
+    .module_cardImg {
+        width: 100%;
+        height: 246px;
+    } 
+    .aboutCompany_detail_summary{
+        margin-bottom: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        Img{
+            width: 89.552vw;
+            padding-bottom: 30px;
+        }
+    }
+    .detail_cardNews{
+        margin-bottom: 100px;
+    }
+    .detail_cardNews .detail_content_cardNews_img {
+        height: 50.522vw
+    }
+    .aboutCompany_detail_summary .aboutCompany_detail_text{
+        padding: 20px 15px 15px;
+    }
+    .aboutCompany_detail_summary .aboutCompany_detail_goal{
+        display: block;
+        dt{padding-bottom: 5px;}
+        dt,dd{
+            width: 100%;
+        }
+    }
+    .aboutCompany_detail_summary .aboutCompany_detail_concept{
+        display: block;
+        dt{padding-bottom: 5px;}
+        dt,dd{width: 100%;}
+    }
+}
+.detail_practice .detail_practice_desc {margin-bottom: 16px;}
+.detail_practice .detail_practice_textArea {margin-bottom: 20px;}
+.detail_practice .detail_practice_btnArea {justify-content: space-around;}
+
+@media (min-width: 758px) and (max-width: 1023px) {
+    .module_card{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .module_box{
+        justify-content: space-around;
+        width: 600px;
+        margin: auto;
+        a {
+        margin-bottom: 25px;
+        }
+        a:nth-child(2n){margin-right: 0;}
+    }
+    .module_cardImg {
+        width: 100%;
+        height: 246px;
+    }
+}
+
+@media (min-width: 1024px) {
+                                                 
 }

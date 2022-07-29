@@ -66,13 +66,13 @@ function App() {
             <Route path="eduguide/1" element={<EduCalendar />} />
             <Route path="eduguide/2" element={<EduLecturer />} />
             {/* 진단 */}
-            <Route path="diagnosis/0" element={<Now />} />
-            <Route path="diagnosis/1" element={<Result />} />
+            <Route path="diagnosis/0/*" element={<Now />} />
+            <Route path="diagnosis/1/*" element={<Result />} />
             {/* 역량학습 */}
-            <Route path="study/0" element={<AboutCompany />} />
-            <Route path="study/1" element={<WorkSkill />} />
-            <Route path="study/2" element={<PeopleSkill />} />
-            <Route path="study/3" element={<SelfCare />} />
+            <Route path="study/0/*" element={<AboutCompany />} />
+            <Route path="study/1/*" element={<WorkSkill />} />
+            <Route path="study/2/*" element={<PeopleSkill />} />
+            <Route path="study/3/*" element={<SelfCare />} />
             {/* 케미스토리 */}
             <Route path="chemistory/0" element={<Chemi1 />} />
             <Route path="chemistory/1" element={<Chemi2 />} />

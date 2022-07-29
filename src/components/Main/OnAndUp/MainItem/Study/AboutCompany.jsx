@@ -3,7 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import debounce from 'lodash.debounce';
 
 import ModuleList from './ModuleList';
-import AboutCompanyDetail from './AboutCompanyDetail';
+import ModuleDetail from './ModuleDetail';
 import ReviewEdit from "./ReviewEdit";
 
 import './css/ability.scss';
@@ -47,8 +47,8 @@ function AboutCompany(props) {
         <>
             <Routes>                       
                 <Route path="*" element={<ModuleList moduleID={0} setModuleItem={setModuleItem} />}/>
-                <Route path="aboutCompany/:id/*" element={
-                    <AboutCompanyDetail 
+                <Route path=":id" element={
+                    <ModuleDetail 
                         moduleItem={moduleItem}
                         datas={datas}
                         setSelectedImgIndex={setSelectedImgIndex}
@@ -57,7 +57,7 @@ function AboutCompany(props) {
                         setData={setData} 
                     />} 
                 />
-                <Route path="aboutCompany/:id/edit" element={
+                <Route path=":id/edit" element={
                     <ReviewEdit      
                         datas={datas}                   
                         addData={addData}

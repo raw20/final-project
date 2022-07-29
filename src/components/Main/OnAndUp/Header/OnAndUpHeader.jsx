@@ -27,6 +27,7 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
     })();
   }, []);
 
+<<<<<<< HEAD
   return (
     <div id="header">
       <Link className="logo" to="/chemiverseOnUp">
@@ -106,6 +107,83 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
       </div>
     </div>
   );
+=======
+	return (
+		<div id="header">
+			<Link className="logo" to="/chemiverseOnUp">
+				logo
+			</Link>
+			<div className="main-item">
+				<ul className="gnb">
+					{item.map((item, index) => (
+						<li key={index}>
+							<NavLink
+								to={`/chemiverseOnUp/${item.id}/${item.onAndUpItemAddress}/0`}
+								state={{
+									id: item.id,
+									menu: item.menu,
+									dep: item.dep,
+									address: item.address,
+								}}
+								className={({ isActive }) => (isActive ? 'item-menu on' : 'item-menu')}
+							>
+								<span>{item.menu}</span>
+							</NavLink>
+							<ul className="depth1">
+								{item.dep.map((ele, index) => (
+									<li key={index} className="depth1Li">
+										<NavLink
+											to={`/chemiverseOnUp/${item.id}/${item.onAndUpItemAddress}/${index}`}
+											state={{
+												id: item.id,
+												menu: item.menu,
+												dep: item.dep,
+												address: item.onAndUpItemAddress,
+											}}
+											className={({ isActive }) => (isActive ? 'item-menu on' : 'item-menu')}
+										>
+											{ele}
+										</NavLink>
+									</li>
+								))}
+							</ul>
+						</li>
+					))}
+				</ul>
+			</div>
+			<div className="side-item">
+				<ul className="util">
+					<li id="mypage">
+						<NavLink to={`/chemiverseOnUp/mypage`}>
+							<BiUser />
+						</NavLink>
+					</li>
+					{LoginAuth ? (
+						<span onClick={() => goToLogout()}>
+							<IoLogOutOutline />
+						</span>
+					) : (
+						<span onClick={() => goToLogin()}>
+							<IoLogInOutline />
+						</span>
+					)}
+					<NavLink
+						to={`/chemiverseOnUp/tab`}
+						state={{
+							id: item.id,
+							menu: item.menu,
+							dep: item.dep,
+							address: item.address,
+						}}
+						className={'tab-btn'}
+					>
+						탭버튼
+					</NavLink>
+				</ul>
+			</div>
+		</div>
+	);
+>>>>>>> 7f3677318dc2cb426b0c9a8a30b96685080fd645
 }
 
 export default OnAndUpHeader;

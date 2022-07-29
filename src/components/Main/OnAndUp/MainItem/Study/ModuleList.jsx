@@ -29,21 +29,36 @@ function ModuleList({moduleID, setModuleItem}) {
                 {
                     moduleData && moduleData.map((el,index) => {
                         return (
-                                <Link key={index} to={`study/${data.address}/${index+1}`}>
+                                <Link key={index} to={`${index+1}`}>
                                     <div className="module_card">
                                         <div className='module_cardImg'>
                                             <div className='cardImg_background'>
-                                                <img className="module_Img_bg"src={"/img/bg-contents-pop3.png"}></img>
-                                                <img className="module_Img" src={"/img/img-pop-board.png"}></img>
+                                                <img className="module_Img" src={`${el.card_image}`}></img>
                                             </div>
                                         </div>
-                                        <div style= {{ textAlign: 'center'}}>
-                                            <button>+</button>
+                                        <div className='module_cardTitle_txt'>
+                                            <div className="module_cardTitle">{el.mtitle}</div>
+                                            <div className='module_cardTitle_sub'>{el.mgoal}</div>
                                         </div>
                                     </div>
-                                    <div className='module_cardTitle_txt'>
-                                        <div className="module_cardTitle">{el.mtitle}</div>
-                                        <div className='module_cardTitle_sub'>{el.mgoal}</div>
+                                </Link>
+                        )
+                    })
+                }
+                {
+                    moduleData && moduleData.map((el,index) => {
+                        return (
+                                <Link key={index} to={`${index+1}`}>
+                                    <div className="module_card">
+                                        <div className='module_cardImg'>
+                                            <div className='cardImg_background'>
+                                                <img className="module_Img" src={`${el.card_image}`}></img>
+                                            </div>
+                                        </div>
+                                        <div className='module_cardTitle_txt'>
+                                            <div className="module_cardTitle">{el.mtitle}</div>
+                                            <div className='module_cardTitle_sub'>{el.mgoal}</div>
+                                        </div>
                                     </div>
                                 </Link>
                         )
