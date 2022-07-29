@@ -5,7 +5,6 @@ import './css/companySlide.css'
 export default function App() {
   return (
     <>
-    <h2 className="about-subtitle">사업분야</h2>
     <div className="about-swiper-box">
       <Swiper className="about-swiper"
       slidesPerView={1}

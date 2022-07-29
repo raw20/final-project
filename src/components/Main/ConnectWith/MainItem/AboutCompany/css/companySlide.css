@@ -1,5 +1,5 @@
 .about-swiper-box {
-  width: 80%;
+  width: 85%;
   height: 30vw;
   margin: 0 auto;
 }
@@ -60,6 +60,7 @@
 
 @media (min-width: 758px) and (max-width: 1024px) {
   .about-swiper-box {
+    width: 90%;
     height: 40vw;
   }
   .about-swiper-box .about-swiper .about-slide .about-slide-text .title {
@@ -72,6 +73,7 @@
 }
 @media (min-width: 335px) and (max-width: 757px) {
   .about-swiper-box {
+    width: 100%;
     height: 100vw;
   }
   .about-swiper-box .about-swiper .about-slide .slide-pic {
