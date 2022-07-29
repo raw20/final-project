@@ -5,8 +5,8 @@ import "./css/tableSearchBar.css";
 function TableSearchBarTwo({ posts, copyPosts, setPosts }) {
   const [display, setDisplay] = useState(true);
   const [searchValue, setSearchValue] = useState("");
+  console.log("posts", posts);
   const [type, setType] = useState("전체");
-
   function onSearch(e) {
     e.preventDefault();
     if (searchValue === null || searchValue === " ") {

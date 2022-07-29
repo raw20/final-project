@@ -9,20 +9,14 @@ import { getLike } from "../../../../../app/detailSlice";
 function AboutMe() {
   const [posts, setPosts] = useState([]);
   const [copyPosts, setCopyPosts] = useState([]);
-  const postData = useSelector((state) => state.item);
+  const listdata = useSelector((state) => state.item);
   const [writer, setWriter] = useState(false);
   const [aboutMetitle, setAboutMeTitle] = useState("");
+  const [aboutWriter, setAboutWriter] = useState("");
   const [aboutMeContents, setAboutMeContents] = useState("");
   const dispatch = useDispatch();
-  const dataUrl =
-    "https://my-json-server.typicode.com/raw20/final-project/aboutMeList";
+
   useEffect(() => {
-    (async () => {
-      const response = await fetch(dataUrl);
-      const json = await response.json();
-      setPosts(json);
-      setCopyPosts(json);
-    })();
     dispatch(getLike());
   }, []);
 
@@ -31,7 +25,7 @@ function AboutMe() {
       {!writer ? (
         <div className="aboutMe_area">
           <AboutMeTable
-            posts={posts}
+            posts={listdata.data}
             copyPosts={copyPosts}
             setPosts={setPosts}
             writer={writer}
@@ -45,6 +39,8 @@ function AboutMe() {
             setAboutMeTitle={setAboutMeTitle}
             aboutMeContents={aboutMeContents}
             setAboutMeContents={setAboutMeContents}
+            aboutWriter={aboutWriter}
+            setAboutWriter={setAboutWriter}
           />
           <SubmitBtn
             writer={writer}
@@ -53,6 +49,9 @@ function AboutMe() {
             setAboutMeTitle={setAboutMeTitle}
             aboutMeContents={aboutMeContents}
             setAboutMeContents={setAboutMeContents}
+            aboutWriter={aboutWriter}
+            setAboutWriter={setAboutWriter}
+            posts={listdata.data}
           />
         </div>
       )}

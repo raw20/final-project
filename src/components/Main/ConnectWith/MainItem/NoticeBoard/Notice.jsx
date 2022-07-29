@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import "./css/notice.css";
-import NoticeWrite from "./NoticeWrite";
 import SubmitBtn from "./SubmitBtn";
 import NoticeTable from "./NoticeTable";
 
