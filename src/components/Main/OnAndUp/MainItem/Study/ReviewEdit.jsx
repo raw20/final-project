@@ -11,6 +11,10 @@ function ReviewEdit({datas, addData, setData, saveReviewData}) {
     const { id } = useParams();
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
+    useEffect(() => {
         datas.map((el, index, data) => {
             if(id == el.id) {
                 setmoduleId(index);

@@ -1,82 +1,15 @@
 .about-company-wrap {
-  padding: 20px;
-  box-sizing: border-box;
-  width: 100%;
-  /* summary-area */
-}
-.about-company-wrap h2 {
-  font-size: 25px;
-}
-.about-company-wrap .about-summary-area {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 40vw;
-  /* sum-copy-box */
-}
-.about-company-wrap .about-summary-area .sum-copy-box {
-  width: 85%;
-  height: 18vw;
-  padding: 4.5vw;
-  box-sizing: border-box;
+  width: 90%;
+  height: 100vh;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
   margin: 0 auto;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/public/img/bg02.jpg) no-repeat center/cover;
-  border-radius: 20px;
-  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.15);
-  display: flex;
-  flex-direction: column;
+  padding-top: 2rem;
 }
-.about-company-wrap .about-summary-area .sum-copy-box span {
-  color: #fff;
-}
-.about-company-wrap .about-summary-area .sum-copy-box .copy-sub {
-  font-size: 1vw;
-  margin-bottom: 1.5vw;
-}
-.about-company-wrap .about-summary-area .sum-copy-box .copy-main {
-  font-size: 2vw;
-  line-height: 2.3vw;
-}
-.about-company-wrap .about-summary-area .sum-content-box {
-  width: 85%;
-  margin: 0 auto;
-  padding: 3vw;
-  display: flex;
-  flex-wrap: wrap;
-}
-.about-company-wrap .about-summary-area .sum-content-box .logo-box {
-  width: calc(50% - 20px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.about-company-wrap .about-summary-area .sum-content-box .logo-box img {
-  width: 70%;
-  margin: 0 auto;
-  cursor: pointer;
-}
-.about-company-wrap .about-summary-area .sum-content-box .logo-box img:hover {
-  transform: scale(1.03);
-  transition: all 0.5s;
-}
-.about-company-wrap .about-summary-area .sum-content-box .logo-box p {
-  align-self: flex-start;
-  margin-left: 5vw;
-}
-.about-company-wrap .about-summary-area .sum-content-box .sum-content {
-  width: calc(50% - 20px);
-  font-size: 1vw;
-  line-height: 1.3vw;
-  word-break: keep-all;
-  color: rgb(117, 114, 114);
-}
-.about-company-wrap .swiper-area {
+.about-company-wrap .about-company-content {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 40vw;
+  margin: 4rem auto;
+  font-size: 1.2rem;
+  line-height: 30px;
+  color: #888;
 }/*# sourceMappingURL=aboutCompany.css.map */
