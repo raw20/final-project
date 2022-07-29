@@ -1,8 +1,10 @@
 .about-company-wrap {
-  width: 100%;
+  width: 90%;
   height: 100vh;
   -webkit-animation: fadein 2s;
           animation: fadein 2s;
+  margin: 0 auto;
+  padding-top: 2rem;
 }
 .about-company-wrap .about-company-content {
   width: 100%;

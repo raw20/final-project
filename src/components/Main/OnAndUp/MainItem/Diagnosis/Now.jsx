@@ -5,8 +5,6 @@ import './css/selfTest.scss';
 
 import BeforeTest from './BeforeTest';
 import AfterTest from './AfterTest';
-import BeforeResult from './BeforeResult';
-import AfterResult from './AfterResult';
 
 function Now(props) {
     const [selectedTab, setSelectedTab] = useState(0);
@@ -21,27 +19,26 @@ function Now(props) {
 console.log('dw')
     return (
         <div className="nowContainer">
+            <div className="selfTestContainer_title">현재상태 점검하기</div>
             <div className="selfTestContainer_box">
             <div className="selfTestContainer_sidebar">
 
-                <Link className={`${selectedTab === 0 ? 'active' : ''}`} onClick={() => setSelectedTab(0)} to="diagnosis/now/before">
+                <Link className={`${selectedTab === 0 ? 'active' : ''}`} onClick={() => setSelectedTab(0)} to="now/before">
                     <button>#사전</button>
                 </Link>
                 <Link className={`${selectedTab === 1 ? 'active' : ''}`} onClick={() => setSelectedTab(1)} 
-                      to="diagnosis/now/after">
+                      to="now/after">
                     <button>#사후</button>
                 </Link>
 
             </div>
                 <div className="selfTestContainer_content">
 
-                    <Routes>
+                <Routes>
                         <Route path="*" element={<BeforeTest />} />
-                        <Route path="diagnosis/now/before" element={<BeforeTest />} />
-                        <Route path="diagnosis/now/after" element={<AfterTest />} />
-                        <Route path="diagnosis/result/before" element={<BeforeResult />} />
-                        <Route path="diagnosis/result/after" element={<AfterResult />} />
-                    </Routes>
+                        <Route path="now/before" element={<BeforeTest />} />
+                        <Route path="now/after" element={<AfterTest />} />
+                </Routes>
 
                 </div>
             </div>

@@ -40,7 +40,7 @@ function OnAndUp() {
         <div className="search-box">
           <input
             type="text"
-            class="search-txt"
+            className="search-txt"
             name=""
             placeholder="Type to search"
           />

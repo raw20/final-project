@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import "./css/style.css";
-
+import "./css/notice.css";
 import NoticeWrite from "./NoticeWrite";
-import NoticeSubmiBtn from "./NoticeSubmiBtn";
+import SubmitBtn from "./SubmitBtn";
 import NoticeTable from "./NoticeTable";
 
 function Notice() {
   const [posts, setPosts] = useState([]);
+  const [copyPosts, setCopyPosts] = useState([]);
   const [writer, setWriter] = useState(false);
   const dataUrl = "/db/boardData.json";
   useEffect(() => {
@@ -16,24 +16,23 @@ function Notice() {
       const response = await fetch(dataUrl);
       const json = await response.json();
       setPosts(json);
+      setCopyPosts(json);
     })();
   }, []);
 
   return (
     <>
       {!writer ? (
-        <div className="edu_notice_area">
+        <div className="notice_area">
           <NoticeTable
             posts={posts}
+            copyPosts={copyPosts}
             setPosts={setPosts}
-            writer={writer}
-            setWriter={setWriter}
           />
         </div>
       ) : (
-        <div className="edu_notice_area">
-          <NoticeWrite />
-          <NoticeSubmiBtn writer={writer} setWriter={setWriter} />
+        <div className="notice_area">
+          <SubmitBtn writer={writer} setWriter={setWriter} />
         </div>
       )}
     </>

@@ -34,7 +34,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .module_card:hover {
@@ -65,18 +65,21 @@
 }
 
 .module_cardTitle_txt {
-  display: flex;
-  align-items: flex-end;
+  padding-left: 3px;
 }
 .module_cardTitle_txt .module_cardTitle {
   font-size: 14px;
   color: #4C539A;
   font-weight: bold;
+  padding-bottom: 5px;
 }
 .module_cardTitle_txt .module_cardTitle_sub {
   font-size: 12px;
   color: #888;
-  padding-left: 5px;
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .detail_container {
@@ -107,7 +110,6 @@
 
 .detail_cardNews {
   width: 100%;
-  height: 200px;
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
@@ -117,30 +119,30 @@
   margin-bottom: 50px;
   margin-left: 8px;
 }
-
-.swiper {
-  width: 70%;
-  height: 200px;
-  background-color: lightgray;
-  margin: 0;
-}
-
-.swiper .swiper-slide {
+.detail_cardNews .detail_content {
   width: 100%;
-  height: 200px;
+  display: flex;
+}
+.detail_cardNews .detail_content_cardNews {
+  height: 400px;
+  width: 30%;
+  margin-right: 5%;
   cursor: pointer;
 }
-.swiper .swiper-slide img {
+.detail_cardNews .detail_content_microLearning {
+  height: 400px;
+  width: 65%;
+  cursor: pointer;
+}
+.detail_cardNews .detail_content_cardNews_img {
   width: 100%;
-  height: 100%;
+  height: 320px;
 }
-
-.swiper-pagination-bullet {
-  background: red !important;
-}
-
-.swiper-pagination-bullet-active {
-  background: yellow !important;
+.detail_cardNews .detail_content_cardNews_title {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 30px;
 }
 
 .ReactModal__Body--open,
@@ -178,6 +180,7 @@
   background-color: #fff;
   margin-right: 5px;
   border: 0.5px solid #888;
+  cursor: pointer;
 }
 .detail_practice .detail_practice_btnArea {
   width: 100%;
@@ -190,6 +193,7 @@
   border-radius: 3px;
   background-color: #4c539a;
   color: #fff;
+  cursor: pointer;
 }
 
 .submitBtnArea {
@@ -247,6 +251,15 @@
   font-size: 12px;
 }
 
+.ModalCards .ModalCards_btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.ModalCards .ModalCards_btn button {
+  font-size: 17px;
+}
 .ModalCards .ModalCards_Title {
   text-align: center;
   width: 80%;
@@ -255,4 +268,43 @@
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 13px;
+}
+.ModalCards .ModalCards_swiper {
+  width: 100%;
+  margin-top: 50px;
+}
+.ModalCards .ModalCards_microLearning {
+  width: 80%;
+  margin: auto;
+}
+.ModalCards .ModalCards_microLearning img {
+  width: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+}
+
+.swiper-slide {
+  flex-shrink: unset;
+  height: 250px;
+  cursor: pointer;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-pagination-bullet {
+  background: red !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: yellow !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: gray;
 }/*# sourceMappingURL=ability.css.map */

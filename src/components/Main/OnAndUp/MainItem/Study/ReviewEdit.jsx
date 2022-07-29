@@ -11,20 +11,24 @@ function ReviewEdit({datas, addData, setData, saveReviewData}) {
     const { id } = useParams();
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
+    useEffect(() => {
         datas.map((el, index, data) => {
             if(id == el.id) {
                 setmoduleId(index);
                 setIsNew(false);
             }
         })
-        console.log('dwd',datas)
+        console.log('dwd',datas[moduleId])
     },[])
 
 
     return (
         <div>
             <Editor id={id} isNew={isNew} data={ isNew ? '' : datas[moduleId]} addData={addData} setData={setData} />
-            <Link to = {`../study/aboutCompany/${id}`} className="submitBtnArea">
+            <Link to = {`../aboutCompany/${id}`} className="submitBtnArea">
                 <button className='submitBtn' onClick={saveReviewData}>제출하기</button>
             </Link>
         </div>

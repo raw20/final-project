@@ -1,28 +1,96 @@
-.welcome-wrap {
-  width: 100%;
-  height: 100vh;
-  -webkit-animation: fadein 2s;
-          animation: fadein 2s;
+@media (min-width: 1024px) {
+  .welcome-wrap {
+    width: 80%;
+    height: 100vh;
+    -webkit-animation: fadein 2s;
+            animation: fadein 2s;
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+  .welcome-wrap .welcome-content {
+    width: 100%;
+    margin: 4rem auto;
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: #888;
+  }
+  .welcome-wrap .welcome-video-area {
+    width: 100%;
+    height: 100%;
+    margin: 4rem auto;
+  }
+  .welcome-wrap .welcome-video-area .welcome-video-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  .welcome-wrap .welcome-video-area .welcome-video {
+    width: 90%;
+    height: 60%;
+    border-radius: 20px;
+    margin: 2rem auto;
+  }
 }
-.welcome-wrap .welcome-content {
-  width: 100%;
-  margin: 4rem auto;
-  font-size: 1.2rem;
-  line-height: 30px;
-  color: #888;
+@media (min-width: 758px) and (max-width: 1023px) {
+  .welcome-wrap {
+    width: 80%;
+    height: 100vh;
+    -webkit-animation: fadein 2s;
+            animation: fadein 2s;
+    margin: 0 auto;
+    padding-top: 3rem;
+  }
+  .welcome-wrap .welcome-content {
+    width: 100%;
+    margin: 4rem auto;
+    font-size: 1rem;
+    line-height: 30px;
+    color: #888;
+  }
+  .welcome-wrap .welcome-video-area {
+    width: 100%;
+    height: 70%;
+    margin: 4rem auto;
+  }
+  .welcome-wrap .welcome-video-area .welcome-video-title {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  .welcome-wrap .welcome-video-area .welcome-video {
+    width: 90%;
+    height: 60%;
+    border-radius: 20px;
+    margin: 2rem auto;
+  }
 }
-.welcome-wrap .welcome-video-area {
-  width: 100%;
-  height: 100%;
-  margin: 4rem auto;
-}
-.welcome-wrap .welcome-video-area .welcome-video-title {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-.welcome-wrap .welcome-video-area .welcome-video {
-  width: 90%;
-  height: 60%;
-  border-radius: 20px;
-  margin: 2rem auto;
+@media (min-width: 335px) and (max-width: 757px) {
+  .welcome-wrap {
+    width: 80%;
+    height: 100vh;
+    -webkit-animation: fadein 2s;
+            animation: fadein 2s;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+  }
+  .welcome-wrap .welcome-content {
+    width: 100%;
+    margin: 3rem auto;
+    font-size: 0.8rem;
+    line-height: 30px;
+    color: #888;
+  }
+  .welcome-wrap .welcome-video-area {
+    width: 100%;
+    height: 50%;
+    margin: 4rem auto;
+  }
+  .welcome-wrap .welcome-video-area .welcome-video-title {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .welcome-wrap .welcome-video-area .welcome-video {
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    margin: 2rem auto;
+  }
 }/*# sourceMappingURL=welcome.css.map */

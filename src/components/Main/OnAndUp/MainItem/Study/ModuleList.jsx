@@ -29,7 +29,7 @@ function ModuleList({moduleID, setModuleItem}) {
                 {
                     moduleData && moduleData.map((el,index) => {
                         return (
-                                <Link key={index} to={`study/${data.address}/${index+1}`}>
+                                <Link key={index} to={`${index+1}`}>
                                     <div className="module_card">
                                         <div className='module_cardImg'>
                                             <div className='cardImg_background'>
@@ -48,7 +48,7 @@ function ModuleList({moduleID, setModuleItem}) {
                 {
                     moduleData && moduleData.map((el,index) => {
                         return (
-                                <Link key={index} to={`study/${data.address}/${index+1}`}>
+                                <Link key={index} to={`${index+1}`}>
                                     <div className="module_card">
                                         <div className='module_cardImg'>
                                             <div className='cardImg_background'>

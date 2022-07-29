@@ -1,49 +1,169 @@
+@import "./variables";
 $bgColor: #dde3f6;
 $deepColor: #6f76c1;
 $lightColor: #e6e0ec;
+$lightgray:#dcdce6;
+$textgray:#aeaeba;
 
-.edu_notice_area{
-  width: 100%;
-  margin: auto;
-  .edu_table{
-    border-collapse: collapse;
-    tr{
-      text-align: center;
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #ccc;
-      padding: 20px;
+.edu_notice_wrap {
+  width: 85%;
+  margin: 0 auto;
+  animation: fadein 2s;
+  .edu_notice_area {
+    width: 100%;
+    margin: 0 auto;
+    .edu_table {
+      width: 100%;
+      margin: auto;
+      border-collapse: collapse;
+      th {
+        text-align: center;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid $lightgray;
+        padding: 20px;
+      }
+      td {
+        width: 10%;
+        text-align: center;
+        font-size: 0.7rem;
+        padding: 20px;
+        border-bottom: 0.5px solid $lightgray;
+        color: $textgray;
+      }
+      td:nth-child(3) {
+        width: 80%;
+        text-align: start;
+        font-size: 0.9rem;
+        color: #000;
+        padding-left: 5.5rem;
+        cursor: pointer;
+        &:hover {
+          color: $deepColor;
+        }
+      }
     }
-    .th_01{
-      width: 60px;
-    }
-    .th_02{
-      width: 60px;
-    }
-    td{
-      text-align: center;
-      font-size: 12px;
-      border-bottom: 0.5px solid #CCC;
-      color: #888;
+    .edu_detail_wrap{
+      .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 20px 0;
+        .title_area{
+          display: flex;
+          flex-direction: row;
+          padding: 15px 20px;
+          border-top: 1px solid #000;
+          border-bottom: 1px solid $lightgray;
+          background-color: #f5f5fa;
+          .category{
+            font-size: 14px;
+            margin-right: 20px;
+            color: $textgray;
+          }
+          .title{
+            font-size: 14px;
+          }
+        }
+        .date{
+          padding: 15px 20px;
+          border-bottom: 1px solid $lightgray;
+          color: $textgray;
+        }
+
+      }
+      .main{
+        text-align: center;
+        padding: 30px;
+        box-sizing: border-box;
+        border-bottom: 1px solid $lightgray;
+        font-size: 12px;
+        line-height: 20px;
+        img{
+          width: 60vw;
+          margin-bottom: 20px;
+        }
+      }
+      .footer{
+        .btn{
+          width: 120px;
+          height: 40px;
+          border: 1px solid $lightgray;
+          border-radius: 20px;
+          margin-top: 20px;
+          cursor: pointer;
+          color: #6f76c1;
+          &:hover{border: 1px solid $deepColor}
+        }
+      }
     }
   }
-  .edu_pagination{
+
+  .edu_pagination {
     display: flex;
     justify-content: space-between;
     text-align: center;
     width: 300px;
     padding-top: 25px;
     margin: auto;
-      .page_link{
-        color: #ccc;
-        font-size: 18px;
-        font-weight: 800;
-        &:hover {
-          cursor: pointer;
-          color: $deepColor;
+    .page_link {
+      color: #ccc;
+      font-size: 18px;
+      font-weight: 800;
+      &:hover {
+        cursor: pointer;
+        color: $deepColor;
+      }
+      &.active {
+        color: $deepColor;
+      }
+    }
+  }
+}
+
+@media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+  .edu_notice_wrap{
+    width: 100%;
+  }
+}
+
+@media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+  .edu_notice_wrap{
+    margin-top: 40px;
+    min-width: 100%;
+    .edu_notice_area{
+      .edu_table{
+        thead{
+          display: none;
         }
-        &.active {
-          color: $deepColor;
+        .tbody{
+          border-top: 1px solid #000;
+          .body_row{
+            display: flex;
+            flex-direction: column;
+            justify-content: baseline;
+            border-bottom: 1px solid $lightgray;
+            td{
+              border: none;
+            }
+            .idName{
+              display: none;
+            }
+            .list_cat{
+              margin-top: 10px;
+              padding: 9px 0;
+            }
+            .list_title{
+              width: 100%;
+              padding: 9px;
+              font-size: 14px;
+            }
+            .list_date{
+              padding: 9px;
+              align-self: flex-end;
+            }
+          }
         }
+      }
     }
   }
 }

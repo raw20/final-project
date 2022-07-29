@@ -33,20 +33,16 @@ function ConnectWithHeader({ opacity, LoginAuth }) {
       <div className="main-item">
         <ul className={opacity === "0" ? "gnb off" : "gnb"}>
           {item.map((item, index) => (
-            <li>
+            <li key={item.id}>
               <NavLink
-                to={`/item/${item.address}/${item.id}`}
-                key={item.id}
+                to={
+                  item.id === 3
+                    ? `/${item.id}/${item.address}/notice`
+                    : `/${item.id}/${item.address}`
+                }
                 className={({ isActive }) =>
                   isActive ? "item-menu on" : "item-menu"
                 }
-                state={{
-                  id: item.id,
-                  title: item.title,
-                  img: item.main_img,
-                  address: item.address,
-                  contents: item.contents,
-                }}
               >
                 {item.title}
               </NavLink>
@@ -62,6 +58,9 @@ function ConnectWithHeader({ opacity, LoginAuth }) {
         }}
       >
         Chemiverse On & Up <IoCaretForwardOutline />
+      </Link>
+      <Link to="/headertab" className="connect-with-header-tab">
+        내비
       </Link>
     </div>
   );
