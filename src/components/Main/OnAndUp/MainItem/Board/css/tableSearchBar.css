@@ -1,0 +1,97 @@
+.table-search {
+  width: 100%;
+  height: 10vh;
+}
+.table-search .table-search-form {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.table-search .table-search-form .contents-type {
+  width: 10%;
+  height: 18px;
+  border: 1px solid #ccc;
+  background: url(/public/img/ic-arrow-down.png) no-repeat 94% 50%;
+  border-radius: 20px;
+  color: #ccc;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px rgba(34, 51, 89, 0.1);
+}
+.table-search .table-search-form .contents-type .type-tab {
+  width: 70%;
+  height: auto;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #ccc;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 0px;
+}
+.table-search .table-search-form .contents-type .type-tab .type-tab-list {
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.table-search .table-search-form .contents-type .type-tab.on {
+  display: block;
+}
+.table-search .table-search-form .contents-type.on {
+  background: url(/public/img/ic-arrow-up.png) no-repeat 94% 50%;
+}
+.table-search .table-search-form .table-search-input {
+  width: 25%;
+  height: 18px;
+  border-bottom: 1px solid #ccc;
+  margin-left: 1rem;
+  color: #ccc;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 0.5rem 1.2rem;
+}
+.table-search .table-search-form .table-search-input::-moz-placeholder {
+  color: #ccc;
+}
+.table-search .table-search-form .table-search-input:-ms-input-placeholder {
+  color: #ccc;
+}
+.table-search .table-search-form .table-search-input::placeholder {
+  color: #ccc;
+}
+.table-search .table-search-form .table-search-input:focus {
+  outline: none;
+}
+.table-search .table-search-form .table-search-submit {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  background: url(/public/img/ic-search.png) no-repeat center/50%;
+  text-indent: -9999px;
+  font-size: 0px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.table-search .table-search-form .table-search-submit:hover {
+  transform: scale(130%);
+}
+
+@media (min-width: 335px) and (max-width: 757px) {
+  .table-search .table-search-form .contents-type {
+    width: 20%;
+  }
+  .table-search .table-search-form .table-search-input {
+    width: 50%;
+  }
+}/*# sourceMappingURL=tableSearchBar.css.map */

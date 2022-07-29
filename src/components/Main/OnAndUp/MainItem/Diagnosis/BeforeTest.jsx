@@ -64,8 +64,9 @@ function BeforeTest(props) {
                     </div>
                     <div className="beforeTest_notice">
                         <div className='beforeTest_notice_inner'>
-                            <div className='beforeTest_notice_txt'>Expert는 회원의 개인정보를 안전하게 취급하는데 최선을 다합니다. 개인정보보호법」 등 관련 법령상의 개인정보 보호 규정을 준수하며, 수집된 개인정보는 상기 목적 이외의 용도로는 사용되지 않습니다. <br />
-                            양식은 한번만 제출할 수 있으며, 제출 시 수정이 불가합니다.</div>
+                            <div className='beforeTest_notice_txt'>Expert는 회원의 개인정보를 안전하게 취급하는데 최선을 다합니다. 개인정보보호법」 등 관련 법령상의 개인정보 보호 규정을 준수하며, 수집된 개인정보는 상기 목적 이외의 용도로는 사용되지 않습니다. 
+                            이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용 목적 달성 시 지체없이 파기합니다. 다만 다른 법령에서 별도의 기간을 정하고 있는 경우나 이용자의 요청에 따라 기간을 달리 정한 경우에는 그 기간이 경과한 후 파기 등의 필요한 조치를 취합니다.<br />
+                            <br />양식은 한번만 제출할 수 있으며, 제출 시 수정이 불가합니다.</div>
                         </div>
                         <div className='beforeTest_bottom'>
                             <div className="beforeTest_notice_area">

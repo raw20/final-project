@@ -4,6 +4,8 @@ import "./css/preparations.css";
 function Preparations() {
   const [checkListData, SetCheckListData] = useState([]);
   const checkListDocument = "/db/checkListDocument.json";
+  const [check, setCheck] = useState([]);
+  const [bodyCheck, setBodyCheck] = useState(false);
   useEffect(() => {
     (async () => {
       const response = await fetch(checkListDocument);
@@ -11,6 +13,7 @@ function Preparations() {
       SetCheckListData(json);
     })();
   });
+
   return (
     <div className="preparations-wrap">
       <div className="preparations-checklist-box">
@@ -21,6 +24,16 @@ function Preparations() {
           <ul className="checklist-name">
             <li className="checklist-item">
               <span className="checklist-item-name">신체검사</span>
+              <button
+                className={
+                  bodyCheck ? "checklist-item-check on" : "checklist-item-check"
+                }
+                onClick={() => {
+                  setBodyCheck((bodyCheck) => !bodyCheck);
+                }}
+              >
+                체크
+              </button>
             </li>
           </ul>
           <div className="checklist-document">
@@ -31,11 +44,33 @@ function Preparations() {
             {checkListData.map((item) => (
               <li className="checklist-item" key={item.id}>
                 <span className="checklist-item-name">{item.name}</span>
-                <button className="checklist-item-check">체크</button>
+                <button
+                  className={
+                    check.includes(item.id)
+                      ? "checklist-item-check on"
+                      : "checklist-item-check"
+                  }
+                  onClick={() => {
+                    !check.includes(item.id)
+                      ? setCheck((check) => [...check, item.id])
+                      : setCheck(check.filter((ele) => ele !== item.id));
+                  }}
+                >
+                  체크
+                </button>
               </li>
             ))}
           </ul>
-          <button className="checklist-submit-btn">확인</button>
+          <button
+            className="checklist-submit-btn"
+            onClick={() => {
+              alert("제출완료");
+              setCheck("");
+              setBodyCheck("");
+            }}
+          >
+            확인
+          </button>
         </div>
       </div>
     </div>

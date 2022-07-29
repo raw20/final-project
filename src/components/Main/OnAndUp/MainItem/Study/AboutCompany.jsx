@@ -3,7 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import debounce from 'lodash.debounce';
 
 import ModuleList from './ModuleList';
-import AboutCompanyDetail from './AboutCompanyDetail';
+import ModuleDetail from './ModuleDetail';
 import ReviewEdit from "./ReviewEdit";
 
 import './css/ability.scss';
@@ -19,7 +19,7 @@ function AboutCompany(props) {
     const [datas, setDatas] = useState(getItem('reviewData') ||  defaultData);
     const [moduleItem, setModuleItem] = useState({});
     const [selectedImgIndex, setSelectedImgIndex] = useState(0);
-    //setItem("reviewData",defaultData)
+
     const setData = useCallback((newData) => {
         const newDatas  = [...datas]; 
         newDatas[selectedImgIndex] = newData  ;
@@ -47,16 +47,17 @@ function AboutCompany(props) {
         <>
             <Routes>                       
                 <Route path="*" element={<ModuleList moduleID={0} setModuleItem={setModuleItem} />}/>
-                <Route path="study/aboutCompany/:id/*" element={
-                    <AboutCompanyDetail 
+                <Route path=":id" element={
+                    <ModuleDetail 
                         moduleItem={moduleItem}
+                        datas={datas}
                         setSelectedImgIndex={setSelectedImgIndex}
                         selectedImgIndex={selectedImgIndex}
                         addData={addData}
                         setData={setData} 
                     />} 
                 />
-                <Route path="study/aboutCompany/:id/edit" element={
+                <Route path=":id/edit" element={
                     <ReviewEdit      
                         datas={datas}                   
                         addData={addData}

@@ -295,12 +295,12 @@
         }
     }
 }
-.swiper {
+.modal_swiper_name {
     width: 80%;
     margin: auto;
     height: 300px;
     background-color: #fff;
-}
+
 .swiper-slide {
     height: 250px;
     cursor: pointer;
@@ -310,11 +310,6 @@
         height: 100%;
     }
 }
-.swiper-pagination-bullet {
-    background: red !important;
-}
-.swiper-pagination-bullet-active {
-background: yellow !important;
 }
 .prev-arrow, .next-arrow {
     position: absolute;

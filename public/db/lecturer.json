@@ -1,0 +1,160 @@
+[
+  {
+    "id" : "1",
+    "name" : "김미주",
+    "position" : "강사",
+    "pic" : "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F675dd856-304a-428e-9be4-b0f3094ecb39%2FLECT_THUMB_8EH3202112031711359LGQ-removebg-preview.png?table=block&id=13982cb9-122a-4ea5-a8cb-c6049a4c44f8&width=360&userId=fa3bea6d-e42a-40f8-b88c-7ec43765de26&cache=v2",
+    "career1" : "경희대학교 경영대학원 MBA 석사",
+    "career2" : "전 LG전자 하이로지스틱스 사내강사",
+    "detail_career" : [
+      "現) 엑스퍼트컨설팅 책임강사",
+      "前) 아모제푸드",
+      "前) 학교법인 가톨릭학원",
+      "前) LX 판토스​"
+    ],
+    "detail_edu" : [
+      "경희대학교 경영대학원 (MBA 전공)​"
+    ],
+    "detail_lec" : [
+      "삼성 SDI 신입사원 입문 과정",
+      "현대자동차 현대모비스 신규사원 과정",
+      "포스코 에너지 신입직원 입문 과정",
+      "CJ대한통운 1년차 인사이트업 과정",
+      "GS글로벌 대리 승진자 역량강화 과정",
+      "롯데칠성 대리 승진자 역량강화 과정",
+      "한국수자원공사 조직문화 특별과정"
+    ],
+    "detail_pic" : "https://www.exc.co.kr/dwn_data/lecturer_data/lecturer_imgs/LECT_DTL_DWPN20211206110054APY9.jpg",
+    "youtube" : "https://www.youtube.com/embed/WW-6piNteqA"
+  },  
+  {
+    "id" : "2",
+    "name" : "권서희",
+    "position" : "강사",
+    "pic" : "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F25a9013a-033f-4a77-bbfe-eaf3068e00ca%2FLECT_THUMB_ZNRF20211217164701VHZ0-removebg-preview_(1).png?table=block&id=41849b00-4dce-4d6d-8eeb-f87e2eea0081&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=360&userId=fa3bea6d-e42a-40f8-b88c-7ec43765de26&cache=v2",
+    "career1" : "前)기업행복연구소 교육컨설팅 대표",
+    "career2" : "중앙대학교 인적자원개발학 석사",
+    "detail_career" : [
+      "現) 엑스퍼트컨설팅 전임강사",
+      "(사)한국강사협회이사",
+      "서울시 공무원교육원 출강 강사",
+      "경기도인재개발원 출강강사​",
+      "前)기업행복연구소 교육컨설팅 대표",
+      "前)㈜신한금융그룹 신한은행 행원"
+    ],
+    "detail_edu" : [
+      "중앙대학교 GHRD 인적자원개발학 석사​",
+      "단국대학교 법과대학 법학 학사",
+      "저서 『강사 트렌드 코리아 2020』 (지식공감,2019)",
+      "국가직무능력표준 ‘경영기획’ ‘인사조직’ ‘직업교육’ NCS 훈련강사 인증",
+      "제13회 대한민국 교육산업 대상 수상(헤럴드경제)",
+      "월간 인재 경영 선정 ‘2018 명강사’ 선정"
+
+    ],
+    "detail_lec" : [
+      "삼성 SDI 신입사원 입문 과정",
+      "현대자동차 현대모비스 신규사원 과정",
+      "포스코 에너지 신입직원 입문 과정",
+      "CJ대한통운 1년차 인사이트업 과정",
+      "GS글로벌 대리 승진자 역량강화 과정",
+      "롯데칠성 대리 승진자 역량강화 과정",
+      "한국수자원공사 조직문화 특별과정"
+    ],
+    "detail_pic" : "https://www.exc.co.kr/dwn_data/lecturer_data/lecturer_imgs/LECT_DTL_R4UT20211206095638OX2E.jpg",
+    "youtube" : "https://www.youtube.com/embed/mNWLB4qXaME"
+  },
+  {
+    "id" : "3",
+    "name" : "한주미",
+    "position" : "강사",
+    "pic" : "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4c8e3f53-6d2a-429c-b982-791e368343b7%2FLECT_THUMB_2LWQ202112061809362SVD-removebg-preview.png?table=block&id=caa0ff1f-dff8-40f1-9ff7-e601303da32b&width=360&userId=fa3bea6d-e42a-40f8-b88c-7ec43765de26&cache=v2",
+    "career1" : "한양대학교 대학원 박사과정 (산업교육)",
+    "career2" : "LG경영 개발원 인재원 팀장(경영,진단,임원)",
+    "detail_career" : [
+      "現) 엑스퍼트컨설팅 강사 ",
+      "​前) 삼성전자서비스 사내 강의 및 교육 기획",
+      "​前) CESCO 교육홍보팀",
+      "​前) GS칼텍스 사내 강의 및 현장 코칭​",
+      "홈앤쇼핑 프리랜서 쇼호스트",
+      "신구대학교 서비스러닝센터 외래교수"
+    ],
+    "detail_edu" : [
+      "대구카톨릭대학교​",
+      "(저서) REAL하게 성장하라",
+      "(공저) 슬기로운 자기경영: 변화 시대 필요한 셀프 리더십",
+      "TA교류분석, DISC, 애니어그램 등 강사 자격 보유"
+    ],
+    "detail_lec" : [
+      "재규어랜드로버 전직원 레벨UP 전담 교육",
+      "Audi 전직원 Reborn 전담 교육",
+      "현대자동차 책임연구원 조직역량향상과정",
+      "경기도인재개발원 공직가치 내재화 과정"
+    ],
+    "detail_pic" : "https://www.exc.co.kr/dwn_data/lecturer_data/lecturer_imgs/LECT_DTL_NIJ520211206180936AWLF.jpg",
+    "youtube" : "https://www.youtube.com/embed/w-HAjo8PhVo"
+  },
+  {
+    "id" : "4",
+    "name" : "안재현",
+    "position" : "수석강사",
+    "pic" : "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fee61786e-3398-4949-84a5-9a220882c624%2FLECT_THUMB_CGAR20211206155816CN9D-removebg-preview.png?table=block&id=f55c0137-899d-457d-af35-9f47e22fdd81&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=360&userId=fa3bea6d-e42a-40f8-b88c-7ec43765de26&cache=v2",
+    "career1" : "서울과학기술대학교 외래교수",
+    "career2" : "대한민국 사업 트렌드 저자",
+    "detail_career" : [
+      "現) 엑스퍼트컨설팅 수석강사",
+      "現) 서울과학기술대학교 외래교수",
+      "​現) 아시아미래인재연구소 트렌드 애널리스트",
+      "前) 엑스퍼트컨설팅 전문가그룹 수석연구위원 ​",
+      "前) Asia Futures Group 이사",
+      "한국인사조직, 전략경영, 윤리경영, 기업교육학회 활동"
+    ],
+    "detail_edu" : [
+      "한국외국어대학교 경영학 박사(매니지먼트)​",
+      "신입사원의 조직사회화 및 혁신행동, CSR  등 다수 연구 수행",
+      "대한민국 사업 트렌드 저자(지식노마드)",
+      "생각의 미래 대표 역자(지식노마드)"
+    ],
+    "detail_lec" : [
+      "한국항공우주산업 전 직원 변화관리 과정",
+      "현대중공업 트렌드와 변화관리 과정",
+      "한국발명진흥회 실무자 워크스마트 과정",
+      "씨젠 실무자 워크스마트, 기획력 과정 ",
+      "삼성전기 승격자대상 메타버스 활용 핵심가치 교육",
+      "강원도, 용인시, 화성시 세대공감과 메타버스 교육"
+    ],
+    "detail_pic" : "https://www.exc.co.kr/dwn_data/lecturer_data/lecturer_imgs/LECT_DTL_XCX520211206155816LRZF.jpg",
+    "youtube" : "https://www.youtube.com/embed/Id7EFQX9ZAc"
+  },
+  {
+    "id" : "5",
+    "name" : "최동환",
+    "position" : "수석강사",
+    "pic" : "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F89f2de39-6c81-4c5b-8526-97efc6179bc0%2FLECT_THUMB_ZXJY2021120618000504IL-removebg-preview.png?table=block&id=ea877624-81a3-4c94-b127-37459684c574&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=360&userId=fa3bea6d-e42a-40f8-b88c-7ec43765de26&cache=v2",
+    "career1" : "前) 조직문화콘텐츠연구소 대표",
+    "career2" : "국민대학교 경영MBA석사",
+    "detail_career" : [
+      "現)엑스퍼트컨설팅 수석강사 ",
+      "前)조직문화콘텐츠연구소 대표 ",
+      "​前)megaNEXT㈜ 메가HRD 전임교수",
+      "前)조직문화공작소AIPU 수석 컨설턴트/A.I Practitioner",
+      "前)㈜Edumax 교육컨설팅 총괄/전문연구위원",
+      "​서울시인재개발원 외부강사"
+    ],
+    "detail_edu" : [
+      "국민대학교 경영MBA석사(Leadership&Coaching)​",
+      "한국AI연구회 AIFC자격취득",
+      "한국코치협회인증코치,MBTI,애니어그램 등 강사 자격"
+    ],
+    "detail_lec" : [
+      "GS칼텍스 조직문화 워크샵 ‘앞서가는 조직을 만드는 조직문화 비밀’",
+      "LG화학 오창 반 단위 조직개발 프로그램 개발, 실·반장 리더십 과정 강의",
+      "한국지질자원연구원 핵심가치 정립 워크샵 개발 및 강의",
+      "기술사업화 관리자 교육 ‘업무를 중심으로 소통하는 조직문화’ 특강",
+      "HR 直問直答 컨퍼런스 기획총괄 ",
+      "암웨이 핵심가치기반 행동규범 도출 프로젝트 매니저",
+      "기아자동차 실·팀 단위 조직개발 프로젝트 수행"
+    ],
+    "detail_pic" : "https://www.exc.co.kr/dwn_data/lecturer_data/lecturer_imgs/LECT_DTL_LU6D20211206180005888N.jpg",
+    "youtube" : "https://www.youtube.com/embed/6vVB0m5dQl4"
+  }
+]
