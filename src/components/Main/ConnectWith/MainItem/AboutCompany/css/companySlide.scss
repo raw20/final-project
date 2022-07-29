@@ -5,7 +5,7 @@ $lightColor: #e6e0ec;
 $lightColorOp: #e6e0ec71;
 
 .about-swiper-box{
-  width: 80%;
+  width: 85%;
   height: 30vw;
   margin: 0 auto;
   .about-swiper{
@@ -66,6 +66,7 @@ $lightColorOp: #e6e0ec71;
 
 @media (min-width: 758px) and (max-width: 1024px) {
 .about-swiper-box{
+  width: 90%;
   height: 40vw;
   .about-swiper{
     .about-slide{
@@ -85,6 +86,7 @@ $lightColorOp: #e6e0ec71;
 
 @media (min-width: 335px) and (max-width: 757px) {
   .about-swiper-box{
+    width: 100%;
     height: 100vw;
     .about-swiper{
       .about-slide{
