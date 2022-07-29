@@ -1,6 +1,9 @@
 {
   "name": "final-project",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.x"
+  },
   "private": true,
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^34.2.0",
