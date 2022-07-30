@@ -6,6 +6,11 @@ import { useDispatch } from "react-redux";
 import { connectWith } from "../../app/headerStateSlice";
 import { FiSearch } from "react-icons/fi";
 import { headerGnbOpcity } from "../../app/headerStateSlice";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Parallax, Pagination, Navigation } from "swiper";
 
 function OnAndUp() {
   const [data, setData] = useState([]);
@@ -46,6 +51,31 @@ function OnAndUp() {
           />
           <FiSearch />
         </div>
+      </div>
+      <div className="mobile-main">
+        <Swiper
+          style={{
+            "--swiper-navigation-color": "#fff",
+            "--swiper-pagination-color": "#fff",
+          }}
+          speed={600}
+          parallax={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Parallax, Pagination, Navigation]}
+          className="mySwiper"
+        >
+          <div
+            slot="container-start"
+            className="parallax-bg"
+            data-swiper-parallax="-23%"
+          ></div>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );

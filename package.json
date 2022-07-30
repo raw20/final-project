@@ -1,6 +1,9 @@
 {
   "name": "final-project",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.x"
+  },
   "private": true,
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^34.2.0",
@@ -24,7 +27,7 @@
     "react-redux": "^8.0.2",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-youtube": "^9.0.3",
     "redux-persist": "^6.0.0",
     "revo-calendar": "^3.2.2",
