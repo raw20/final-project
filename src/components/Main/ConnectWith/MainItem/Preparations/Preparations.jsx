@@ -43,7 +43,10 @@ function Preparations() {
           <ul className="checklist-name">
             {checkListData.map((item) => (
               <li className="checklist-item" key={item.id}>
-                <span className="checklist-item-name">{item.name}</span>
+                {item.name.split('\n').map(line=>{
+                  return (<span className="checklist-item-name">{line}<br /></span>
+                  )
+                })}
                 <button
                   className={
                     check.includes(item.id)
