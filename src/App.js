@@ -36,28 +36,29 @@ import Chemi4 from './components/Main/OnAndUp/MainItem/ChemiStory/Chemi4';
 import M1 from './components/Main/OnAndUp/MainItem/Mentoring/M1';
 import M2 from './components/Main/OnAndUp/MainItem/Mentoring/M2';
 import M3 from './components/Main/OnAndUp/MainItem/Mentoring/M3';
-function App() {
-	const [LoginAuth, setLoginAuth] = useState(false);
-	useEffect(() => {
-		console.log('로그인인증값', LoginAuth);
-	}, [LoginAuth]);
 
-	return (
-		<div className="App">
-			<BrowserRouter>
-				<Header LoginAuth={LoginAuth} setLoginAuth={setLoginAuth} />
-				<Routes>
-					<Route path="/" element={<ConnectWith />} />
-					<Route path="/:id" element={<ConnectWthItemForm />}>
-						<Route path="welcome" element={<Welcome />} />
-						<Route path="aboutCompany" element={<AboutCompanyConnect />} />
-						<Route path="preparations" element={<Preparations />} />
-						<Route path="noticeBoard/" element={<NoticeBoard />}>
-							<Route path="notice" element={<Notice />} />
-							<Route path="aboutme" element={<AboutMe />} />
-							<Route path="qna" element={<QandA />} />
-						</Route>
-					</Route>
+function App() {
+  const [LoginAuth, setLoginAuth] = useState(false);
+  useEffect(() => {
+    console.log("로그인인증값", LoginAuth);
+  }, [LoginAuth]);
+
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Header LoginAuth={LoginAuth} setLoginAuth={setLoginAuth} />
+        <Routes>
+          <Route path="/" element={<ConnectWith />} />
+          <Route path="/:id" element={<ConnectWthItemForm />}>
+            <Route path="welcome" element={<Welcome />} />
+            <Route path="aboutCompany" element={<AboutCompanyConnect />} />
+            <Route path="preparations" element={<Preparations />} />
+            <Route path="noticeBoard/" element={<NoticeBoard />}>
+              <Route path="notice" element={<Notice />} />
+              <Route path="aboutme" element={<AboutMe />} />
+              <Route path="qna" element={<QandA />} />
+            </Route>
+          </Route>
 
 					<Route path="/" element={<ConnectWith />} />
 					<Route path="/chemiverseOnUp/:id" element={<OnAndUpItemForm />}>
@@ -89,20 +90,31 @@ function App() {
 					</Route>
 					<Route path="/chemiverseOnUp" element={<OnAndUp />} />
 
-					<Route path="/chemiverseOnUp/login" element={<Login setLoginAuth={setLoginAuth} />} />
-					<Route path="/chemiverseOnUp/login-search" element={<LoginSearch />} />
-					<Route path="/chemiverseOnUp/profile" element={<Profile />} />
-					<Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
-				</Routes>
-			</BrowserRouter>
-			<div className="search-box">
-				<input type="text" className="search-txt" name="" placeholder="Type to search" />
-				<div className="search-btn">
-					<FiSearch />
-				</div>
-			</div>
-		</div>
-	);
+          <Route
+            path="/chemiverseOnUp/login"
+            element={<Login setLoginAuth={setLoginAuth} />}
+          />
+          <Route
+            path="/chemiverseOnUp/login-search"
+            element={<LoginSearch />}
+          />
+          <Route path="/chemiverseOnUp/profile" element={<Profile />} />
+          <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
+        </Routes>
+      </BrowserRouter>
+      <div className="search-box">
+        <input
+          type="text"
+          className="search-txt"
+          name=""
+          placeholder="Type to search"
+        />
+        <div className="search-btn">
+          <FiSearch />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;

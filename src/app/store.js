@@ -2,10 +2,11 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import headerStateSlice from "./headerStateSlice";
 import storageSession from "redux-persist/lib/storage/session"; //세션스토리지
 import { persistReducer } from "redux-persist";
-import userReducer from './userSlice';
-import userSlice from './userSlice';
+import userReducer from "./userSlice";
+import userSlice from "./userSlice";
 import aboutMeWriteSlice from "./aboutMeWriteSlice";
 import detailSlice from "./detailSlice";
+import searchTableSlice from "./searchTableSlice";
 
 const persistConfig = {
   key: "root",
@@ -17,12 +18,11 @@ const rootReducer = combineReducers({
   user: userSlice,
   aboutMeWriter: aboutMeWriteSlice,
   item: detailSlice,
-
+  table: searchTableSlice,
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 const store = configureStore({
   reducer: persistedReducer,
-  user: userReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
