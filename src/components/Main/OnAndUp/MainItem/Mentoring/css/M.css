@@ -1,0 +1,230 @@
+.mento-wrap1 .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(111, 118, 193);
+}
+.mento-wrap1 .title h2 {
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+.mento-wrap1 .title h3 {
+  font-size: 20px;
+}
+.mento-wrap1 .boxlist .box {
+  max-width: 1200px;
+  height: auto;
+  margin: 30px auto;
+  padding: 30px 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+  font-size: 15px;
+  position: relative;
+}
+.mento-wrap1 .boxlist .box .col-box {
+  width: 10px;
+  height: auto;
+  border-radius: 15px 0 0 15px;
+  padding: 40px 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgb(111, 118, 193);
+}
+.mento-wrap1 .boxlist .box .light {
+  background-color: #e6e0ec;
+}
+.mento-wrap1 .boxlist .box .img-box {
+  background: url(./../../../../../../../public/img/ic-check.png) center/cover;
+  width: 25px;
+  height: 25px;
+  z-index: 1;
+  position: absolute;
+  left: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mento-wrap1 .boxlist .box p {
+  text-indent: 20px;
+}
+.mento-wrap1 .title .box {
+  max-width: 1200px;
+  height: auto;
+  margin: 30px auto;
+  padding: 50px 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+  font-size: 15px;
+}
+
+.mento-wrap2 .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(111, 118, 193);
+}
+.mento-wrap2 .title h2 {
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+.mento-wrap2 .title h3 {
+  font-size: 20px;
+}
+.mento-wrap2 .mento-box {
+  max-width: 1200px;
+  height: auto;
+  margin: 30px auto;
+  padding: 50px 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+  font-size: 15px;
+}
+.mento-wrap2 .mento-box .mento-input {
+  border: 1px solid #999;
+  width: 200px;
+  height: 30px;
+  margin: 30px auto;
+}
+.mento-wrap2 .mento-box .mento-input input {
+  width: 200px;
+  height: 30px;
+  text-indent: 10px;
+}
+.mento-wrap2 .mento-box .mento-input1 {
+  border: 1px solid #999;
+  width: 500px;
+  height: 100px;
+  margin: 0 auto;
+}
+.mento-wrap2 .mento-box .mento-input1 input {
+  width: 500px;
+  height: 100px;
+  text-indent: 10px;
+  font-size: 15px;
+}
+.mento-wrap2 .mento-btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100px;
+  float: right;
+}
+.mento-wrap2 .mento-btn button {
+  width: 80px;
+  height: 30px;
+  font-size: 10px;
+  background-color: #d9d9d9;
+  color: #000;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 2px;
+}
+.mento-wrap2 .mento-btn button:hover {
+  background-color: rgb(111, 118, 193);
+  color: #fff;
+}
+
+.mento-wrap3 .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(111, 118, 193);
+}
+.mento-wrap3 .title h2 {
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+.mento-wrap3 .title h3 {
+  font-size: 20px;
+}
+.mento-wrap3 .dep1 .box {
+  max-width: 1200px;
+  height: auto;
+  margin: 30px auto;
+  padding: 50px 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
+  font-size: 15px;
+}
+.mento-wrap3 .dep1 .chemi-btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100px;
+  float: right;
+}
+.mento-wrap3 .dep1 .chemi-btn button {
+  width: 80px;
+  height: 30px;
+  font-size: 10px;
+  background-color: #d9d9d9;
+  color: #000;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 2px;
+}
+.mento-wrap3 .dep1 .chemi-btn button:hover {
+  background-color: rgb(111, 118, 193);
+  color: #fff;
+}
+
+.DiaryItem {
+  margin-bottom: 10px;
+  padding: 20px;
+}
+.DiaryItem .info {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.DiaryItem .content {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.DiaryItem .content input {
+  border: 1px solid #999;
+  padding: 20px;
+}
+.DiaryItem .mento-btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100px;
+  float: right;
+}
+.DiaryItem .mento-btn button {
+  width: 80px;
+  height: 30px;
+  font-size: 10px;
+  background-color: #d9d9d9;
+  color: #000;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 2px;
+}
+.DiaryItem .mento-btn button:hover {
+  background-color: rgb(111, 118, 193);
+  color: #fff;
+}/*# sourceMappingURL=M.css.map */

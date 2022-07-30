@@ -14,10 +14,10 @@ const ChemiWItem1 = ({
 }) => {
   const localContentInput = useRef();
   const [localContent, setLocalContent] = useState(content);
-  const [localContent1, setLocalContent1] = useState(content);
-  const [localContent2, setLocalContent2] = useState(content);
-  const [localContent3, setLocalContent3] = useState(content);
-  const [localContent4, setLocalContent4] = useState(content);
+  const [localContent1, setLocalContent1] = useState(content1);
+  const [localContent2, setLocalContent2] = useState(content2);
+  const [localContent3, setLocalContent3] = useState(content3);
+  const [localContent4, setLocalContent4] = useState(content4);
   const [isEdit, setIsEdit] = useState(false);
   const toggleIsEdit = () => setIsEdit(!isEdit);
 
@@ -52,14 +52,14 @@ const ChemiWItem1 = ({
     <div className="DiaryItem">
       <div className="info">
         <span className="author_info">
-          제목 : {author}
+          이름 : {author}
         </span>
         <br />
        
       </div>
       <div className="content">
         {isEdit ? (
-          <textarea
+          <input
             ref={localContentInput}
             value={localContent}
             onChange={(e) => setLocalContent(e.target.value)}
@@ -70,7 +70,7 @@ const ChemiWItem1 = ({
       </div>
       <div className="content">
         {isEdit ? (
-          <textarea
+          <input
             ref={localContentInput}
             value={localContent1}
             onChange={(e) => setLocalContent1(e.target.value)}
@@ -81,7 +81,7 @@ const ChemiWItem1 = ({
       </div>
       <div className="content">
         {isEdit ? (
-          <textarea
+          <input
             ref={localContentInput}
             value={localContent2}
             onChange={(e) => setLocalContent2(e.target.value)}
@@ -92,7 +92,7 @@ const ChemiWItem1 = ({
       </div>
       <div className="content">
         {isEdit ? (
-          <textarea
+          <input
             ref={localContentInput}
             value={localContent3}
             onChange={(e) => setLocalContent3(e.target.value)}
@@ -103,25 +103,25 @@ const ChemiWItem1 = ({
       </div>
       <div className="content">
         {isEdit ? (
-          <textarea
+          <input
             ref={localContentInput}
             value={localContent4}
             onChange={(e) => setLocalContent4(e.target.value)}
           />
         ) : (
-          content4
+         content4
         )}
       </div>
       {isEdit ? (
-        <>
+        <div className="chemi-btn">
           <button onClick={handleQuitEdit}>수정 취소</button>
           <button onClick={handleEdit}>수정 완료</button>
-        </>
+        </div>
       ) : (
-        <>
+        <div className="chemi-btn">
           <button onClick={handleClickRemove}>삭제하기</button>
           <button onClick={toggleIsEdit}>수정하기</button>
-        </>
+        </div>
       )}
     </div>
   );

@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import './css/chemi.css'
-const ChemiWItem2 = ({
+import './css/M.css'
+const MItem = ({
   onRemove,
   onEdit,
   id,
@@ -15,7 +15,7 @@ const ChemiWItem2 = ({
   const toggleIsEdit = () => setIsEdit(!isEdit);
 
   const handleClickRemove = () => {
-    if (window.confirm(`${id}번째 목표를 정말 삭제하시겠습니까?`)) {
+    if (window.confirm(`${id}번째 계획를 정말 삭제하시겠습니까?`)) {
       onRemove(id);
     }
   };
@@ -31,7 +31,7 @@ const ChemiWItem2 = ({
       return;
     }
 
-    if (window.confirm(`${id}번 째 목표를 수정하시겠습니까?`)) {
+    if (window.confirm(`${id}번 째 계획를 수정하시겠습니까?`)) {
       onEdit(id, localContent);
       toggleIsEdit();
     }
@@ -41,7 +41,7 @@ const ChemiWItem2 = ({
     <div className="DiaryItem">
       <div className="info">
         <span className="author_info">
-          목표 : {author}
+          제목 : {author}
         </span>
         <br />
         <span className="date">
@@ -60,12 +60,12 @@ const ChemiWItem2 = ({
         )}
       </div>
       {isEdit ? (
-        <div className="chemi-btn">
+        <div className="mento-btn">
           <button onClick={handleQuitEdit}>수정 취소</button>
           <button onClick={handleEdit}>수정 완료</button>
         </div>
       ) : (
-        <div className="chemi-btn">
+        <div className="mento-btn">
           <button onClick={handleClickRemove}>삭제하기</button>
           <button onClick={toggleIsEdit}>수정하기</button>
         </div>
@@ -73,4 +73,4 @@ const ChemiWItem2 = ({
     </div>
   );
 };
-export default ChemiWItem2;
+export default MItem;

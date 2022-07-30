@@ -37,7 +37,7 @@
 		"onAndUpSubAddress": ["0", "1", "2", "3"],
 		"menu": "Chemi Story",
 		"explanation": "컨텐츠 설명글",
-		"dep": ["Chemi Stroy란?", "작성하기", "성찰저널", "자기계발목표"]
+		"dep": ["Chemi Stroy란?", "작성하기", "성찰저널", "자기개발목표"]
 	},
 	{
 		"id": 5,

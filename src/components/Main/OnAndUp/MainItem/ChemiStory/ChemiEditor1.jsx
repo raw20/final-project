@@ -80,9 +80,10 @@ const ChemiEditor1 = ({onCreate}) =>{
             
           
         </main>
-      
-        <input ref={authorInput}name='author' value={state.author} onChange={handleChangeState}/>
-        <div classname='chemi-btn'>
+      <div className="chemi-name">
+        <input placeholder='이름을 입력하세요' ref={authorInput}name='author' value={state.author} onChange={handleChangeState}/>
+        </div>
+        <div className='chemi-btn'>
                 <button onClick={handleSubmit}>저장하기</button>
             </div>
     </div>

@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
-import './css/chemi.css'
-const ChemiEditor2 = ({onCreate}) =>{
+import './css/M.css'
+const MEditor1 = ({onCreate}) =>{
 
     const authorInput = useRef()
     const contentInput = useRef()
@@ -35,24 +35,24 @@ const ChemiEditor2 = ({onCreate}) =>{
         content: '',
            })
   }
-    return <div className="chemi-wrap4">
+    return <div className="mento-wrap2">
       <main>
 
       <div className="title">
-          <h2>자기개발목표</h2>
+          <h2>활동내용 업로드</h2>
         </div>
-        <div className="chemi-box">
-         <div className='chemi-input'>
-            <input placeholder='목표를 입력하세요' ref={authorInput}name='author' value={state.author} onChange={handleChangeState}/>
+        <div className="mento-box">
+         <div className='mento-input'>
+            <input placeholder='제목를 입력하세요' ref={authorInput}name='author' value={state.author} onChange={handleChangeState}/>
         </div>
-        <div className='chemi-input1'>
+        <div className='mento-input1'>
             <input placeholder='내용을 입력하세요' ref={contentInput} name='content' value={state.content} onChange={handleChangeState}/>
         </div>
         </div>
-        <div className='chemi-btn'>
+        <div className='mento-btn'>
             <button onClick={handleSubmit}>저장하기</button>
         </div>
         </main>
     </div>
 };
-export default ChemiEditor2;
+export default MEditor1;
