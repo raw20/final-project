@@ -1,38 +1,47 @@
 import React from "react";
-
+import './css/M.css'
+import { useRef, useState } from "react";
+import MEditor1 from "./MEditor1";
+import MList1 from './MList1';
 function M3() {
+  const [data, setData] = useState([]);
+
+  const dataId = useRef(0);
+
+  const onCreate = (author, content, emotion) => {
+    const created_date = new Date().getTime();
+    const newItem = {
+      author,
+      content,
+      emotion,
+      created_date,
+      id: dataId.current
+    };
+    dataId.current += 1;
+    setData([newItem, ...data]);
+  };
+
+  const onRemove = (targetId) => {
+    const newDiaryList = data.filter((it) => it.id !== targetId);
+    setData(newDiaryList);
+  };
+
+  const onEdit = (targetId, newContent) => {
+    setData(
+      data.map((it) =>
+        it.id === targetId ? { ...it, content: newContent } : it
+      )
+    );
+  };
+
   return (
-    <div className="wrap">
-      <main>
-        <div className="title">
-          <h2>활동내용</h2>
-          <h3>목적</h3>
-        </div>
-        <ul className="boxlist">
-          <li className="box">
-            <p>집가고싶다아아</p>
-          </li>
-          <li className="box">
-            <p>
-              효과적인 팔로워십을 발휘할 수 있는 능력은 이후 효과적인 리더십을
-              발휘하는 것의 원천이 된다.
-            </p>
-          </li>
-          <li className="box">
-            <p>
-              적극적이고 주도적인 팔로워십을 발휘함으로써 조직 내 신뢰받는
-              핵심인재가 된다.
-            </p>
-          </li>
-        </ul>
-        <div className="title">
-          <h3>사용방법</h3>
-          <div className="box">
-            <p>왜 하는가?</p>
-          </div>
-        </div>
-      </main>
+
+    <div>
+        <MEditor1 onCreate={onCreate} />
+        <MList1 onEdit={onEdit} onRemove={onRemove} diaryList={data} />
     </div>
+   
+      
   );
 }
 
