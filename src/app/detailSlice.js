@@ -68,7 +68,7 @@ export const countView = createAsyncThunk(
       const res = await axios.put(
         `https://my-json-server.typicode.com/raw20/final-project/aboutMeList/${id}`,
         {
-          views: views,
+          views: (views += 1),
         }
       );
       return {
