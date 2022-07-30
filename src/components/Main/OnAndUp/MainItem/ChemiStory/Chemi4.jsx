@@ -35,25 +35,12 @@ function Chemi4() {
   };
 
   return (
-    <div className="chemi-wrap4">
-      <main>
-        <div className="title">
-          <h2>자기개발목표</h2>
-        </div>
-        <div className="dep1">
-          <div className="box">
+
+          <div>
           <ChemiEditor2 onCreate={onCreate} />
       <ChemiList2 onEdit={onEdit} onRemove={onRemove} diaryList={data} />
           </div>
-        
-       
-         <div className="chemi-btn">
-           <button>작성하기</button>
-          </div>
-        </div>
-      
-      </main>
-    </div>
+  
   );
 }
 

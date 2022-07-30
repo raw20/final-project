@@ -8,12 +8,12 @@ function Chemi3() {
 
   const dataId = useRef(0);
 
-  const onCreate = (author, content, content1, content2, content3, content4, content5, content6, content7, content8) => {
+  const onCreate = (author, content, content1, content2, content3, content4) => {
    
     const newItem = {
       author,
       content,
-      content1, content2, content3, content4, content5, content6, content7, content8,
+      content1, content2, content3, content4, 
      
       id: dataId.current
     };
