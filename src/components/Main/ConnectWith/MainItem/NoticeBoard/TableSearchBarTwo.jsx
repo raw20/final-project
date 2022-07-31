@@ -1,12 +1,14 @@
 import React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { searchData } from "../../../../../app/searchTableSlice";
 import "./css/tableSearchBar.css";
 
-function TableSearchBarTwo({ posts, copyPosts, setPosts }) {
+function TableSearchBarTwo({ posts }) {
   const [display, setDisplay] = useState(true);
   const [searchValue, setSearchValue] = useState("");
   const [type, setType] = useState("전체");
-
+  const dispatch = useDispatch();
   function onSearch(e) {
     e.preventDefault();
     if (searchValue === null || searchValue === " ") {
@@ -15,16 +17,16 @@ function TableSearchBarTwo({ posts, copyPosts, setPosts }) {
       const filterData = posts.filter((ele) =>
         ele.writer.includes(searchValue)
       );
-      setPosts(filterData);
+      dispatch(searchData(filterData));
     } else if (type === selectTypeArray[2].name) {
       const filterData = posts.filter((ele) => ele.title.includes(searchValue));
-      setPosts(filterData);
+      dispatch(searchData(filterData));
     } else if (type === selectTypeArray[0].name) {
       const filterData = posts.filter(
         (ele) =>
           ele.title.includes(searchValue) || ele.writer.includes(searchValue)
       );
-      setPosts(filterData);
+      dispatch(searchData(filterData));
     }
   }
   function handlerSelectType(e) {
@@ -36,7 +38,7 @@ function TableSearchBarTwo({ posts, copyPosts, setPosts }) {
   }
   function handlerChanegeData(e) {
     if (e.key === "Backspace") {
-      setPosts(copyPosts);
+      dispatch(searchData(""));
     }
   }
   const selectTypeArray = [

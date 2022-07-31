@@ -3,31 +3,18 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import AboutMeDetail from "./AboutMeDetail";
 import TableSearchBarTwo from "./TableSearchBarTwo";
-const AboutMeTableList = ({
-  posts,
-  totalPosts,
-  content,
-  setContent,
-  copyPosts,
-  setPosts,
-}) => {
-  const [viewCount, setViewCount] = useState(0);
+const AboutMeTableList = ({ posts, totalPosts, content, setContent }) => {
   const [index, setIndex] = useState();
   const likeValue = useSelector((state) => state.item.data);
   function onClick(index) {
     setContent(false);
     setIndex(index);
-    setViewCount((num) => (num += 1));
   }
   return (
     <>
       {content ? (
         <div className="aboutMe_table_area">
-          <TableSearchBarTwo
-            posts={posts}
-            copyPosts={copyPosts}
-            setPosts={setPosts}
-          />
+          <TableSearchBarTwo posts={posts} />
           <span>
             총<span className="total"> {totalPosts}</span>건
           </span>

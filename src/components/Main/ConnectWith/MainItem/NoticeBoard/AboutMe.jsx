@@ -14,15 +14,9 @@ function AboutMe() {
   const [aboutMetitle, setAboutMeTitle] = useState("");
   const [aboutMeContents, setAboutMeContents] = useState("");
   const dispatch = useDispatch();
-  const dataUrl =
-    "https://my-json-server.typicode.com/raw20/final-project/aboutMeList";
+  console.log("pd", postData.data);
+
   useEffect(() => {
-    (async () => {
-      const response = await fetch(dataUrl);
-      const json = await response.json();
-      setPosts(json);
-      setCopyPosts(json);
-    })();
     dispatch(getLike());
   }, []);
 
@@ -31,8 +25,7 @@ function AboutMe() {
       {!writer ? (
         <div className="aboutMe_area">
           <AboutMeTable
-            posts={posts}
-            copyPosts={copyPosts}
+            posts={postData.data}
             setPosts={setPosts}
             writer={writer}
             setWriter={setWriter}
