@@ -230,42 +230,54 @@ $bgColor: #dde3f6;
       }
     }
   }
+
   .btn-menu-wrap {
+    animation-name: change;
+    animation-duration: 1.5s;
+    animation-delay: 0;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
     background-color: #6f76c1;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 70px 80px;
+    align-items: baseline;
+    padding: 0 50px;
     height: 100vh;
+    overflow: hidden;
     touch-action: none;
-    animation: fadein 1s;
     .btn-menu {
       text-align: center;
-      margin: 30px auto;
+      margin: 150px 0;
       font-size: 30px;
       line-height: 30px;
       color: #fff;
       text-decoration: none;
-      .btn-menu-depth1 {
-        width: 100px;
-        font-size: 25px;
-        line-height: 30px;
-        &::after {
-          display: block;
-          content: "";
-          width: 140px;
-          border-bottom: 1.5px solid #fff;
-          padding-bottom: 10px;
-        }
-      }
-      .btn-menu-box {
-        text-decoration: none;
-        .btn-menu-depth2 {
-          margin-top: 10px;
-          font-size: 16px;
-          &:hover {
-            color: #f9c153;
-            .btn-menu-depth1 {
-              color: #f9c153;
+      .btn-menu-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        .btn-menu-depth1 {
+          font-size: 18px;
+          line-height: 30px;
+          margin: 20px;
+          .btn-menu-box {
+            font-size: 23px;
+            text-decoration: none;
+            &::after {
+              display: block;
+              content: "";
+              width: 140px;
+              border-bottom: 1.5px solid #fff;
+              padding-bottom: 10px;
+              margin: 0 auto;
+            }
+          }
+          .btn-menu-depth2 {
+            margin: 10px;
+            .btn-menu-depth2-text {
+              &:hover {
+                color: #f9c153;
+              }
+              .btn-menu-depth2-item {
+                text-decoration: none;
+              }
             }
           }
         }
@@ -289,8 +301,14 @@ $bgColor: #dde3f6;
     bottom: -50px;
     right: 50px;
   }
-  .bottom-logo {
-    display: none;
+  .homepage {
+    height: 30px;
+    font-size: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    color: #fff;
+    text-decoration: none;
   }
 }
 
@@ -346,17 +364,22 @@ $bgColor: #dde3f6;
     background-color: $deepColor;
     animation: fadein 1s;
     touch-action: none;
+    height: 100vh;
     .btn-menu {
       font-size: 18px;
       line-height: 30px;
       color: #fff;
-      padding-bottom: 30px;
       margin: 0 20px;
-      position: relative;
       .btn-menu-depth1 {
+        position: relative;
+        margin: 20px 0;
+      }
+      .btn-menu-box {
         width: 100%;
         font-size: 25px;
         line-height: 50px;
+        text-decoration: none;
+
         &::after {
           content: "";
           display: block;
@@ -367,13 +390,14 @@ $bgColor: #dde3f6;
           width: 100%;
         }
       }
-      .btn-menu-box {
+      .btn-menu-depth2 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         cursor: default;
-        .btn-menu-depth2 {
+        .btn-menu-depth2-item {
           font-size: 16px;
           margin: 0 5px;
+          text-decoration: none;
         }
       }
     }
@@ -387,8 +411,14 @@ $bgColor: #dde3f6;
     .img-balloon {
       display: none;
     }
-    .bottom-logo {
-      display: none;
+    .homepage {
+      height: 30px;
+      font-size: 20px;
+      position: absolute;
+      bottom: -100px;
+      left: 20px;
+      color: #fff;
+      text-decoration: none;
     }
   }
   .search-box {

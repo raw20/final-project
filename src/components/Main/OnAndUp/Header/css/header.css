@@ -234,47 +234,60 @@
     display: none;
   }
   .btn-menu-wrap {
+    -webkit-animation-name: change;
+            animation-name: change;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     background-color: #6f76c1;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 70px 80px;
+    align-items: baseline;
+    padding: 0 50px;
     height: 100vh;
+    overflow: hidden;
     touch-action: none;
-    -webkit-animation: fadein 1s;
-            animation: fadein 1s;
   }
   .btn-menu-wrap .btn-menu {
     text-align: center;
-    margin: 30px auto;
+    margin: 150px 0;
     font-size: 30px;
     line-height: 30px;
     color: #fff;
     text-decoration: none;
   }
-  .btn-menu-wrap .btn-menu .btn-menu-depth1 {
-    width: 100px;
-    font-size: 25px;
-    line-height: 30px;
+  .btn-menu-wrap .btn-menu .btn-menu-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  .btn-menu-wrap .btn-menu .btn-menu-depth1::after {
+  .btn-menu-wrap .btn-menu .btn-menu-item .btn-menu-depth1 {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 20px;
+  }
+  .btn-menu-wrap .btn-menu .btn-menu-item .btn-menu-depth1 .btn-menu-box {
+    font-size: 23px;
+    text-decoration: none;
+  }
+  .btn-menu-wrap .btn-menu .btn-menu-item .btn-menu-depth1 .btn-menu-box::after {
     display: block;
     content: "";
     width: 140px;
     border-bottom: 1.5px solid #fff;
     padding-bottom: 10px;
+    margin: 0 auto;
   }
-  .btn-menu-wrap .btn-menu .btn-menu-box {
+  .btn-menu-wrap .btn-menu .btn-menu-item .btn-menu-depth1 .btn-menu-depth2 {
+    margin: 10px;
+  }
+  .btn-menu-wrap .btn-menu .btn-menu-item .btn-menu-depth1 .btn-menu-depth2 .btn-menu-depth2-text:hover {
+    color: #f9c153;
+  }
+  .btn-menu-wrap .btn-menu .btn-menu-item .btn-menu-depth1 .btn-menu-depth2 .btn-menu-depth2-text .btn-menu-depth2-item {
     text-decoration: none;
-  }
-  .btn-menu-wrap .btn-menu .btn-menu-box .btn-menu-depth2 {
-    margin-top: 10px;
-    font-size: 16px;
-  }
-  .btn-menu-wrap .btn-menu .btn-menu-box .btn-menu-depth2:hover {
-    color: #f9c153;
-  }
-  .btn-menu-wrap .btn-menu .btn-menu-box .btn-menu-depth2:hover .btn-menu-depth1 {
-    color: #f9c153;
   }
   .goback {
     position: fixed;
@@ -293,8 +306,14 @@
     bottom: -50px;
     right: 50px;
   }
-  .bottom-logo {
-    display: none;
+  .homepage {
+    height: 30px;
+    font-size: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    color: #fff;
+    text-decoration: none;
   }
 }
 @media (min-width: 335px) and (max-width: 757px) {
@@ -349,21 +368,25 @@
     -webkit-animation: fadein 1s;
             animation: fadein 1s;
     touch-action: none;
+    height: 100vh;
   }
   .btn-menu-wrap .btn-menu {
     font-size: 18px;
     line-height: 30px;
     color: #fff;
-    padding-bottom: 30px;
     margin: 0 20px;
-    position: relative;
   }
   .btn-menu-wrap .btn-menu .btn-menu-depth1 {
+    position: relative;
+    margin: 20px 0;
+  }
+  .btn-menu-wrap .btn-menu .btn-menu-box {
     width: 100%;
     font-size: 25px;
     line-height: 50px;
+    text-decoration: none;
   }
-  .btn-menu-wrap .btn-menu .btn-menu-depth1::after {
+  .btn-menu-wrap .btn-menu .btn-menu-box::after {
     content: "";
     display: block;
     position: absolute;
@@ -372,14 +395,15 @@
     border-bottom: 1.5px solid #dde3f6;
     width: 100%;
   }
-  .btn-menu-wrap .btn-menu .btn-menu-box {
+  .btn-menu-wrap .btn-menu .btn-menu-depth2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     cursor: default;
   }
-  .btn-menu-wrap .btn-menu .btn-menu-box .btn-menu-depth2 {
+  .btn-menu-wrap .btn-menu .btn-menu-depth2 .btn-menu-depth2-item {
     font-size: 16px;
     margin: 0 5px;
+    text-decoration: none;
   }
   .btn-menu-wrap .goback {
     position: fixed;
@@ -391,8 +415,14 @@
   .btn-menu-wrap .img-balloon {
     display: none;
   }
-  .btn-menu-wrap .bottom-logo {
-    display: none;
+  .btn-menu-wrap .homepage {
+    height: 30px;
+    font-size: 20px;
+    position: absolute;
+    bottom: -100px;
+    left: 20px;
+    color: #fff;
+    text-decoration: none;
   }
   .search-box {
     display: none;
