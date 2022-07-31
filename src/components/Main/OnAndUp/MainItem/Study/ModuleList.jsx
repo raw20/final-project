@@ -54,6 +54,7 @@ function ModuleList({moduleID, setModuleItem}) {
                                             <div className='cardImg_background'>
                                                 <img className="module_Img" src={`${el.card_image}`}></img>
                                             </div>
+                                            {/* <div className="module_card_hover"></div> */}
                                         </div>
                                         <div className='module_cardTitle_txt'>
                                             <div className="module_cardTitle">{el.mtitle}</div>
