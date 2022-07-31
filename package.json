@@ -31,6 +31,8 @@
     "redux-persist": "^6.0.0",
     "revo-calendar": "^3.2.2",
     "sass": "^1.53.0",
+    "sweetalert2": "^11.4.24",
+    "sweetalert2-react-content": "^5.0.2",
     "swiper": "^8.3.1",
     "web-vitals": "^2.1.4"
   },

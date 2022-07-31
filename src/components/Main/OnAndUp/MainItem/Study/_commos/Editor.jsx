@@ -3,27 +3,18 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { getItem } from '../lib/storage';
 
-function Editor({ id, isNew, data, addData, setData }) {
+function Editor({ id, data, setEditorData }) {
 
     function handleChange(EditorData) {
-        if (isNew) {
-            addData({ id: id, content: EditorData})
-        }
-        else {
-            setData({
-                ...data,
-                id: parseInt(id),
-                content: EditorData,
-            })
-        }
+        setEditorData({ id: parseInt(id), content: EditorData})
     }
 
     return (
         <>
-        <div>
+        <div style={{ marginTop: 50 }}>
             <CKEditor
                 editor={ ClassicEditor }
-                data= {data.content || ''}
+                data= { data }
                 onReady={ editor => {
                     // You can store the "editor" and use when it is needed.
                     console.log( 'Editor is ready to use!', editor );

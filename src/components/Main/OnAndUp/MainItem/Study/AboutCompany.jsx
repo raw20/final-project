@@ -12,6 +12,9 @@ import './css/ability.scss';
 import { setItem , getItem, removeItem } from './lib/storage';
 
 function AboutCompany(props) {
+    const [isNew, setIsNew] = useState(true);
+    const [datas, setDatas] = useState(getItem('reviewData') || []);
+    const [moduleItem, setModuleItem] = useState({});
 
     const options = [
         { value: '0', label: '회사이해', address: 'study' },
@@ -20,33 +23,6 @@ function AboutCompany(props) {
         { value: '3', label: '자기관리', address: 'study' }
     ]
 
-    const [datas, setDatas] = useState(getItem('reviewData') || []);
-    const [moduleItem, setModuleItem] = useState({});
-    const [selectedImgIndex, setSelectedImgIndex] = useState(0);
-    //removeItem("reviewData");
-    const setData = useCallback((newData) => {
-        const newDatas  = [...datas]; 
-        newDatas[selectedImgIndex] = newData;
-        setDatas(newDatas);  
-    },[selectedImgIndex, datas])
-
-    const addData = useCallback((newData) => {
-        const newDatas = [
-          ...datas,
-          newData
-        ]
-        setDatas(newDatas)
-        setSelectedImgIndex(datas.length);
-    },[datas])
-
-    function saveReviewData() {
-        setItem('reviewData',datas)
-    }
-    
-    useEffect(() => {
-        console.log('item',moduleItem)
-    },[moduleItem])
-    
     return (
         <>
             <SmallSelectBox options={options} placeholder={"회사이해"} />
@@ -56,18 +32,14 @@ function AboutCompany(props) {
                     <ModuleDetail 
                         moduleItem={moduleItem}
                         datas={datas}
-                        setSelectedImgIndex={setSelectedImgIndex}
-                        selectedImgIndex={selectedImgIndex}
-                        addData={addData}
-                        setData={setData} 
+                        isNew = {isNew}                
+                        setIsNew = {setIsNew}
                     />} 
                 />
                 <Route path=":id/edit" element={
-                    <ReviewEdit      
-                        datas={datas}                   
-                        addData={addData}
-                        setData={setData} 
-                        saveReviewData = {saveReviewData}
+                    <ReviewEdit     
+                        isNew = {isNew}                
+                        setIsNew = {setIsNew}
                     />} 
                 />
             </Routes>

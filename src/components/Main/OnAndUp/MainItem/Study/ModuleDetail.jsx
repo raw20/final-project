@@ -1,24 +1,26 @@
 import React,{ useEffect, useState, useRef, useCallback, useLayoutEffect } from 'react';
 
+
 import Modal from 'react-modal';
 import { Link, useParams, useLocation, useNavigate } from "react-router-dom";
 import YouTube from "react-youtube";
+import { RiArrowGoBackLine } from "react-icons/ri";
 import { Swiper, SwiperSlide } from "swiper/react"; 
 import SwiperCore, { Pagination, Navigation, Autoplay} from "swiper/core";
 
 import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+
 import { setItem , getItem, removeItem } from './lib/storage';
 
-function ModuleDetail({setSelectedImgIndex, moduleItem}) {
+function ModuleDetail({ isNew, setIsNew }) {
     const [cardNewsModalIsOpen, setCardNewsModalIsOpen] = useState(false);
     const [microLearningModalIsOpen, setMicroLearningModalIsOpen] = useState(false);
-    const [moduleId, setmoduleId] = useState(0);
     const [moduleInfo, setModuleInfo] = useState({});
-    const [isNew, setIsNew] = useState(true);
+    const [content, setContent] = useState('');
     const history = useNavigate();
-    
+
     const ID = useLocation().pathname.slice(-3,-2);
     const mID = useLocation().pathname.slice(-1);
 
@@ -32,24 +34,26 @@ function ModuleDetail({setSelectedImgIndex, moduleItem}) {
         })();
     },[]);
 
+
     const [datas, setDatas] = useState(getItem('reviewData') || []);
-    console.log('getitem',getItem('reviewData'))
 
     useEffect(() => {
-        console.log(datas)
+        var tmpContent = '';
         if (datas.length > 0) {
             datas.map((el, index, data) => {
-                if(ID == el.id) {
-                    setmoduleId(index);
-                    setSelectedImgIndex(index)
+                
+                if(mID == el.id) {
                     setIsNew(false);
+                    tmpContent = datas[index].content;
+                    tmpContent = tmpContent.replace('</p>','');
+                    tmpContent = tmpContent.replace('<p>','');
+                    setContent(tmpContent);
                 }
             });
-            var content = datas[moduleId].content;
-            content = content.replace('</p>','');
-            content = content.replace('<p>','');
         }
     },[])
+
+
 
     SwiperCore.use([Pagination, Navigation, Autoplay]);
 
@@ -57,6 +61,7 @@ function ModuleDetail({setSelectedImgIndex, moduleItem}) {
         //setOpenModalId(e.target.id);
         setCardNewsModalIsOpen(true);
     }
+
     function handleMicroLearningModal(e) {
         //setOpenModalId(e.target.id);
         setMicroLearningModalIsOpen(true);
@@ -65,9 +70,11 @@ function ModuleDetail({setSelectedImgIndex, moduleItem}) {
     const videoUrl = "https://youtu.be/eZYJ1rglPUs"
     const videoCode = videoUrl.replace("https://youtu.be/",'');
     
+
     const youtubeOpts = {
-        width: "640",
+        width: "100%",
         height: "390",
+        margin: "auto",
         playerVars: {
           autoplay: 1,
         },
@@ -78,18 +85,19 @@ function ModuleDetail({setSelectedImgIndex, moduleItem}) {
     const handlePrev = useCallback(() => {
       if (!sliderRef.current) return;
       sliderRef.current.swiper.slidePrev();
-      console.log('prev')
     }, []);
   
     const handleNext = useCallback(() => {
       if (!sliderRef.current) return;
       sliderRef.current.swiper.slideNext();
-      console.log('nect')
     }, []);
 
     return (
         <>
-            <div className='study_back' onClick={ () => { history(-1) }}> &lt;- </div>
+            <div className="backButton" onClick={ () => { history('../') }}> 
+                <RiArrowGoBackLine size="20"/>
+                <div style={{ marginLeft: 10 }}>뒤로가기</div>
+            </div>
             <div className="detail_container">
                 <div className="aboutCompany_detail_summary">
                     <img src={moduleInfo.card_image}></img>
@@ -116,7 +124,7 @@ function ModuleDetail({setSelectedImgIndex, moduleItem}) {
                                 <div className="detail_content_cardNews_title">카드뉴스</div>
                             </div>
                             <div className="detail_content_microLearning" onClick={handleMicroLearningModal}>
-                                <img className="detail_content_cardNews_img" src='/img/modalimg.jpg'></img>
+                                <img className="detail_content_cardNews_img" src='/img/cardNews1.png'></img>
                                 <div className="detail_content_cardNews_title">마이크로러닝</div>
                             </div>
                         </div>
@@ -127,7 +135,7 @@ function ModuleDetail({setSelectedImgIndex, moduleItem}) {
                             <div className="detail_practice_desc">오늘 배운 내용에 대해 Review하며 배운 점, 느낀 점, 성찰할 점 등에 대해 자유롭게 적어봅시다.</div>   
                         </div>   
                         <div className="detail_practice_textArea">
-                            {/* { isNew ? '' : content } */}
+                            { content }
                         </div>   
                         <div className="detail_practice_btnArea" to='edit'>   
                             <Link to="#">   
@@ -140,6 +148,7 @@ function ModuleDetail({setSelectedImgIndex, moduleItem}) {
                     </div>
                 </div>
             </div>
+
             <Modal 
                 className="cardnewsModal"
                 isOpen={cardNewsModalIsOpen}
@@ -157,8 +166,8 @@ function ModuleDetail({setSelectedImgIndex, moduleItem}) {
                     content: {
                       position: "absolute",
                       top: "150px",
-                      left: "calc(50% - 400px)",
-                      width: "800px",
+                      left: "25%",
+                      width: "50%",
                       height: "60%",
                       border: "1px solid #ccc",
                       background: "#fff",
@@ -255,19 +264,19 @@ function ModuleDetail({setSelectedImgIndex, moduleItem}) {
                       backgroundColor: "rgba(15, 15, 15, 0.79)",
                     },
                     content: {
-                      position: "absolute",
-                      top: "150px",
-                      left: "calc(50% - 400px)",
-                      width: "800px",
-                      height: "60%",
-                      border: "1px solid #ccc",
-                      background: "#fff",
-                      overflow: "auto",
-                      WebkitOverflowScrolling: "touch",
-                      borderRadius: "4px",
-                      outline: "none",
-                      padding: "20px",
-                    },
+                        position: "absolute",
+                        top: "150px",
+                        left: "25%",
+                        width: "50%",
+                        height: "60%",
+                        border: "1px solid #ccc",
+                        background: "#fff",
+                        overflow: "auto",
+                        WebkitOverflowScrolling: "touch",
+                        borderRadius: "4px",
+                        outline: "none",
+                        padding: "20px",
+                      },
                   }}
             >
                 <div className='ModalCards'>
