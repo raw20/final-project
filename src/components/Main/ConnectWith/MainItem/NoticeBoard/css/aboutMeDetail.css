@@ -6,75 +6,95 @@
 .aboutMe-wrap .aboutMe-header {
   width: 100%;
   display: flex;
-  border-bottom: 1px solid #6f76c1;
-  padding: 1rem 2rem;
+  padding: 0;
+  flex-direction: column;
+  margin: 20px 0;
+  border-bottom: 1px solid #dcdce6;
 }
-.aboutMe-wrap .aboutMe-header .aboutMe-category {
-  width: 70px;
-  height: 25px;
-  color: #6f76c1;
+.aboutMe-wrap .aboutMe-header .aboutMe-title-area {
   display: flex;
-  font-size: 0.9rem;
-  justify-content: center;
-  align-items: center;
-  margin-right: 1rem;
+  flex-direction: row;
+  padding: 15px 20px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #dcdce6;
+  background-color: #f5f5fa;
 }
-.aboutMe-wrap .aboutMe-header .aboutMe-title {
-  font-size: 1.4rem;
-  color: #6f76c1;
+.aboutMe-wrap .aboutMe-header .aboutMe-title-area .aboutMe-category {
+  font-size: 14px;
+  margin-right: 20px;
+  color: #aeaeba;
+}
+.aboutMe-wrap .aboutMe-header .aboutMe-title-area .aboutMe-title {
+  font-size: 14px;
+  color: #000;
+}
+.aboutMe-wrap .aboutMe-header .aboutMe-sub {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 15px 30px;
+  color: #aeaeba;
+  justify-content: space-between;
+}
+.aboutMe-wrap .aboutMe-header .aboutMe-sub .aboutMe-sub-sub {
+  display: flex;
+}
+.aboutMe-wrap .aboutMe-header .aboutMe-sub .aboutMe-sub-sub .aboutMe-like {
+  margin-left: 15px;
 }
 .aboutMe-wrap .aboutMe-main {
   width: 90%;
   margin: 0 auto;
-}
-.aboutMe-wrap .aboutMe-main .aboutMe-sub {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-.aboutMe-wrap .aboutMe-main .aboutMe-sub .aboutMe-date {
-  width: 20%;
-  text-align: end;
-  padding: 1rem 1.5rem;
-  font-size: 0.9rem;
-}
-.aboutMe-wrap .aboutMe-main .aboutMe-sub .aboutMe-views,
-.aboutMe-wrap .aboutMe-main .aboutMe-sub .aboutMe-like {
-  width: 10%;
-  text-align: end;
-  padding: 1rem 1.5rem;
-  font-size: 0.9rem;
+  padding: 20px;
+  box-sizing: border-box;
 }
 .aboutMe-wrap .aboutMe-main .aboutMe-img {
   width: 100%;
 }
 .aboutMe-wrap .aboutMe-main .aboutMe-img img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   margin: 0px auto;
 }
 .aboutMe-wrap .aboutMe-main .aboutMe-text {
   margin: 1.5rem auto;
   font-size: 1.2rem;
-  line-height: 1.3rem;
-  font-weight: 200;
+  line-height: 1.6rem;
+}
+.aboutMe-wrap .aboutMe-main .tab-like {
+  width: 8rem;
+  height: 3rem;
+  margin: 10px auto;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  box-shadow: 0px 5px 15px -9px rgba(0, 0, 0, 0.38);
+}
+.aboutMe-wrap .aboutMe-main .tab-like:hover {
+  font-size: 1.15rem;
+  transition: all 0.2s;
+}
+.aboutMe-wrap .aboutMe-main .tab-like:focus {
+  font-size: 1.15rem;
+  transition: all 0.2s;
 }
 .aboutMe-wrap .aboutMe-footer {
   width: 100%;
+  height: 60px;
   margin: 0 auto;
+  border-top: 1px solid #dcdce6;
 }
-.aboutMe-wrap .aboutMe-footer .aboutMe-file {
-  padding: 1.3rem 0.5rem;
-  font-size: 1.4rem;
+.aboutMe-wrap .aboutMe-footer .aboutMe-list-btn {
+  width: 10rem;
+  height: 3rem;
+  border: 1px solid #dcdce6;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
   color: #6f76c1;
-  border-top: 1px solid #6f76c1;
-  border-bottom: 1px solid #6f76c1;
 }
-.aboutMe-wrap .aboutMe-footer .notice-btn {
-  margin-top: 1.5rem;
-  margin-right: 1rem;
-  float: right;
+.aboutMe-wrap .aboutMe-footer .aboutMe-list-btn:hover {
+  border: 1px solid #6f76c1;
 }/*# sourceMappingURL=aboutMeDetail.css.map */
