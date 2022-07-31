@@ -10,7 +10,6 @@ function AboutMeDetail({ posts, setContent, id }) {
   const [likes, setLikes] = useState("1");
   const likeValue = useSelector((state) => state.item.likes);
   const dispatch = useDispatch();
-  console.log(likes);
   function handlerLikeFnc(e) {
     e.preventDefault();
     setLikes(likes === "1" ? "0" : "1");

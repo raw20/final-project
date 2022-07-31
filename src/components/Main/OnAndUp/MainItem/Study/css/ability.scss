@@ -109,24 +109,31 @@
 
     .detail_cardNews_title {
         padding-left: 5px;
-        font-size: 18px;
         margin-bottom: 30px;
         margin-left: 8px;
         color: rgb(111, 118, 193);
-        font-weight: 500;
+        font-size: 22px;
+        font-weight: bold;
     }
     .detail_content {
         width: 100%;
         display: flex;
     }
     .detail_content_cardNews {
-        width: 45%;
+        width: 30%;
         margin-right: 3%;
         cursor: pointer;
+        img{
+            min-width: 270px;
+            box-shadow: 0px 11px 23px -9px rgb(0 0 0 / 38%);
+        }
     }
     .detail_content_microLearning {
-        width: 55%;
+        width: 70%;
         cursor: pointer;
+        img{
+            box-shadow: 0px 11px 23px -9px rgb(0 0 0 / 38%);
+        }
     }
     .detail_content_cardNews_img {
         width: 100%;
@@ -145,6 +152,10 @@
 .ReactModal__Html--open {
   z-index: 999;
 }
+.beforeTest_question .beforeTest_question_g {
+    font-size: 16px;
+    line-height: 1.2;
+}
 .detail_practice {
     width: 100%;
     display: flex;
@@ -152,11 +163,12 @@
     margin-bottom: 100px;
 
     .detail_practice_title {
-        font-size: 18px;
         margin-left: 5px;
         color: rgb(111, 118, 193);
         font-weight: 500;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        font-size: 22px;
+        font-weight: bold;
     }
 
     .detail_practice_desc {
@@ -173,7 +185,7 @@
         margin-bottom: 15px;
     }
 
-    .tempSaveBtn {
+    .deleteBtn, .tempSaveBtn {
         min-width: 130px;
         width: 6.843vw;
         height: 25px;
@@ -219,22 +231,24 @@
     margin: 50px 0 150px;
 
     img {
-        width: 300px;
+        width: 30%;
         height: 250px;
         border-radius: 10px;
+        margin-right: 3%;
+        box-shadow: 0px 11px 23px -9px rgb(0 0 0 / 38%);
     }
     .aboutCompany_detail_text {
         padding: 30px 25px 25px;
-        margin-left: 50px;
         width: calc(100% - 150px);
         border-radius: 10px;
         box-shadow: 1px 1px 5px 3px #ddd;
     }
     .aboutCompany_detail_title {
-        font-size: 18px;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         font-weight: 500;
         color: rgb(111, 118, 193);
+        font-size: 22px;
+        font-weight: bold;
     }
     .aboutCompany_detail_goal{
         display: flex;
@@ -244,7 +258,7 @@
         width: 100%;
         dt{
             width: 10%;
-            font-weight: 500;
+            font-weight: bold;
         }
         dd{
             width: 90%;
@@ -257,7 +271,7 @@
         width: 100%;
         dt{
             width: 10%;
-            font-weight: 500;
+            font-weight: bold;
         }
         dd{
             width: 90%;
@@ -271,7 +285,6 @@
         display:flex;
         justify-content: flex-end;
         cursor: pointer;
-
         button { font-size: 17px; }
     }
     .ModalCards_Title{
@@ -330,12 +343,21 @@
     right: 20px;
 }
 .beforeResult_analysisBox ul li:nth-child(3) div {background-color: #e6e0ec;}
-
-
-// 이것도 공통
-.menuSelect{
-    display: none;
+.study_back{
+    font-size: 28px;
+    display: flex;
+    justify-content: center; align-items: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 13%; right: 5%;
+    transform: translate(0, -50%);
+    background-color: #fff;
+    border: 1px solid #6f76c1;
+    border-radius: 30px;
+    transition: 0.4s;
+    width: 30px; height: 30px;
 }
+
 @media (min-width: 335px) and (max-width: 757px) {
     .item-form .item-inner .item-box{padding: 0 !important}
     .module_card{
@@ -360,8 +382,9 @@
         display: flex;
         flex-wrap: wrap;
         Img{
-            width: 89.552vw;
-            padding-bottom: 30px;
+            width: 100%;
+            margin: auto auto 35px;
+            width: 95%;
         }
     }
     .detail_content{
@@ -369,6 +392,7 @@
         flex-direction: column;
         .detail_content_cardNews_img{
             width: 100%;
+            height: auto;
         }
     }
     .detail_container{
@@ -415,49 +439,6 @@
         margin-bottom: 50px;
         .detail_content_cardNews_title{margin-top: 15px;}
     }
-
-    // 공통으로 빼는게 좋음.
-.item-form .item-inner .tab-btn-area {
-    display: none !important;
-}
-
-.menuSelect {
-    display:block;
-    margin-bottom: 30px;
-
-    &__indicator svg {
-        fill: #fff;
-    }
-
-    &__menu:before {
-        content: "";
-        display: block;
-        width: 80%;
-        margin: auto;
-        border-bottom: 1px solid #fff;
-      }
-
-    &__option {
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-    }
-    &__single-value {
-        color: #fff !important;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        transform: translate(18px);
-    }
-    &__placeholder {
-        color: #fff !important;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        margin-left: 36px;
-        transform: translate(18px);
-    }
-}
 }
 
 @media (min-width: 758px) and (max-width: 1023px) {
@@ -501,15 +482,28 @@
         margin: 0 0 100px;
         Img{
             width: 35%;
-            padding-right: 20px;
-            padding-bottom: 40px;
+            margin-right: 15px;
         }
         .aboutCompany_detail_text {
             margin-left: 0;
             width: 65%;
+            padding: 30px 20px 30px;
         }
         .aboutCompany_detail_goal, .aboutCompany_detail_concept{
             dt{width: 20%;}
+        }
+    }
+    .detail_cardNews{
+        justify-content: space-between;
+        .detail_content {
+            justify-content: space-between;
+        }
+        .detail_content_cardNews{
+            width: calc(30% - 20px);
+            img{min-width: auto;}
+        }
+        .detail_content_microLearning{
+            width: calc(70% - 20px);
         }
     }
 }
