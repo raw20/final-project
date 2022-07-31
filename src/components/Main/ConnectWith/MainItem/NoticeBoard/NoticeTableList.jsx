@@ -42,10 +42,10 @@ const NoticeTableList = ({
               ) : (
                 posts.map((posts, index) => (
                   <tr className="content_row" key={index}>
-                    <td>{posts.id}</td>
-                    <td>{posts.category}</td>
-                    <td onClick={() => onClick(index)}>{posts.title}</td>
-                    <td>{posts.date}</td>
+                    <td className="td-id">{posts.id}</td>
+                    <td className="td-cat">{posts.category}</td>
+                    <td className="td-title" onClick={() => onClick(index)}>{posts.title}</td>
+                    <td className="td-date">{posts.date}</td>
                   </tr>
                 ))
               )}
