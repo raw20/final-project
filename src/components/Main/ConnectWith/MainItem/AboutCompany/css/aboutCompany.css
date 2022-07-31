@@ -1,15 +1,178 @@
 .about-company-wrap {
-  width: 90%;
-  height: 100vh;
-  -webkit-animation: fadein 2s;
-          animation: fadein 2s;
-  margin: 0 auto;
-  padding-top: 2rem;
-}
-.about-company-wrap .about-company-content {
+  padding: 50px 20px;
+  box-sizing: border-box;
   width: 100%;
-  margin: 4rem auto;
-  font-size: 1.2rem;
-  line-height: 30px;
-  color: #888;
+  /* summary-area */
+}
+.about-company-wrap h2 {
+  font-size: 25px;
+}
+.about-company-wrap .about-summary-area {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 40vw;
+  /* sum-copy-box */
+}
+.about-company-wrap .about-summary-area .sum-copy-box {
+  width: 85%;
+  height: 18vw;
+  padding: 4.5vw;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/public/img/bg02.jpg) no-repeat center/cover;
+  border-radius: 20px;
+  box-shadow: 0px 11px 23px -9px rgba(0, 0, 0, 0.38);
+  display: flex;
+  flex-direction: column;
+}
+.about-company-wrap .about-summary-area .sum-copy-box span {
+  color: #fff;
+}
+.about-company-wrap .about-summary-area .sum-copy-box .copy-sub {
+  font-size: 1vw;
+  margin-bottom: 1.5vw;
+}
+.about-company-wrap .about-summary-area .sum-copy-box .copy-main {
+  font-size: 2vw;
+  line-height: 2.3vw;
+}
+.about-company-wrap .about-summary-area .sum-content-box {
+  width: 85%;
+  margin: 0 auto;
+  padding: 3vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about-company-wrap .about-summary-area .sum-content-box .logo-box {
+  width: calc(45% - 40px);
+  margin-left: 3vw;
+}
+.about-company-wrap .about-summary-area .sum-content-box .logo-box .move-logo {
+  width: 100%;
+  height: 8.3vw;
+  border-radius: 20px;
+  box-shadow: 0px 11px 23px -9px rgba(0, 0, 0, 0.38);
+  background: url(/public/img/sub_bnr10.png) no-repeat center/130%;
+  cursor: pointer;
+  text-align: center;
+}
+.about-company-wrap .about-summary-area .sum-content-box .logo-box .move-logo:hover {
+  -webkit-animation-name: bigscale;
+          animation-name: bigscale;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.about-company-wrap .about-summary-area .sum-content-box .logo-box p {
+  font-size: 0.9vw;
+  color: rgb(117, 114, 114);
+}
+.about-company-wrap .about-summary-area .sum-content-box .sum-content {
+  width: calc(50% - 40px);
+  font-size: 1vw;
+  line-height: 1.3vw;
+  word-break: keep-all;
+  color: rgb(117, 114, 114);
+}
+.about-company-wrap .swiper-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 40vw;
+  margin: 10px 0;
+}
+.about-company-wrap .swiper-area span {
+  font-size: 1vw;
+  color: rgb(117, 114, 114);
+}
+
+@-webkit-keyframes bigscale {
+  0% {
+    background-size: 130%;
+  }
+  100% {
+    background-size: 140%;
+    filter: brightness(0.8);
+  }
+}
+
+@keyframes bigscale {
+  0% {
+    background-size: 130%;
+  }
+  100% {
+    background-size: 140%;
+    filter: brightness(0.8);
+  }
+}
+@media (min-width: 758px) and (max-width: 1024px) {
+  .about-company-wrap {
+    padding: 0;
+    /* summary-area */
+  }
+  .about-company-wrap .about-summary-area {
+    padding: 10px 0;
+    margin: 10px 0;
+  }
+  .about-company-wrap .about-summary-area .sum-content-box {
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+  .about-company-wrap .about-summary-area .sum-content-box .logo-box {
+    width: calc(50% - 20px);
+    margin-left: 1vw;
+  }
+  .about-company-wrap .about-summary-area .sum-content-box .sum-content {
+    width: calc(50% - 20px);
+  }
+  .about-company-wrap .swiper-area {
+    height: 50vw;
+    margin-top: 10px 0;
+  }
+}
+@media (min-width: 335px) and (max-width: 757px) {
+  .about-company-wrap {
+    padding: 0;
+    /* summary-area */
+  }
+  .about-company-wrap h2 {
+    font-size: 2rem;
+  }
+  .about-company-wrap .about-summary-area {
+    width: 100%;
+    height: 70vw;
+    padding: 10px 0;
+    margin: 10px 0;
+  }
+  .about-company-wrap .about-summary-area .sum-copy-box {
+    width: 100%;
+    height: 30vw;
+  }
+  .about-company-wrap .about-summary-area .sum-content-box {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+  .about-company-wrap .about-summary-area .sum-content-box .logo-box {
+    display: none;
+  }
+  .about-company-wrap .about-summary-area .sum-content-box .sum-content {
+    width: 100%;
+    font-size: 1vw;
+    line-height: 3vw;
+  }
+  .about-company-wrap .swiper-area {
+    height: 125vw;
+    margin-top: 10px 0;
+    overflow: hidden;
+  }
 }/*# sourceMappingURL=aboutCompany.css.map */

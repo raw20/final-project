@@ -4,7 +4,13 @@ import { useLocation, Route, Link, Routes } from "react-router-dom";
 import BeforeResult from './BeforeResult';
 import AfterResult from './AfterResult';
 
+import SmallSelectBox from '../../Main/SmallSelectBox';
+
 function Result(props) {
+    const options = [
+        { value: '0', label: '현재상태 점검하기', address: 'diagnosis' },
+        { value: '1', label: '진단결과보기', address: 'diagnosis' }
+    ]
     const [selectedTab, setSelectedTab] = useState(0);
     const { pathname, state } = useLocation(0);
     useEffect(() => {
@@ -16,25 +22,26 @@ function Result(props) {
 
     return (
         <div className="nowContainer">
-            <div className="selfTestContainer_title">진단결과 보기</div>
-            
+            <SmallSelectBox options={options} placeholder={"진단결과보기"} />
             <div className="selfTestContainer_box">
-                <div className="selfTestContainer_sidebar">
+                <div className='selfTestContainer_box_inner'>
+                    <div className="selfTestContainer_sidebar">
 
-                    <Link className={`${selectedTab === 0 ? 'active' : ''}`} onClick={() => setSelectedTab(0)} to="result/before">
-                        <button>#사전</button>
-                    </Link>
-                    <Link className={`${selectedTab === 1 ? 'active' : ''}`} onClick={() => setSelectedTab(1)} to="result/after">
-                        <button>#사후</button>
-                    </Link>
-                    
-                </div>
-                <div className="selfTestContainer_content">
-                    <Routes>
-                        <Route path="*" element={<BeforeResult />} />
-                        <Route path="result/before" element={<BeforeResult />} />
-                        <Route path="result/after" element={<AfterResult />} />
-                    </Routes>
+                        <Link className={`${selectedTab === 0 ? 'active' : ''}`} onClick={() => setSelectedTab(0)} to="result/before">
+                            <button>#사전</button>
+                        </Link>
+                        <Link className={`${selectedTab === 1 ? 'active' : ''}`} onClick={() => setSelectedTab(1)} to="result/after">
+                            <button>#사후</button>
+                        </Link>
+                        
+                    </div>
+                    <div className="selfTestContainer_content">
+                        <Routes>
+                            <Route path="*" element={<BeforeResult />} />
+                            <Route path="result/before" element={<BeforeResult />} />
+                            <Route path="result/after" element={<AfterResult />} />
+                        </Routes>
+                    </div>
                 </div>
             </div>
         </div>

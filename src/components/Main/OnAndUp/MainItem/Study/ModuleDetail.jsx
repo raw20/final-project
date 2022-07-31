@@ -1,8 +1,8 @@
-import React,{ useEffect, useState, useRef, useCallback } from 'react';
+import React,{ useEffect, useState, useRef, useCallback, useLayoutEffect } from 'react';
 
 
 import Modal from 'react-modal';
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation, useNavigate } from "react-router-dom";
 import YouTube from "react-youtube";
 import { Swiper, SwiperSlide } from "swiper/react"; 
 import SwiperCore, { Pagination, Navigation, Autoplay} from "swiper/core";
@@ -11,38 +11,50 @@ import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { setItem , getItem } from './lib/storage';
+import { setItem , getItem, removeItem } from './lib/storage';
 
 function ModuleDetail({setSelectedImgIndex, moduleItem}) {
     const [cardNewsModalIsOpen, setCardNewsModalIsOpen] = useState(false);
     const [microLearningModalIsOpen, setMicroLearningModalIsOpen] = useState(false);
     const [moduleId, setmoduleId] = useState(0);
+    const [moduleInfo, setModuleInfo] = useState({});
     const [isNew, setIsNew] = useState(true);
-    const { id } = useParams();
-    const defaultData = [
-        {   id: 1, content: '1번' },
-        {   id: 2, content: '2번' },
-        {   id: 3, content: '3번' }
-    ]
-    const [datas, setDatas] = useState(getItem('reviewData') ||  defaultData);
+    const history = useNavigate();
+    
+    const ID = useLocation().pathname.slice(-3,-2);
+    const mID = useLocation().pathname.slice(-1);
 
+    const itemData = "/db/moduleData.json";
+
+    useEffect(() => {
+        (async () => {
+        const response = await fetch(itemData);
+        const json = await response.json();
+        setModuleInfo(json[ID].module[mID-1])
+        })();
+    },[]);
+
+
+    const [datas, setDatas] = useState(getItem('reviewData') || []);
+console.log('getitem',getItem('reviewData'))
 
     useEffect(() => {
         console.log(datas)
-        datas.map((el, index, data) => {
-            if(id == el.id) {
-                setmoduleId(index);
-                setSelectedImgIndex(index)
-                setIsNew(false);
-            }
-        })
-
-       // var content = datas[moduleId].content;
+        if (datas.length > 0) {
+            datas.map((el, index, data) => {
+                if(ID == el.id) {
+                    setmoduleId(index);
+                    setSelectedImgIndex(index)
+                    setIsNew(false);
+                }
+            });
+            var content = datas[moduleId].content;
+            content = content.replace('</p>','');
+            content = content.replace('<p>','');
+        }
     },[])
 
 
-    // content = content.replace('</p>','');
-    // content = content.replace('<p>','');
 
     SwiperCore.use([Pagination, Navigation, Autoplay]);
 
@@ -84,20 +96,21 @@ function ModuleDetail({setSelectedImgIndex, moduleItem}) {
 
     return (
         <>
-                     <div className="detail_container">
+            <div onClick={ () => { history(-1) }}> &dt- 뒤로가기</div>
+            <div className="detail_container">
                 <div className="aboutCompany_detail_summary">
-                    <img src={'/img/img-pop-board-m.png'}></img>
+                    <img src={moduleInfo.card_image}></img>
                     <div className="aboutCompany_detail_text">
                         <div className="aboutCompany_detail_title">
-                            신입사원의 매너
+                            {moduleInfo.mtitle}
                         </div>
                         <div className="aboutCompany_detail_goal">
                             <dt>학습목표</dt>
-                            <dd>이ㅓㄹㅇ마ㅣ러ㅏㅇ시ㅏㄴ어하;ㅁ허</dd>
+                            <dd>{moduleInfo.mgoal}</dd>
                         </div>
                         <div className="aboutCompany_detail_concept">
                             <dt>기본개념</dt>
-                            <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur deleniti alias at iusto! Quod voluptas quos exercitationem dolorem distinctio, velit ut? Pariatur omnis sequi reiciendis a eum suscipit necessitatibus itaque?</dd>
+                            <dd>{moduleInfo.mconcept}</dd>
                         </div>
                     </div>
                 </div>

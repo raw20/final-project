@@ -5,22 +5,18 @@ import AboutMeTable from "./AboutMeTable";
 import AboutMeWrite from "./AboutMeWrite";
 import { useDispatch, useSelector } from "react-redux";
 import { getLike } from "../../../../../app/detailSlice";
-import { searchData } from "../../../../../app/searchTableSlice";
-import { useLocation } from "react-router";
 
 function AboutMe() {
-  const listdata = useSelector((state) => state.item);
+  const [posts, setPosts] = useState([]);
+  const [copyPosts, setCopyPosts] = useState([]);
+  const postData = useSelector((state) => state.item);
   const [writer, setWriter] = useState(false);
   const [aboutMetitle, setAboutMeTitle] = useState("");
-  const [aboutWriter, setAboutWriter] = useState("");
   const [aboutMeContents, setAboutMeContents] = useState("");
   const dispatch = useDispatch();
-  const location = useLocation();
+  console.log("pd", postData.data);
 
   useEffect(() => {
-    if (location.pathname !== "/3/noticeBoard/aboutme") {
-      dispatch(searchData([]));
-    }
     dispatch(getLike());
   }, []);
 
@@ -29,7 +25,8 @@ function AboutMe() {
       {!writer ? (
         <div className="aboutMe_area">
           <AboutMeTable
-            posts={listdata.data}
+            posts={postData.data}
+            setPosts={setPosts}
             writer={writer}
             setWriter={setWriter}
           />
@@ -41,8 +38,6 @@ function AboutMe() {
             setAboutMeTitle={setAboutMeTitle}
             aboutMeContents={aboutMeContents}
             setAboutMeContents={setAboutMeContents}
-            aboutWriter={aboutWriter}
-            setAboutWriter={setAboutWriter}
           />
           <SubmitBtn
             writer={writer}
@@ -51,9 +46,6 @@ function AboutMe() {
             setAboutMeTitle={setAboutMeTitle}
             aboutMeContents={aboutMeContents}
             setAboutMeContents={setAboutMeContents}
-            aboutWriter={aboutWriter}
-            setAboutWriter={setAboutWriter}
-            posts={listdata.data}
           />
         </div>
       )}

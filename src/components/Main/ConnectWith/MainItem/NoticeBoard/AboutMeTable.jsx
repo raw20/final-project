@@ -1,17 +1,18 @@
 import React from "react";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import TablePagenation from "./TablePagenation";
 import AboutMeTableList from "./AboutMeTableList";
 import WriteBtn from "./WriteBtn";
+import { useSelector } from "react-redux";
 
-function AboutMeTable({ posts, writer, setWriter }) {
+function Table({ posts, writer, setWriter, setPosts }) {
   const [content, setContent] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(10);
+  const searchResult = useSelector((state) => state.table.AboutMeData);
+  console.log("search data", searchResult);
   const indexOfLast = currentPage * postsPerPage;
   const indexOfFirst = indexOfLast - postsPerPage;
-  const searchData = useSelector((state) => state.table.AboutMeData);
   function currentPosts(posts) {
     let currentPosts = 0;
     currentPosts = posts.slice(indexOfFirst, indexOfLast);
@@ -19,28 +20,22 @@ function AboutMeTable({ posts, writer, setWriter }) {
   }
   return (
     <>
-      {searchData.length > 0 ? (
-        <AboutMeTableList
-          posts={currentPosts(searchData)}
-          totalPosts={searchData.length}
-          content={content}
-          setContent={setContent}
-        ></AboutMeTableList>
-      ) : (
-        <AboutMeTableList
-          posts={currentPosts(posts)}
-          totalPosts={posts.length}
-          content={content}
-          setContent={setContent}
-        ></AboutMeTableList>
-      )}
-
+      <AboutMeTableList
+        posts={
+          searchResult.length > 0
+            ? currentPosts(searchResult)
+            : currentPosts(posts)
+        }
+        totalPosts={searchResult.length > 0 ? searchResult.lengt : posts.length}
+        content={content}
+        setContent={setContent}
+      ></AboutMeTableList>
       {content ? (
         <>
           <TablePagenation
             postsPerPage={postsPerPage}
             totalPosts={
-              searchData.length > 0 ? searchData.length : posts.length
+              searchResult.length > 0 ? searchResult.length : posts.length
             }
             paginate={setCurrentPage}
           ></TablePagenation>
@@ -51,4 +46,4 @@ function AboutMeTable({ posts, writer, setWriter }) {
   );
 }
 
-export default AboutMeTable;
+export default Table;

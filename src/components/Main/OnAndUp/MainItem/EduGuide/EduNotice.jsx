@@ -4,8 +4,14 @@ import EduNoticePage from "./EduNoticePage";
 import "./css/EduNotice.css";
 import EduNoticeDetail from './EduNoticeDetail';
 import EduNoticeSearch from "./EduNoticeSearch";
+import SmallSelectBox from '../../Main/SmallSelectBox';
 
 function EduNotice() {
+  const options = [
+    { value: '0', label: '공지사항', address: 'eduguide' },
+    { value: '1', label: '시간표', address: 'eduguide' },
+    { value: '2', label: '강사소개', address: 'eduguide' }
+]
   const [content, setContent] = useState(true);
   const [index, setIndex] = useState();
   const [lists, setLists] = useState([]);/* posts,setposts */
@@ -26,6 +32,7 @@ function EduNotice() {
 
   return (
     <div className="edu_notice_wrap">
+      <SmallSelectBox options={options} placeholder={"공지사항"} />
       <div className="edu_notice_area">
         {content ? (
           <>
