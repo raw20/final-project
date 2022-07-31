@@ -22,7 +22,11 @@ function HeaderTab() {
       {item.map((li) => (
         <ul className="HeaderTab-menu">
           <NavLink
-            to={`/chemiverseOnUp/${li.address}`}
+            to={
+              li.id === 3
+                ? `/${li.id}/${li.address}/notice`
+                : `/${li.id}/${li.address}`
+            }
             key={li.id}
             className={"HeaderTab-menu-link"}
             state={{
@@ -37,7 +41,11 @@ function HeaderTab() {
         </ul>
       ))}
       <NavLink to={`/chemiverseOnUp`} className="Go-ChemiverseOnUp">
-        <img className="Chmeiverse-img" src={process.env.PUBLIC_URL + "/img/img-login.png"} />
+        <img
+          className="Chmeiverse-img"
+          src={process.env.PUBLIC_URL + "/img/img-login.png"}
+          alt="케미버스"
+        />
         <span className="Go-ChemiverseOnUp-text">CHMIVERSE ON & UP ▶</span>
       </NavLink>
     </div>
