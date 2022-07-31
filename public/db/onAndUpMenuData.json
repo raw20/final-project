@@ -5,7 +5,8 @@
     "onAndUpSubAddress": ["0"],
     "menu": "교육장 이동",
     "explanation": "컨텐츠 설명글",
-    "dep": ["교육장 이동"]
+    "dep": ["교육장 이동"],
+    "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F31d379fb-5a5c-49a2-9c29-c37d5b6fe30b%2Fabout_0101_02.png?table=block&id=22ffe83a-6055-40e6-934f-466dcba2dc47&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=1140&userId=&cache=v2"
   },
   {
     "id": 1,
@@ -13,7 +14,8 @@
     "onAndUpSubAddress": ["0", "1", "2"],
     "menu": "교육 안내",
     "explanation": "컨텐츠 설명글",
-    "dep": ["공지사항", "시간표", "강사소개"]
+    "dep": ["공지사항", "시간표", "강사소개"],
+    "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd8871225-f64c-4f68-84ce-9e1e740cba82%2F%E1%84%80%E1%85%AD%E1%84%8B%E1%85%B2%E1%86%A8%E1%84%8B%E1%85%A1%E1%86%AB%E1%84%82%E1%85%A2_%E1%84%80%E1%85%AE%E1%84%85%E1%85%B3%E1%86%B7.png?table=block&id=f9a140bc-fa40-461d-bb87-5226c3f18577&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
   {
     "id": 2,
@@ -21,7 +23,8 @@
     "onAndUpSubAddress": ["0", "1"],
     "menu": "진단",
     "explanation": "컨텐츠 설명글",
-    "dep": ["현재상태점검", "진단결과보기"]
+    "dep": ["현재상태점검", "진단결과보기"],
+    "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F1ec0f4e5-6bca-4f67-ae30-4c030e5e788c%2F%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6.png?table=block&id=9431cbe9-b564-4443-8eb6-33db1b2dc85a&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
   {
     "id": 3,
@@ -29,7 +32,8 @@
     "onAndUpSubAddress": ["0", "1", "2", "3"],
     "menu": "역량학습",
     "explanation": "컨텐츠 설명글",
-    "dep": ["회사이해", "워크스킬", "피플스킬", "자기관리"]
+    "dep": ["회사이해", "워크스킬", "피플스킬", "자기관리"],
+    "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0eb7886b-4e08-4084-83b0-17411b679d56%2F%E1%84%8F%E1%85%A1%E1%84%89%E1%85%A6%E1%86%AB%E1%84%90%E1%85%A5.png?table=block&id=60d9ef1b-9d1f-4a77-a761-346cf3957421&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
   {
     "id": 4,
@@ -37,7 +41,8 @@
     "onAndUpSubAddress": ["0", "1", "2", "3"],
     "menu": "Chemi Story",
     "explanation": "컨텐츠 설명글",
-    "dep": ["Chemi Stroy란?", "작성하기", "성찰저널", "자기개발목표"]
+    "dep": ["Chemi Stroy란?", "작성하기", "성찰저널", "자기계발목표"],
+    "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa24292b2-7499-4b47-a7bf-b5aa9d639be1%2F%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%83%E1%85%A1%E1%86%AB.png?table=block&id=45cdd1ef-030e-4fc2-8c30-f002011f029a&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
   {
     "id": 5,
@@ -45,7 +50,8 @@
     "onAndUpSubAddress": ["0", "1", "2"],
     "menu": "멘토링",
     "explanation": "컨텐츠 설명글",
-    "dep": ["멘토링이란?", "계획서작성", "활동내용"]
+    "dep": ["멘토링이란?", "계획서작성", "활동내용"],
+    "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8be7244c-1707-40d6-b9ad-598f7bcd1168%2F%E1%84%86%E1%85%A6%E1%86%AB%E1%84%90%E1%85%A9%E1%84%85%E1%85%B5%E1%86%BC.png?table=block&id=86aec234-3a5d-44e9-93f1-29ade8fe0d35&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
   {
     "id": 6,
@@ -53,6 +59,7 @@
     "onAndUpSubAddress": ["0", "1"],
     "menu": "게시판",
     "explanation": "컨텐츠 설명글",
-    "dep": ["자유게시판", "아이디어 제시"]
+    "dep": ["자유게시판", "아이디어 제시"],
+    "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F20346dd4-eaa8-4319-b8f9-bc09152741d0%2F%E1%84%80%E1%85%A6%E1%84%89%E1%85%B5%E1%84%91%E1%85%A1%E1%86%AB.png?table=block&id=0a834483-1478-4779-8449-67389c35e003&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   }
 ]

@@ -6,6 +6,19 @@
     height: 148px;
     margin-top: 130px;
     text-align: center;
+
+    .error-button {
+      width: 417px;
+      height: 75px;
+      border: 0;
+      outline: none;
+      border-radius: 5px;
+      background-color: #6f76c14e;
+      color: white;
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-top: 90px;
+    }
   }
 
   .login-title {
@@ -71,11 +84,10 @@
     font-size: 20px;
     letter-spacing: 2px;
     margin-top: 90px;
-
-    &:disabled {
-      background-color: rgba(0, 149, 246, 0.3);
-    }
   }
+
+
+
 
   #searchBtn {
     color: #6F76C1;
@@ -93,6 +105,20 @@
     height: 400px;
     margin-top: 223px;
     text-align: center;
+
+    .error-button {
+      width: 417px;
+      height: 75px;
+      border: 0;
+      outline: none;
+      border-radius: 5px;
+      background-color: #6f76c14e;
+      ;
+      color: white;
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-top: 90px;
+    }
   }
 
   .login-title {
@@ -159,9 +185,6 @@
     letter-spacing: 2px;
     margin-top: 90px;
 
-    &:disabled {
-      background-color: rgba(0, 149, 246, 0.3);
-    }
   }
 
   #searchBtn {
@@ -180,6 +203,19 @@
     height: 148px;
     margin-top: 130px;
     text-align: center;
+
+    .error-button {
+      width: 417px;
+      height: 75px;
+      border: 0;
+      outline: none;
+      border-radius: 5px;
+      background-color: #a9add8;
+      color: white;
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-top: 90px;
+    }
   }
 
   .login-title {
@@ -245,10 +281,6 @@
     font-size: 20px;
     letter-spacing: 2px;
     margin-top: 90px;
-
-    &:disabled {
-      background-color: rgba(0, 149, 246, 0.3);
-    }
   }
 
   #searchBtn {
