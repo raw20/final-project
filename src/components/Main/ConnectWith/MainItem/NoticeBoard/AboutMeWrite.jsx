@@ -22,8 +22,8 @@ function AboutMeWrite({
       <table className="writer-table">
         <tbody>
           <tr className="writer-title-row">
-            <td>제목</td>
-            <td><input
+            <td className="writer-titl">제목</td>
+            <td className="writer-titl-inputbox"><input
               type="text"
               id="writer-title-input"
               placeholder={aboutMetitle ? titleValue : null}
@@ -32,8 +32,8 @@ function AboutMeWrite({
             /></td>
           </tr>
           <tr className="writer-name-row">
-            <td>이름</td>
-            <td>
+            <td className="writer-name">이름</td>
+            <td className="writer-name-inputbox">
               <input
                 type="text"
                 id="writer-title-input"
@@ -43,8 +43,8 @@ function AboutMeWrite({
               /></td>
           </tr>
           <tr className="writer-content-row">
-            <td>내용</td>
-            <td>
+            <td className="writer-content">내용</td>
+            <td className="writer-content-inputbox">
               <CKEditor
                 editor={ClassicEditor}
                 config={{
