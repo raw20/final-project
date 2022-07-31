@@ -10,7 +10,6 @@ function Table({ posts, writer, setWriter }) {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 10;
   const searchResult = useSelector((state) => state.table.AboutMeData);
-  console.log("search data", searchResult);
   const indexOfLast = currentPage * postsPerPage;
   const indexOfFirst = indexOfLast - postsPerPage;
   function currentPosts(posts) {

@@ -10,6 +10,7 @@ function AboutMe() {
   const postData = useSelector((state) => state.item);
   const [writer, setWriter] = useState(false);
   const [aboutMetitle, setAboutMeTitle] = useState("");
+  const [aboutMeName, setAboutMeName] = useState("");
   const [aboutMeContents, setAboutMeContents] = useState("");
   const dispatch = useDispatch();
 
@@ -32,6 +33,8 @@ function AboutMe() {
           <AboutMeWrite
             aboutMetitle={aboutMetitle}
             setAboutMeTitle={setAboutMeTitle}
+            aboutMeName={aboutMeName}
+            setAboutMeName={setAboutMeName}
             aboutMeContents={aboutMeContents}
             setAboutMeContents={setAboutMeContents}
           />
@@ -39,8 +42,10 @@ function AboutMe() {
             writer={writer}
             setWriter={setWriter}
             aboutMetitle={aboutMetitle}
-            setAboutMeTitle={setAboutMeTitle}
+            aboutMeName={aboutMeName}
             aboutMeContents={aboutMeContents}
+            setAboutMeTitle={setAboutMeTitle}
+            setAboutMeName={setAboutMeName}
             setAboutMeContents={setAboutMeContents}
           />
         </div>
