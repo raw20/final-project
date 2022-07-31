@@ -62,15 +62,11 @@
 }
 
 .selfTestContainer_sidebar {
-  height: 400px;
   display: flex;
   flex-direction: column;
   padding-top: 30px;
   position: absolute;
   left: -80px;
-}
-.selfTestContainer_sidebar a {
-  z-index: 1;
 }
 .selfTestContainer_sidebar a:first-child {
   margin-bottom: 15px;
@@ -88,26 +84,35 @@
 }
 .selfTestContainer_sidebar .active button {
   background-color: rgb(111, 118, 193);
-  width: 110px;
+  width: 100px;
   color: #fff;
-  z-index: 5;
+}
+.selfTestContainer_sidebar .active {
+  position: relative;
+  z-index: 6;
 }
 
 .selfTestContainer_box {
   display: flex;
   padding: 30px 0;
+  width: 100%;
+}
+.selfTestContainer_box .selfTestContainer_box_inner {
+  width: 100%;
+  box-sizing: border-box;
   position: relative;
 }
 
 .selfTestContainer_content {
-  width: calc(100% - 100px);
-  height: 400px;
+  width: 100%;
   background-color: #fff;
-  z-index: 3;
 }
 
 .nowContainer {
-  width: 100%;
+  width: 85%;
+  margin: 0 auto;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 .beforeTest_btnArea {
@@ -136,11 +141,11 @@
 }
 
 .beforeTest_desc_inner_title {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
   text-align: center;
-  padding: 30px 0 30px;
-  color: #888;
+  padding: 40px 0 50px;
+  color: rgb(111, 118, 193);
 }
 
 .beforeTest_desc_inner_txt {
@@ -163,6 +168,9 @@
   box-sizing: border-box;
   box-shadow: 1px 1px 5px 3px #ddd;
   border-radius: 10px;
+  background-color: #fff;
+  z-index: 2;
+  position: relative;
 }
 
 .beforeTest_question {
@@ -227,6 +235,12 @@
   box-shadow: 1px 1px 5px 3px #ddd;
   background-color: #f9fafc;
   border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 30px 20px 20px;
+  position: relative;
+  box-sizing: border-box;
 }
 .beforeResult_abilityResult .beforeResult_abilityResult_box {
   width: 23.089%;
@@ -256,12 +270,11 @@
 
 .beforeResult_analysisBox {
   width: 100%;
-  height: 270px;
 }
 .beforeResult_analysisBox .beforeResult_analysisBox_title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
-  padding-top: 20px;
+  padding: 50px 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -271,7 +284,6 @@
   width: 100%;
 }
 .beforeResult_analysisBox ul li {
-  max-width: 1000px;
   height: 30px;
   margin: 30px auto;
   padding: 30px 50px 30px 55px;
@@ -280,6 +292,8 @@
   box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
   font-size: 14px;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .beforeResult_analysisBox ul li .beforeResult_analysisBox_col {
   width: 10px;
@@ -289,6 +303,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  bottom: 0;
   background-color: rgb(111, 118, 193);
 }
 
@@ -339,21 +354,41 @@
   color: #888;
 }
 
-.afterResult_box {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-}
-
 .afterResult_beforeBox {
   width: 40%;
   height: 100%;
   box-shadow: 1px 1px 5px 3px #ddd;
 }
 
+.afterTest_inner, .afterResult_box {
+  border-radius: 10px;
+  height: 550px;
+  background-color: #fff;
+  z-index: 2;
+  position: relative;
+  padding: 30px;
+  box-shadow: 1px 1px 5px 3px #ddd;
+}
+.afterTest_inner .afterTest_inner_title, .afterTest_inner .afterResult_box_title, .afterResult_box .afterTest_inner_title, .afterResult_box .afterResult_box_title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  padding: 40px 0 15px;
+  color: rgb(111, 118, 193);
+}
+
+.beforeResult_abilityResult_box_chart {
+  height: 220px;
+}
+
 @media (min-width: 335px) and (max-width: 757px) {
+  .item-form .item-inner .item-box {
+    padding: 0;
+    height: auto !important;
+  }
+  .nowContainer {
+    width: 100%;
+  }
   .beforeTest_content {
     padding: 15px;
   }
@@ -370,19 +405,67 @@
     width: 100%;
     height: 246px;
   }
+  .beforeResult_abilityResult {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .beforeResult_abilityResult .beforeResult_abilityResult_box {
+    width: 90%;
+  }
+  .selfTestContainer_sidebar {
+    position: static;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+  .selfTestContainer_sidebar a {
+    width: 50%;
+  }
+  .selfTestContainer_sidebar .active button, .selfTestContainer_sidebar button {
+    width: 95%;
+    text-align: center;
+  }
+  .beforeTest_bottom {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .beforeTest_bottom .beforeTest_notice_answer {
+    padding-bottom: 20px;
+  }
+  .beforeTest_bottom .beforeTest_button {
+    width: 100%;
+  }
+  .beforeTest_bottom button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .beforeResult_analysisBox ul li {
+    height: 100%;
+    padding: 20px 30px 20px 55px;
+  }
 }
 @media (min-width: 758px) and (max-width: 1023px) {
+  .item-form .item-inner .item-contents {
+    margin-bottom: 30px !important;
+  }
+  .item-form .item-inner .tab-btn-area {
+    margin: 50px auto 30px;
+    flex-direction: row;
+  }
   .module_card {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
   .module_box {
-    justify-content: space-around;
-    width: 600px;
+    width: 100%;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
   }
   .module_box a {
+    width: 48%;
     margin-bottom: 25px;
   }
   .module_box a:nth-child(2n) {
@@ -391,5 +474,27 @@
   .module_cardImg {
     width: 100%;
     height: 246px;
+  }
+  .beforeResult_abilityResult {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .beforeResult_abilityResult .beforeResult_abilityResult_box {
+    width: 45%;
+  }
+  .beforeTest_bottom .beforeTest_button .beforeTest_button_left, .beforeTest_bottom .beforeTest_button .beforeTest_button_right {
+    padding: 5px 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .beforeResult_abilityResult {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .beforeResult_abilityResult .beforeResult_abilityResult_box {
+    width: 23.089%;
+    height: 260px;
   }
 }/*# sourceMappingURL=selfTest.css.map */
