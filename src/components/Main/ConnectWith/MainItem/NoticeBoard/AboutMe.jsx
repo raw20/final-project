@@ -8,12 +8,13 @@ import { getLike } from "../../../../../app/detailSlice";
 
 function AboutMe() {
   const postData = useSelector((state) => state.item);
+
+  console.log(postData.data);
   const [writer, setWriter] = useState(false);
   const [aboutMetitle, setAboutMeTitle] = useState("");
   const [aboutMeName, setAboutMeName] = useState("");
   const [aboutMeContents, setAboutMeContents] = useState("");
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(getLike());
   }, []);
