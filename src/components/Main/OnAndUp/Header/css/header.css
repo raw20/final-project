@@ -11,7 +11,7 @@
     z-index: 10000;
   }
   #header .logo {
-    width: 30%;
+    width: 34%;
     height: 70px;
     background: url(/public/img/logo.png) no-repeat left;
     font-size: 0px;
@@ -102,7 +102,6 @@
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
     background-color: #6f76c1;
-    display: flex;
     align-items: baseline;
     padding: 0 80px;
     height: 100vh;
@@ -111,36 +110,39 @@
   }
   .btn-menu-wrap .btn-menu {
     text-align: center;
-    margin: 300px auto;
+    margin-top: 300px;
     font-size: 30px;
     line-height: 30px;
     color: #fff;
     text-decoration: none;
   }
-  .btn-menu-wrap .btn-menu .btn-menu-depth1 {
-    width: 100px;
-    font-size: 25px;
+  .btn-menu-wrap .btn-menu .btn-menu-item {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .btn-menu-wrap .btn-menu .btn-menu-item .btn-menu-depth1 {
+    font-size: 18px;
     line-height: 30px;
   }
-  .btn-menu-wrap .btn-menu .btn-menu-depth1::after {
+  .btn-menu-wrap .btn-menu .btn-menu-item .btn-menu-depth1 .btn-menu-box {
+    font-size: 23px;
+    text-decoration: none;
+  }
+  .btn-menu-wrap .btn-menu .btn-menu-item .btn-menu-depth1 .btn-menu-box::after {
     display: block;
     content: "";
     width: 140px;
     border-bottom: 1.5px solid #fff;
     padding-bottom: 10px;
   }
-  .btn-menu-wrap .btn-menu .btn-menu-box {
+  .btn-menu-wrap .btn-menu .btn-menu-item .btn-menu-depth1 .btn-menu-depth2 {
+    margin: 10px;
+  }
+  .btn-menu-wrap .btn-menu .btn-menu-item .btn-menu-depth1 .btn-menu-depth2 .btn-menu-depth2-text:hover {
+    color: #f9c153;
+  }
+  .btn-menu-wrap .btn-menu .btn-menu-item .btn-menu-depth1 .btn-menu-depth2 .btn-menu-depth2-text .btn-menu-depth2-item {
     text-decoration: none;
-  }
-  .btn-menu-wrap .btn-menu .btn-menu-box .btn-menu-depth2 {
-    margin-top: 10px;
-    font-size: 16px;
-  }
-  .btn-menu-wrap .btn-menu .btn-menu-box .btn-menu-depth2:hover {
-    color: #f9c153;
-  }
-  .btn-menu-wrap .btn-menu .btn-menu-box .btn-menu-depth2:hover .btn-menu-depth1 {
-    color: #f9c153;
   }
   .img-balloon {
     background: url(/./public/img/bg-gnb.png) no-repeat center/cover;
@@ -152,15 +154,14 @@
     bottom: 100px;
     right: 50px;
   }
-  .bottom-logo {
-    background: url(/./public/img/logo.png) no-repeat center/contain;
-    width: 120px;
+  .homepage {
     height: 30px;
-    text-indent: -9999px;
-    font-size: 0;
+    font-size: 20px;
     position: absolute;
     bottom: 50px;
-    left: 50px;
+    left: 80px;
+    color: #fff;
+    text-decoration: none;
   }
   .goback {
     position: absolute;
@@ -199,7 +200,7 @@
     z-index: 10000;
   }
   #header .logo {
-    width: 30%;
+    width: 34%;
     height: 70px;
     background: url(/public/img/logo.png) no-repeat left;
     font-size: 0px;
@@ -309,7 +310,7 @@
     z-index: 10000;
   }
   #header .logo {
-    width: 30%;
+    width: 34%;
     height: 70px;
     background: url(/public/img/logo.png) no-repeat left;
     font-size: 0px;

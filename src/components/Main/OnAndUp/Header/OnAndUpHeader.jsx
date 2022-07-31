@@ -44,9 +44,13 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
                   dep: item.dep,
                   address: item.address,
                 }}
+<<<<<<< Updated upstream
                 className={({ isActive }) =>
                   isActive ? "item-menu on" : "item-menu"
                 }
+=======
+                className={"item-menu"}
+>>>>>>> Stashed changes
               >
                 <span>{item.menu}</span>
               </NavLink>
@@ -61,9 +65,13 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
                         dep: item.dep,
                         address: item.onAndUpItemAddress,
                       }}
+<<<<<<< Updated upstream
                       className={({ isActive }) =>
                         isActive ? "item-menu on" : "item-menu"
                       }
+=======
+                      className={({ isActive }) => (isActive ? "item-menu on" : "item-menu")}
+>>>>>>> Stashed changes
                     >
                       {ele}
                     </NavLink>
@@ -77,7 +85,11 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
       <div className="side-item">
         <ul className="util">
           <li id="mypage">
+<<<<<<< Updated upstream
             <NavLink to={`/chemiverseOnUp/profile`}>
+=======
+            <NavLink to={`/chemiverseOnUp/mypage`}>
+>>>>>>> Stashed changes
               <BiUser />
             </NavLink>
           </li>

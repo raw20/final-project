@@ -1,50 +1,67 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { AiFillCloseSquare } from 'react-icons/ai';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { AiFillCloseSquare } from "react-icons/ai";
 
 function TabBtnMenu() {
-	const [item, setItem] = useState([]);
-	const itemData = '/db/onAndUpMenuData.json';
-	useEffect(() => {
-		(async () => {
-			const response = await fetch(itemData);
-			const json = await response.json();
-			setItem(json);
-		})();
-	}, []);
-
-	return (
-		<div className="btn-menu-wrap">
-			{item.map(li => (
-				<div className="btn-menu">
-					<span className="btn-menu-depth1">{li.menu}</span>
-					<ul>
-						<NavLink
-							to={`/chemiverseOnUp/item/${li.address}`}
-							key={li.id}
-							className={({ isActive }) => (isActive ? 'btn-menu-box on' : 'btn-menu-box')}
-							state={{
-								id: li.id,
-								menu: li.menu,
-								dep: li.dep,
-								address: li.address,
-							}}
-						>
-							{li.dep.map(ele => (
-								<li className="btn-menu-depth2">{ele}</li>
-							))}
-						</NavLink>
-					</ul>
-				</div>
-			))}
-			<NavLink to={-1} className="goback">
-				<AiFillCloseSquare />
-			</NavLink>
-			<span className="img-balloon">열기구</span>
-			<span className="bottom-logo">로고</span>
-		</div>
-	);
+  const [item, setItem] = useState([]);
+  const itemData = "/db/onAndUpMenuData.json";
+  useEffect(() => {
+    (async () => {
+      const response = await fetch(itemData);
+      const json = await response.json();
+      setItem(json);
+    })();
+  }, []);
+  return (
+    <div className="btn-menu-wrap">
+      <div className="btn-menu">
+        <ul className="btn-menu-item">
+          {item.map((item, index) => (
+            <li className="btn-menu-depth1" key={index}>
+              <NavLink
+                to={`/chemiverseOnUp/${item.id}/${item.onAndUpItemAddress}/0`}
+                state={{
+                  id: item.id,
+                  menu: item.menu,
+                  dep: item.dep,
+                  address: item.address,
+                }}
+                className={"btn-menu-box"}
+              >
+                {item.menu}
+              </NavLink>
+              <ul className="btn-menu-depth2">
+                {item.dep.map((ele, index) => (
+                  <li key={index} className="btn-menu-depth2-text">
+                    <NavLink
+                      to={`/chemiverseOnUp/${item.id}/${item.onAndUpItemAddress}/${index}`}
+                      state={{
+                        id: item.id,
+                        menu: item.menu,
+                        dep: item.dep,
+                        address: item.onAndUpItemAddress,
+                      }}
+                      className={"btn-menu-depth2-item"}
+                    >
+                      {ele}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <NavLink to={-1} className="goback">
+        <AiFillCloseSquare />
+      </NavLink>
+      <NavLink to={`/`} className="homepage">
+        Chemiverse Connect With ▶
+      </NavLink>
+      <span className="img-balloon">열기구</span>
+    </div>
+  );
 }
 
 export default TabBtnMenu;
