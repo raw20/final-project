@@ -19,7 +19,7 @@ $lightColor: #e6e0ec;
       box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
       position: relative;
       animation: fadein 1s;
-      .title-area{
+      .title-area {
         width: 100%;
         height: 330px;
         padding: 20px 0 0 30px;
@@ -82,7 +82,7 @@ $lightColor: #e6e0ec;
   }
 }
 @include tablet {
-  html{
+  html {
     font-size: 14px;
   }
   .connectwith-item-form {
@@ -99,7 +99,7 @@ $lightColor: #e6e0ec;
       box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
       position: relative;
       animation: fadein 1s;
-      .title-area{
+      .title-area {
         width: 100%;
         height: 200px;
         margin: 20px 0 0 30px;
@@ -162,7 +162,7 @@ $lightColor: #e6e0ec;
 }
 
 @include mobile {
-  html{
+  html {
     font-size: 12px;
   }
   .connectwith-item-form {
@@ -179,7 +179,7 @@ $lightColor: #e6e0ec;
       box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
       position: relative;
       animation: fadein 1s;
-      .title-area{
+      .title-area {
         .connectwith-item-img {
           width: 100%;
           height: auto;
@@ -221,7 +221,7 @@ $lightColor: #e6e0ec;
             font-size: 1.5rem;
             font-weight: 600;
             color: rgba(111, 118, 193, 1);
-            margin: 3rem 0 1rem ;
+            margin: 3rem 0 1rem;
             .connectwith-item-eng-title {
               margin-left: 1rem;
               font-size: 1rem;
