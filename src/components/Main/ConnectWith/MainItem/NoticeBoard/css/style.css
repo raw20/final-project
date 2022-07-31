@@ -1,23 +1,21 @@
 .table_pagination {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
-  width: 300px;
+  width: 20vw;
+  padding-top: 25px;
   margin: auto;
 }
-.table_pagination .page_item {
-  margin-top: 25px;
-}
-.table_pagination .page_item .page_link {
+.table_pagination .page_link {
   color: #ccc;
   font-size: 18px;
   font-weight: 800;
 }
-.table_pagination .page_item .page_link:hover {
+.table_pagination .page_link:hover {
   cursor: pointer;
   color: #6f76c1;
 }
-.table_pagination .page_item .page_link:focus {
+.table_pagination .page_link.active {
   color: #6f76c1;
 }
 
@@ -31,9 +29,14 @@
   box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.1);
   border-radius: 5px;
   cursor: pointer;
-  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 1.5rem;
   margin-left: 1.5rem;
+  position: absolute;
+  bottom: 2%;
+  right: 10%;
 }
 
 .notice-btn.temporary,
