@@ -20,7 +20,7 @@ function ConnectWith() {
 
   return (
     <>
-      <div className="main">
+      <div className="connect-main">
         <ul className="connect">
           {data.map((cnData) => (
             <ConnectItem key={cnData.id} data={cnData} />

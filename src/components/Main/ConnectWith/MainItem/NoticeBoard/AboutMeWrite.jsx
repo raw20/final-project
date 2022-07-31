@@ -19,43 +19,62 @@ function AboutMeWrite({
 
   return (
     <div className="writer-wrap">
+      <table className="writer-table">
+        <tbody>
+          <tr className="writer-title-row">
+            <td>제목</td>
+            <td><input
+              type="text"
+              id="writer-title-input"
+              placeholder={aboutMetitle ? titleValue : null}
+              value={aboutMetitle}
+              onChange={(e) => setAboutMeTitle(e.target.value)}
+            /></td>
+          </tr>
+          <tr className="writer-name-row">
+            <td>이름</td>
+            <td>
+              <input
+                type="text"
+                id="writer-title-input"
+                placeholder={aboutMeName ? nameValue : null}
+                value={aboutMeName}
+                onChange={(e) => setAboutMeName(e.target.value)}
+              /></td>
+          </tr>
+          <tr className="writer-content-row">
+            <td>내용</td>
+            <td>
+              <CKEditor
+                editor={ClassicEditor}
+                config={{
+                  placeholder: "내용을 입력해주세요",
+                }}
+                data={aboutMeContents}
+                onReady={(editor) => {
+                  // You can store the "editor" and use when it is needed.
+                  console.log("Editor is ready to use!", editor);
+                }}
+                onChange={(event, editor) => {
+                  const data = editor.getData();
+                  setAboutMeContents(data);
+                  console.log({ event, editor, data });
+                }}
+                onBlur={(event, editor) => {
+                  console.log("Blur.", editor);
+                }}
+                onFocus={(event, editor) => {
+                  console.log("Focus.", editor);
+                }}
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <h1 className="writer-title">글쓰기</h1>
-      <input
-        type="text"
-        id="writer-title-input"
-        placeholder={aboutMetitle ? titleValue : "제목을 입력해주세요."}
-        value={aboutMetitle}
-        onChange={(e) => setAboutMeTitle(e.target.value)}
-      />
-      <input
-        type="text"
-        id="writer-title-input"
-        placeholder={aboutMeName ? nameValue : "이름을 입력해주세요."}
-        value={aboutMeName}
-        onChange={(e) => setAboutMeName(e.target.value)}
-      />
-      <CKEditor
-        editor={ClassicEditor}
-        config={{
-          placeholder: "내용을 입력해주세요",
-        }}
-        data={aboutMeContents}
-        onReady={(editor) => {
-          // You can store the "editor" and use when it is needed.
-          console.log("Editor is ready to use!", editor);
-        }}
-        onChange={(event, editor) => {
-          const data = editor.getData();
-          setAboutMeContents(data);
-          console.log({ event, editor, data });
-        }}
-        onBlur={(event, editor) => {
-          console.log("Blur.", editor);
-        }}
-        onFocus={(event, editor) => {
-          console.log("Focus.", editor);
-        }}
-      />
+
+      
+      
     </div>
   );
 }

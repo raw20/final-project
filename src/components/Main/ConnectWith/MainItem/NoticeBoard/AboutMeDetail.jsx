@@ -31,29 +31,30 @@ function AboutMeDetail({ posts, setContent, id }) {
   return (
     <div className="aboutMe-wrap">
       <div className="aboutMe-header">
-        <div className="aboutMe-category">{posts.category}</div>
-        <h1 className="aboutMe-title"> {posts.title}</h1>
-      </div>
-
-      <div className="aboutMe-main">
+        <div className="aboutMe-title-area">
+          <h1 className="aboutMe-title"> {posts.title}</h1>
+        </div>
         <div className="aboutMe-sub">
           <p className="aboutMe-date">작성일 : {posts.date}</p>
-          <p className="aboutMe-views">조회수 : {posts.views}</p>
-          <p className="aboutMe-like">좋아요 : {posts.like}</p>
+          <div className="aboutMe-sub-sub">
+            <p className="aboutMe-views">조회수 : {posts.views}</p>
+            <p className="aboutMe-like">좋아요 : {posts.like}</p>
+          </div>
         </div>
+      </div>
+      <div className="aboutMe-main">
         <div className="aboutMe-img">
           <img src={posts.content_img} alt={posts.id} />
           <div className="aboutMe-text">{posts.content_text}</div>
+          <button className="tab-like" onClick={handlerLikeFnc}>
+          좋아요
+          <MdFavorite className="heart" style={favListColor[likes]} />
+        </button>
         </div>
       </div>
       <div className="aboutMe-footer">
-        <div className="aboutMe-file">첨부파일 {posts.file}</div>
-        <button className="notice-btn" onClick={() => setContent(true)}>
+        <button className="aboutMe-list-btn" onClick={() => setContent(true)}>
           목록보기
-        </button>
-        <button className="notice-btn tab-like" onClick={handlerLikeFnc}>
-          좋아요
-          <MdFavorite className="heart" style={favListColor[likes]} />
         </button>
       </div>
     </div>
