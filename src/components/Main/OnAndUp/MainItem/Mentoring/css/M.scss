@@ -27,13 +27,14 @@
           font-size: 15px;
           position: relative;
           .col-box{
-            width: 10px;
+            width: 30px;
            height: auto;
              border-radius: 15px 0 0 15px;
-           padding: 40px 10px;
+          
            position: absolute;
            left: 0;
            top:0;
+           bottom: 0;
             background-color: rgba(111, 118, 193, 1);
           }
           .light{
@@ -282,13 +283,14 @@
             font-size: 15px;
             position: relative;
             .col-box{
-              width: 10px;
-             height: 13px;
+              width: 30px;
+            
                border-radius: 15px 0 0 15px;
-             padding: 40px 10px;
+             
              position: absolute;
              left: 0;
              top:0;
+             bottom: 0;
               background-color: rgba(111, 118, 193, 1);
             }
             .light{
@@ -538,12 +540,13 @@
             position: relative;
             .col-box{
               width: 10px;
-             height: 45px;
+             
                border-radius: 15px 0 0 15px;
              padding: 40px 10px;
              position: absolute;
              left: 0;
              top:0;
+             bottom: 0;
               background-color: rgba(111, 118, 193, 1);
             }
             .light{

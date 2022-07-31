@@ -36,6 +36,9 @@ const ChemiWItem2 = ({
       toggleIsEdit();
     }
   };
+  const printBtn = () =>{
+    window.print()
+  }
 
   return (
     <div className="DiaryItem">
@@ -58,6 +61,9 @@ const ChemiWItem2 = ({
         ) : (
           content
         )}
+      </div>
+      <div className="chemi-btn">
+        <button onClick={printBtn}>인쇄하기</button>
       </div>
       {isEdit ? (
         <div className="chemi-btn">

@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 import './css/chemi.css'
-
+import SmallSelectBox from '../../Main/SmallSelectBox';
 
 function Chemi1() {
-
+  const options = [
+    { value: '0', label: 'Chemistory란?', address: 'chemistory' },
+    { value: '1', label: '작성하기', address: 'chemistory' },
+    { value: '2', label: '성찰저널', address: 'chemistory' },
+    { value: '3', label: '자기개발목표', address: 'chemistory' }
+]
   return (
     <div className="chemi-wrap1">
+      <SmallSelectBox options={options} placeholder={"Chemistory란?"} />
+
       <main>
         <div className="title">
           <h2>Chemi Story란?</h2>

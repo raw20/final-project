@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
+
 import './css/M.css'
+
 const MItem1 = ({
   onRemove,
   onEdit,
@@ -37,7 +39,15 @@ const MItem1 = ({
     }
   };
 
+
+
+  const printBtn = () =>{
+  window.print();
+  }
+
+
   return (
+    
     <div className="DiaryItem">
       <div className="info">
         <span className="author_info">
@@ -59,6 +69,12 @@ const MItem1 = ({
           content
         )}
       </div>
+      <div className="mento-btn">
+          <button onClick={printBtn}>인쇄하기</button>
+      </div> 
+   
+      
+        
       {isEdit ? (
         <div className="mento-btn">
           <button onClick={handleQuitEdit}>수정 취소</button>
@@ -71,6 +87,7 @@ const MItem1 = ({
         </div>
       )}
     </div>
+ 
   );
 };
 export default MItem1;

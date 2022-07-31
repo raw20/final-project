@@ -3,7 +3,14 @@ import './css/M.css'
 import { useRef, useState } from "react";
 import MEditor from "./MEditor";
 import MList from './MList';
+import SmallSelectBox from '../../Main/SmallSelectBox';
 function M2(props) {
+  const options = [
+    { value: '0', label: '멘토링이란?', address: 'mentoring' },
+    { value: '1', label: '계획서작성', address: 'mentoring' },
+    { value: '2', label: '활동내용', address: 'mentoring' },
+
+]
   const [data, setData] = useState([]);
 
   const dataId = useRef(0);
@@ -36,6 +43,7 @@ function M2(props) {
 
   return (
      <div>
+       <SmallSelectBox options={options} placeholder={"계획서작성"} />
         <MEditor onCreate={onCreate} />
         <MList onEdit={onEdit} onRemove={onRemove} diaryList={data} />
       </div>

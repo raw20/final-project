@@ -23,7 +23,7 @@
           max-width: 1200px;
           height: auto;
           margin: 30px auto;
-          padding: 30px 30px;
+          
           border-radius: 20px;
           background: #ffffff;
           box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
@@ -31,12 +31,13 @@
           position: relative;
           .col-box{
             width: 10px;
-           height: auto;
+          
              border-radius: 15px 0 0 15px;
            padding: 40px 10px;
            position: absolute;
            left: 0;
            top:0;
+           bottom: 0;
             background-color: rgba(111, 118, 193, 1);
           }
           .light{
@@ -146,12 +147,13 @@
         }
         .col-box{
             width: 10px;
-           height: auto;
+          
              border-radius: 15px 0 0 15px;
            padding: 46px 10px;
            position: absolute;
            left: 0;
            top:0;
+           bottom: 0;
             background-color: rgba(111, 118, 193, 1);
           }
           .light{
@@ -362,11 +364,11 @@ p{
         align-items: center;
               tr{
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         text-align: center;
         margin: 10px;
-        width: 100%;
+        width: 90%;
         td{
           padding-right: 10px;
         }
@@ -381,7 +383,7 @@ p{
    
       height: 30px;
       padding: 10px;
-      width: 600px;
+      width: 500px;
       border: 1px solid #999;
     }
     .chemi-name{
@@ -562,12 +564,13 @@ p{
                 position: relative;          
                 .col-box{
                   width: 10px;
-                 height: 85px;
+                
                    border-radius: 15px 0 0 15px;
                  padding: 40px 10px;
                  position: absolute;
                  left: 0;
                  top:0;
+                 bottom: 0;
                   background-color: rgba(111, 118, 193, 1);
                 }
                 .light{
@@ -659,9 +662,9 @@ p{
  
   table{
     max-width: 500px;
-    height: auto;
+    height: 100%;
     margin: 30px auto;
-    padding: 50px 30px 0;
+    padding: 50px 15px 0;
     border-radius: 20px;
     background: #fff;
     box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
@@ -697,23 +700,26 @@ color: #fff;
     }
   }
   .chemi-table-inner{
-    max-width: 500px;
-    padding: 10px;
+    
+    padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 80%;
+    box-sizing: border-box;
           tr{
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin: 10px;
+    margin: 10px 0;
     width: 100%;
     box-sizing: border-box;
     &:first-of-type td:first-of-type{
-      width: 30px;
+   
     }
+    td{margin-right: 5px;}
   }
   }
 
@@ -724,7 +730,7 @@ color: #fff;
 input{
 
   height: 15px;
-  padding: 10px;
+  padding: 10px 0;
 
   border: 1px solid #999;
 }
@@ -911,12 +917,13 @@ text-align: center;
         }
         .col-box{
             width: 10px;
-           height: 29px;
+          
              border-radius: 15px 0 0 15px;
            padding: 46px 10px;
            position: absolute;
            left: 0;
            top:0;
+           bottom: 0;
             background-color: rgba(111, 118, 193, 1);
           }
           .light{
@@ -1097,12 +1104,13 @@ text-align: center;
             position: relative;          
             .col-box{
               width: 10px;
-             height: 52px;
+             
                border-radius: 15px 0 0 15px;
              padding: 40px 10px;
              position: absolute;
              left: 0;
              top:0;
+             bottom: 0;
               background-color: rgba(111, 118, 193, 1);
             }
             .light{
@@ -1232,21 +1240,21 @@ text-align: center;
     }
     .chemi-table-inner{
       max-width: 700px;
-      padding: 10px;
+      padding: 10px 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      width: 80%;
             tr{
       display: flex;
       justify-content: space-between;
       align-items: center;
       text-align: center;
       margin: 10px;
-      width: 100%;
+      width: 80%;
       &:first-of-type td:first-of-type{
-        margin-left: 13px;
-        padding-right: 20px;
+ 
       }
     }
     }
@@ -1258,7 +1266,7 @@ text-align: center;
   input{
   
     height: 15px;
-    padding: 10px;
+    padding: 10px 0;
   width: 300px;
     border: 1px solid #999;
   }
@@ -1442,12 +1450,13 @@ text-align: center;
           }
           .col-box{
               width: 10px;
-             height: 29px;
+            
                border-radius: 15px 0 0 15px;
              padding: 46px 10px;
              position: absolute;
              left: 0;
              top:0;
+             bottom: 0;
               background-color: rgba(111, 118, 193, 1);
             }
             .light{

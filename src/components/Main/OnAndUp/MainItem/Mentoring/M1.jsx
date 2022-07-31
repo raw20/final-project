@@ -1,8 +1,17 @@
 import React from "react";
 import './css/M.css'
+import SmallSelectBox from '../../Main/SmallSelectBox';
 function M1() {
+  const options = [
+    { value: '0', label: '멘토링이란?', address: 'mentoring' },
+    { value: '1', label: '계획서작성', address: 'mentoring' },
+    { value: '2', label: '활동내용', address: 'mentoring' },
+
+]
   return (
+    
     <div className="mento-wrap1">
+      <SmallSelectBox options={options} placeholder={"멘토링이란?"} />
       <main>
         <div className="title">
           <h2>멘토링이란?</h2>
