@@ -33,7 +33,12 @@ import Chemi1 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi1";
 import Chemi2 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi2";
 import Chemi3 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi3";
 import Chemi4 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi4";
-
+import HeaderTab from "./components/Main/ConnectWith/SubItem/HeaderTab";
+import Board from "./components/Main/OnAndUp/MainItem/Board/Board";
+import Idea from "./components/Main/OnAndUp/MainItem/Board/Idea";
+import M1 from "./components/Main/OnAndUp/MainItem/Mentoring/M1";
+import M2 from "./components/Main/OnAndUp/MainItem/Mentoring/M2";
+import M3 from "./components/Main/OnAndUp/MainItem/Mentoring/M3";
 function App() {
   const [LoginAuth, setLoginAuth] = useState(false);
   useEffect(() => {
@@ -56,6 +61,7 @@ function App() {
               <Route path="qna" element={<QandA />} />
             </Route>
           </Route>
+          <Route path="/headertab" element={<HeaderTab />} />
 
           <Route path="/" element={<ConnectWith />} />
           <Route path="/chemiverseOnUp/:id" element={<OnAndUpItemForm />}>
@@ -80,9 +86,12 @@ function App() {
             <Route path="chemistory/3" element={<Chemi4 />} />
 
             {/* 멘토링 */}
-            <Route path="mentoring" />
+            <Route path="mentoring/0" element={<M1 />} />
+            <Route path="mentoring/1" element={<M2 />} />
+            <Route path="mentoring/2" element={<M3 />} />
             {/* 게시판 */}
-            <Route path="noticeBoard/" element={<NoticeBoard />} />
+            <Route path="board/0" element={<Board />} />
+            <Route path="board/1" element={<Idea />} />
           </Route>
           <Route path="/chemiverseOnUp" element={<OnAndUp />} />
 

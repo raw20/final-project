@@ -3,16 +3,9 @@ import './css/chemi.css'
 import { useRef, useState } from "react";
 import ChemiEditor from "./ChemiEditor";
 import ChemiList from "./ChemiList";
-import SmallSelectBox from '../../Main/SmallSelectBox';
 
 
 function Chemi2() {
-    const options = [
-    { value: '0', label: 'Chemi Story란?', address: 'chemistory' },
-    { value: '1', label: '작성하기', address: 'chemistory' },
-    { value: '2', label: '성찰저널', address: 'chemistory' },
-    { value: '3', label: '자기계발목표', address: 'chemistory' }
-]
   const [data, setData] = useState([]);
 
   const dataId = useRef(0);
@@ -44,8 +37,8 @@ function Chemi2() {
   };
 
   return (
+   
     <div className="chemi-wrap2">
-      <SmallSelectBox options={options} placeholder={"작성하기"} />
     <main>
    
         <div className="title">
