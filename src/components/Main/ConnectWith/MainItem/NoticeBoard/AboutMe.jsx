@@ -7,14 +7,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { getLike } from "../../../../../app/detailSlice";
 
 function AboutMe() {
-  const [posts, setPosts] = useState([]);
-  const [copyPosts, setCopyPosts] = useState([]);
   const postData = useSelector((state) => state.item);
   const [writer, setWriter] = useState(false);
   const [aboutMetitle, setAboutMeTitle] = useState("");
   const [aboutMeContents, setAboutMeContents] = useState("");
   const dispatch = useDispatch();
-  console.log("pd", postData.data);
 
   useEffect(() => {
     dispatch(getLike());
@@ -26,7 +23,6 @@ function AboutMe() {
         <div className="aboutMe_area">
           <AboutMeTable
             posts={postData.data}
-            setPosts={setPosts}
             writer={writer}
             setWriter={setWriter}
           />
