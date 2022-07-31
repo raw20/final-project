@@ -1,3 +1,5 @@
+@import "./mixin";
+@include desktop{
 .mento-wrap1{
   .title{
     display: flex;
@@ -249,4 +251,516 @@
     }
   }
   }
+}
+}
+
+@include tablet{
+  .mento-wrap1{
+    .title{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: rgba(111, 118, 193, 1);
+      h2{
+        font-size: 30px;
+        padding-bottom: 50px;
+      }
+      h3{
+        font-size: 20px;
+      }
+    }
+        .boxlist{
+         
+          .box{
+            max-width: 700px;
+            height: auto;
+            margin: 30px auto;
+            padding: 30px 30px;
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+            font-size: 15px;
+            position: relative;
+            .col-box{
+              width: 10px;
+             height: 13px;
+               border-radius: 15px 0 0 15px;
+             padding: 40px 10px;
+             position: absolute;
+             left: 0;
+             top:0;
+              background-color: rgba(111, 118, 193, 1);
+            }
+            .light{
+             background-color:  #e6e0ec;
+            }
+  
+            .img-box{
+              background: url(./../../../../../../../public/img/ic-check.png) center / cover ;
+              width: 25px;
+              height: 25px;
+              z-index: 1;
+              position: absolute;
+              left: 17px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+            p{
+              text-align: left;
+              padding-left: 20px;
+            }
+          }
+        }
+        .title{
+          .box{
+            max-width: 700px;
+            height: auto;
+            margin: 30px auto;
+       
+            padding: 50px 30px;
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+            font-size: 15px;
+          }
+        }
+  }
+  .mento-wrap2{      
+    .title{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: rgba(111, 118, 193, 1);
+      h2{
+        font-size: 30px;
+        padding-bottom: 50px;
+      }
+      h3{
+        font-size: 20px;
+      }
+    }
+           
+              .mento-box{
+                  max-width: 700px;
+                height: auto;
+                margin: 30px auto;
+           
+                padding: 50px 30px;
+                border-radius: 20px;
+                background: #ffffff;
+                box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+                font-size: 15px;
+              
+                .mento-input{
+                  border: 1px solid #999;
+                  width: 200px;
+                    height: 30px;  
+                  margin: 30px auto;
+                  input{
+                    width: 200px;
+                    height: 30px;  
+                    text-indent: 10px;
+                  }            
+                }
+               .mento-input1{
+                border: 1px solid #999;
+                width: 400px;
+                height: 150px;   
+              margin: 0 auto;
+                input{
+                  width: 400px;
+                  height: 150px;   
+                  text-indent: 10px;
+                  font-size: 15px;
+                }            
+              }
+               }
+                .mento-btn{
+                  display: flex;
+                  justify-content: flex-end;
+                  width: 100px;
+                  float: right;
+                  button{
+                      width: 80px;
+                      height: 30px;
+                      font-size: 10px;
+                 
+                      background-color: #d9d9d9;
+                      color: #000;
+                      border-radius: 5px;
+                      border: none;
+                      cursor: pointer;
+                      text-align: center;
+                      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      margin: 0px 2px;
+                      &:hover{
+                          background-color: rgba(111, 118, 193, 1);
+                          color: #fff;
+                      }
+                  }
+                } 
+  
+              }
+              .mento-wrap3{      
+                .title{
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  color: rgba(111, 118, 193, 1);
+                  h2{
+                    font-size: 30px;
+                    padding-bottom: 50px;
+                  }
+                  h3{
+                    font-size: 20px;
+                  }
+                }
+                .dep1{
+                    .box{
+                        max-width: 00px;
+                        
+                        height: auto;
+                        margin: 30px auto;
+                    
+                        padding: 50px 30px;
+                        border-radius: 20px;
+                        background: #ffffff;
+                        box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+                        font-size: 15px;
+                        }
+                        .chemi-btn{
+                          display: flex;
+                          justify-content: flex-end;
+                          width: 100px;
+                          float: right;
+                          button{
+                              width: 80px;
+                              height: 30px;
+                              font-size: 10px;
+                         
+                              background-color: #d9d9d9;
+                              color: #000;
+                              border-radius: 5px;
+                              border: none;
+                              cursor: pointer;
+                              text-align: center;
+                              box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              margin: 0px 2px;
+                              &:hover{
+                                  background-color: rgba(111, 118, 193, 1);
+                                  color: #fff;
+                              }
+                          }
+                     } 
+             }
+                       
+          }
+          .DiaryItem{
+            margin-bottom: 10px;
+            padding: 20px;
+            .info{
+              border-bottom: 1px solid gray;
+              padding-bottom: 10px;
+              margin-bottom: 10px;
+              border-bottom: 1px solid gray;
+                  padding-bottom: 10px;
+                  margin-bottom: 10px;
+            }
+            .content{
+              font-size: 18px;
+              margin-bottom: 20px;
+              input{
+                border: 1px solid #999;
+                padding: 20px;
+              }
+            }
+            .mento-btn{
+              display: flex;
+              justify-content: flex-end;
+             width: 100px;
+             float: right;
+             button{
+              width: 80px;
+              height: 30px;
+              font-size: 10px;
+          
+              background-color: #d9d9d9;
+              color: #000;
+              border-radius: 5px;
+              border: none;
+              cursor: pointer;
+              text-align: center;
+              box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0px 2px;
+              &:hover{
+                  background-color: rgba(111, 118, 193, 1);
+                  color: #fff;
+              }
+            }
+            }
+          }
+}
+@include mobile{
+  .mento-wrap1{
+    .title{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: rgba(111, 118, 193, 1);
+      h2{
+        font-size: 30px;
+        padding-bottom: 50px;
+      }
+      h3{
+        font-size: 20px;
+      }
+    }
+        .boxlist{
+         
+          .box{
+            max-width: 500px;
+            height: auto;
+            margin: 30px auto;
+            padding: 30px 30px;
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+            font-size: 15px;
+            position: relative;
+            .col-box{
+              width: 10px;
+             height: 45px;
+               border-radius: 15px 0 0 15px;
+             padding: 40px 10px;
+             position: absolute;
+             left: 0;
+             top:0;
+              background-color: rgba(111, 118, 193, 1);
+            }
+            .light{
+             background-color:  #e6e0ec;
+            }
+  
+            .img-box{
+              background: url(./../../../../../../../public/img/ic-check.png) center / cover ;
+              width: 25px;
+              height: 25px;
+              z-index: 1;
+              position: absolute;
+              left: 17px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+            p{
+              text-align: left;
+              padding-left: 20px;
+            }
+          }
+        }
+        .title{
+          .box{
+            max-width: 500px;
+            height: auto;
+            margin: 30px auto;
+       
+            padding: 50px 30px;
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+            font-size: 15px;
+          }
+        }
+  }
+  .mento-wrap2{      
+    .title{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: rgba(111, 118, 193, 1);
+      h2{
+        font-size: 30px;
+        padding-bottom: 50px;
+      }
+      h3{
+        font-size: 20px;
+      }
+    }
+           
+              .mento-box{
+                  max-width: 500px;
+                height: auto;
+                margin: 30px auto;
+           
+                padding: 50px 30px;
+                border-radius: 20px;
+                background: #ffffff;
+                box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+                font-size: 15px;
+              
+                .mento-input{
+                  border: 1px solid #999;
+                  width: 100px;
+                    height: 30px;  
+                  margin: 0 auto 20px;
+                  input{
+                    width: 100px;
+                    height: 30px;  
+                    text-indent: 10px;
+                  }            
+                }
+               .mento-input1{
+                border: 1px solid #999;
+                width: 170px;
+                height: 130px;   
+              margin: 0 auto;
+                input{
+                  width: 170px;
+                  height: 130px;   
+                  text-indent: 10px;
+                  font-size: 15px;
+                }            
+              }
+               }
+                .mento-btn{
+                  display: flex;
+                  justify-content: flex-end;
+                  width: 100px;
+                  float: right;
+                  button{
+                      width: 80px;
+                      height: 30px;
+                      font-size: 10px;
+                 
+                      background-color: #d9d9d9;
+                      color: #000;
+                      border-radius: 5px;
+                      border: none;
+                      cursor: pointer;
+                      text-align: center;
+                      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      margin: 0px 2px;
+                      &:hover{
+                          background-color: rgba(111, 118, 193, 1);
+                          color: #fff;
+                      }
+                  }
+                } 
+  
+              }
+              .mento-wrap3{      
+                .title{
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  color: rgba(111, 118, 193, 1);
+                  h2{
+                    font-size: 30px;
+                    padding-bottom: 50px;
+                  }
+                  h3{
+                    font-size: 20px;
+                  }
+                }
+                .dep1{
+                    .box{
+                        max-width: 00px;
+                        
+                        height: auto;
+                        margin: 30px auto;
+                    
+                        padding: 50px 30px;
+                        border-radius: 20px;
+                        background: #ffffff;
+                        box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+                        font-size: 15px;
+                        }
+                        .chemi-btn{
+                          display: flex;
+                          justify-content: flex-end;
+                          width: 100px;
+                          float: right;
+                          button{
+                              width: 80px;
+                              height: 30px;
+                              font-size: 10px;
+                         
+                              background-color: #d9d9d9;
+                              color: #000;
+                              border-radius: 5px;
+                              border: none;
+                              cursor: pointer;
+                              text-align: center;
+                              box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              margin: 0px 2px;
+                              &:hover{
+                                  background-color: rgba(111, 118, 193, 1);
+                                  color: #fff;
+                              }
+                          }
+                     } 
+             }
+                       
+          }
+          .DiaryItem{
+            margin-bottom: 10px;
+            padding: 20px;
+            .info{
+              border-bottom: 1px solid gray;
+              padding-bottom: 10px;
+              margin-bottom: 10px;
+              border-bottom: 1px solid gray;
+                  padding-bottom: 10px;
+                  margin-bottom: 10px;
+            }
+            .content{
+              font-size: 18px;
+              margin-bottom: 20px;
+              input{
+                border: 1px solid #999;
+                padding: 20px;
+              }
+            }
+            .mento-btn{
+              display: flex;
+              justify-content: flex-end;
+             width: 100px;
+             float: right;
+             button{
+              width: 80px;
+              height: 30px;
+              font-size: 10px;
+          
+              background-color: #d9d9d9;
+              color: #000;
+              border-radius: 5px;
+              border: none;
+              cursor: pointer;
+              text-align: center;
+              box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0px 2px;
+              &:hover{
+                  background-color: rgba(111, 118, 193, 1);
+                  color: #fff;
+              }
+            }
+            }
+          }
 }

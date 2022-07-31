@@ -7,11 +7,14 @@ import "./css/writer.css";
 function AboutMeWrite({
   aboutMetitle,
   setAboutMeTitle,
+  aboutMeName,
+  setAboutMeName,
   aboutMeContents,
   setAboutMeContents,
 }) {
   useBeforeunload((event) => event.preventDefault());
   const titleValue = useSelector((state) => state.aboutMeWriter.title);
+  const nameValue = useSelector((state) => state.aboutMeWriter.name);
   const contentsValue = useSelector((state) => state.aboutMeWriter.content);
 
   return (
@@ -23,6 +26,13 @@ function AboutMeWrite({
         placeholder={aboutMetitle ? titleValue : "제목을 입력해주세요."}
         value={aboutMetitle}
         onChange={(e) => setAboutMeTitle(e.target.value)}
+      />
+      <input
+        type="text"
+        id="writer-title-input"
+        placeholder={aboutMeName ? nameValue : "이름을 입력해주세요."}
+        value={aboutMeName}
+        onChange={(e) => setAboutMeName(e.target.value)}
       />
       <CKEditor
         editor={ClassicEditor}

@@ -5,12 +5,11 @@ import AboutMeTableList from "./AboutMeTableList";
 import WriteBtn from "./WriteBtn";
 import { useSelector } from "react-redux";
 
-function Table({ posts, writer, setWriter, setPosts }) {
+function Table({ posts, writer, setWriter }) {
   const [content, setContent] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(10);
+  const postsPerPage = 10;
   const searchResult = useSelector((state) => state.table.AboutMeData);
-  console.log("search data", searchResult);
   const indexOfLast = currentPage * postsPerPage;
   const indexOfFirst = indexOfLast - postsPerPage;
   function currentPosts(posts) {

@@ -52,37 +52,39 @@ const ChemiEditor1 = ({onCreate}) =>{
           <li className="box">
           <div className="col-box"></div>
             <div className="img-box"></div>
-            <input placeholder='무엇을 배웠는가?' ref={contentInput} name='content' value={state.content} onChange={handleChangeState}/>
+            
+            <input placeholder='1. 내용을 입력하세요' ref={contentInput} name='content' value={state.content} onChange={handleChangeState}/>
           </li>
           <li className="box">
           <div className="col-box light"></div>
             <div className="img-box"></div>
-            <input placeholder='어떤 과정을 통해 학습했는가?' ref={contentInput} name='content1' value={state.content1} onChange={handleChangeState}/>
+            <input placeholder='2. 내용을 입력하세요' ref={contentInput} name='content1' value={state.content1} onChange={handleChangeState}/>
           </li>
           <li className="box">
           <div className="col-box"></div>
             <div className="img-box"></div>
-            <input placeholder='이런 학습활동을 통해 무엇을 배웠는가?' ref={contentInput} name='content2' value={state.content2} onChange={handleChangeState}/>
+            <input placeholder='3. 내용을 입력하세요' ref={contentInput} name='content2' value={state.content2} onChange={handleChangeState}/>
           </li>
           <li className="box">
           <div className="col-box light"></div>
             <div className="img-box"></div>
-            <input placeholder='여기서 배운 것을 나의 실생활, 직장, 가정에 적용한다면?' ref={contentInput} name='content3' value={state.content3} onChange={handleChangeState}/>
+            <input placeholder='4. 내용을 입력하세요' ref={contentInput} name='content3' value={state.content3} onChange={handleChangeState}/>
           </li>
           <li className="box">
           <div className="col-box"></div>
             <div className="img-box"></div>
-        
-            <input placeholder='나의 기여도는 무엇인가? 또한 우리 팀원들 각자의 기여도를 평가한다면?' ref={contentInput} name='content4' value={state.content4} onChange={handleChangeState}/>
+            
+            <input placeholder='5. 내용을 입력하세요' ref={contentInput} name='content4' value={state.content4} onChange={handleChangeState}/>
           </li>
        
         </ul>
             
           
         </main>
-      
-        <input ref={authorInput}name='author' value={state.author} onChange={handleChangeState}/>
-        <div classname='chemi-btn'>
+      <div className="chemi-name">
+        <input placeholder='이름을 입력하세요' ref={authorInput}name='author' value={state.author} onChange={handleChangeState}/>
+        </div>
+        <div className='chemi-btn'>
                 <button onClick={handleSubmit}>저장하기</button>
             </div>
     </div>

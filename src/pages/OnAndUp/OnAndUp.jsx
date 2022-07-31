@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { connectWith } from "../../app/headerStateSlice";
 import { FiSearch } from "react-icons/fi";
 import { headerGnbOpcity } from "../../app/headerStateSlice";
+import OnAndUpMobileSlider from "./OnAndUpMobileSlider"
 
 function OnAndUp() {
   const [data, setData] = useState([]);
@@ -46,6 +47,9 @@ function OnAndUp() {
           />
           <FiSearch />
         </div>
+      </div>{/* main */}
+      <div className="mobile-slider">
+        <OnAndUpMobileSlider />
       </div>
     </div>
   );

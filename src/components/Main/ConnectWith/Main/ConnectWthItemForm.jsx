@@ -10,7 +10,7 @@ function ConnectWthItemForm() {
   const [item, setItem] = useState([]);
   const connenctWithMenuData = "/db/connenctWithMenuData.json";
   const { id } = useParams();
-  const contents = item[id]?.contents.split("\\n").join("<br>");
+
   useEffect(() => {
     (async () => {
       const response = await fetch(connenctWithMenuData);
@@ -22,10 +22,11 @@ function ConnectWthItemForm() {
   return (
     <div className="connectwith-item-form">
       <div className="connectwith-item-inner">
-      <div className="title-area">
+        <div className="title-area">
           <div className="connectwith-item-img">
             <img src={`${item[id]?.main_img}`} alt={item[id]?.title} />
-          </div>{/* img */}
+          </div>
+          {/* img */}
           <div className="connectwith-item-text">
             <div className="connectwith-item-location">
               {`Connect With Me ▶ ${item[id]?.title} `}
@@ -44,8 +45,10 @@ function ConnectWthItemForm() {
                 </div>
               );
             })}
-          </div>{/* text */}
-        </div>{/* title-area */}
+          </div>
+          {/* text */}
+        </div>
+        {/* title-area */}
         <div className="connectwith-item-box">
           <Outlet />
         </div>

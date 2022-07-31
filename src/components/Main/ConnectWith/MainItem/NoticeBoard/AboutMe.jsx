@@ -7,15 +7,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { getLike } from "../../../../../app/detailSlice";
 
 function AboutMe() {
-  const [posts, setPosts] = useState([]);
-  const [copyPosts, setCopyPosts] = useState([]);
   const postData = useSelector((state) => state.item);
+
+  console.log(postData.data);
   const [writer, setWriter] = useState(false);
   const [aboutMetitle, setAboutMeTitle] = useState("");
+  const [aboutMeName, setAboutMeName] = useState("");
   const [aboutMeContents, setAboutMeContents] = useState("");
   const dispatch = useDispatch();
-  console.log("pd", postData.data);
-
   useEffect(() => {
     dispatch(getLike());
   }, []);
@@ -26,7 +25,6 @@ function AboutMe() {
         <div className="aboutMe_area">
           <AboutMeTable
             posts={postData.data}
-            setPosts={setPosts}
             writer={writer}
             setWriter={setWriter}
           />
@@ -36,6 +34,8 @@ function AboutMe() {
           <AboutMeWrite
             aboutMetitle={aboutMetitle}
             setAboutMeTitle={setAboutMeTitle}
+            aboutMeName={aboutMeName}
+            setAboutMeName={setAboutMeName}
             aboutMeContents={aboutMeContents}
             setAboutMeContents={setAboutMeContents}
           />
@@ -43,8 +43,10 @@ function AboutMe() {
             writer={writer}
             setWriter={setWriter}
             aboutMetitle={aboutMetitle}
-            setAboutMeTitle={setAboutMeTitle}
+            aboutMeName={aboutMeName}
             aboutMeContents={aboutMeContents}
+            setAboutMeTitle={setAboutMeTitle}
+            setAboutMeName={setAboutMeName}
             setAboutMeContents={setAboutMeContents}
           />
         </div>

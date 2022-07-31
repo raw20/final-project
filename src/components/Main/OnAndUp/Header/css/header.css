@@ -193,7 +193,6 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    background-color: #6f76c1;
     top: 0;
     left: 0;
     right: 0;
@@ -235,18 +234,17 @@
   }
   .btn-menu-wrap {
     background-color: #6f76c1;
-    display: flex;
-    align-items: baseline;
-    padding: 0 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 70px 80px;
     height: 100vh;
-    overflow: hidden;
     touch-action: none;
     -webkit-animation: fadein 1s;
             animation: fadein 1s;
   }
   .btn-menu-wrap .btn-menu {
     text-align: center;
-    margin: 300px auto;
+    margin: 30px auto;
     font-size: 30px;
     line-height: 30px;
     color: #fff;
@@ -277,6 +275,26 @@
   .btn-menu-wrap .btn-menu .btn-menu-box .btn-menu-depth2:hover .btn-menu-depth1 {
     color: #f9c153;
   }
+  .goback {
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    color: #fff;
+    font-size: 40px;
+  }
+  .img-balloon {
+    background: url(/./public/img/bg-gnb.png) no-repeat center/cover;
+    width: 200px;
+    height: 200px;
+    text-indent: -9999px;
+    font-size: 0;
+    position: absolute;
+    bottom: -50px;
+    right: 50px;
+  }
+  .bottom-logo {
+    display: none;
+  }
 }
 @media (min-width: 335px) and (max-width: 757px) {
   #header {
@@ -285,7 +303,6 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    background-color: #6f76c1;
     top: 0;
     left: 0;
     right: 0;
