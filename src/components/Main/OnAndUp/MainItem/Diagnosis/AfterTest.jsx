@@ -38,8 +38,7 @@ function AfterTest(props) {
     },[data])
 
     const options = {
-        title: "2021년 OO님의 역량 그래프",
-        chartArea: { width: "50%" },
+        chartArea: { width: "60%" },
         hAxis: {
             title: "역량 점수",
             minValue: 0,
@@ -50,13 +49,14 @@ function AfterTest(props) {
     };
 
     return (
-        <div style={{ padding: 30 }}>
+        <div className='afterTest_inner'>
+            <div className='afterTest_inner_title'>2022년 OO님의 역량 그래프</div>
             {
                 show ?
                 <Chart
                     chartType="BarChart"
-                    width="100%"
-                    height="400px"
+                    width="95%"
+                    height="95%"
                     data={data}
                     options={options}
                 />

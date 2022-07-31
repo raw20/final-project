@@ -130,82 +130,6 @@
     top: -80px;
     right: -12px;
   }
-  .mobile-main {
-    display: none;
-  }
-}
-@media (min-width: 758px) and (max-width: 1023px) {
-  .wrap {
-    width: 100%;
-    height: 100vh;
-    padding-top: 7rem;
-    background-color: #dde3f6;
-  }
-  .wrap .main {
-    width: 100%;
-    display: none;
-  }
-  .mobile-main {
-    width: 100%;
-    height: 100vh;
-  }
-  .mobile-main .swiper {
-    width: 100%;
-    height: 100%;
-    background-color: #dde3f6;
-  }
-  .mobile-main .swiper .swiper-slide {
-    font-size: 18px;
-    color: #fff;
-    box-sizing: border-box;
-    padding: 40px 60px;
-  }
-  .mobile-main .swiper .parallax-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 130%;
-    height: 100%;
-    background-image: url(/public/img/img-main-full.png);
-    background-size: cover;
-    background-position: center;
-  }
-}
-@media (min-width: 335px) and (max-width: 757px) {
-  .wrap {
-    width: 100%;
-    height: 100vh;
-    padding-top: 7rem;
-    background-color: #dde3f6;
-  }
-  .wrap .main {
-    display: none;
-  }
-  .mobile-main {
-    width: 100%;
-    height: 100vh;
-  }
-  .mobile-main .swiper {
-    width: 100%;
-    height: 100%;
-    background-color: #dde3f6;
-  }
-  .mobile-main .swiper .swiper-slide {
-    font-size: 18px;
-    color: #fff;
-    box-sizing: border-box;
-    padding: 40px 60px;
-  }
-  .mobile-main .swiper .parallax-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 130%;
-    height: 100%;
-    background-image: url(/public/img/img-main-full.png);
-    background-size: cover;
-    background-position: center;
-  }
 }
 @-webkit-keyframes fadein {
   from {
@@ -221,5 +145,10 @@
   }
   to {
     opacity: 1;
+  }
+}
+@media (min-width: 758px) and (max-width: 1023px) {
+  .connect-with-btn {
+    background-color: aqua;
   }
 }/*# sourceMappingURL=main.css.map */

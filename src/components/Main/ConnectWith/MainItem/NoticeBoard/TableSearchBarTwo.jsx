@@ -1,34 +1,28 @@
 import React from "react";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { searchData } from "../../../../../app/searchTableSlice";
 import "./css/tableSearchBar.css";
 
-function TableSearchBarTwo() {
+function TableSearchBarTwo({ posts }) {
   const [display, setDisplay] = useState(true);
   const [searchValue, setSearchValue] = useState("");
   const [type, setType] = useState("전체");
-  const listdata = useSelector((state) => state.item.data);
   const dispatch = useDispatch();
-
   function onSearch(e) {
     e.preventDefault();
     if (searchValue === null || searchValue === " ") {
       console.log("no data");
     } else if (type === selectTypeArray[1].name) {
-      console.log("1111");
-      const filterData = listdata.filter((ele) =>
+      const filterData = posts.filter((ele) =>
         ele.writer.includes(searchValue)
       );
-      console.log(filterData);
       dispatch(searchData(filterData));
     } else if (type === selectTypeArray[2].name) {
-      const filterData = listdata.filter((ele) =>
-        ele.title.includes(searchValue)
-      );
+      const filterData = posts.filter((ele) => ele.title.includes(searchValue));
       dispatch(searchData(filterData));
     } else if (type === selectTypeArray[0].name) {
-      const filterData = listdata.filter(
+      const filterData = posts.filter(
         (ele) =>
           ele.title.includes(searchValue) || ele.writer.includes(searchValue)
       );
@@ -44,7 +38,7 @@ function TableSearchBarTwo() {
   }
   function handlerChanegeData(e) {
     if (e.key === "Backspace") {
-      dispatch(searchData([]));
+      dispatch(searchData(""));
     }
   }
   const selectTypeArray = [

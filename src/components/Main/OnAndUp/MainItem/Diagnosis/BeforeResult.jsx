@@ -18,7 +18,6 @@ function BeforeResult(props) {
     },[]);
 
     useEffect(() => {
-
         if (item) {
             var tmpSeriesArr = [];
             item.map((ele,index) => {
@@ -71,37 +70,44 @@ function BeforeResult(props) {
             <div className="beforeResult_boxs">
                 <div className='beforeResult_abilityResult'>
                     <div className='beforeResult_abilityResult_box'>
-                        {
-                            data[0]? 
-                            // <div> { JSON.stringify([data[1] ]) } </div>
-                                <ReactApexChart options={options} series={[data[0]]} type="radar" height={200} />
-                                : null
-                        }
-                        <div className='beforeResult_abilityResult_box_title'>자기관리</div>
+                        <div className='beforeResult_abilityResult_box_chart'>
+                            {
+                                data[0]? 
+                                    <ReactApexChart options={options} series={[data[0]]} type="radar" height={200} />
+                                    : null
+                            }
+                        </div>
+                        <div className='beforeResult_abilityResult_box_title'>회사이해</div>
                     </div>
                     <div className='beforeResult_abilityResult_box'>
-                        {
-                            data[2]? 
-                                <ReactApexChart options={options} series={[data[2]]} type="radar" height={200} />
-                                : null
-                        }
+                        <div className='beforeResult_abilityResult_box_chart'>
+                            {
+                                data[1]? 
+                                    <ReactApexChart options={options} series={[data[1]]} type="radar" height={200} />
+                                    : null
+                            }
+                        </div>
                         <div className='beforeResult_abilityResult_box_title'>워크스킬</div>
                     </div>
                     <div className='beforeResult_abilityResult_box'>
-                        {
-                            data[1]? 
-                                <ReactApexChart options={options} series={[data[1]]} type="radar" height={200} />
-                                : null
-                        }
+                        <div className='beforeResult_abilityResult_box_chart'>
+                            {
+                                data[2]? 
+                                    <ReactApexChart options={options} series={[data[2]]} type="radar" height={200} />
+                                    : null
+                            }
+                        </div>
                         <div className='beforeResult_abilityResult_box_title'>피플스킬</div>
                     </div>
                     <div className='beforeResult_abilityResult_box'>
-                        {
-                            data[3]? 
-                                <ReactApexChart options={options} series={[data[3]]} type="radar" height={200} />
-                                : null
-                        }
-                            <div className='beforeResult_abilityResult_box_title'>자기관리</div>
+                        <div className='beforeResult_abilityResult_box_chart'>
+                            {
+                                data[3]? 
+                                    <ReactApexChart options={options} series={[data[3]]} type="radar" height={200} />
+                                    : null
+                            }
+                        </div>
+                        <div className='beforeResult_abilityResult_box_title'>자기관리</div>
                     </div>
                 </div>
                 <div className='beforeResult_analysisBox'>
