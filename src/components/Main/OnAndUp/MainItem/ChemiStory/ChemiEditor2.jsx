@@ -35,6 +35,14 @@ const ChemiEditor2 = ({onCreate}) =>{
         content: '',
            })
   }
+  const tempSubmit = () =>{
+    onCreate(state.author,state.content);
+    alert('임시 저장되었습니다')
+    setState({
+        author: '',
+        content: '',
+           })
+  }
     return <div className="chemi-wrap4">
       <main>
 
@@ -51,6 +59,9 @@ const ChemiEditor2 = ({onCreate}) =>{
         </div>
         <div className='chemi-btn'>
             <button onClick={handleSubmit}>저장하기</button>
+        </div>
+        <div className='chemi-btn'>
+            <button onClick={tempSubmit}>임시저장</button>
         </div>
         </main>
     </div>

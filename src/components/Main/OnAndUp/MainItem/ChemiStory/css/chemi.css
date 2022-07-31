@@ -17,7 +17,6 @@
     max-width: 1200px;
     height: auto;
     margin: 30px auto;
-    padding: 30px 30px;
     border-radius: 20px;
     background: #ffffff;
     box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
@@ -26,12 +25,12 @@
   }
   .chemi-wrap1 .boxlist .box .col-box {
     width: 10px;
-    height: auto;
     border-radius: 15px 0 0 15px;
     padding: 40px 10px;
     position: absolute;
     left: 0;
     top: 0;
+    bottom: 0;
     background-color: rgb(111, 118, 193);
   }
   .chemi-wrap1 .boxlist .box .light {
@@ -126,12 +125,12 @@
   }
   .chemi-wrap3 .boxlist .col-box {
     width: 10px;
-    height: auto;
     border-radius: 15px 0 0 15px;
     padding: 46px 10px;
     position: absolute;
     left: 0;
     top: 0;
+    bottom: 0;
     background-color: rgb(111, 118, 193);
   }
   .chemi-wrap3 .boxlist .light {
@@ -315,11 +314,11 @@
   }
   .DiaryEditor .chemi-table table .chemi-table-inner tr {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     margin: 10px;
-    width: 100%;
+    width: 90%;
   }
   .DiaryEditor .chemi-table table .chemi-table-inner tr td {
     padding-right: 10px;
@@ -327,7 +326,7 @@
   .DiaryEditor input {
     height: 30px;
     padding: 10px;
-    width: 600px;
+    width: 500px;
     border: 1px solid #999;
   }
   .DiaryEditor .chemi-name {
@@ -487,12 +486,12 @@
   }
   .chemi-wrap1 .boxlist .box .col-box {
     width: 10px;
-    height: 85px;
     border-radius: 15px 0 0 15px;
     padding: 40px 10px;
     position: absolute;
     left: 0;
     top: 0;
+    bottom: 0;
     background-color: rgb(111, 118, 193);
   }
   .chemi-wrap1 .boxlist .box .light {
@@ -568,9 +567,9 @@
   }
   .DiaryEditor .chemi-table table {
     max-width: 500px;
-    height: auto;
+    height: 100%;
     margin: 30px auto;
-    padding: 50px 30px 0;
+    padding: 50px 15px 0;
     border-radius: 20px;
     background: #fff;
     box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
@@ -603,28 +602,29 @@
     color: #999;
   }
   .DiaryEditor .chemi-table table .chemi-table-inner {
-    max-width: 500px;
-    padding: 10px;
+    padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 80%;
+    box-sizing: border-box;
   }
   .DiaryEditor .chemi-table table .chemi-table-inner tr {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin: 10px;
+    margin: 10px 0;
     width: 100%;
     box-sizing: border-box;
   }
-  .DiaryEditor .chemi-table table .chemi-table-inner tr:first-of-type td:first-of-type {
-    width: 30px;
+  .DiaryEditor .chemi-table table .chemi-table-inner tr td {
+    margin-right: 5px;
   }
   .DiaryEditor input {
     height: 15px;
-    padding: 10px;
+    padding: 10px 0;
     border: 1px solid #999;
   }
   .DiaryEditor .chemi-name {
@@ -786,12 +786,12 @@
   }
   .chemi-wrap3 .boxlist .col-box {
     width: 10px;
-    height: 29px;
     border-radius: 15px 0 0 15px;
     padding: 46px 10px;
     position: absolute;
     left: 0;
     top: 0;
+    bottom: 0;
     background-color: rgb(111, 118, 193);
   }
   .chemi-wrap3 .boxlist .light {
@@ -950,12 +950,12 @@
   }
   .chemi-wrap1 .boxlist .box .col-box {
     width: 10px;
-    height: 52px;
     border-radius: 15px 0 0 15px;
     padding: 40px 10px;
     position: absolute;
     left: 0;
     top: 0;
+    bottom: 0;
     background-color: rgb(111, 118, 193);
   }
   .chemi-wrap1 .boxlist .box .light {
@@ -1066,11 +1066,12 @@
   }
   .DiaryEditor .chemi-table table .chemi-table-inner {
     max-width: 700px;
-    padding: 10px;
+    padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 80%;
   }
   .DiaryEditor .chemi-table table .chemi-table-inner tr {
     display: flex;
@@ -1078,15 +1079,11 @@
     align-items: center;
     text-align: center;
     margin: 10px;
-    width: 100%;
-  }
-  .DiaryEditor .chemi-table table .chemi-table-inner tr:first-of-type td:first-of-type {
-    margin-left: 13px;
-    padding-right: 20px;
+    width: 80%;
   }
   .DiaryEditor input {
     height: 15px;
-    padding: 10px;
+    padding: 10px 0;
     width: 300px;
     border: 1px solid #999;
   }
@@ -1249,12 +1246,12 @@
   }
   .chemi-wrap3 .boxlist .col-box {
     width: 10px;
-    height: 29px;
     border-radius: 15px 0 0 15px;
     padding: 46px 10px;
     position: absolute;
     left: 0;
     top: 0;
+    bottom: 0;
     background-color: rgb(111, 118, 193);
   }
   .chemi-wrap3 .boxlist .light {
