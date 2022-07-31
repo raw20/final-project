@@ -63,7 +63,6 @@ function AfterResult(props) {
 
 
     const options = {
-        title: "2021년 대비 2022년 OO님의 역량변화 그래프",
         chartArea: { width: "50%" },
         hAxis: {
             title: "역량 점수",
@@ -76,13 +75,13 @@ function AfterResult(props) {
 
     return (
         <div className="afterResult_box">    
+            <div className='afterResult_box_title'>2022년 대비 2022년 OO님의 역량변화 그래프</div>
             {
                 show ?    
-                // <div> {JSON.stringify(diffData)} </div>
                     <Chart
                         chartType="BarChart"
-                        width="100%"
-                        height="400px"
+                        width="95%"
+                        height="95%"
                         diffdata={diffData}
                         options={options}
                     />

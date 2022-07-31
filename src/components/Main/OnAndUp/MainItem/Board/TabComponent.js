@@ -1,4 +1,4 @@
-import Board from "./\bBoard";
+import Board from "./Board";
 import AboutMe from "./AboutMe";
 import QandA from "./QandA";
 
