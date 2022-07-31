@@ -1,7 +1,7 @@
 @media (min-width: 1024px) {
   .tab-btn-wrap {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding-top: 7rem;
     background-color: #fff;
   }
@@ -47,7 +47,7 @@
 @media (min-width: 758px) and (max-width: 1023px) {
   .tab-btn-wrap {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding-top: 7rem;
     background-color: #fff;
   }
@@ -93,7 +93,7 @@
 @media (min-width: 335px) and (max-width: 757px) {
   .tab-btn-wrap {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding-top: 1rem;
     background-color: #fff;
   }

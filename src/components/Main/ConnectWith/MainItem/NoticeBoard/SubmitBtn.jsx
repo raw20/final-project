@@ -1,15 +1,24 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { tempSaveContents } from "../../../../../app/aboutMeWriteSlice";
+import { addAboutMeTableData } from "../../../../../app/detailSlice";
 import "./css/style.css";
 function SubmitBtn({
   setWriter,
   aboutMetitle,
   setAboutMeTitle,
+  aboutMeName,
+  setAboutMeName,
   aboutMeContents,
   setAboutMeContents,
 }) {
   const dispatch = useDispatch();
+  const dataLength = useSelector((state) => state.item.data);
+  let today = new Date();
+  let year = String(today.getFullYear());
+  let month = String(today.getMonth() + 1).padStart(2, "0");
+  let date = String(today.getDate());
+
   function convertBoolean() {
     alert("게시글 저장완료");
     setWriter(false);
@@ -19,11 +28,17 @@ function SubmitBtn({
     e.preventDefault();
     if (aboutMetitle) {
       dispatch(
-        tempSaveContents({ title: aboutMetitle, contents: aboutMeContents })
+        tempSaveContents({
+          title: aboutMetitle,
+          name: aboutMeName,
+          contents: aboutMeContents,
+        })
       );
       convertBoolean();
     } else if (aboutMetitle === "") {
       alert("제목을 입력하세요.");
+    } else if (aboutMeName === "") {
+      alert("이름을 입력하세요.");
     } else if (aboutMeContents === "") {
       alert("내용을 입력하세요.");
     }
@@ -31,14 +46,26 @@ function SubmitBtn({
   function onSave(e) {
     e.preventDefault();
     if (aboutMetitle) {
-      dispatch(
-        tempSaveContents({ title: aboutMetitle, contents: aboutMeContents })
-      );
+      const writeData = {
+        id: String(dataLength.length + 1),
+        title: aboutMetitle,
+        writer: aboutMeName,
+        content_text: aboutMeContents,
+        content_img:
+          "http://conference.exc.co.kr/chemiverse/assets/img/img-board-view.png",
+        file: "N",
+        like: 0,
+        views: 0,
+        date: `${year}.${month}.${date}`,
+      };
+      dispatch(addAboutMeTableData(writeData));
       convertBoolean();
       setAboutMeTitle("");
       setAboutMeContents("");
     } else if (aboutMetitle === "") {
       alert("제목을 입력하세요.");
+    } else if (aboutMeName === "") {
+      alert("이름을 입력하세요.");
     } else if (aboutMeContents === "") {
       alert("내용을 입력하세요.");
     }

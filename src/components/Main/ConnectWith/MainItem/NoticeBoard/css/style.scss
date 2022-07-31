@@ -4,23 +4,21 @@ $lightColor: #e6e0ec;
 
 .table_pagination {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
-  width: 300px;
+  width: 20vw;
+  padding-top: 25px;
   margin: auto;
-  .page_item {
-    margin-top: 25px;
-    .page_link {
-      color: #ccc;
-      font-size: 18px;
-      font-weight: 800;
-      &:hover {
-        cursor: pointer;
-        color: $deepColor;
-      }
-      &:focus {
-        color: $deepColor;
-      }
+  .page_link {
+    color: #ccc;
+    font-size: 18px;
+    font-weight: 800;
+    &:hover {
+      cursor: pointer;
+      color: $deepColor;
+    }
+    &.active {
+      color: $deepColor;
     }
   }
 }
@@ -34,7 +32,9 @@ $lightColor: #e6e0ec;
   box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
   border-radius: 5px;
   cursor: pointer;
-  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 1.5rem;
   margin-left: 1.5rem;
 }

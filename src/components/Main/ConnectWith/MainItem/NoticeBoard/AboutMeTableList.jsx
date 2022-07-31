@@ -1,14 +1,30 @@
 import React from "react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { countView } from "../../../../../app/detailSlice";
 import AboutMeDetail from "./AboutMeDetail";
 import TableSearchBarTwo from "./TableSearchBarTwo";
 const AboutMeTableList = ({ posts, totalPosts, content, setContent }) => {
   const [index, setIndex] = useState();
+  const dispatch = useDispatch();
   const likeValue = useSelector((state) => state.item.data);
   function onClick(index) {
     setContent(false);
     setIndex(index);
+    dispatch(
+      countView({
+        id: posts[index].id,
+        title: posts[index].title,
+        writer: posts[index].writer,
+        content_text: posts[index].content_text,
+        content_img:
+          "http://conference.exc.co.kr/chemiverse/assets/img/img-board-view.png",
+        file: "N",
+        like: posts[index].like,
+        views: posts[index].views,
+        date: posts[index].date,
+      })
+    );
   }
   return (
     <>
@@ -35,12 +51,16 @@ const AboutMeTableList = ({ posts, totalPosts, content, setContent }) => {
               ) : (
                 posts.map((posts, index) => (
                   <tr className="content_row" key={index}>
-                    <td>{posts.writer === "교육담당자" ? "필독" : posts.id}</td>
-                    <td>{posts.writer}</td>
-                    <td onClick={() => onClick(index)}>{posts.title}</td>
-                    <td>{posts.views}</td>
-                    <td>{posts.date}</td>
-                    <td>{posts.like}</td>
+                    <td className="td-id">
+                      {posts.writer === "교육담당자" ? "필독" : posts.id}
+                    </td>
+                    <td className="td-writer">{posts.writer}</td>
+                    <td className="td-title" onClick={() => onClick(index)}>
+                      {posts.title}
+                    </td>
+                    <td className="td-views">{posts.views}</td>
+                    <td className="td-date"> {posts.date}</td>
+                    <td className="td-like"> {posts.like}</td>
                   </tr>
                 ))
               )}
