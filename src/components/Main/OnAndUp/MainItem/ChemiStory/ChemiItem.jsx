@@ -31,7 +31,7 @@ const ChemiWItem = ({
   const toggleIsEdit = () => setIsEdit(!isEdit);
 
   const handleClickRemove = () => {
-    if (window.confirm(`${id}번째 일기를 정말 삭제하시겠습니까?`)) {
+    if (window.confirm(`${id}번째 작성글을 정말 삭제하시겠습니까?`)) {
       onRemove(id);
     }
   };
@@ -55,7 +55,7 @@ const ChemiWItem = ({
       return;
     }
 
-    if (window.confirm(`${id}번 째 일기를 수정하시겠습니까?`)) {
+    if (window.confirm(`${id}번 째 작성글을 수정하시겠습니까?`)) {
       onEdit(id, localContent);
       toggleIsEdit();
     }
@@ -70,108 +70,110 @@ const ChemiWItem = ({
         <br />
       
       </div>
-      <div className="chemi-content">
-        <p>1년 이내</p>
-       <span>목표 : </span> {isEdit ? (
-          <input
-            ref={localContentInput}
-            value={localContent}
-            onChange={(e) => setLocalContent(e.target.value)}
-          />
-        ) : (
-          content
-        )}
-      </div>
-      <div className="chemi-content">
-      <span>필요역량 : </span> {isEdit ? (
-          <input
-            ref={localContentInput}
-            value={localContent1}
-            onChange={(e) => setLocalContent1(e.target.value)}
-          />
-        ) : (
-          content1
-        )}
-      </div>
-      <div className="chemi-content">
-      <span>실행계획 : </span> {isEdit ? (
-          <input
-            ref={localContentInput}
-            value={localContent2}
-            onChange={(e) => setLocalContent2(e.target.value)}
-          />
-        ) : (
-          content2
-        )}
-      </div>
-      <div className="chemi-content">
-        <p>3년 이내</p>
-        <span>목표 : </span> {isEdit ? (
-          <input
-            ref={localContentInput}
-            value={localContent3}
-            onChange={(e) => setLocalContent3(e.target.value)}
-          />
-        ) : (
-          content3
-        )}
-      </div>
-      <div className="chemi-content">
-      <span>필요역량 : </span>{isEdit ? (
-          <input
-            ref={localContentInput}
-            value={localContent4}
-            onChange={(e) => setLocalContent4(e.target.value)}
-          />
-        ) : (
-          content4
-        )}
-      </div>
-      <div className="chemi-content">
-      <span>실행계획 : </span>{isEdit ? (
-          <input
-            ref={localContentInput}
-            value={localContent5}
-            onChange={(e) => setLocalContent5(e.target.value)}
-          />
-        ) : (
-          content5
-        )}
-      </div>
-      <div className="chemi-content">
-        <p>5년 이내</p>
-        <span>목표 : </span>{isEdit ? (
-          <input
-            ref={localContentInput}
-            value={localContent6}
-            onChange={(e) => setLocalContent6(e.target.value)}
-          />
-        ) : (
-          content6
-        )}
-      </div>
-      <div className="chemi-content">
-      <span>필요역량 : </span>{isEdit ? (
-          <input
-            ref={localContentInput}
-            value={localContent7}
-            onChange={(e) => setLocalContent7(e.target.value)}
-          />
-        ) : (
-          content7
-        )}
-      </div>
-      <div className="chemi-content">
-      <span>실행계획 : </span> {isEdit ? (
-          <input
-            ref={localContentInput}
-            value={localContent8}
-            onChange={(e) => setLocalContent8(e.target.value)}
-          />
-        ) : (
-          content8
-        )}
-      </div>
+      <div className="chemi-list">
+          <div className="chemi-content">
+            <p>1년 이내</p>
+          <span>목표 : </span> {isEdit ? (
+              <input
+                ref={localContentInput}
+                value={localContent}
+                onChange={(e) => setLocalContent(e.target.value)}
+              />
+            ) : (
+              content
+            )}
+          </div>
+          <div className="chemi-content">
+          <span>필요역량 : </span> {isEdit ? (
+              <input
+                ref={localContentInput}
+                value={localContent1}
+                onChange={(e) => setLocalContent1(e.target.value)}
+              />
+            ) : (
+              content1
+            )}
+          </div>
+          <div className="chemi-content">
+          <span>실행계획 : </span> {isEdit ? (
+              <input
+                ref={localContentInput}
+                value={localContent2}
+                onChange={(e) => setLocalContent2(e.target.value)}
+              />
+            ) : (
+              content2
+            )}
+          </div>
+          <div className="chemi-content">
+            <p>3년 이내</p>
+            <span>목표 : </span> {isEdit ? (
+              <input
+                ref={localContentInput}
+                value={localContent3}
+                onChange={(e) => setLocalContent3(e.target.value)}
+              />
+            ) : (
+              content3
+            )}
+          </div>
+          <div className="chemi-content">
+          <span>필요역량 : </span>{isEdit ? (
+              <input
+                ref={localContentInput}
+                value={localContent4}
+                onChange={(e) => setLocalContent4(e.target.value)}
+              />
+            ) : (
+              content4
+            )}
+          </div>
+          <div className="chemi-content">
+          <span>실행계획 : </span>{isEdit ? (
+              <input
+                ref={localContentInput}
+                value={localContent5}
+                onChange={(e) => setLocalContent5(e.target.value)}
+              />
+            ) : (
+              content5
+            )}
+          </div>
+          <div className="chemi-content">
+            <p>5년 이내</p>
+            <span>목표 : </span>{isEdit ? (
+              <input
+                ref={localContentInput}
+                value={localContent6}
+                onChange={(e) => setLocalContent6(e.target.value)}
+              />
+            ) : (
+              content6
+            )}
+          </div>
+          <div className="chemi-content">
+          <span>필요역량 : </span>{isEdit ? (
+              <input
+                ref={localContentInput}
+                value={localContent7}
+                onChange={(e) => setLocalContent7(e.target.value)}
+              />
+            ) : (
+              content7
+            )}
+          </div>
+          <div className="chemi-content">
+          <span>실행계획 : </span> {isEdit ? (
+              <input
+                ref={localContentInput}
+                value={localContent8}
+                onChange={(e) => setLocalContent8(e.target.value)}
+              />
+            ) : (
+              content8
+            )}
+          </div>
+        </div>
       {isEdit ? (
         <div className="chemi-btn">
           <button onClick={handleQuitEdit}>수정 취소</button>
