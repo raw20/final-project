@@ -67,4 +67,48 @@
   height: 100vh;
   border-radius: 20px;
   background: #ffffff;
+}
+
+.menuSelect {
+  display: none;
+}
+
+@media (min-width: 335px) and (max-width: 757px) {
+  .item-form .item-inner .tab-btn-area {
+    display: none !important;
+  }
+  .menuSelect {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .menuSelect__indicator svg {
+    fill: #fff;
+  }
+  .menuSelect__menu:before {
+    content: "";
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid #fff;
+  }
+  .menuSelect__option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menuSelect__single-value {
+    color: #fff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(18px);
+  }
+  .menuSelect__placeholder {
+    color: #fff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 36px;
+    transform: translate(18px);
+  }
 }/*# sourceMappingURL=itemForm.css.map */

@@ -1,7 +1,9 @@
+@import "./mixin";
 $bgColor: #dde3f6;
 $deepColor: #6f76c1;
 $lightColor: #e6e0ec;
-.notice_area {
+@include desktop{
+  .notice_area {
   width: 85%;
   margin: 0 auto;
   animation: fadein 2s;
@@ -10,6 +12,7 @@ $lightColor: #e6e0ec;
     margin: 0 auto;
     .notice_table {
       width: 100%;
+      height: 100%;
       margin: auto;
       border-collapse: collapse;
       th {
@@ -35,6 +38,62 @@ $lightColor: #e6e0ec;
         cursor: pointer;
         &:hover {
           color: $deepColor;
+        }
+      }
+    }
+  }
+}
+}
+
+@include tablet{
+  .notice_area{
+    width: 90%;
+    .notice_table{
+      word-break: keep-all;
+    }
+  }
+}
+
+@include mobile{
+  .notice_area{
+    width: 100%;
+    margin: 0;
+    .notice_table_area{
+      thead{
+        width: 100%;
+        display: none;
+      }
+      .notice_table{
+        .content_row{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: baseline;
+        border-bottom: 0.5px solid #ccc;;
+        }
+        .content_row:first-child{
+          border-top: 0.5px solid #000;
+        }
+        td{
+          border: none;
+        }
+        .td-id{
+          display: none;
+        }
+        .td-cat{
+          margin-top: 10px;
+          padding: 9px 0;
+        }
+        .td-title{
+          width: 100%;
+          padding: 9px;
+          font-size: 14px;
+        }
+        .td-date{
+          width: 25%;
+          align-self: flex-end;
+          padding: 9px;
         }
       }
     }
