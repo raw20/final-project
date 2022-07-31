@@ -1,15 +1,16 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./css/Profile.css";
 import userData from "../../../../../userData.json";
+import { headerGnbOpcity } from "../../../../../app/headerStateSlice";
 
 const Profile = () => {
   const userId = useSelector((state) => state.user.id.id);
-  console.log(userId);
+  const dispatch = useDispatch();
   const user = userData.find((user) => {
     return user.id === userId;
   });
-  console.log(user);
+  dispatch(headerGnbOpcity("1"));
 
   if (!user) {
     return <div>No user data</div>;

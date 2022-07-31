@@ -12,6 +12,19 @@
   border-radius: 20px;
   background: #ffffff;
 }
+.item-form .item-inner .item-img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.item-form .item-inner .item-img img {
+  width: 570px;
+  height: 390px;
+  position: absolute;
+  top: 0px;
+  right: -50px;
+}
 .item-form .item-inner .item-location {
   width: 100%;
   font-size: 15px;

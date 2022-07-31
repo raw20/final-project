@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import content from "./css/content.css";
 import { login } from "../../../../../app/userSlice";
 import userData from "../../../../../userData.json";
+import { headerGnbOpcity } from "../../../../../app/headerStateSlice";
 
 const Login = ({ setLoginAuth }) => {
   const [error, setError] = useState(false);
@@ -11,6 +12,7 @@ const Login = ({ setLoginAuth }) => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  dispatch(headerGnbOpcity("2"));
 
   /*  const loginSubmit = (e) => {
      // e.preventDefault();

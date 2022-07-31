@@ -5,8 +5,9 @@ import "./css/header.css";
 import { BiUser } from "react-icons/bi";
 import { IoLogInOutline } from "react-icons/io5";
 import { IoLogOutOutline } from "react-icons/io5";
+import { useSelector } from "react-redux";
 
-function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
+function OnAndUpHeader({ opacity, LoginAuth, setLoginAuth }) {
   const navigate = useNavigate();
   const goToLogin = () => {
     navigate("/chemiverseOnUp/login");
@@ -26,9 +27,15 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
       setItem(json);
     })();
   }, []);
-
+  const headerType = useSelector((state) => state.headerLayout.opacity);
+  const typeArry = [
+    "onAndUp-header off",
+    "onAndUp-header",
+    "onAndUp-header none",
+  ];
+  console.log("ht", headerType);
   return (
-    <div id="header">
+    <div className={typeArry[parseInt(headerType)]}>
       <Link className="logo" to="/chemiverseOnUp">
         logo
       </Link>

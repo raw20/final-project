@@ -2,9 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AiFillCloseSquare } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { headerGnbOpcity } from "../../../../app/headerStateSlice";
 
 function TabBtnMenu() {
   const [item, setItem] = useState([]);
+  const dispatch = useDispatch();
   const itemData = "/db/onAndUpMenuData.json";
   useEffect(() => {
     (async () => {
