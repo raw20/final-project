@@ -51,12 +51,16 @@ const AboutMeTableList = ({ posts, totalPosts, content, setContent }) => {
               ) : (
                 posts.map((posts, index) => (
                   <tr className="content_row" key={index}>
-                    <td>{posts.writer === "교육담당자" ? "필독" : posts.id}</td>
-                    <td>{posts.writer}</td>
-                    <td onClick={() => onClick(index)}>{posts.title}</td>
-                    <td>{posts.views}</td>
-                    <td>{posts.date}</td>
-                    <td>{posts.like}</td>
+                    <td className="td-id">
+                      {posts.writer === "교육담당자" ? "필독" : posts.id}
+                    </td>
+                    <td className="td-writer">{posts.writer}</td>
+                    <td className="td-title" onClick={() => onClick(index)}>
+                      {posts.title}
+                    </td>
+                    <td className="td-views">{posts.views}</td>
+                    <td className="td-date"> {posts.date}</td>
+                    <td className="td-like"> {posts.like}</td>
                   </tr>
                 ))
               )}
