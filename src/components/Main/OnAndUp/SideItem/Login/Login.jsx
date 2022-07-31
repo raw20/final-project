@@ -1,14 +1,12 @@
-import React, { useState, useId } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import content from './css/content.css';
-import { login } from '../../../../../app/userSlice';
-import userData from '../../../../../userData.json';
-import { useSelector } from 'react-redux';
-
+import React, { useState, useId } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import content from "./css/content.css";
+import { login } from "../../../../../app/userSlice";
+import userData from "../../../../../userData.json";
 
 const Login = ({ setLoginAuth }) => {
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(false);
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
@@ -22,10 +20,9 @@ const Login = ({ setLoginAuth }) => {
    } */
 
   const LoginSearch = () => {
-    navigate('/chemiverseOnUp/login-search')
-  }
-  console.log(id)
-
+    navigate("/chemiverseOnUp/login-search");
+  };
+  console.log(id);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,69 +46,57 @@ const Login = ({ setLoginAuth }) => {
       //alert("비밀번호가 일치하지않습니다.");
     }
 
-    dispatch(login({ id: id, pw: password }))
+    dispatch(login({ id: id, pw: password }));
     setLoginAuth(true);
-    navigate('/chemiverseOnUp');
+    navigate("/chemiverseOnUp");
   };
 
   return (
-    <div className='login-form'>
-      <div className='login-title'>
-        로그인💡
-      </div>
+    <div className="login-form">
+      <div className="login-title">로그인💡</div>
       <form onSubmit={(e) => handleSubmit(e)}>
         {/*       <form onSubmit={(e) => { login(e) }}> */}
-        <div className='login-id'>
+        <div className="login-id">
           <div>
             <input
               type="id"
               id="loginId"
-              placeholder='아이디'
+              placeholder="아이디"
               value={id}
               onChange={(e) => setId(e.target.value)}
             />
           </div>
         </div>
-        <div className='login-pw'>
+        <div className="login-pw">
           <div>
             <input
               type="password"
               id="userPass"
-              placeholder='비밀번호'
+              placeholder="비밀번호"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
         </div>
-        <div className='IdFwBtn'>
-          <button
-            id='searchBtn'
-            onClick={LoginSearch}>
+        <div className="IdFwBtn">
+          <button id="searchBtn" onClick={LoginSearch}>
             ID/PW찾기
           </button>
           {/*   <span>{error ? true : "로그인 정보가 올바르지 않습니다."}</span> */}
         </div>
         <div>
-          {error ?
-            (<button
-              className="error-button"
-            >로그인
-            </button>
-            )
+          {error ? (
+            <button className="error-button">로그인</button>
+          ) : (
             /*    (<span>로그인 정보가 올바르지 않습니다 </span>) */
-            :
-            (<button
-              className="login-button"
-              type="submit"
-              value="로그인"
-            >로그인
+            <button className="login-button" type="submit" value="로그인">
+              로그인
             </button>
-            )}
+          )}
         </div>
       </form>
     </div>
   );
-}
-
+};
 
 export default Login;

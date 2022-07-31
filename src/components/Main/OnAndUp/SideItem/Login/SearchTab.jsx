@@ -1,9 +1,9 @@
-import React, { useState, useId } from 'react';
-import PwModal from './PwModal'
-import { useDispatch } from 'react-redux';
-import userData from '../../../../../userData.json';
-import './css/search.css';
-import { userSearch } from '../../../../../app/userSlice';
+import React, { useState } from "react";
+import PwModal from "./PwModal";
+import { useDispatch } from "react-redux";
+import userData from "../../../../../userData.json";
+import "./css/search.css";
+import { userSearch } from "../../../../../app/userSlice";
 
 function SearchTab() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -15,11 +15,11 @@ function SearchTab() {
     setActiveIndex(index);
   };
 
-  const [modalOpen, setModalOpen] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false);
   const modalClose = (e) => {
     e.preventDefault();
-    setModalOpen(!modalOpen)
-  }
+    setModalOpen(!modalOpen);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,83 +36,87 @@ function SearchTab() {
       return alert("휴대폰 번호가 일치하지않습니다.");
     }
 
-    dispatch(userSearch({ name: name, number: number }))
+    dispatch(userSearch({ name: name, number: number }));
   };
-
 
   const tabContArr = [
     {
       tabTitle: (
-        <div className='search-tab'>
-          <li className={activeIndex === 0 ? "is-active" : ""} onClick={() => tabClickHandler(0)}> 아이디 찾기</li>
+        <div className="search-tab">
+          <li
+            className={activeIndex === 0 ? "is-active" : ""}
+            onClick={() => tabClickHandler(0)}
+          >
+            {" "}
+            아이디 찾기
+          </li>
         </div>
       ),
       tabCont: (
         <form onSubmit={(e) => handleSubmit(e)}>
-          <div id='tab-content'>
+          <div id="tab-content">
             <input
               type="name"
               id="userName"
-              placeholder='이름을 입력하세요'
+              placeholder="이름을 입력하세요"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
             <input
               type="tel"
-              id='phoneNumber'
-              placeholder='휴대폰 번호를 입력하세요'
+              id="phoneNumber"
+              placeholder="휴대폰 번호를 입력하세요"
               value={number}
               onChange={(e) => setNumber(e.target.value)}
             />
-            <button
-              id='idBtn'
-              type="submit">
+            <button id="idBtn" type="submit">
               회원정보로 찾기
             </button>
           </div>
         </form>
-      )
+      ),
     },
     {
       tabTitle: (
-        <div className='search-tab'>
-          <li className={activeIndex === 1 ? "is-active" : ""} onClick={() => tabClickHandler(1)}> 비밀번호 찾기 </li>
+        <div className="search-tab">
+          <li
+            className={activeIndex === 1 ? "is-active" : ""}
+            onClick={() => tabClickHandler(1)}
+          >
+            {" "}
+            비밀번호 찾기{" "}
+          </li>
         </div>
       ),
       tabCont: (
-        <div id='tab-content'>
-          <input
-            type="id"
-            id="userId"
-            placeholder='아이디를 입력하세요' />
-          <input
-            type="name"
-            id="userPwName"
-            placeholder='이름을 입력하세요' />
+        <div id="tab-content">
+          <input type="id" id="userId" placeholder="아이디를 입력하세요" />
+          <input type="name" id="userPwName" placeholder="이름을 입력하세요" />
           <input
             type="tel"
-            id='phoneNumber'
-            placeholder='휴대폰 번호를 입력하세요' />
+            id="phoneNumber"
+            placeholder="휴대폰 번호를 입력하세요"
+          />
           <div>
             <>
-              <button id='pwChange' onClick={modalClose}>비밀번호 변경</button>
+              <button id="pwChange" onClick={modalClose}>
+                비밀번호 변경
+              </button>
               {modalOpen && <PwModal modalClose={modalClose}></PwModal>}
             </>
           </div>
         </div>
-      )
-    }
+      ),
+    },
   ];
   return (
-    <div className='tab-box'>
+    <div className="tab-box">
       <ul className="tabs is-boxed">
         {tabContArr.map((section, index) => {
-          return section.tabTitle
+          return section.tabTitle;
         })}
       </ul>
-      <div>
-        {tabContArr[activeIndex].tabCont}
-      </div>
+      <div>{tabContArr[activeIndex].tabCont}</div>
     </div>
   );
 }
