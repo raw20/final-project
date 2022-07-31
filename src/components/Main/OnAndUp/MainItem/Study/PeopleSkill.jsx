@@ -6,10 +6,17 @@ import ModuleDetail from './ModuleDetail';
 import ReviewEdit from "./ReviewEdit";
 
 import './css/ability.scss';
+import SmallSelectBox from '../../Main/SmallSelectBox';
 
 import { setItem , getItem } from './lib/storage';
 
 function PeopleSkill(props) {
+    const options = [
+        { value: '0', label: '회사이해', address: 'study' },
+        { value: '1', label: '워크스킬', address: 'study' },
+        { value: '2', label: '피플스킬', address: 'study' },
+        { value: '3', label: '자기관리', address: 'study' }
+    ]
     const defaultData = [
         {   id: 1, content: '1번' },
         {   id: 2, content: '2번' },
@@ -43,27 +50,30 @@ function PeopleSkill(props) {
     },[moduleItem])
     
     return (
-        <Routes>                       
-            <Route path="*" element={<ModuleList moduleID={0} setModuleItem={setModuleItem} />}/>
-            <Route path=":id" element={
-                <ModuleDetail 
-                    moduleItem={moduleItem}
-                    datas={datas}
-                    setSelectedImgIndex={setSelectedImgIndex}
-                    selectedImgIndex={selectedImgIndex}
-                    addData={addData}
-                    setData={setData} 
-                />} 
-            />
-            <Route path=":id/edit" element={
-                <ReviewEdit      
-                    datas={datas}                   
-                    addData={addData}
-                    setData={setData} 
-                    saveReviewData = {saveReviewData}
-                />} 
-            />
-        </Routes>
+        <>
+            <SmallSelectBox options={options} placeholder={"피플스킬"} />
+            <Routes>                       
+                <Route path="*" element={<ModuleList moduleID={0} setModuleItem={setModuleItem} />}/>
+                <Route path=":id" element={
+                    <ModuleDetail 
+                        moduleItem={moduleItem}
+                        datas={datas}
+                        setSelectedImgIndex={setSelectedImgIndex}
+                        selectedImgIndex={selectedImgIndex}
+                        addData={addData}
+                        setData={setData} 
+                    />} 
+                />
+                <Route path=":id/edit" element={
+                    <ReviewEdit      
+                        datas={datas}                   
+                        addData={addData}
+                        setData={setData} 
+                        saveReviewData = {saveReviewData}
+                    />} 
+                />
+            </Routes>
+        </>
     );
 }
 

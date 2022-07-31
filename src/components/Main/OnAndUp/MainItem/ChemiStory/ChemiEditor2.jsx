@@ -35,24 +35,18 @@ const ChemiEditor2 = ({onCreate}) =>{
         content: '',
            })
   }
-    return <div className="chemi-wrap4">
-      <main>
-
-      <div className="title">
-          <h2>자기개발목표</h2>
+    return <div className="DiaryEditor">
+      
+        <div>
+            <input ref={authorInput}name='author' value={state.author} onChange={handleChangeState}/>
         </div>
-        <div className="chemi-box">
-         <div className='chemi-input'>
-            <input placeholder='목표를 입력하세요' ref={authorInput}name='author' value={state.author} onChange={handleChangeState}/>
+        <div>
+            <textarea ref={contentInput} name='content' value={state.content} onChange={handleChangeState}/>
         </div>
-        <div className='chemi-input1'>
-            <input placeholder='내용을 입력하세요' ref={contentInput} name='content' value={state.content} onChange={handleChangeState}/>
-        </div>
-        </div>
-        <div className='chemi-btn'>
+        
+        <div classname='chemi-btn'>
             <button onClick={handleSubmit}>저장하기</button>
         </div>
-        </main>
     </div>
 };
 export default ChemiEditor2;

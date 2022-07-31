@@ -1,16 +1,16 @@
 import React from "react";
 
-function M1() {
+function M4() {
   return (
     <div className="wrap">
       <main>
         <div className="title">
-          <h2>멘토링이란</h2>
+          <h2>고민상담</h2>
           <h3>목적</h3>
         </div>
         <ul className="boxlist">
           <li className="box">
-            <p>으아아아아아아</p>
+            <p>인생이 고민이누</p>
           </li>
           <li className="box">
             <p>
@@ -36,4 +36,4 @@ function M1() {
   );
 }
 
-export default M1;
+export default M4;
