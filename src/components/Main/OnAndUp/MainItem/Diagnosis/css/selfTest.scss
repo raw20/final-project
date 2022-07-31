@@ -244,12 +244,13 @@
 .beforeResult_analysisBox{
     width: 100%;
     .beforeResult_analysisBox_title{
-        font-size: 18px; font-weight: 500;
-        padding: 50px 0 20px;
+        padding: 80px 0 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: rgba(111, 118, 193, 1);
+        font-size: 22px;
+        font-weight: bold;
+        color: rgb(111, 118, 193);
     }
     ul{
         width: 100%;
@@ -401,6 +402,12 @@
     .beforeResult_analysisBox ul li{
         height: 100%;
         padding: 20px 30px 20px 55px;
+    }
+    
+    .afterTest_inner .afterTest_inner_title, .afterTest_inner .afterResult_box_title, .afterResult_box .afterTest_inner_title, .afterResult_box .afterResult_box_title {
+        font-size: 18px;
+        padding: 20px 0 0;
+        line-height: 1.2;
     }
 }
 

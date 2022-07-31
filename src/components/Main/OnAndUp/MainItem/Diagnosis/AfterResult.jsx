@@ -75,7 +75,7 @@ function AfterResult(props) {
 
     return (
         <div className="afterResult_box">    
-            <div className='afterResult_box_title'>2022년 대비 2022년 OO님의 역량변화 그래프</div>
+            <div className='afterResult_box_title'>2022년 OO님의 사후 역량변화 그래프</div>
             {
                 show ?    
                     <Chart

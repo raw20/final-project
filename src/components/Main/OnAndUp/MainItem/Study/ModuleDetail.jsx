@@ -1,6 +1,5 @@
 import React,{ useEffect, useState, useRef, useCallback, useLayoutEffect } from 'react';
 
-
 import Modal from 'react-modal';
 import { Link, useParams, useLocation, useNavigate } from "react-router-dom";
 import YouTube from "react-youtube";
@@ -10,7 +9,6 @@ import SwiperCore, { Pagination, Navigation, Autoplay} from "swiper/core";
 import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
 import { setItem , getItem, removeItem } from './lib/storage';
 
 function ModuleDetail({setSelectedImgIndex, moduleItem}) {
@@ -34,9 +32,8 @@ function ModuleDetail({setSelectedImgIndex, moduleItem}) {
         })();
     },[]);
 
-
     const [datas, setDatas] = useState(getItem('reviewData') || []);
-console.log('getitem',getItem('reviewData'))
+    console.log('getitem',getItem('reviewData'))
 
     useEffect(() => {
         console.log(datas)
@@ -54,15 +51,12 @@ console.log('getitem',getItem('reviewData'))
         }
     },[])
 
-
-
     SwiperCore.use([Pagination, Navigation, Autoplay]);
 
     function handleCardNewsModal(e) {
         //setOpenModalId(e.target.id);
         setCardNewsModalIsOpen(true);
     }
-
     function handleMicroLearningModal(e) {
         //setOpenModalId(e.target.id);
         setMicroLearningModalIsOpen(true);
@@ -71,7 +65,6 @@ console.log('getitem',getItem('reviewData'))
     const videoUrl = "https://youtu.be/eZYJ1rglPUs"
     const videoCode = videoUrl.replace("https://youtu.be/",'');
     
-
     const youtubeOpts = {
         width: "640",
         height: "390",
@@ -96,7 +89,7 @@ console.log('getitem',getItem('reviewData'))
 
     return (
         <>
-            <div onClick={ () => { history(-1) }}> &dt- 뒤로가기</div>
+            <div className='study_back' onClick={ () => { history(-1) }}> &lt;- </div>
             <div className="detail_container">
                 <div className="aboutCompany_detail_summary">
                     <img src={moduleInfo.card_image}></img>
@@ -123,7 +116,7 @@ console.log('getitem',getItem('reviewData'))
                                 <div className="detail_content_cardNews_title">카드뉴스</div>
                             </div>
                             <div className="detail_content_microLearning" onClick={handleMicroLearningModal}>
-                                <img className="detail_content_cardNews_img" src='/img/cardNews1.png'></img>
+                                <img className="detail_content_cardNews_img" src='/img/modalimg.jpg'></img>
                                 <div className="detail_content_cardNews_title">마이크로러닝</div>
                             </div>
                         </div>
@@ -138,7 +131,7 @@ console.log('getitem',getItem('reviewData'))
                         </div>   
                         <div className="detail_practice_btnArea" to='edit'>   
                             <Link to="#">   
-                                <button className='tempSaveBtn'>임시저장</button>   
+                                <button className='deleteBtn'>삭제하기</button>   
                             </Link>   
                             <Link to="edit">   
                                 <button className='writeBtn'>작성하기</button>   
@@ -147,7 +140,6 @@ console.log('getitem',getItem('reviewData'))
                     </div>
                 </div>
             </div>
-
             <Modal 
                 className="cardnewsModal"
                 isOpen={cardNewsModalIsOpen}
