@@ -5,8 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { getLike } from "../../../../../app/detailSlice";
 import BoardTable from "./BoardTable";
 import BoardWrite from "./BoardWrite";
+import SmallSelectBox from "../../Main/SmallSelectBox";
 
 function Board() {
+  const options = [
+    { value: "0", label: "자유게시판", address: "board" },
+    { value: "1", label: "아이디어제시", address: "board" },
+  ];
   const [posts, setPosts] = useState([]);
   const [copyPosts, setCopyPosts] = useState([]);
   const postData = useSelector((state) => state.item);
@@ -27,6 +32,7 @@ function Board() {
 
   return (
     <>
+      <SmallSelectBox options={options} placeholder={"자유게시판"} />
       {!writer ? (
         <div className="aboutMe_area">
           <BoardTable posts={posts} copyPosts={copyPosts} setPosts={setPosts} writer={writer} setWriter={setWriter} />

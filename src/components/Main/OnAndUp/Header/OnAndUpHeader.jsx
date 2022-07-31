@@ -51,9 +51,7 @@ function OnAndUpHeader({ opacity, LoginAuth, setLoginAuth }) {
                   dep: item.dep,
                   address: item.address,
                 }}
-                className={({ isActive }) =>
-                  isActive ? "item-menu on" : "item-menu"
-                }
+                className={"item-menu"}
               >
                 <span>{item.menu}</span>
               </NavLink>
@@ -68,9 +66,7 @@ function OnAndUpHeader({ opacity, LoginAuth, setLoginAuth }) {
                         dep: item.dep,
                         address: item.onAndUpItemAddress,
                       }}
-                      className={({ isActive }) =>
-                        isActive ? "item-menu on" : "item-menu"
-                      }
+                      className={({ isActive }) => (isActive ? "item-menu on" : "item-menu")}
                     >
                       {ele}
                     </NavLink>

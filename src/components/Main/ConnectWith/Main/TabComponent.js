@@ -18,14 +18,6 @@ const component = [
     index: 1,
     content: [<CompanyIntro />],
   },
-  {
-    index: 2,
-    content: [<Preparations />],
-  },
-  {
-    index: 3,
-    content: [<NoticeBoard />],
-  },
 ];
 
 export default component;
