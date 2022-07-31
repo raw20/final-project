@@ -6,16 +6,29 @@ import { useDispatch, useSelector } from "react-redux";
 import { addLike } from "../../../../../app/detailSlice";
 
 function AboutMeDetail({ posts, setContent, id }) {
-  const favListColor = [{ color: "#ccc" }, { color: "#f20" }];
-  const [likes, setLikes] = useState("0");
+  const favListColor = [{ color: "#f20" }, { color: "#ccc" }];
+  const [likes, setLikes] = useState("1");
   const likeValue = useSelector((state) => state.item.likes);
   const dispatch = useDispatch();
+  console.log(likes);
   function handlerLikeFnc(e) {
     e.preventDefault();
-    setLikes(likes === "0" ? "1" : "0");
-    dispatch(addLike({ id, like: likes }));
+    setLikes(likes === "1" ? "0" : "1");
+    dispatch(
+      addLike({
+        id: posts.id,
+        title: posts.title,
+        writer: posts.writer,
+        content_text: posts.content_text,
+        content_img:
+          "http://conference.exc.co.kr/chemiverse/assets/img/img-board-view.png",
+        file: "N",
+        like: parseInt(likes),
+        views: posts.views,
+        date: posts.date,
+      })
+    );
   }
-  console.log("좋아요 : ", likes, posts.like);
   return (
     <div className="aboutMe-wrap">
       <div className="aboutMe-header">
