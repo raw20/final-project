@@ -22,28 +22,30 @@ function ConnectWthItemForm() {
   return (
     <div className="connectwith-item-form">
       <div className="connectwith-item-inner">
-        <div className="connectwith-item-img">
-          <img src={`${item[id]?.main_img}`} alt={item[id]?.title} />
-        </div>
-        <div className="connectwith-item-text">
-          <div className="connectwith-item-location">
-            {`Connect With Me ▶ ${item[id]?.title} `}
-          </div>
-          <div className="connectwith-item-title">
-            {item[id]?.title}
-            <span className="connectwith-item-eng-title">
-              {item[id]?.eng_title}
-            </span>
-          </div>
-          {item[id]?.contents.split("\n").map((line) => {
-            return (
-              <div className="connectwith-item-contents">
-                {line}
-                <br />
-              </div>
-            );
-          })}
-        </div>
+      <div className="title-area">
+          <div className="connectwith-item-img">
+            <img src={`${item[id]?.main_img}`} alt={item[id]?.title} />
+          </div>{/* img */}
+          <div className="connectwith-item-text">
+            <div className="connectwith-item-location">
+              {`Connect With Me ▶ ${item[id]?.title} `}
+            </div>
+            <div className="connectwith-item-title">
+              {item[id]?.title}
+              <span className="connectwith-item-eng-title">
+                {item[id]?.eng_title}
+              </span>
+            </div>
+            {item[id]?.contents.split("\n").map((line) => {
+              return (
+                <div className="connectwith-item-contents">
+                  {line}
+                  <br />
+                </div>
+              );
+            })}
+          </div>{/* text */}
+        </div>{/* title-area */}
         <div className="connectwith-item-box">
           <Outlet />
         </div>
