@@ -192,6 +192,12 @@ $bgColor: #dde3f6;
 }
 
 @include tablet {
+  .onAndUp-header.off {
+    background-color: $bgColor;
+  }
+  .onAndUp-header.none {
+    display: none;
+  }
   .onAndUp-header {
     width: 100%;
     display: flex;
@@ -321,6 +327,12 @@ $bgColor: #dde3f6;
 }
 
 @include mobile {
+  .onAndUp-header.off {
+    background-color: $bgColor;
+  }
+  .onAndUp-header.none {
+    display: none;
+  }
   .onAndUp-header {
     width: 100%;
     display: flex;

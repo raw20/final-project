@@ -9,6 +9,7 @@ function TabBtnMenu() {
   const [item, setItem] = useState([]);
   const dispatch = useDispatch();
   const itemData = "/db/onAndUpMenuData.json";
+  dispatch(headerGnbOpcity("2"));
   useEffect(() => {
     (async () => {
       const response = await fetch(itemData);
