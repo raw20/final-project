@@ -4,6 +4,8 @@
   background-color: #6f76c1;
   padding: 50px;
   box-sizing: border-box;
+  position: fixed;
+  overflow: hidden;
 }
 .HeaderTab-wrap .logo {
   background: url(/public/img/logo.png) no-repeat center/80%;
@@ -17,7 +19,7 @@
 .HeaderTab-wrap .HeaderTab_close {
   position: absolute;
   top: 90px;
-  right: 20px;
+  right: 40px;
   background: url(/public/img/btn-close.png) no-repeat center/cover;
   width: 30px;
   height: 30px;
@@ -31,7 +33,7 @@
   text-decoration: none;
 }
 .HeaderTab-wrap .HeaderTab-menu .HeaderTab-menu-link > li {
-  padding: 40px;
+  padding: 20px;
   text-indent: 15px;
   position: relative;
 }
