@@ -1,15 +1,34 @@
 .writer-wrap {
   width: 100%;
+  color: #aeaeba;
 }
-.writer-wrap .writer-title {
-  font-size: 1.5rem;
-  text-align: center;
-  font-weight: 300;
-  color: #6f76c1;
-  padding: 2.5rem;
-}
-.writer-wrap #writer-title-input {
+.writer-wrap .writer-table {
   width: 100%;
-  height: 30px;
-  border: 1px solid #e6e0ec;
+}
+.writer-wrap .writer-table tbody {
+  width: 100%;
+}
+.writer-wrap .writer-table .writer-title-row {
+  width: 100%;
+  height: 60px;
+}
+.writer-wrap .writer-table .writer-titl, .writer-wrap .writer-table .writer-name, .writer-wrap .writer-table .writer-content {
+  width: 140px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border-bottom: 1px solid #dcdce6;
+}
+.writer-wrap .writer-table .writer-titl-inputbox, .writer-wrap .writer-table .writer-name-inputbox, .writer-wrap .writer-table .writer-content-inputbox {
+  width: calc(100% - 140px);
+  border-bottom: 1px solid #dcdce6;
+}
+.writer-wrap .writer-table #writer-title-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #dde3f6;
+  padding: 0 20px;
+  font-size: 1rem;
+  outline: none;
 }/*# sourceMappingURL=writer.css.map */
