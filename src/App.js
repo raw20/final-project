@@ -33,7 +33,9 @@ import Chemi1 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi1";
 import Chemi2 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi2";
 import Chemi3 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi3";
 import Chemi4 from "./components/Main/OnAndUp/MainItem/ChemiStory/Chemi4";
-
+import HeaderTab from "./components/Main/ConnectWith/SubItem/HeaderTab";
+import Board from "./components/Main/OnAndUp/MainItem/Board/Board";
+import Idea from "./components/Main/OnAndUp/MainItem/Board/Idea";
 function App() {
   const [LoginAuth, setLoginAuth] = useState(false);
   useEffect(() => {
@@ -56,6 +58,7 @@ function App() {
               <Route path="qna" element={<QandA />} />
             </Route>
           </Route>
+          <Route path="/headertab" element={<HeaderTab />} />
 
           <Route path="/" element={<ConnectWith />} />
           <Route path="/chemiverseOnUp/:id" element={<OnAndUpItemForm />}>
@@ -82,29 +85,19 @@ function App() {
             {/* 멘토링 */}
             <Route path="mentoring" />
             {/* 게시판 */}
-            <Route path="noticeBoard/" element={<NoticeBoard />} />
+            <Route path="board/0" element={<Board />} />
+            <Route path="board/1" element={<Idea />} />
           </Route>
           <Route path="/chemiverseOnUp" element={<OnAndUp />} />
 
-          <Route
-            path="/chemiverseOnUp/login"
-            element={<Login setLoginAuth={setLoginAuth} />}
-          />
-          <Route
-            path="/chemiverseOnUp/login-search"
-            element={<LoginSearch />}
-          />
+          <Route path="/chemiverseOnUp/login" element={<Login setLoginAuth={setLoginAuth} />} />
+          <Route path="/chemiverseOnUp/login-search" element={<LoginSearch />} />
           <Route path="/chemiverseOnUp/profile" element={<Profile />} />
           <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
         </Routes>
       </BrowserRouter>
       <div className="search-box">
-        <input
-          type="text"
-          className="search-txt"
-          name=""
-          placeholder="Type to search"
-        />
+        <input type="text" className="search-txt" name="" placeholder="Type to search" />
         <div className="search-btn">
           <FiSearch />
         </div>

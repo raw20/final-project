@@ -1,6 +1,5 @@
-import Board from "./\bBoard";
-import AboutMe from "./AboutMe";
-import QandA from "./QandA";
+import Board from "./Board";
+import Idea from "./Idea";
 
 /*
  index : 0 = 공지사항
@@ -15,11 +14,7 @@ const component = [
   },
   {
     index: 1,
-    content: [<AboutMe />],
-  },
-  {
-    index: 2,
-    content: [<QandA />],
+    content: [<Idea />],
   },
 ];
 
