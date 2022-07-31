@@ -1,27 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useId } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import content from './css/content.css';
 import { login } from '../../../../../app/userSlice';
+import userData from '../../../../../userData.json';
+import { useSelector } from 'react-redux';
 
 
 const Login = ({ setLoginAuth }) => {
+  const [error, setError] = useState(false)
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   /*  const loginSubmit = (e) => {
      // e.preventDefault();
      console.log('로그인되었습니다.');
      setLoginAuth(true);
      navigate('/chemiverseOnUp');
    } */
+
   const LoginSearch = () => {
     navigate('/chemiverseOnUp/login-search')
   }
   console.log(id)
+
+
   const handleSubmit = (e) => {
-    e.preventDefault(e);
+    e.preventDefault();
+    // 입력을 안 한 경우
+    if (id.length == 0 || password.length == 0) {
+      //console.log(error);
+      /* setError(true); */
+      return alert("아이디와 비밀번호를 입력하세요.");
+    }
+
+    const user = userData.find((user) => user.id === id);
+    // 아이디가 일치하는 사용자가 없는 경우
+    if (!user) {
+      return setError(true);
+      //alert("아이디가 일치하지않습니다.");
+    }
+
+    // 패스워드가 일치하지 않는 경우
+    if (user.password !== password) {
+      return setError(true);
+      //alert("비밀번호가 일치하지않습니다.");
+    }
+
     dispatch(login({ id: id, pw: password }))
     setLoginAuth(true);
     navigate('/chemiverseOnUp');
@@ -57,10 +84,29 @@ const Login = ({ setLoginAuth }) => {
           </div>
         </div>
         <div className='IdFwBtn'>
-          <button id='searchBtn' onClick={LoginSearch}>ID/PW찾기</button>
+          <button
+            id='searchBtn'
+            onClick={LoginSearch}>
+            ID/PW찾기
+          </button>
+          {/*   <span>{error ? true : "로그인 정보가 올바르지 않습니다."}</span> */}
         </div>
         <div>
-          <button className="login-button" type="submit" value="로그인" >로그인</button>
+          {error ?
+            (<button
+              className="error-button"
+            >로그인
+            </button>
+            )
+            /*    (<span>로그인 정보가 올바르지 않습니다 </span>) */
+            :
+            (<button
+              className="login-button"
+              type="submit"
+              value="로그인"
+            >로그인
+            </button>
+            )}
         </div>
       </form>
     </div>
