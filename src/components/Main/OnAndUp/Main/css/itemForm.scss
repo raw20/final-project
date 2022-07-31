@@ -75,7 +75,7 @@ $lightColor: #e6e0ec;
 //SmallSelectBox
 
 .menuSelect {
-  display:none;
+  display: none;
 }
 
 @media (min-width: 335px) and (max-width: 757px) {
@@ -84,40 +84,40 @@ $lightColor: #e6e0ec;
   }
 
   .menuSelect {
-    display:block;
+    display: block;
     margin-bottom: 30px;
 
     &__indicator svg {
-        fill: #fff;
+      fill: #fff;
     }
 
     &__menu:before {
-        content: "";
-        display: block;
-        width: 80%;
-        margin: auto;
-        border-bottom: 1px solid #fff;
-      }
+      content: "";
+      display: block;
+      width: 80%;
+      margin: auto;
+      border-bottom: 1px solid #fff;
+    }
 
     &__option {
-        display: flex;
-        justify-content: center; 
-        align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    &__single-value {
-        color: #fff !important;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        transform: translate(18px);
+    z &__single-value {
+      color: #fff !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translate(18px);
     }
     &__placeholder {
-        color: #fff !important;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        margin-left: 36px;
-        transform: translate(18px);
+      color: #fff !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 36px;
+      transform: translate(18px);
     }
   }
 }
