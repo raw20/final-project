@@ -1,5 +1,6 @@
 .edu_wrap {
   margin-top: 100px;
+  padding: 50px;
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -70,7 +71,19 @@
 }
 
 @media (min-width: 300px) and (max-width: 1023px) {
-  .edu_box {
+  .edu_wrap {
+    padding: 0;
+  }
+  .edu_wrap .edu_box {
     min-width: 100%;
+  }
+  .edu_wrap .edu_title {
+    margin-top: 35px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .edu_wrap .edu_url {
+    margin-top: 18px;
+    font-size: 14px;
   }
 }/*# sourceMappingURL=eduroom.css.map */

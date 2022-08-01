@@ -40,6 +40,15 @@
   align-items: center;
   margin-bottom: 20px;
 }
+.module_card :hover .dim {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
 .module_card :hover .module_card_hover {
   width: 100%;
   height: 170px;
@@ -443,6 +452,9 @@
   .module_card_hover, .module_card_hover_text {
     display: none;
   }
+  .dim {
+    display: none;
+  }
   .module_box {
     justify-content: center;
     width: 100%;
@@ -560,6 +572,9 @@
 }
 @media (min-width: 758px) and (max-width: 1023px) {
   .module_card_hover, .module_card_hover_text {
+    display: none;
+  }
+  .dim {
     display: none;
   }
   .module_card {

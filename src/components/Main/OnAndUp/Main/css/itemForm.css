@@ -121,7 +121,7 @@
   }
   .item-form .item-inner {
     overflow-wrap: break-word;
-    max-width: 86%;
+    max-width: 90%;
     margin: 1.875rem auto;
     padding: 3.125rem 1.875rem;
     border-radius: 20px;
@@ -236,7 +236,7 @@
   .item-form .item-inner {
     box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
     overflow-wrap: break-word;
-    max-width: 80%;
+    width: 90%;
     margin: 1.875rem auto;
     padding: 2.125rem 10px;
     border-radius: 20px;
@@ -270,10 +270,10 @@
   .item-form .item-inner .item-text .item-location {
     width: 100%;
     height: auto;
-    font-size: 0.688rem;
+    font-size: 12px;
     color: #ccc;
     position: relative;
-    margin-left: 1.25rem;
+    margin-left: 3px;
   }
   .item-form .item-inner .item-text .item-location::before {
     content: " ";
@@ -287,7 +287,7 @@
   }
   .item-form .item-inner .item-text .item-title {
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 26px;
     font-weight: 600;
     color: rgb(111, 118, 193);
     margin-top: 3rem;
@@ -295,7 +295,8 @@
   .item-form .item-inner .item-text .item-contents {
     width: 70%;
     height: 1%;
-    font-size: 0.8rem;
+    font-size: 14px;
+    word-break: keep-all;
     color: #ccc;
     margin-top: 1.5rem;
   }
