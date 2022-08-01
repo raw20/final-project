@@ -1,5 +1,5 @@
 import React from 'react';
-import DemoApp from './DemoApp';
+import Calendar from './Calendar';
 import SmallSelectBox from '../../Main/SmallSelectBox';
 
 const EduCalendar = () => {
@@ -11,7 +11,7 @@ const EduCalendar = () => {
   return (
     <div>
       <SmallSelectBox options={options} placeholder={"시간표"} />
-      <DemoApp />
+      <Calendar />
     </div>
   );
 };

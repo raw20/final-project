@@ -54,7 +54,7 @@ const EduLectuererCard = ({lec, setViewDetail, index, setLecCardIndex,lecCardInd
             <span className="career">{lec.career1}</span>
             <span className="career">{lec.career2}</span>
           </div>
-          <div className="module_box">
+          <div className="lecturer_module_box">
             <span>진행중인 모듈</span>
             <div className={display ? "contents-type" : "contents-type on"} onClick={handlerShowType}>
               선택

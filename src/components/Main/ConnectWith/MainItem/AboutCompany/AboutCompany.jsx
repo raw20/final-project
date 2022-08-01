@@ -70,8 +70,38 @@ function AboutCompany() {
         <span className="swiper-intro">엑스퍼트 컨설팅은 HRM(인사)에서 HRD(교육)까지 Total HR 솔루션을 제공함으로써 고객사의 경쟁력 강화를 위해 노력해오고 있습니다.</span>
         <AboutCompanySlider />
       </div>
-      <div className="vision-area">
-
+      <div 
+       data-aos="fade-up"
+       data-aos-delay="100"
+       data-aos-offset="100"
+       data-aos-duration="2500"
+      className="about-vision-area">
+        <h2 className="about-subtitle">비전</h2>
+        <div className="admin vi-content">
+          <div className="vi-title">경영철학</div>
+          <div className="ad-admin">우리는 언제나 팀웍과 조직력으로 도전하고, 성취하고, 도약한다</div>
+        </div>
+        <div className="mission vi-content">
+          <div className="vi-title">미션</div>
+          <div className="ad-admin">고객 조직과 고객 구성원의 성공에 공헌한다</div>
+        </div>
+        <div className="value vi-content">
+          <div className="vi-title">기준가치</div>
+          <div className="va-content-box">
+            <div className="va-content">정직/청렴</div>
+            <div className="va-content">고객중심</div>
+          </div>
+        </div>
+        <div className="act-val vi-content">
+          <h2>행동가치</h2>
+          <ul className="ac-content-list">
+            <li className="ac-content"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fbcc8e5cd-b660-4079-87ab-32ff0f68778d%2Fact01.gif?table=block&id=a1064e26-059d-4aff-9a63-1acebb844a98&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&userId=fa3bea6d-e42a-40f8-b88c-7ec43765de26&cache=v2" alt="" /><span> 끊임없는 창조적 혁신의 실천</span></li>
+            <li className="ac-content"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F795b6f55-2512-4c72-b96b-b3f43728617a%2Fact02.gif?table=block&id=7c1cf27f-ce34-499f-963e-da500882ffe7&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&userId=fa3bea6d-e42a-40f8-b88c-7ec43765de26&cache=v2" alt="" /><span> 전문성을 위한 지속적인 학습</span></li>
+            <li className="ac-content"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F22a0606e-2880-4ca3-9dc6-206d45442d87%2Fact03.gif?table=block&id=8505bc2f-1df7-4663-9159-de927425b33c&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&userId=fa3bea6d-e42a-40f8-b88c-7ec43765de26&cache=v2" alt="" /><span> 논리와 합리사고 중시</span></li>
+            <li className="ac-content"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb6176411-0c37-4fea-970a-e2304f779ddf%2Fact04.gif?table=block&id=ab110252-3cfd-468f-826d-2dc68cbc6b40&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&userId=fa3bea6d-e42a-40f8-b88c-7ec43765de26&cache=v2" alt="" /><span> 업무품질에 대한 집착</span></li>
+            <li className="ac-content"><img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F28aeedb3-d543-4146-80da-03f73f37fab7%2Fact05.gif?table=block&id=b4360c30-5d63-421e-904f-2b225513df20&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&userId=fa3bea6d-e42a-40f8-b88c-7ec43765de26&cache=v2" alt="" /><span> 승리에 대한 열정</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   );

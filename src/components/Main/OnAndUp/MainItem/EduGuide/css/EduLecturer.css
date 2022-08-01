@@ -45,13 +45,13 @@
   font-size: 14px;
   margin-bottom: 8px;
 }
-.lecturer_area .lecturer_wrap .card .lec_box .module_box {
+.lecturer_area .lecturer_wrap .card .lec_box .lecturer_module_box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   height: 55px;
 }
-.lecturer_area .lecturer_wrap .card .lec_box .module_box .contents-type {
+.lecturer_area .lecturer_wrap .card .lec_box .lecturer_module_box .contents-type {
   width: 80%;
   height: 18px;
   border-radius: 5px;
@@ -66,7 +66,7 @@
   box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
   background-color: rgba(255, 255, 255, 0.336);
 }
-.lecturer_area .lecturer_wrap .card .lec_box .module_box .contents-type .type-tab {
+.lecturer_area .lecturer_wrap .card .lec_box .lecturer_module_box .contents-type .type-tab {
   width: 84.2%;
   height: auto;
   background-color: rgb(255, 255, 255);
@@ -81,22 +81,22 @@
   right: 0px;
   border-radius: 5px;
 }
-.lecturer_area .lecturer_wrap .card .lec_box .module_box .contents-type .type-tab .type-tab-list {
+.lecturer_area .lecturer_wrap .card .lec_box .lecturer_module_box .contents-type .type-tab .type-tab-list {
   margin-top: 0.7rem;
   cursor: pointer;
 }
-.lecturer_area .lecturer_wrap .card .lec_box .module_box .contents-type .type-tab .type-tab-list:hover {
+.lecturer_area .lecturer_wrap .card .lec_box .lecturer_module_box .contents-type .type-tab .type-tab-list:hover {
   color: #6f76c1;
   font-weight: 500;
 }
-.lecturer_area .lecturer_wrap .card .lec_box .module_box .contents-type .type-tab.on {
+.lecturer_area .lecturer_wrap .card .lec_box .lecturer_module_box .contents-type .type-tab.on {
   display: block;
 }
-.lecturer_area .lecturer_wrap .card .lec_box .module_box .contents-type.on {
+.lecturer_area .lecturer_wrap .card .lec_box .lecturer_module_box .contents-type.on {
   box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
   background-color: rgb(255, 255, 255);
 }
-.lecturer_area .lecturer_wrap .card .lec_box .module_box span {
+.lecturer_area .lecturer_wrap .card .lec_box .lecturer_module_box span {
   font-weight: 600;
   font-size: 14px;
 }
@@ -209,14 +209,14 @@
   .lecturer_area .card .lec_box .movebtn_box .detail_btn {
     margin: 0px !important;
   }
-  .lecturer_area .card .lec_box .module_box .contents-type {
+  .lecturer_area .card .lec_box .lecturer_module_box .contents-type {
     background-color: #dde3f6;
   }
-  .lecturer_area .card .lec_box .module_box .contents-type .type-tab {
+  .lecturer_area .card .lec_box .lecturer_module_box .contents-type .type-tab {
     min-width: 89.8%;
     background-color: #dde3f6;
   }
-  .lecturer_area .card .lec_box .module_box .contents-type.on {
+  .lecturer_area .card .lec_box .lecturer_module_box .contents-type.on {
     background-color: #dde3f6;
   }
   .lecturer_area .subinfo_box {
@@ -262,14 +262,14 @@
   .lecturer_area .card .lec_box .info_box .career_box {
     font-size: 12px;
   }
-  .lecturer_area .card .lec_box .info_box .module_box .contents-type {
+  .lecturer_area .card .lec_box .info_box .lecturer_module_box .contents-type {
     background-color: #dde3f6;
   }
-  .lecturer_area .card .lec_box .info_box .module_box .contents-type .type-tab {
+  .lecturer_area .card .lec_box .info_box .lecturer_module_box .contents-type .type-tab {
     max-width: 75%;
     background-color: #dde3f6;
   }
-  .lecturer_area .card .lec_box .info_box .module_box .contents-type.on {
+  .lecturer_area .card .lec_box .info_box .lecturer_module_box .contents-type.on {
     background-color: #dde3f6;
   }
   .lecturer_area .card .lec_box .movebtn_box .detail_btn {

@@ -65,7 +65,7 @@
   border-bottom: 1px solid #dcdce6;
   color: #aeaeba;
 }
-.edu_notice_wrap .edu_notice_area .edu_detail_wrap .main {
+.edu_notice_wrap .edu_notice_area .edu_detail_wrap .edu-detail-main {
   text-align: center;
   padding: 30px;
   box-sizing: border-box;
@@ -73,7 +73,7 @@
   font-size: 12px;
   line-height: 20px;
 }
-.edu_notice_wrap .edu_notice_area .edu_detail_wrap .main img {
+.edu_notice_wrap .edu_notice_area .edu_detail_wrap .edu-detail-main img {
   width: 60vw;
   margin-bottom: 20px;
 }
@@ -91,11 +91,34 @@
 }
 .edu_notice_wrap .edu_pagination {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   text-align: center;
   width: 300px;
   padding-top: 25px;
   margin: auto;
+}
+.edu_notice_wrap .edu_pagination .PrevButton {
+  width: 11px;
+  height: 18px;
+  font-size: 0;
+  text-indent: -9999px;
+  background: url(/public/img/left.png) no-repeat center/cover;
+  cursor: pointer;
+}
+.edu_notice_wrap .edu_pagination .PrevButton:disabled {
+  background: url(/public/img/left-dis.png) no-repeat center/cover;
+}
+.edu_notice_wrap .edu_pagination .NextButton {
+  width: 11px;
+  height: 18px;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+  background: url(/public/img/right.png) no-repeat center/cover;
+}
+.edu_notice_wrap .edu_pagination .NextButton:disabled {
+  background: url(/public/img/right-dis.png) no-repeat center/cover;
 }
 .edu_notice_wrap .edu_pagination .page_link {
   color: #ccc;

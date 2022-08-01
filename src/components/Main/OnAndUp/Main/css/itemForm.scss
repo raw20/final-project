@@ -115,6 +115,7 @@ $lightColor: #e6e0ec;
   }
 }
 @include tablet {
+
   .item-form {
     width: 100%;
     height: 100%;
@@ -181,7 +182,36 @@ $lightColor: #e6e0ec;
         }
       }
       .tab-btn-area {
-        display: none;
+        width: 65%;
+        height: auto;
+        display: flex;
+        margin: 10rem auto;
+        .tab-btn {
+          width: 150px;
+          height: 50px;
+          color: #111;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          box-shadow: 2px 2px 2px 2px rgb(34 51 89 / 10%);
+          border-radius: 11px;
+          font-size: 15px;
+          cursor: pointer;
+          margin: 0px auto;
+          text-decoration: none;
+          .tab-btn-list {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .tab-btn.on {
+          background-color: rgba(111, 118, 193, 1);
+          color: #fff;
+          border: none;
+          box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+        }
       }
       .item-box {
         max-width: 100%;
@@ -263,9 +293,9 @@ $lightColor: #e6e0ec;
           margin-top: 1.5rem;
         }
       }
-      .tab-btn-area {
-        display: none;
-      }
+      // .tab-btn-area {
+      //   display: none;
+      // }
       .item-box {
         max-width: 100%;
         margin: 20rem auto;
@@ -276,10 +306,6 @@ $lightColor: #e6e0ec;
       }
     }
   }
-  .item-form .item-inner .tab-btn-area {
-    display: none !important;
-  }
-
   .menuSelect {
     display:block;
     margin-bottom: 30px;
