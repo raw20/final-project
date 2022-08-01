@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import { AiFillCloseSquare } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { headerGnbOpcity } from "../../../../app/headerStateSlice";
+import { setFooterDisplay } from "../../../../app/footerStateSlice";
 
 function TabBtnMenu() {
   const [item, setItem] = useState([]);
   const dispatch = useDispatch();
   const itemData = "/db/onAndUpMenuData.json";
   dispatch(headerGnbOpcity("2"));
+  dispatch(setFooterDisplay("off"));
   useEffect(() => {
     (async () => {
       const response = await fetch(itemData);
