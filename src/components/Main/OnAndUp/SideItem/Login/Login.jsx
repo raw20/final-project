@@ -1,11 +1,11 @@
-import React, { useState, useId } from "react";
+import React, { useState, useId, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import content from "./css/content.css";
 import { login } from "../../../../../app/userSlice";
 import userData from "../../../../../userData.json";
-import { useSelector } from "react-redux";
 import { setFooterDisplay } from "../../../../../app/footerStateSlice";
+import { headerGnbOpcity } from "../../../../../app/headerStateSlice";
 
 const Login = ({ setLoginAuth }) => {
   const [error, setError] = useState(false);
@@ -13,18 +13,18 @@ const Login = ({ setLoginAuth }) => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   dispatch(setFooterDisplay("off"));
+  dispatch(headerGnbOpcity("2"));
   /*  const loginSubmit = (e) => {
      // e.preventDefault();
      console.log('로그인되었습니다.');
      setLoginAuth(true);
      navigate('/chemiverseOnUp');
    } */
-  console.log(id);
   const LoginSearch = () => {
     navigate("/chemiverseOnUp/login-search");
   };
-  console.log(id);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -38,14 +38,14 @@ const Login = ({ setLoginAuth }) => {
     const user = userData.find((user) => user.id === id);
     // 아이디가 일치하는 사용자가 없는 경우
     if (!user) {
+      alert("아이디가 일치하지않습니다.");
       return setError(true);
-      //alert("아이디가 일치하지않습니다.");
     }
 
     // 패스워드가 일치하지 않는 경우
     if (user.password !== password) {
+      alert("비밀번호가 일치하지않습니다.");
       return setError(true);
-      //alert("비밀번호가 일치하지않습니다.");
     }
 
     dispatch(login({ id: id, pw: password }));

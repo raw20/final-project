@@ -4,7 +4,6 @@ import "./css/footer.css";
 
 const Footer = () => {
   const footerDisplay = useSelector((state) => state.footer.display);
-  console.log("tf", footerDisplay);
   return (
     <div className={footerDisplay === "off" ? "ft-wrapper off" : "ft-wrapper"}>
       <div className="ft-box">
@@ -27,35 +26,55 @@ const Footer = () => {
         </div>
         <div className="footer-certification-award">
           <div className="certification-award1">
-            <img className="awardLogo" alt="awardLogo" src={process.env.PUBLIC_URL + "/img/award-logo1.png"} />
+            <img
+              className="awardLogo"
+              alt="awardLogo"
+              src={process.env.PUBLIC_URL + "/img/award-logo1.png"}
+            />
             <div className="award-title">
               <h3>고용노동부인증 우수교육기관</h3>
               <p>원격훈련 부분('19.10~'22.09)</p>
             </div>
           </div>
           <div className="certification-award2">
-            <img className="awardLogo" alt="awardLogo" src={process.env.PUBLIC_URL + "/img/award-logo2.jpg"} />
+            <img
+              className="awardLogo"
+              alt="awardLogo"
+              src={process.env.PUBLIC_URL + "/img/award-logo2.jpg"}
+            />
             <div className="award-title">
               <h3>서울시 우수기업브랜드</h3>
               <p>2017 하이서울브랜드기업 선정 </p>
             </div>
           </div>
           <div className="certification-award3">
-            <img className="awardLogo" alt="awardLogo" src={process.env.PUBLIC_URL + "/img/award-logo3.png"} />
+            <img
+              className="awardLogo"
+              alt="awardLogo"
+              src={process.env.PUBLIC_URL + "/img/award-logo3.png"}
+            />
             <div className="award-title">
               <h3>PCI 한국심리학회 국내최초 인증</h3>
               <p>PCI(직무기반 인성검사)</p>
             </div>
           </div>
           <div className="certification-award4">
-            <img className="awardLogo" alt="awardLogo" src={process.env.PUBLIC_URL + "/img/award-logo4.jpg"} />
+            <img
+              className="awardLogo"
+              alt="awardLogo"
+              src={process.env.PUBLIC_URL + "/img/award-logo4.jpg"}
+            />
             <div className="award-title">
               <h3>Main-Biz</h3>
               <p>경영혁신형 중소기업인증</p>
             </div>
           </div>
           <div className="certification-award5">
-            <img className="awardLogo" alt="awardLogo" src={process.env.PUBLIC_URL + "/img/award-logo5.png"} />
+            <img
+              className="awardLogo"
+              alt="awardLogo"
+              src={process.env.PUBLIC_URL + "/img/award-logo5.png"}
+            />
             <div className="award-title">
               <h3>가족친화기업</h3>
               <p>인증획득</p>
