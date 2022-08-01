@@ -18,7 +18,6 @@
 .module_box {
   width: 1000px;
   height: 300px;
-  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -43,30 +42,10 @@
   align-items: center;
   margin-bottom: 20px;
 }
-.module_card :hover .module_card_hover {
-  width: 100%;
-  height: 170px;
-  transform: translate(0, -170px);
-  transition: all ease 0.5s;
-  visibility: visible;
-}
-.module_card :hover .module_card_hover_text {
-  visibility: visible;
-  padding: 0 30px;
-  margin-top: 50px;
-  color: #fff;
-  line-height: 1.2;
-  transform: translate(0, 0);
-  transition: all ease-in-out 0.3s;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  opacity: 1;
-}
 
 .module_cardImg {
   width: 100%;
   height: 100%;
-  position: relative;
 }
 .module_cardImg .cardImg_background {
   width: 100%;
@@ -79,30 +58,10 @@
   border-radius: 10px 10px 0 0;
 }
 
-.module_card_hover {
-  position: absolute;
-  width: 100%;
-  height: 30px;
-  background-color: rgba(111, 118, 193, 0.5);
-  z-index: 3;
-  border-radius: 60% 50% 0 0;
-}
-
-.module_card_hover_text {
-  opacity: 0;
-  margin-top: 50px;
-  font-size: 15px;
-  left: -40%;
-  padding: 0 30px;
-}
-
 .module_cardTitle_txt {
   padding: 16px;
   width: 100%;
   box-sizing: border-box;
-  z-index: 5;
-  background-color: #fff;
-  border-radius: 0 0 10px 10px;
 }
 .module_cardTitle_txt .module_cardTitle {
   font-size: 15px;
@@ -151,54 +110,44 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 130px;
+  margin-bottom: 150px;
 }
 .detail_cardNews .detail_cardNews_title {
   padding-left: 5px;
+  font-size: 18px;
   margin-bottom: 30px;
   margin-left: 8px;
   color: rgb(111, 118, 193);
-  font-size: 22px;
-  font-weight: bold;
+  font-weight: 500;
 }
 .detail_cardNews .detail_content {
   width: 100%;
   display: flex;
 }
 .detail_cardNews .detail_content_cardNews {
-  position: relative;
-  width: 30%;
+  width: 45%;
   margin-right: 3%;
   cursor: pointer;
 }
-.detail_cardNews .detail_content_cardNews img {
-  min-width: 270px;
-  box-shadow: 0px 11px 23px -9px rgba(0, 0, 0, 0.38);
-}
 .detail_cardNews .detail_content_microLearning {
-  position: relative;
-  width: 70%;
+  width: 55%;
   cursor: pointer;
 }
-.detail_cardNews .detail_content_microLearning img {
-  box-shadow: 0px 11px 23px -9px rgba(0, 0, 0, 0.38);
-}
-.detail_cardNews .detail_content_cardNews_img, .detail_cardNews .detail_content_microLearning_img {
+.detail_cardNews .detail_content_cardNews_img {
   width: 100%;
-  min-width: 300px;
   height: 320px;
   border-radius: 15px;
 }
-.detail_cardNews .detail_content_cardNews_title, .detail_cardNews .detail_content_microLearning_title {
+.detail_cardNews .detail_content_cardNews_title {
   width: 100%;
   text-align: center;
   font-size: 15px;
   margin-top: 30px;
 }
 
-.beforeTest_question .beforeTest_question_g {
-  font-size: 16px;
-  line-height: 1.2;
+.ReactModal__Body--open,
+.ReactModal__Html--open {
+  z-index: 999;
 }
 
 .detail_practice {
@@ -208,12 +157,11 @@
   margin-bottom: 100px;
 }
 .detail_practice .detail_practice_title {
+  font-size: 18px;
   margin-left: 5px;
   color: rgb(111, 118, 193);
   font-weight: 500;
-  margin-bottom: 15px;
-  font-size: 22px;
-  font-weight: bold;
+  margin-bottom: 10px;
 }
 .detail_practice .detail_practice_desc {
   color: gray;
@@ -221,14 +169,13 @@
   margin-bottom: 30px;
 }
 .detail_practice .detail_practice_textArea {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100px;
   border-radius: 10px;
   box-shadow: 1px 1px 5px 3px #ddd;
   margin-bottom: 15px;
-  padding: 30px;
 }
-.detail_practice .deleteBtn, .detail_practice .tmpSaveBtn {
+.detail_practice .tempSaveBtn {
   min-width: 130px;
   width: 6.843vw;
   height: 25px;
@@ -243,7 +190,7 @@
   display: flex;
   justify-content: flex-end;
 }
-.detail_practice .writeBtn, .detail_practice .saveBtn {
+.detail_practice .writeBtn {
   min-width: 130px;
   width: 6.843vw;
   height: 25px;
@@ -253,38 +200,44 @@
   cursor: pointer;
 }
 
-.save_btnArea {
+.submitBtnArea {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   padding-top: 20px;
 }
 
+.submitBtn {
+  width: 70px;
+  height: 25px;
+  border-radius: 3px;
+  background-color: rgb(111, 118, 193);
+  color: #fff;
+}
+
 .aboutCompany_detail_summary {
   width: 100%;
   height: 100%;
   display: flex;
-  margin: 50px 0 130px;
+  margin: 50px 0 150px;
 }
 .aboutCompany_detail_summary img {
-  width: 30%;
+  width: 300px;
   height: 250px;
   border-radius: 10px;
-  margin-right: 3%;
-  box-shadow: 0px 11px 23px -9px rgba(0, 0, 0, 0.38);
 }
 .aboutCompany_detail_summary .aboutCompany_detail_text {
   padding: 30px 25px 25px;
+  margin-left: 50px;
   width: calc(100% - 150px);
   border-radius: 10px;
   box-shadow: 1px 1px 5px 3px #ddd;
 }
 .aboutCompany_detail_summary .aboutCompany_detail_title {
-  margin-bottom: 30px;
+  font-size: 18px;
+  margin-bottom: 25px;
   font-weight: 500;
   color: rgb(111, 118, 193);
-  font-size: 22px;
-  font-weight: bold;
 }
 .aboutCompany_detail_summary .aboutCompany_detail_goal {
   display: flex;
@@ -295,7 +248,7 @@
 }
 .aboutCompany_detail_summary .aboutCompany_detail_goal dt {
   width: 10%;
-  font-weight: bold;
+  font-weight: 500;
 }
 .aboutCompany_detail_summary .aboutCompany_detail_goal dd {
   width: 90%;
@@ -308,7 +261,7 @@
 }
 .aboutCompany_detail_summary .aboutCompany_detail_concept dt {
   width: 10%;
-  font-weight: bold;
+  font-weight: 500;
 }
 .aboutCompany_detail_summary .aboutCompany_detail_concept dd {
   width: 90%;
@@ -347,26 +300,11 @@
   width: 100%;
 }
 
-.embed_modal_swiper_name {
-  display: none;
-}
-.embed_modal_swiper_name .swiper-slide {
-  height: auto;
-  cursor: pointer;
-}
-.embed_modal_swiper_name .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-
 .modal_swiper_name {
   width: 80%;
   margin: auto;
   height: 300px;
   background-color: #fff;
-  border-radius: 0px 11px 23px -9px rgba(0, 0, 0, 0.38);
-  box-shadow: 1px 1px 5px 3px #ddd;
 }
 .modal_swiper_name .swiper-slide {
   height: 250px;
@@ -375,7 +313,6 @@
 .modal_swiper_name .swiper-slide img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
 }
 
 .prev-arrow, .next-arrow {
@@ -400,42 +337,7 @@
   background-color: #e6e0ec;
 }
 
-.study_back {
-  font-size: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 13%;
-  right: 5%;
-  transform: translate(0, -50%);
-  background-color: #fff;
-  border: 1px solid #6f76c1;
-  border-radius: 30px;
-  transition: 0.4s;
-  width: 30px;
-  height: 30px;
-}
-
-.backButton {
-  font-size: 15px;
-  display: flex;
-  color: rgb(111, 118, 193);
-  font-weight: 800;
-  align-items: center;
-  cursor: pointer;
-}
-.backButton :hover {
-  color: rgb(61, 68, 143);
-}
-
-.ck-editor__editable {
-  max-height: 300px;
-  min-height: 300px;
-}
-
-.embedYoutube {
+.menuSelect {
   display: none;
 }
 
@@ -445,9 +347,6 @@
   }
   .module_card {
     width: 100%;
-  }
-  .module_card_hover, .module_card_hover_text {
-    display: none;
   }
   .module_box {
     justify-content: center;
@@ -469,27 +368,15 @@
     flex-wrap: wrap;
   }
   .aboutCompany_detail_summary Img {
-    width: 100%;
-    margin: auto auto 35px;
-    width: 95%;
+    width: 89.552vw;
+    padding-bottom: 30px;
   }
   .detail_content {
     flex-wrap: wrap;
     flex-direction: column;
   }
   .detail_content .detail_content_cardNews_img {
-    display: none;
-  }
-  .detail_content .detail_content_microLearning_img {
-    display: none;
-  }
-  .embedYoutube {
-    display: block;
-    height: 300px;
-  }
-  .embed_modal_swiper_name {
-    display: block;
-    box-shadow: 0px 11px 23px -9px rgba(0, 0, 0, 0.38);
+    width: 100%;
   }
   .detail_container {
     padding: 0;
@@ -536,32 +423,51 @@
   .detail_practice .detail_practice_desc {
     margin-bottom: 16px;
   }
+  .detail_practice .detail_practice_textArea {
+    margin-bottom: 20px;
+  }
   .detail_cardNews {
     margin-bottom: 50px;
   }
   .detail_cardNews .detail_content_cardNews_title {
     margin-top: 15px;
   }
-  .save_btnArea {
-    flex-direction: column;
-    align-items: flex-end;
+  .item-form .item-inner .tab-btn-area {
+    display: none !important;
   }
-  .save_btnArea div {
-    width: 100%;
-    margin-bottom: 10px;
+  .menuSelect {
+    display: block;
+    margin-bottom: 30px;
   }
-  .save_btnArea a {
-    width: 100%;
-    text-align: right;
+  .menuSelect__indicator svg {
+    fill: #fff;
   }
-  .backButton {
-    padding-bottom: 20px;
+  .menuSelect__menu:before {
+    content: "";
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid #fff;
   }
-  .detail_practice .deleteBtn, .detail_practice .tmpSaveBtn {
-    width: 100%;
+  .menuSelect__option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .detail_practice .writeBtn, .detail_practice .saveBtn {
-    width: 100%;
+  .menuSelect__single-value {
+    color: #fff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(18px);
+  }
+  .menuSelect__placeholder {
+    color: #fff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 36px;
+    transform: translate(18px);
   }
 }
 @media (min-width: 758px) and (max-width: 1023px) {
@@ -584,9 +490,6 @@
   .item-form .item-inner .tab-btn-area .tab-btn {
     margin-top: 10px !important;
     width: 48% !important;
-  }
-  .module_card_hover, .module_card_hover_text {
-    display: none;
   }
   .module_card {
     display: flex;
@@ -616,32 +519,14 @@
   }
   .aboutCompany_detail_summary Img {
     width: 35%;
-    margin-right: 15px;
+    padding-right: 20px;
+    padding-bottom: 40px;
   }
   .aboutCompany_detail_summary .aboutCompany_detail_text {
     margin-left: 0;
     width: 65%;
-    padding: 30px 20px 30px;
   }
   .aboutCompany_detail_summary .aboutCompany_detail_goal dt, .aboutCompany_detail_summary .aboutCompany_detail_concept dt {
     width: 20%;
-  }
-  .detail_cardNews {
-    justify-content: space-between;
-  }
-  .detail_cardNews .detail_content {
-    justify-content: space-between;
-  }
-  .detail_cardNews .detail_content_cardNews {
-    width: calc(30% - 20px);
-  }
-  .detail_cardNews .detail_content_cardNews img {
-    min-width: auto;
-  }
-  .detail_cardNews .detail_content_microLearning {
-    width: calc(70% - 20px);
-  }
-  .backButton {
-    padding-bottom: 20px;
   }
 }/*# sourceMappingURL=ability.css.map */

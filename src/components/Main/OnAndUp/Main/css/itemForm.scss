@@ -17,6 +17,8 @@ $lightColor: #e6e0ec;
       background: #fff;
       position: relative;
       animation: fadein 1s;
+      box-sizing: border-box;
+      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
       .item-img {
         width: 100%;
         height: auto;
@@ -72,7 +74,7 @@ $lightColor: #e6e0ec;
         width: 65%;
         height: auto;
         display: flex;
-        margin: 10rem auto;
+        margin: 15rem auto 50px;
         .tab-btn {
           width: 150px;
           height: 50px;
@@ -102,7 +104,7 @@ $lightColor: #e6e0ec;
       }
       .item-box {
         max-width: 100%;
-        margin: 20rem auto;
+        margin: 0 auto;
         padding: 50px 30px;
         height: 100vh;
         border-radius: 20px;
@@ -130,6 +132,7 @@ $lightColor: #e6e0ec;
       background: #fff;
       position: relative;
       animation: fadein 1s;
+      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
       .item-img {
         width: 100%;
         height: auto;
@@ -185,7 +188,7 @@ $lightColor: #e6e0ec;
         width: 65%;
         height: auto;
         display: flex;
-        margin: 10rem auto;
+        margin: 15rem auto 50px;
         .tab-btn {
           width: 150px;
           height: 50px;
@@ -215,7 +218,7 @@ $lightColor: #e6e0ec;
       }
       .item-box {
         max-width: 100%;
-        margin: 20rem auto;
+        margin: 0 auto;
         padding: 50px 30px;
         height: 130vh;
         border-radius: 20px;
@@ -242,6 +245,7 @@ $lightColor: #e6e0ec;
       background: #fff;
       position: relative;
       animation: fadein 1s;
+      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
       .item-img {
         width: 100%;
         height: auto;
@@ -298,7 +302,7 @@ $lightColor: #e6e0ec;
       // }
       .item-box {
         max-width: 100%;
-        margin: 20rem auto;
+        margin: 120px auto;
         padding: 50px 30px;
         height: 100vh;
         border-radius: 20px;
