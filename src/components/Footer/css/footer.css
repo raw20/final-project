@@ -9,7 +9,6 @@
     bottom: 0;
     left: 0;
   }
-
   .ft-inner {
     display: flex;
     justify-content: flex-start;
@@ -19,33 +18,27 @@
     box-sizing: border-box;
     position: relative;
   }
-
   .ft-inner .company {
     margin: 0 30px;
   }
-
   .ft-inner .info {
     margin: 0 50px;
   }
-
   .ft-company-info {
     position: flex;
     padding-right: 16px;
     letter-spacing: -0.5px;
     line-height: 18px;
   }
-
   .ft-company-info .email {
     text-decoration: underline;
   }
-
   .ft-company-info {
     color: #656565;
     letter-spacing: -0.5px;
     line-height: 18px;
     font-weight: 440;
   }
-
   .footer-certification-award {
     display: flex;
     margin-top: 30px;
@@ -53,48 +46,40 @@
     justify-content: center;
     color: #656565;
   }
-
   .certification-award1 {
     margin-right: 20px;
     display: flex;
     flex-direction: row;
   }
-
   .certification-award2 {
     margin-right: 20px;
     display: flex;
     flex-direction: row;
   }
-
   .certification-award3 {
     margin-right: 20px;
     display: flex;
     flex-direction: row;
   }
-
   .certification-award4 {
     margin-right: 20px;
     display: flex;
     flex-direction: row;
   }
-
   .certification-award5 {
     margin-right: 20px;
     display: flex;
     flex-direction: row;
   }
-
   .award-title {
     margin-right: 20px;
   }
-
   .awardLogo {
     width: 40px;
     height: 40px;
     margin-right: 10px;
   }
 }
-
 @media (min-width: 758px) and (max-width: 1023px) {
   .ft-wrapper {
     width: 100%;
@@ -106,7 +91,6 @@
     bottom: 0;
     left: 0;
   }
-
   .ft-inner {
     display: flex;
     justify-content: flex-start;
@@ -116,33 +100,27 @@
     box-sizing: border-box;
     position: relative;
   }
-
   .ft-inner .company {
     margin: 0 10px;
   }
-
   .ft-inner .info {
     margin: 0 30px;
   }
-
   .ft-company-info {
     position: flex;
     padding-right: 16px;
     letter-spacing: -0.5px;
     line-height: 18px;
   }
-
   .ft-company-info .email {
     text-decoration: underline;
   }
-
   .ft-company-info {
     color: #656565;
     letter-spacing: -0.5px;
     line-height: 18px;
     font-weight: 440;
   }
-
   .footer-certification-award {
     display: flex;
     margin-top: 30px;
@@ -150,38 +128,30 @@
     justify-content: center;
     color: #656565;
   }
-
   .certification-award1 {
     margin-right: 20px;
   }
-
   .certification-award2 {
     margin-right: 20px;
   }
-
   .certification-award3 {
     margin-right: 20px;
   }
-
   .certification-award4 {
     margin-right: 20px;
   }
-
   .certification-award5 {
     margin-right: 20px;
   }
-
   .award-title {
     margin-right: 20px;
   }
-
   .awardLogo {
     width: 40px;
     height: 40px;
     margin-right: 10px;
   }
 }
-
 @media (min-width: 335px) and (max-width: 757px) {
   .ft-wrapper {
     width: 100%;
@@ -192,34 +162,28 @@
     position: fixed;
     bottom: 0;
   }
-
   .ft-inner {
     padding: 10px 0;
     width: 100%;
     box-sizing: border-box;
     position: relative;
   }
-
   .ft-inner .info {
     margin: 10px 0;
   }
-
   .ft-company-info {
     letter-spacing: -0.5px;
     line-height: 18px;
   }
-
   .ft-company-info .email {
     text-decoration: underline;
   }
-
   .ft-company-info {
     color: #656565;
     letter-spacing: -0.5px;
     line-height: 18px;
     font-weight: 440;
   }
-
   .footer-certification-award {
     display: flex;
     margin-top: 30px;
@@ -227,36 +191,27 @@
     justify-content: center;
     color: #656565;
   }
-
   .certification-award1 {
     margin-right: 20px;
   }
-
   .certification-award2 {
     margin-right: 20px;
   }
-
   .certification-award3 {
     margin-right: 20px;
   }
-
   .certification-award4 {
     margin-right: 20px;
   }
-
   .certification-award5 {
     margin-right: 20px;
   }
-
   .award-title {
     margin-right: 20px;
   }
-
   .awardLogo {
     width: 40px;
     height: 40px;
     margin-right: 10px;
   }
-}
-
-/*# sourceMappingURL=footer.css.map */
+}/*# sourceMappingURL=footer.css.map */
