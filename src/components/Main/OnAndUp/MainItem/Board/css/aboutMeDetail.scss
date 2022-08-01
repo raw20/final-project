@@ -2,15 +2,15 @@ $bgColor: #dde3f6;
 $deepColor: #6f76c1;
 $lightColor: #e6e0ec;
 
-.aboutMe-wrap {
+.b-aboutMe-wrap {
   width: 100%;
   animation: fadein 1s;
-  .aboutMe-header {
+  .b-aboutMe-header {
     width: 100%;
     display: flex;
     border-bottom: 1px solid $deepColor;
     padding: 1rem 2rem;
-    .aboutMe-category {
+    .b-aboutMe-category {
       width: 70px;
       height: 25px;
       color: $deepColor;
@@ -20,7 +20,7 @@ $lightColor: #e6e0ec;
       align-items: center;
       margin-right: 1rem;
     }
-    .aboutMe-title {
+    .b-aboutMe-title {
       font-size: 1.4rem;
       color: $deepColor;
       display: flex;
@@ -28,21 +28,21 @@ $lightColor: #e6e0ec;
       align-items: center;
     }
   }
-  .aboutMe-main {
+  .b-aboutMe-main {
     width: 90%;
     margin: 0 auto;
-    .aboutMe-sub {
+    .b-aboutMe-sub {
       width: 100%;
       display: flex;
       justify-content: flex-end;
-      .aboutMe-date {
+      .b-aboutMe-date {
         width: 20%;
         text-align: end;
         padding: 1rem 1.5rem;
         font-size: 0.9rem;
       }
-      .aboutMe-views,
-      .aboutMe-like {
+      .b-aboutMe-views,
+      .b-aboutMe-like {
         width: 10%;
         text-align: end;
         padding: 1rem 1.5rem;
@@ -50,7 +50,7 @@ $lightColor: #e6e0ec;
       }
     }
 
-    .aboutMe-img {
+    .b-aboutMe-img {
       width: 100%;
       img {
         width: 100%;
@@ -58,17 +58,17 @@ $lightColor: #e6e0ec;
         margin: 0px auto;
       }
     }
-    .aboutMe-text {
+    .b-aboutMe-text {
       margin: 1.5rem auto;
       font-size: 1.2rem;
       line-height: 1.3rem;
       font-weight: 200;
     }
   }
-  .aboutMe-footer {
+  .b-aboutMe-footer {
     width: 100%;
     margin: 0 auto;
-    .aboutMe-file {
+    .b-aboutMe-file {
       padding: 1.3rem 0.5rem;
       font-size: 1.4rem;
       color: $deepColor;

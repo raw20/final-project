@@ -10,7 +10,6 @@ $lightColor: #e6e0ec;
     box-sizing: border-box;
     .item-inner {
       max-width: 80%;
-      height: 80vw;
       margin: 1.875rem auto;
       padding: 3.125rem 1.875rem;
       border-radius: 20px;
@@ -72,7 +71,7 @@ $lightColor: #e6e0ec;
         width: 65%;
         height: auto;
         display: flex;
-        margin: 10rem auto;
+        margin: 100px auto;
         .tab-btn {
           width: 150px;
           height: 50px;
@@ -102,9 +101,8 @@ $lightColor: #e6e0ec;
       }
       .item-box {
         max-width: 100%;
-        margin: 20rem auto;
-        padding: 50px 30px;
-        height: 100vh;
+        margin: 20px auto;
+        padding: 30px 30px;
         border-radius: 20px;
         background: #ffffff;
       }

@@ -2,15 +2,15 @@ $bgColor: #dde3f6;
 $deepColor: #6f76c1;
 $lightColor: #e6e0ec;
 
-.notice-detail-wrap {
+.b-notice-detail-wrap {
   width: 100%;
   animation: fadein 1s;
-  .notice-detail-header {
+  .b-notice-detail-header {
     width: 100%;
     display: flex;
     border-bottom: 1px solid $deepColor;
     padding: 1rem 2rem;
-    .notice-detail-category {
+    .b-notice-detail-category {
       width: 70px;
       height: 25px;
       color: $deepColor;
@@ -20,7 +20,7 @@ $lightColor: #e6e0ec;
       align-items: center;
       margin-right: 1rem;
     }
-    .notice-detail-title {
+    .b-notice-detail-title {
       font-size: 1.4rem;
       color: $deepColor;
       display: flex;
@@ -28,16 +28,16 @@ $lightColor: #e6e0ec;
       align-items: center;
     }
   }
-  .notice-detail-main {
+  .b-notice-detail-main {
     width: 90%;
     margin: 0 auto;
-    .notice-detail-date {
+    .b-notice-detail-date {
       width: 100%;
       text-align: end;
       padding: 1rem 1.5rem;
       font-size: 0.9rem;
     }
-    .notice-detail-img {
+    .b-notice-detail-img {
       width: 100%;
       img {
         width: 100%;
@@ -45,24 +45,24 @@ $lightColor: #e6e0ec;
         margin: 0px auto;
       }
     }
-    .notice-detail-text {
+    .b-notice-detail-text {
       margin: 1.5rem auto;
       font-size: 1.2rem;
       line-height: 1.3rem;
       font-weight: 200;
     }
   }
-  .notice-detail-footer {
+  .b-notice-detail-footer {
     width: 100%;
     margin: 0 auto;
-    .notice-detail-file {
+    .b-notice-detail-file {
       padding: 1.3rem 0.5rem;
       font-size: 1.4rem;
       color: $deepColor;
       border-top: 1px solid $deepColor;
       border-bottom: 1px solid $deepColor;
     }
-    .notice-btn {
+    .b-notice-btn {
       margin-top: 1.5rem;
       margin-right: 1rem;
       float: right;

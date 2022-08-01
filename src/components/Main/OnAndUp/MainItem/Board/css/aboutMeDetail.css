@@ -1,15 +1,15 @@
-.aboutMe-wrap {
+.b-aboutMe-wrap {
   width: 100%;
   -webkit-animation: fadein 1s;
           animation: fadein 1s;
 }
-.aboutMe-wrap .aboutMe-header {
+.b-aboutMe-wrap .b-aboutMe-header {
   width: 100%;
   display: flex;
   border-bottom: 1px solid #6f76c1;
   padding: 1rem 2rem;
 }
-.aboutMe-wrap .aboutMe-header .aboutMe-category {
+.b-aboutMe-wrap .b-aboutMe-header .b-aboutMe-category {
   width: 70px;
   height: 25px;
   color: #6f76c1;
@@ -19,61 +19,61 @@
   align-items: center;
   margin-right: 1rem;
 }
-.aboutMe-wrap .aboutMe-header .aboutMe-title {
+.b-aboutMe-wrap .b-aboutMe-header .b-aboutMe-title {
   font-size: 1.4rem;
   color: #6f76c1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.aboutMe-wrap .aboutMe-main {
+.b-aboutMe-wrap .b-aboutMe-main {
   width: 90%;
   margin: 0 auto;
 }
-.aboutMe-wrap .aboutMe-main .aboutMe-sub {
+.b-aboutMe-wrap .b-aboutMe-main .b-aboutMe-sub {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-.aboutMe-wrap .aboutMe-main .aboutMe-sub .aboutMe-date {
+.b-aboutMe-wrap .b-aboutMe-main .b-aboutMe-sub .b-aboutMe-date {
   width: 20%;
   text-align: end;
   padding: 1rem 1.5rem;
   font-size: 0.9rem;
 }
-.aboutMe-wrap .aboutMe-main .aboutMe-sub .aboutMe-views,
-.aboutMe-wrap .aboutMe-main .aboutMe-sub .aboutMe-like {
+.b-aboutMe-wrap .b-aboutMe-main .b-aboutMe-sub .b-aboutMe-views,
+.b-aboutMe-wrap .b-aboutMe-main .b-aboutMe-sub .b-aboutMe-like {
   width: 10%;
   text-align: end;
   padding: 1rem 1.5rem;
   font-size: 0.9rem;
 }
-.aboutMe-wrap .aboutMe-main .aboutMe-img {
+.b-aboutMe-wrap .b-aboutMe-main .b-aboutMe-img {
   width: 100%;
 }
-.aboutMe-wrap .aboutMe-main .aboutMe-img img {
+.b-aboutMe-wrap .b-aboutMe-main .b-aboutMe-img img {
   width: 100%;
   height: 400px;
   margin: 0px auto;
 }
-.aboutMe-wrap .aboutMe-main .aboutMe-text {
+.b-aboutMe-wrap .b-aboutMe-main .b-aboutMe-text {
   margin: 1.5rem auto;
   font-size: 1.2rem;
   line-height: 1.3rem;
   font-weight: 200;
 }
-.aboutMe-wrap .aboutMe-footer {
+.b-aboutMe-wrap .b-aboutMe-footer {
   width: 100%;
   margin: 0 auto;
 }
-.aboutMe-wrap .aboutMe-footer .aboutMe-file {
+.b-aboutMe-wrap .b-aboutMe-footer .b-aboutMe-file {
   padding: 1.3rem 0.5rem;
   font-size: 1.4rem;
   color: #6f76c1;
   border-top: 1px solid #6f76c1;
   border-bottom: 1px solid #6f76c1;
 }
-.aboutMe-wrap .aboutMe-footer .notice-btn {
+.b-aboutMe-wrap .b-aboutMe-footer .notice-btn {
   margin-top: 1.5rem;
   margin-right: 1rem;
   float: right;

@@ -11,12 +11,12 @@ const NoticeTableList = ({ posts, totalPosts, content, setContent, copyPosts, se
   return (
     <>
       {content ? (
-        <div className="notice_table_area">
+        <div className="b-notice_table_area">
           <TableSearchBar posts={posts} copyPosts={copyPosts} setPosts={setPosts} />
           <span>
             총<span className="total"> {totalPosts}</span>건
           </span>
-          <table className="notice_table">
+          <table className="b-notice_table">
             <thead>
               <tr>
                 <th>NO</th>
@@ -30,7 +30,7 @@ const NoticeTableList = ({ posts, totalPosts, content, setContent, copyPosts, se
                 <h2>검색결과 없음</h2>
               ) : (
                 posts.map((posts, index) => (
-                  <tr className="content_row" key={index}>
+                  <tr className="b-content_row" key={index}>
                     <td>{posts.id}</td>
                     <td>{posts.category}</td>
                     <td onClick={() => onClick(index)}>{posts.title}</td>

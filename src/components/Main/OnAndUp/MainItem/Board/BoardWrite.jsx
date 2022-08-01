@@ -10,9 +10,9 @@ function BoardWrite({ boardTitle, setBoardTitle, boardContents, setBoardContents
   const contentsValue = useSelector((state) => state.aboutMeWriter.content);
 
   return (
-    <div className="writer-wrap">
-      <h1 className="writer-title">글쓰기</h1>
-      <input type="text" id="writer-title-input" placeholder={boardTitle ? titleValue : "제목을 입력해주세요."} value={boardTitle} onChange={(e) => setBoardTitle(e.target.value)} />
+    <div className="b-writer-wrap">
+      <h1 className="b-writer-title">글쓰기</h1>
+      <input type="text" id="b-writer-title-input" placeholder={boardTitle ? titleValue : "제목을 입력해주세요."} value={boardTitle} onChange={(e) => setBoardTitle(e.target.value)} />
       <CKEditor
         editor={ClassicEditor}
         config={{
