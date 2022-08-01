@@ -1,148 +1,326 @@
-.item-form {
-  width: 100%;
-  height: 100%;
-  padding-top: 4.35rem;
-  box-sizing: border-box;
-}
-.item-form .item-inner {
-  max-width: 80%;
-  height: 100%;
-  margin: 1.875rem auto;
-  padding: 3.125rem 1.875rem;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
-  position: relative;
-  -webkit-animation: fadein 1s;
-          animation: fadein 1s;
-}
-.item-form .item-inner .item-img {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: flex-end;
-}
-.item-form .item-inner .item-img img {
-  width: 570px;
-  height: 390px;
-  position: absolute;
-  top: 0px;
-  right: -50px;
-}
-.item-form .item-inner .item-text {
-  margin: 1.875rem 3.125rem;
-}
-.item-form .item-inner .item-text .item-location {
-  width: 100%;
-  height: auto;
-  font-size: 15px;
-  color: #ccc;
-  position: relative;
-  margin-left: 1.25rem;
-}
-.item-form .item-inner .item-text .item-location::before {
-  content: " ";
-  width: 17px;
-  height: 17px;
-  top: 0px;
-  left: -20px;
-  position: absolute;
-  background: url(../../../../../../public/img/ic-check-on.png) no-repeat center/cover;
-  margin-right: 1.25rem;
-}
-.item-form .item-inner .item-text .item-title {
-  width: 100%;
-  font-size: 3rem;
-  font-weight: 600;
-  color: rgb(111, 118, 193);
-  margin: 5rem 0 3rem;
-}
-.item-form .item-inner .item-text .item-contents {
-  width: 70%;
-  font-size: 25px;
-  color: #ccc;
-  margin-top: 30px;
-}
-.item-form .item-inner .item-text .tab-btn-area {
-  width: 60%;
-  display: flex;
-  margin: 4rem auto;
-}
-.item-form .item-inner .item-text .tab-btn-area .tab-btn {
-  width: 150px;
-  height: 50px;
-  color: #111;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 2px 2px rgba(34, 51, 89, 0.1);
-  border-radius: 11px;
-  font-size: 15px;
-  cursor: pointer;
-  margin: 0px auto;
-  text-decoration: none;
-}
-.item-form .item-inner .item-text .tab-btn-area .tab-btn .tab-btn-list {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.item-form .item-inner .item-text .tab-btn-area .tab-btn.on {
-  background-color: rgb(111, 118, 193);
-  color: #fff;
-  border: none;
-  box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.1);
-}
-.item-form .item-inner .item-box {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 50px 30px;
-  height: 100vh;
-  border-radius: 20px;
-  background: #ffffff;
-}
-
-.menuSelect {
-  display: none;
-}
-
-@media (min-width: 335px) and (max-width: 757px) {
+@media (min-width: 1024px) {
+  .item-form {
+    width: 100%;
+    height: 100%;
+    padding-top: 4.375rem;
+    box-sizing: border-box;
+  }
+  .item-form .item-inner {
+    max-width: 80%;
+    height: 80vw;
+    margin: 1.875rem auto;
+    padding: 3.125rem 1.875rem;
+    border-radius: 20px;
+    background: #fff;
+    position: relative;
+    -webkit-animation: fadein 1s;
+            animation: fadein 1s;
+  }
+  .item-form .item-inner .item-img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .item-form .item-inner .item-img img {
+    width: 570px;
+    height: 390px;
+    position: absolute;
+    top: 0px;
+    right: -50px;
+  }
+  .item-form .item-inner .item-text {
+    width: 100%;
+    height: 15%;
+    margin: 1.875rem 3.125rem;
+  }
+  .item-form .item-inner .item-text .item-location {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    color: #ccc;
+    position: relative;
+    margin-left: 1.25rem;
+  }
+  .item-form .item-inner .item-text .item-location::before {
+    content: " ";
+    width: 17px;
+    height: 17px;
+    top: 0px;
+    left: -20px;
+    position: absolute;
+    background: url(https://www.notion.so/b7cd0c647e2842dba9f334c3613fe2b8#013799ce0c0749dfb5c4ab586fc3cd10) no-repeat center/cover;
+    margin-right: 1.25rem;
+  }
+  .item-form .item-inner .item-text .item-title {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(111, 118, 193);
+    margin-top: 7rem;
+  }
+  .item-form .item-inner .item-text .item-contents {
+    width: 70%;
+    height: 1%;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 2.5rem;
+  }
   .item-form .item-inner .tab-btn-area {
-    display: none !important;
+    width: 65%;
+    height: auto;
+    display: flex;
+    margin: 10rem auto;
   }
-  .menuSelect {
-    display: block;
-    margin-bottom: 30px;
+  .item-form .item-inner .tab-btn-area .tab-btn {
+    width: 150px;
+    height: 50px;
+    color: #111;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px 2px rgba(34, 51, 89, 0.1);
+    border-radius: 11px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0px auto;
+    text-decoration: none;
   }
-  .menuSelect__indicator svg {
-    fill: #fff;
-  }
-  .menuSelect__menu:before {
-    content: "";
-    display: block;
-    width: 80%;
-    margin: auto;
-    border-bottom: 1px solid #fff;
-  }
-  .menuSelect__option {
+  .item-form .item-inner .tab-btn-area .tab-btn .tab-btn-list {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  z .menuSelect__single-value {
-    color: #fff !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(18px);
+  .item-form .item-inner .tab-btn-area .tab-btn.on {
+    background-color: rgb(111, 118, 193);
+    color: #fff;
+    border: none;
+    box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.1);
   }
-  .menuSelect__placeholder {
-    color: #fff !important;
+  .item-form .item-inner .item-box {
+    max-width: 100%;
+    margin: 20rem auto;
+    padding: 50px 30px;
+    height: 100vh;
+    border-radius: 20px;
+    background: #ffffff;
+  }
+}
+@media (min-width: 758px) and (max-width: 1023px) {
+  .item-form {
+    width: 100%;
+    height: 100%;
+    padding-top: 4.375rem;
+    box-sizing: border-box;
+  }
+  .item-form .item-inner {
+    max-width: 80%;
+    height: 150vw;
+    margin: 1.875rem auto;
+    padding: 3.125rem 1.875rem;
+    border-radius: 20px;
+    background: #fff;
+    position: relative;
+    -webkit-animation: fadein 1s;
+            animation: fadein 1s;
+  }
+  .item-form .item-inner .item-img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .item-form .item-inner .item-img img {
+    width: 370px;
+    height: 250px;
+    position: absolute;
+    top: 0px;
+    right: -30px;
+  }
+  .item-form .item-inner .item-text {
+    width: 100%;
+    height: 15%;
+    margin: 1.875rem 3.125rem;
+  }
+  .item-form .item-inner .item-text .item-location {
+    width: 100%;
+    height: auto;
+    font-size: 0.813rem;
+    color: #ccc;
+    position: relative;
+    margin-left: 1.25rem;
+  }
+  .item-form .item-inner .item-text .item-location::before {
+    content: " ";
+    width: 17px;
+    height: 17px;
+    top: 0px;
+    left: -20px;
+    position: absolute;
+    background: url(https://www.notion.so/b7cd0c647e2842dba9f334c3613fe2b8#013799ce0c0749dfb5c4ab586fc3cd10) no-repeat center/cover;
+    margin-right: 1.25rem;
+  }
+  .item-form .item-inner .item-text .item-title {
+    width: 100%;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: rgb(111, 118, 193);
+    margin-top: 4rem;
+  }
+  .item-form .item-inner .item-text .item-contents {
+    width: 70%;
+    height: 1%;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 2.5rem;
+  }
+  .item-form .item-inner .tab-btn-area {
+    width: 70%;
+    display: flex;
+    margin: 10rem auto;
+  }
+  .item-form .item-inner .tab-btn-area .tab-btn {
+    width: 8.375rem;
+    height: 3.125rem;
+    color: #111;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px 2px rgba(34, 51, 89, 0.1);
+    border-radius: 11px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0px auto;
+    text-decoration: none;
+  }
+  .item-form .item-inner .tab-btn-area .tab-btn .tab-btn-list {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 36px;
-    transform: translate(18px);
+  }
+  .item-form .item-inner .tab-btn-area .tab-btn.on {
+    background-color: rgb(111, 118, 193);
+    color: #fff;
+    border: none;
+    box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.1);
+  }
+  .item-form .item-inner .item-box {
+    max-width: 100%;
+    margin: 20rem auto;
+    padding: 50px 30px;
+    height: 130vh;
+    border-radius: 20px;
+    background: #ffffff;
+  }
+}
+@media (min-width: 335px) and (max-width: 757px) {
+  .item-form {
+    width: 100%;
+    height: auto;
+    padding-top: 4.375rem;
+    box-sizing: border-box;
+  }
+  .item-form .item-inner {
+    max-width: 80%;
+    height: 80vw;
+    margin: 1.875rem auto;
+    padding: 2.125rem 1.875rem;
+    border-radius: 20px;
+    background: #fff;
+    position: relative;
+    -webkit-animation: fadein 1s;
+            animation: fadein 1s;
+  }
+  .item-form .item-inner .item-img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .item-form .item-inner .item-img img {
+    width: 270px;
+    height: 180px;
+    position: absolute;
+    top: 0px;
+    right: -25px;
+  }
+  .item-form .item-inner .item-text {
+    width: 100%;
+    height: 15%;
+    margin: 1.875rem 1.525rem;
+  }
+  .item-form .item-inner .item-text .item-location {
+    width: 100%;
+    height: auto;
+    font-size: 0.688rem;
+    color: #ccc;
+    position: relative;
+    margin-left: 1.25rem;
+  }
+  .item-form .item-inner .item-text .item-location::before {
+    content: " ";
+    width: 17px;
+    height: 17px;
+    top: 0px;
+    left: -20px;
+    position: absolute;
+    background: url(https://www.notion.so/b7cd0c647e2842dba9f334c3613fe2b8#013799ce0c0749dfb5c4ab586fc3cd10) no-repeat center/cover;
+    margin-right: 1.25rem;
+  }
+  .item-form .item-inner .item-text .item-title {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(111, 118, 193);
+    margin-top: 3rem;
+  }
+  .item-form .item-inner .item-text .item-contents {
+    width: 70%;
+    height: 1%;
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-top: 1.5rem;
+  }
+  .item-form .item-inner .tab-btn-area {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem auto;
+  }
+  .item-form .item-inner .tab-btn-area .tab-btn {
+    width: 12rem;
+    height: 3.125rem;
+    color: #111;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px 2px rgba(34, 51, 89, 0.1);
+    border-radius: 11px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0.6rem auto;
+    text-decoration: none;
+  }
+  .item-form .item-inner .tab-btn-area .tab-btn .tab-btn-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-form .item-inner .tab-btn-area .tab-btn.on {
+    background-color: rgb(111, 118, 193);
+    color: #fff;
+    border: none;
+    box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.1);
+  }
+  .item-form .item-inner .item-box {
+    max-width: 100%;
+    margin: 20rem auto;
+    padding: 50px 30px;
+    height: 100vh;
+    border-radius: 20px;
+    background: #ffffff;
   }
 }/*# sourceMappingURL=itemForm.css.map */
