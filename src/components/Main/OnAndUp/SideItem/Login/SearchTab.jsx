@@ -1,124 +1,89 @@
-import React, { useState } from "react";
-import PwModal from "./PwModal";
+import React, { useState, useId } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import content from "./css/content.css";
+import { login } from "../../../../../app/userSlice";
 import userData from "../../../../../userData.json";
-import "./css/search.css";
-import { userSearch } from "../../../../../app/userSlice";
+import { useSelector } from "react-redux";
 
-function SearchTab() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
+const Login = ({ setLoginAuth }) => {
+  const [error, setError] = useState(false);
+  const [id, setId] = useState("");
+  const [password, setPassword] = useState("");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const tabClickHandler = (index) => {
-    setActiveIndex(index);
+  const LoginSearch = () => {
+    navigate("/chemiverseOnUp/login-search");
   };
-
-  const [modalOpen, setModalOpen] = useState(false);
-  const modalClose = (e) => {
-    e.preventDefault();
-    setModalOpen(!modalOpen);
-  };
+  console.log(id);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // 입력을 안 한 경우
+    if (id.length == 0 || password.length == 0) {
+      return alert("아이디와 비밀번호를 입력하세요.");
+    }
 
-    const user = userData.find((user) => user.name === name);
-
+    const user = userData.find((user) => user.id === id);
     // 아이디가 일치하는 사용자가 없는 경우
     if (!user) {
-      return alert("이름이 일치하지않습니다.");
+      return setError(true);
     }
 
     // 패스워드가 일치하지 않는 경우
-    if (user.number !== number) {
-      return alert("휴대폰 번호가 일치하지않습니다.");
+    if (user.password !== password) {
+      return setError(true);
     }
 
-    dispatch(userSearch({ name: name, number: number }));
+    dispatch(login({ id: id, pw: password }));
+    setLoginAuth(true);
+    navigate("/chemiverseOnUp");
   };
 
-  const tabContArr = [
-    {
-      tabTitle: (
-        <div className="search-tab">
-          <li
-            className={activeIndex === 0 ? "is-active" : ""}
-            onClick={() => tabClickHandler(0)}
-          >
-            {" "}
-            아이디 찾기
-          </li>
-        </div>
-      ),
-      tabCont: (
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <div id="tab-content">
-            <input
-              type="name"
-              id="userName"
-              placeholder="이름을 입력하세요"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <input
-              type="tel"
-              id="phoneNumber"
-              placeholder="휴대폰 번호를 입력하세요"
-              value={number}
-              onChange={(e) => setNumber(e.target.value)}
-            />
-            <button id="idBtn" type="submit">
-              회원정보로 찾기
-            </button>
-          </div>
-        </form>
-      ),
-    },
-    {
-      tabTitle: (
-        <div className="search-tab">
-          <li
-            className={activeIndex === 1 ? "is-active" : ""}
-            onClick={() => tabClickHandler(1)}
-          >
-            {" "}
-            비밀번호 찾기{" "}
-          </li>
-        </div>
-      ),
-      tabCont: (
-        <div id="tab-content">
-          <input type="id" id="userId" placeholder="아이디를 입력하세요" />
-          <input type="name" id="userPwName" placeholder="이름을 입력하세요" />
-          <input
-            type="tel"
-            id="phoneNumber"
-            placeholder="휴대폰 번호를 입력하세요"
-          />
-          <div>
-            <>
-              <button id="pwChange" onClick={modalClose}>
-                비밀번호 변경
-              </button>
-              {modalOpen && <PwModal modalClose={modalClose}></PwModal>}
-            </>
-          </div>
-        </div>
-      ),
-    },
-  ];
   return (
-    <div className="tab-box">
-      <ul className="tabs is-boxed">
-        {tabContArr.map((section, index) => {
-          return section.tabTitle;
-        })}
-      </ul>
-      <div>{tabContArr[activeIndex].tabCont}</div>
+    <div className="login-form">
+      <div className="login-title">로그인💡</div>
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <div className="login-id">
+          <div>
+            <input
+              type="id"
+              id="loginId"
+              placeholder="아이디"
+              value={id}
+              onChange={(e) => setId(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className="login-pw">
+          <div>
+            <input
+              type="password"
+              id="userPass"
+              placeholder="비밀번호"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className="IdFwBtn">
+          <button id="searchBtn" onClick={LoginSearch}>
+            ID/PW찾기
+          </button>
+        </div>
+        <div>
+          {error ? (
+            <button className="error-button">로그인</button>
+          ) : (
+            <button className="login-button" type="submit" value="로그인">
+              로그인
+            </button>
+          )}
+        </div>
+      </form>
     </div>
   );
-}
+};
 
-export default SearchTab;
+export default Login;
