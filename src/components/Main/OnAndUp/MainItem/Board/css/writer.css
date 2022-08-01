@@ -1,15 +1,14 @@
-.writer-wrap {
+.board-writer-wrap {
   width: 100%;
 }
-.writer-wrap .writer-title {
+.board-writer-wrap .writer-title {
   font-size: 1.5rem;
   text-align: center;
   font-weight: 300;
   color: #6f76c1;
   padding: 2.5rem;
 }
-.writer-wrap #writer-title-input {
+.board-writer-wrap .board-writer-input {
   width: 100%;
   height: 30px;
-  border: 1px solid #e6e0ec;
 }/*# sourceMappingURL=writer.css.map */

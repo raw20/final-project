@@ -32,6 +32,21 @@ function ConnectItem({ data }) {
               </div>
             );
           })}
+          <section class="sticky">
+            <div class="bubbles">
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              
+            </div>
+          </section>
           <div className="img">
             <img src={`${data.img}`} alt={data.title} />
           </div>

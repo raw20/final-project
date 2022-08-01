@@ -24,7 +24,10 @@ function AboutCompany() {
         data-aos-offset="100"
         data-aos-duration="2500"
         className="sum-copy-box">
-          <span className="copy-sub">사람을 통한 경쟁의 차별화! 사람을 통한 경영성과의 극대화!</span>
+          <span className="copy-sub">
+            <div className="sub1">사람을 통한 경쟁의 차별화!</div>
+            <div className="sub2">사람을 통한 경영성과의 극대화!</div>
+          </span>
           <span className="copy-main">인재강국 대한민국을<br/>세우는 주춧돌이 되겠습니다.</span>
         </div>
         <div
@@ -34,8 +37,21 @@ function AboutCompany() {
         data-aos-duration="2500"
          className="sum-content-box">
           <div className="logo-box">
-            <p>홈페이지 바로가기</p>
-            <div className="move-logo" onClick={() => window.open('https://www.exc.co.kr/', '_blank')}></div>
+            <div className="logo-text">
+            <div className="txt">
+                <span className="txt1">대표이사</span>
+                <span>김정문</span>
+              </div>
+              <div className="txt">
+                <span className="txt1">임직원 수</span>
+                <span>211명</span>
+              </div>
+              <div className="txt">
+                <span className="txt1">주소</span>
+                <span>서울시 송파구 중대로 121, 2층 (가락동, 롯데캐슬파인힐)</span>
+              </div>
+            </div>
+            <div className="move-logo" onClick={() => window.open('https://www.exc.co.kr/', '_blank')}>홈페이지 바로가기</div>
           </div>
           <div className="sum-content">
             <span>
@@ -51,7 +67,7 @@ function AboutCompany() {
       data-aos-duration="2500" 
       className="swiper-area">
         <h2 className="about-subtitle">사업분야</h2>
-        <span>엑스퍼트 컨설팅은 HRM(인사)에서 HRD(교육)까지 Total HR 솔루션을 제공함으로써 고객사의 경쟁력 강화를 위해 노력해오고 있습니다.</span>
+        <span className="swiper-intro">엑스퍼트 컨설팅은 HRM(인사)에서 HRD(교육)까지 Total HR 솔루션을 제공함으로써 고객사의 경쟁력 강화를 위해 노력해오고 있습니다.</span>
         <AboutCompanySlider />
       </div>
       <div className="vision-area">

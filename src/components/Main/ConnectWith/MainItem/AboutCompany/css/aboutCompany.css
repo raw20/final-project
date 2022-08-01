@@ -1,4 +1,5 @@
 .about-company-wrap {
+  margin-top: 50px;
   padding: 50px 20px;
   box-sizing: border-box;
   width: 100%;
@@ -6,6 +7,7 @@
 }
 .about-company-wrap h2 {
   font-size: 25px;
+  margin-bottom: 15px;
 }
 .about-company-wrap .about-summary-area {
   width: 100%;
@@ -14,7 +16,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 40vw;
+  height: 45vw;
   /* sum-copy-box */
 }
 .about-company-wrap .about-summary-area .sum-copy-box {
@@ -35,6 +37,8 @@
 .about-company-wrap .about-summary-area .sum-copy-box .copy-sub {
   font-size: 1vw;
   margin-bottom: 1.5vw;
+  display: flex;
+  flex-wrap: wrap;
 }
 .about-company-wrap .about-summary-area .sum-copy-box .copy-main {
   font-size: 2vw;
@@ -53,35 +57,48 @@
   width: calc(45% - 40px);
   margin-left: 3vw;
 }
+.about-company-wrap .about-summary-area .sum-content-box .logo-box .logo-text {
+  margin-bottom: 30px;
+}
+.about-company-wrap .about-summary-area .sum-content-box .logo-box .logo-text .txt {
+  display: flex;
+  font-size: 16px;
+  line-height: 30px;
+}
+.about-company-wrap .about-summary-area .sum-content-box .logo-box .logo-text .txt .txt1 {
+  display: block;
+  width: 60px;
+  margin-right: 20px;
+}
 .about-company-wrap .about-summary-area .sum-content-box .logo-box .move-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
   width: 100%;
-  height: 8.3vw;
+  height: 4vw;
   border-radius: 20px;
-  box-shadow: 0px 11px 23px -9px rgba(0, 0, 0, 0.38);
-  background: url(/public/img/sub_bnr10.png) no-repeat center/130%;
+  border: 0.5px solid #f1f1f1;
+  box-shadow: 0px 5px 23px -9px rgba(0, 0, 0, 0.38);
   cursor: pointer;
-  text-align: center;
 }
 .about-company-wrap .about-summary-area .sum-content-box .logo-box .move-logo:hover {
-  -webkit-animation-name: bigscale;
-          animation-name: bigscale;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  box-shadow: 0px 11px 23px -9px rgba(0, 0, 0, 0.38);
+  transition: all 0.2s;
 }
 .about-company-wrap .about-summary-area .sum-content-box .logo-box p {
   font-size: 0.9vw;
   color: rgb(117, 114, 114);
 }
 .about-company-wrap .about-summary-area .sum-content-box .sum-content {
-  width: calc(50% - 40px);
-  font-size: 1vw;
-  line-height: 1.3vw;
+  width: calc(50% - 20px);
+  font-size: 17px;
+  line-height: 22px;
   word-break: keep-all;
   color: rgb(117, 114, 114);
 }
 .about-company-wrap .swiper-area {
+  margin-top: 30px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -91,29 +108,10 @@
   margin: 10px 0;
 }
 .about-company-wrap .swiper-area span {
-  font-size: 1vw;
+  font-size: 16px;
   color: rgb(117, 114, 114);
 }
 
-@-webkit-keyframes bigscale {
-  0% {
-    background-size: 130%;
-  }
-  100% {
-    background-size: 140%;
-    filter: brightness(0.8);
-  }
-}
-
-@keyframes bigscale {
-  0% {
-    background-size: 130%;
-  }
-  100% {
-    background-size: 140%;
-    filter: brightness(0.8);
-  }
-}
 @media (min-width: 758px) and (max-width: 1024px) {
   .about-company-wrap {
     padding: 0;
@@ -121,22 +119,27 @@
   }
   .about-company-wrap .about-summary-area {
     padding: 10px 0;
-    margin: 10px 0;
+    margin: 30px 0;
+    min-height: 60vw;
   }
   .about-company-wrap .about-summary-area .sum-content-box {
     margin: 10px 0;
     padding: 10px 0;
   }
   .about-company-wrap .about-summary-area .sum-content-box .logo-box {
-    width: calc(50% - 20px);
-    margin-left: 1vw;
+    width: 100%;
+    margin-bottom: 30px;
   }
   .about-company-wrap .about-summary-area .sum-content-box .sum-content {
-    width: calc(50% - 20px);
+    width: 100%;
   }
   .about-company-wrap .swiper-area {
-    height: 50vw;
+    height: 550px;
     margin-top: 10px 0;
+  }
+  .about-company-wrap .swiper-area .swiper-intro {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 @media (min-width: 335px) and (max-width: 757px) {
@@ -145,34 +148,63 @@
     /* summary-area */
   }
   .about-company-wrap h2 {
-    font-size: 2rem;
+    font-size: 20px;
   }
   .about-company-wrap .about-summary-area {
     width: 100%;
-    height: 70vw;
+    height: 650px;
     padding: 10px 0;
     margin: 10px 0;
   }
   .about-company-wrap .about-summary-area .sum-copy-box {
     width: 100%;
-    height: 30vw;
+    height: 200px;
+  }
+  .about-company-wrap .about-summary-area .sum-copy-box .copy-sub {
+    font-size: 12px;
+    margin-bottom: 1.5vw;
+  }
+  .about-company-wrap .about-summary-area .sum-copy-box .copy-main {
+    font-size: 16px;
+    line-height: 23px;
   }
   .about-company-wrap .about-summary-area .sum-content-box {
     width: 100%;
-    margin: 10px 0;
+    height: 300px;
+    margin: 15px 0 30px;
     padding: 10px 0;
+    font-size: 14px;
   }
   .about-company-wrap .about-summary-area .sum-content-box .logo-box {
-    display: none;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .about-company-wrap .about-summary-area .sum-content-box .logo-box .logo-text {
+    margin-bottom: 30px;
+  }
+  .about-company-wrap .about-summary-area .sum-content-box .logo-box .logo-text .txt {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .about-company-wrap .about-summary-area .sum-content-box .logo-box .logo-text .txt .txt1 {
+    width: 60px;
+    margin-right: 15px;
+  }
+  .about-company-wrap .about-summary-area .sum-content-box .logo-box .move-logo {
+    height: 40px;
   }
   .about-company-wrap .about-summary-area .sum-content-box .sum-content {
     width: 100%;
-    font-size: 1vw;
-    line-height: 3vw;
+    font-size: 14px;
+    line-height: 20px;
   }
   .about-company-wrap .swiper-area {
-    height: 125vw;
-    margin-top: 10px 0;
+    height: 550px;
+    margin-top: 30px;
     overflow: hidden;
+  }
+  .about-company-wrap .swiper-area .swiper-intro {
+    font-size: 14px;
+    line-height: 20px;
   }
 }/*# sourceMappingURL=aboutCompany.css.map */
