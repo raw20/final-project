@@ -34,6 +34,7 @@ function ModuleList({moduleID, setModuleItem}) {
                                         <div className='module_cardImg'>
                                             <div className='cardImg_background'>
                                                 <img className="module_Img" src={`${el.card_image}`}></img>
+                                                <div className="dim"></div>
                                             </div>
                                             <div className="module_card_hover">
                                                 <div className="module_card_hover_text">{el.mconcept}</div>
@@ -56,6 +57,7 @@ function ModuleList({moduleID, setModuleItem}) {
                                 <div className='module_cardImg'>
                                     <div className='cardImg_background'>
                                         <img className="module_Img" src={`${el.card_image}`}></img>
+                                        <div className="dim"></div>
                                     </div>
                                     <div className="module_card_hover">
                                         <div className="module_card_hover_text">{el.mconcept}</div>

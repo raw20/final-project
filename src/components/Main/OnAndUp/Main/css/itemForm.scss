@@ -239,6 +239,7 @@ $lightColor: #e6e0ec;
     padding-top: 4.375rem;
     box-sizing: border-box;
     .item-inner {
+      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
       overflow-wrap: break-word;
       max-width: 80%;
       //height: 80vw;
@@ -303,7 +304,7 @@ $lightColor: #e6e0ec;
       }
       .item-box {
         max-width: 100%;
-        margin: 120px auto;
+        margin: 0 auto;
         padding: 50px 30px;
         //height: 100vh;
         border-radius: 20px;
