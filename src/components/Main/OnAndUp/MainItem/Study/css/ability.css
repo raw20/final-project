@@ -16,8 +16,8 @@
 }
 
 .module_box {
-  width: 1000px;
-  height: 300px;
+  max-width: 1200px;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -28,9 +28,6 @@
 .module_box a {
   width: 235px;
   margin-right: 20px;
-}
-.module_box a:nth-child(4n) {
-  margin-right: 0;
 }
 
 .module_card {
@@ -151,7 +148,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 130px;
+  margin-bottom: 150px;
 }
 .detail_cardNews .detail_cardNews_title {
   padding-left: 5px;
@@ -174,6 +171,7 @@
 .detail_cardNews .detail_content_cardNews img {
   min-width: 270px;
   box-shadow: 0px 11px 23px -9px rgba(0, 0, 0, 0.38);
+  margin-right: 3%;
 }
 .detail_cardNews .detail_content_microLearning {
   position: relative;
@@ -366,7 +364,6 @@
   height: 300px;
   background-color: #fff;
   border-radius: 0px 11px 23px -9px rgba(0, 0, 0, 0.38);
-  box-shadow: 1px 1px 5px 3px #ddd;
 }
 .modal_swiper_name .swiper-slide {
   height: 250px;
@@ -440,9 +437,6 @@
 }
 
 @media (min-width: 335px) and (max-width: 757px) {
-  .item-form .item-inner .item-box {
-    padding: 0 !important;
-  }
   .module_card {
     width: 100%;
   }
@@ -565,26 +559,6 @@
   }
 }
 @media (min-width: 758px) and (max-width: 1023px) {
-  .item-form .item-inner .item-box {
-    padding: 0;
-    height: auto !important;
-  }
-  .item-form .item-inner .item-contents {
-    margin-bottom: 30px !important;
-  }
-  .item-form .item-inner .tab-btn-area {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0 30px;
-    width: calc(100% - 60px) !important;
-  }
-  .item-form .item-inner .tab-btn-area .item-box {
-    padding: 0px 30px 50px;
-  }
-  .item-form .item-inner .tab-btn-area .tab-btn {
-    margin-top: 10px !important;
-    width: 48% !important;
-  }
   .module_card_hover, .module_card_hover_text {
     display: none;
   }

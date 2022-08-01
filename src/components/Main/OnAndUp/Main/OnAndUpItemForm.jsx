@@ -45,7 +45,7 @@ function OnAndUpItemForm() {
           <div className="item-title">{item[id] ? item[id]?.menu : null}</div>
           <div className="item-contents">
             {item[id] ? item[id]?.explanation : null}
-          </div>
+          </div></div>
           {item[id]?.menu !== "교육장 이동" ? (
             <ul className="tab-btn-area">
               {item[id]?.onAndUpSubAddress.map((ele, index) => (
@@ -66,7 +66,6 @@ function OnAndUpItemForm() {
               ))}
             </ul>
           ) : null}
-        </div>
 
         <div className="item-box">
           <Outlet />
