@@ -96,19 +96,30 @@ function App() {
           </Route>
           <Route path="/chemiverseOnUp" element={<OnAndUp />} />
 
-          <Route path="/chemiverseOnUp/login" element={<Login setLoginAuth={setLoginAuth} />} />
-          <Route path="/chemiverseOnUp/login-search" element={<LoginSearch />} />
+          <Route
+            path="/chemiverseOnUp/login"
+            element={<Login setLoginAuth={setLoginAuth} />}
+          />
+          <Route
+            path="/chemiverseOnUp/login-search"
+            element={<LoginSearch />}
+          />
           <Route path="/chemiverseOnUp/profile" element={<Profile />} />
           <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
         </Routes>
+        {/* <Footer /> */}
       </BrowserRouter>
       <div className="search-box">
-        <input type="text" className="search-txt" name="" placeholder="Type to search" />
+        <input
+          type="text"
+          className="search-txt"
+          name=""
+          placeholder="Type to search"
+        />
         <div className="search-btn">
           <FiSearch />
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

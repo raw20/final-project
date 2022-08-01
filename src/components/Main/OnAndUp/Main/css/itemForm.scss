@@ -3,16 +3,19 @@ $deepColor: #6f76c1;
 $lightColor: #e6e0ec;
 .item-form {
   width: 100%;
-  height: 100vh;
-  padding-top: 70px;
+  height: 100%;
+  padding-top: 4.35rem;
   box-sizing: border-box;
   .item-inner {
-    max-width: 1200px;
-    height: auto;
-    margin: 30px auto;
-    padding: 50px 30px;
+    max-width: 80%;
+    height: 100%;
+    margin: 1.875rem auto;
+    padding: 3.125rem 1.875rem;
     border-radius: 20px;
-    background: #ffffff;
+    background: #fff;
+    box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+    position: relative;
+    animation: fadein 1s;
     .item-img {
       width: 100%;
       height: auto;
@@ -26,54 +29,74 @@ $lightColor: #e6e0ec;
         right: -50px;
       }
     }
-    .item-location {
-      width: 100%;
-      font-size: 15px;
-      color: #ccc;
-    }
-    .item-title {
-      width: 100%;
-      font-size: 50px;
-      color: rgba(111, 118, 193, 1);
-      margin-top: 50px;
-    }
-    .item-contents {
-      width: 70%;
-      font-size: 25px;
-      color: #ccc;
-      margin-top: 30px;
-    }
-    .tab-btn-area {
-      width: 700px;
-      display: flex;
-      margin: 0px auto;
-      .tab-btn {
-        width: 150px;
-        height: 50px;
-        color: #111;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        box-shadow: 2px 2px 2px 2px rgb(34 51 89 / 10%);
-        border-radius: 11px;
+    .item-text {
+      margin: 1.875rem 3.125rem;
+
+      .item-location {
+        width: 100%;
+        height: auto;
         font-size: 15px;
-        cursor: pointer;
-        margin: 0px auto;
-        text-decoration: none;
-        .tab-btn-list {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        color: #ccc;
+        position: relative;
+        margin-left: 1.25rem;
+        &::before {
+          content: " ";
+          width: 17px;
+          height: 17px;
+          top: 0px;
+          left: -20px;
+          position: absolute;
+          background: url(../../../../../../public/img/ic-check-on.png)
+            no-repeat center / cover;
+          margin-right: 1.25rem;
         }
       }
-      .tab-btn.on {
-        background-color: rgba(111, 118, 193, 1);
-        color: #fff;
-        border: none;
-        box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+      .item-title {
+        width: 100%;
+        font-size: 3rem;
+        font-weight: 600;
+        color: rgba(111, 118, 193, 1);
+        margin: 5rem 0 3rem;
+      }
+      .item-contents {
+        width: 70%;
+        font-size: 25px;
+        color: #ccc;
+        margin-top: 30px;
+      }
+      .tab-btn-area {
+        width: 60%;
+        display: flex;
+        margin: 4rem auto;
+        .tab-btn {
+          width: 150px;
+          height: 50px;
+          color: #111;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          box-shadow: 2px 2px 2px 2px rgb(34 51 89 / 10%);
+          border-radius: 11px;
+          font-size: 15px;
+          cursor: pointer;
+          margin: 0px auto;
+          text-decoration: none;
+          .tab-btn-list {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .tab-btn.on {
+          background-color: rgba(111, 118, 193, 1);
+          color: #fff;
+          border: none;
+          box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
+        }
       }
     }
+
     .item-box {
       max-width: 1000px;
       margin: 30px auto;

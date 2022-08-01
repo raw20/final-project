@@ -41,6 +41,15 @@ $lightColor: #e6e0ec;
           &:hover {
             color: $deepColor;
           }
+          .new-title {
+            width: 40px;
+            height: 20px;
+            background-color: $deepColor;
+            margin-left: 0.5rem;
+            font-size: 0.6rem;
+            color: #fff;
+            border-radius: 5px;
+          }
         }
       }
     }
@@ -51,6 +60,15 @@ $lightColor: #e6e0ec;
     width: 90%;
     .aboutMe_table {
       word-break: keep-all;
+      .new-title {
+        width: 40px;
+        height: 20px;
+        background-color: $deepColor;
+        margin-left: 0.5rem;
+        font-size: 0.6rem;
+        color: #fff;
+        border-radius: 5px;
+      }
     }
   }
 }
@@ -89,6 +107,15 @@ $lightColor: #e6e0ec;
           width: 100%;
           padding: 9px;
           font-size: 14px;
+          .new-title {
+            width: 40px;
+            height: 20px;
+            background-color: $deepColor;
+            margin-left: 0.5rem;
+            font-size: 0.6rem;
+            color: #fff;
+            border-radius: 5px;
+          }
         }
         .td-views {
           display: none;
