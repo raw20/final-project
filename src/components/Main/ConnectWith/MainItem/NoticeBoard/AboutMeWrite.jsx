@@ -19,10 +19,10 @@ function AboutMeWrite({
 
   return (
     <div className="writer-wrap">
+    <h1 className="writer-title">자기소개를 입력하세요</h1>
       <table className="writer-table">
-        <tbody>
           <tr className="writer-title-row">
-            <td className="writer-titl">제목</td>
+            <th className="writer-titl">제목</th>
             <td className="writer-titl-inputbox"><input
               type="text"
               id="writer-title-input"
@@ -32,7 +32,7 @@ function AboutMeWrite({
             /></td>
           </tr>
           <tr className="writer-name-row">
-            <td className="writer-name">이름</td>
+            <th className="writer-name">이름</th>
             <td className="writer-name-inputbox">
               <input
                 type="text"
@@ -43,7 +43,7 @@ function AboutMeWrite({
               /></td>
           </tr>
           <tr className="writer-content-row">
-            <td className="writer-content">내용</td>
+            <th className="writer-content">내용</th>
             <td className="writer-content-inputbox">
               <CKEditor
                 editor={ClassicEditor}
@@ -69,12 +69,7 @@ function AboutMeWrite({
               />
             </td>
           </tr>
-        </tbody>
       </table>
-      <h1 className="writer-title">글쓰기</h1>
-
-      
-      
     </div>
   );
 }

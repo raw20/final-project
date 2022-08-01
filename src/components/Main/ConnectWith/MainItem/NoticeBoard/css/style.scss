@@ -23,14 +23,14 @@ $lightColor: #e6e0ec;
   }
 }
 .notice-btn {
-  width: 70px;
-  height: 30px;
-  font-size: 0.7rem;
+  width: 140px;
+  height: 50px;
+  font-size: 16px;
   background-color: rgba(111, 118, 193, 1);
   color: #fff;
   border: none;
   box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 10%);
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -39,10 +39,9 @@ $lightColor: #e6e0ec;
   margin-left: 1.5rem;
 }
 
-.notice-btn.temporary,
-.notice-btn.tab-like {
+.notice-btn.temporary{
   border: 1px solid #ccc;
-  background-color: $lightColor;
+  background-color: #fff;
   color: #111;
   display: flex;
   justify-content: center;
@@ -50,4 +49,12 @@ $lightColor: #e6e0ec;
 }
 .heart {
   margin-left: 0.4rem;
+}
+
+@media (min-width: 758px) and (max-width: 1023px) {
+  
+}
+
+@media (min-width: 335px) and (max-width: 757px) {
+  
 }
