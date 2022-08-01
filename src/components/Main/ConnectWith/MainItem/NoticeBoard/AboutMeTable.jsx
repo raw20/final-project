@@ -14,7 +14,7 @@ function Table({ posts, writer, setWriter }) {
   const indexOfFirst = indexOfLast - postsPerPage;
   function currentPosts(posts) {
     let currentPosts = 0;
-    currentPosts = posts.slice(indexOfFirst, indexOfLast);
+    currentPosts = [...posts].reverse().slice(indexOfFirst, indexOfLast);
     return currentPosts;
   }
   return (
