@@ -6,7 +6,7 @@ import { Link, useParams, useLocation, useNavigate } from "react-router-dom";
 import YouTube from "react-youtube";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { Markup } from 'interweave';
-import Swal from 'sweetalert2';
+import { useMediaQuery } from "react-responsive"
 import withReactContent from 'sweetalert2-react-content';
 import { Swiper, SwiperSlide } from "swiper/react"; 
 import SwiperCore, { Pagination, Navigation, Autoplay} from "swiper/core";
@@ -21,7 +21,6 @@ function ModuleDetail({ isNew, setIsNew }) {
     const [cardNewsModalIsOpen, setCardNewsModalIsOpen] = useState(false);
     const [microLearningModalIsOpen, setMicroLearningModalIsOpen] = useState(false);
     const [moduleInfo, setModuleInfo] = useState({});
-    const MySwal = withReactContent(Swal);
     const [isTmp, setIsTmp] = useState(2);
     const [content, setContent] = useState('작성하기 버튼을 눌러 느낀 점을 적어보세요!');
     const history = useNavigate();
@@ -30,6 +29,17 @@ function ModuleDetail({ isNew, setIsNew }) {
     const mID = useLocation().pathname.slice(-1);
 
     const itemData = "/db/moduleData.json";
+
+    const isPc = useMediaQuery({
+        query : "(min-width:1024px)"
+      });
+      const isTablet = useMediaQuery({
+        query : "(min-width:758px) and (max-width:1023px)"
+      });
+
+      const isMobile = useMediaQuery({
+        query : "(max-width:757px)"
+      });
 
     useEffect(() => {
         (async () => {
@@ -257,7 +267,7 @@ function ModuleDetail({ isNew, setIsNew }) {
 
             <Modal 
                 className="cardnewsModal"
-                isOpen={cardNewsModalIsOpen}
+                isOpen={cardNewsModalIsOpen && !isMobile}
                 onRequestClose={()=> setCardNewsModalIsOpen(false)} // 오버레이나 esc를 누르면 핸들러 동작
                 ariaHideApp={false}
                 style={{
@@ -370,7 +380,7 @@ function ModuleDetail({ isNew, setIsNew }) {
             </Modal>
             <Modal 
                 className="microLearningModal"
-                isOpen={microLearningModalIsOpen}
+                isOpen={microLearningModalIsOpen && !isMobile}
                 onRequestClose={()=> setMicroLearningModalIsOpen(false)} // 오버레이나 esc를 누르면 핸들러 동작
                 ariaHideApp={false}
                 style={{

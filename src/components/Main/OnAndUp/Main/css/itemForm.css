@@ -234,6 +234,7 @@
     box-sizing: border-box;
   }
   .item-form .item-inner {
+    box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
     overflow-wrap: break-word;
     max-width: 80%;
     margin: 1.875rem auto;

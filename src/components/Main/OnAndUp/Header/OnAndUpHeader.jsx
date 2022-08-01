@@ -33,7 +33,6 @@ function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
     "onAndUp-header",
     "onAndUp-header none",
   ];
-  console.log("ht", headerType);
   return (
     <div className={typeArry[parseInt(headerType)]}>
       <Link className="logo" to="/chemiverseOnUp">
