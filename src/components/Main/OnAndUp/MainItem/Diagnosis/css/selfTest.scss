@@ -1,3 +1,6 @@
+.item-inner{
+    box-shadow: none !important
+}
 .titleBanner {
     height: 300px;
     display: flex;
@@ -88,11 +91,9 @@
     padding: 30px 0;
     width: 100%;
     .selfTestContainer_box_inner{
-        max-width: 850px;
         width: 100%;
         box-sizing: border-box;
         position: relative;
-        margin: 0 auto;
     }
 }
 
@@ -349,6 +350,7 @@
 }
 
 @media (min-width: 335px) and (max-width: 757px) {
+    .item-form .item-inner .item-box{padding: 0; height: auto !important}
     .nowContainer{width: 100%;}
     .beforeTest_content{
     padding: 15px;
@@ -411,6 +413,11 @@
 
 
 @media (min-width: 758px) and (max-width: 1023px) {
+    .item-form .item-inner .item-contents{margin-bottom: 30px !important}
+    .item-form .item-inner .tab-btn-area {
+        margin: 50px auto 30px;
+        flex-direction: row;
+    }
     .module_card{
         display: flex;
         flex-wrap: wrap;

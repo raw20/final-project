@@ -6,8 +6,8 @@
     box-sizing: border-box;
   }
   .item-form .item-inner {
+    overflow-wrap: break-word;
     max-width: 80%;
-    height: 80vw;
     margin: 1.875rem auto;
     padding: 3.125rem 1.875rem;
     border-radius: 20px;
@@ -15,6 +15,8 @@
     position: relative;
     -webkit-animation: fadein 1s;
             animation: fadein 1s;
+    box-sizing: border-box;
+    box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
   }
   .item-form .item-inner .item-img {
     width: 100%;
@@ -70,7 +72,7 @@
     width: 65%;
     height: auto;
     display: flex;
-    margin: 10rem auto;
+    margin: 15rem auto 50px;
   }
   .item-form .item-inner .tab-btn-area .tab-btn {
     width: 150px;
@@ -100,9 +102,8 @@
   }
   .item-form .item-inner .item-box {
     max-width: 100%;
-    margin: 20rem auto;
+    margin: 0 auto;
     padding: 50px 30px;
-    height: 100vh;
     border-radius: 20px;
     background: #ffffff;
   }
@@ -118,8 +119,8 @@
     box-sizing: border-box;
   }
   .item-form .item-inner {
+    overflow-wrap: break-word;
     max-width: 80%;
-    height: 150vw;
     margin: 1.875rem auto;
     padding: 3.125rem 1.875rem;
     border-radius: 20px;
@@ -127,6 +128,7 @@
     position: relative;
     -webkit-animation: fadein 1s;
             animation: fadein 1s;
+    box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
   }
   .item-form .item-inner .item-img {
     width: 100%;
@@ -182,7 +184,7 @@
     width: 65%;
     height: auto;
     display: flex;
-    margin: 10rem auto;
+    margin: 15rem auto 50px;
   }
   .item-form .item-inner .tab-btn-area .tab-btn {
     width: 150px;
@@ -212,9 +214,8 @@
   }
   .item-form .item-inner .item-box {
     max-width: 100%;
-    margin: 20rem auto;
+    margin: 0 auto;
     padding: 50px 30px;
-    height: 130vh;
     border-radius: 20px;
     background: #ffffff;
   }
@@ -230,8 +231,8 @@
     box-sizing: border-box;
   }
   .item-form .item-inner {
+    overflow-wrap: break-word;
     max-width: 80%;
-    height: 80vw;
     margin: 1.875rem auto;
     padding: 2.125rem 1.875rem;
     border-radius: 20px;
@@ -239,6 +240,7 @@
     position: relative;
     -webkit-animation: fadein 1s;
             animation: fadein 1s;
+    box-shadow: 8px 2px 62px 0px rgba(34, 51, 89, 0.09);
   }
   .item-form .item-inner .item-img {
     width: 100%;
@@ -292,9 +294,8 @@
   }
   .item-form .item-inner .item-box {
     max-width: 100%;
-    margin: 20rem auto;
+    margin: 120px auto;
     padding: 50px 30px;
-    height: 100vh;
     border-radius: 20px;
     background: #ffffff;
   }
