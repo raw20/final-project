@@ -9,13 +9,17 @@ $lightColor: #e6e0ec;
     padding-top: 4.375rem;
     box-sizing: border-box;
     .item-inner {
-      max-width: 80%;
+      overflow-wrap: break-word;
+      max-width: 90%;
+      //height: 80vw;
       margin: 1.875rem auto;
       padding: 3.125rem 1.875rem;
       border-radius: 20px;
       background: #fff;
       position: relative;
       animation: fadein 1s;
+      box-sizing: border-box;
+      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
       .item-img {
         width: 100%;
         height: auto;
@@ -68,12 +72,13 @@ $lightColor: #e6e0ec;
         }
       }
       .tab-btn-area {
-        width: 65%;
+        width: 70%;
         height: auto;
         display: flex;
-        margin: 100px auto;
+        justify-content: space-between;
+        margin: 15rem auto 50px;
         .tab-btn {
-          width: 150px;
+          width: calc(25% - 30px);
           height: 50px;
           color: #111;
           background-color: #fff;
@@ -101,8 +106,9 @@ $lightColor: #e6e0ec;
       }
       .item-box {
         max-width: 100%;
-        margin: 20px auto;
-        padding: 30px 30px;
+        margin: 0 auto;
+        padding: 50px 30px;
+        //height: 100vh;
         border-radius: 20px;
         background: #ffffff;
       }
@@ -120,14 +126,16 @@ $lightColor: #e6e0ec;
     padding-top: 4.375rem;
     box-sizing: border-box;
     .item-inner {
-      max-width: 80%;
-      height: 150vw;
+      overflow-wrap: break-word;
+      max-width: 86%;
+      //height: 150vw;
       margin: 1.875rem auto;
       padding: 3.125rem 1.875rem;
       border-radius: 20px;
       background: #fff;
       position: relative;
       animation: fadein 1s;
+      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
       .item-img {
         width: 100%;
         height: auto;
@@ -180,12 +188,14 @@ $lightColor: #e6e0ec;
         }
       }
       .tab-btn-area {
-        width: 65%;
+        width: 90%;
         height: auto;
         display: flex;
-        margin: 10rem auto;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 100px auto;
         .tab-btn {
-          width: 150px;
+          width: calc(25% - 20px);
           height: 50px;
           color: #111;
           background-color: #fff;
@@ -213,9 +223,9 @@ $lightColor: #e6e0ec;
       }
       .item-box {
         max-width: 100%;
-        margin: 20rem auto;
+        margin: 0 auto;
         padding: 50px 30px;
-        height: 130vh;
+        //height: 130vh;
         border-radius: 20px;
         background: #ffffff;
       }
@@ -232,14 +242,17 @@ $lightColor: #e6e0ec;
     padding-top: 4.375rem;
     box-sizing: border-box;
     .item-inner {
+      overflow-wrap: break-word;
       max-width: 80%;
-      height: 80vw;
+      //height: 80vw;
       margin: 1.875rem auto;
-      padding: 2.125rem 1.875rem;
+      padding: 2.125rem 10px;
       border-radius: 20px;
       background: #fff;
       position: relative;
       animation: fadein 1s;
+      box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 9%);
+      .tab-btn-area{display: none;}
       .item-img {
         width: 100%;
         height: auto;
@@ -291,14 +304,11 @@ $lightColor: #e6e0ec;
           margin-top: 1.5rem;
         }
       }
-      // .tab-btn-area {
-      //   display: none;
-      // }
       .item-box {
         max-width: 100%;
-        margin: 20rem auto;
-        padding: 50px 30px;
-        height: 100vh;
+        margin: 30px auto;
+        padding: 30px 5px;
+        //height: 100vh;
         border-radius: 20px;
         background: #ffffff;
       }

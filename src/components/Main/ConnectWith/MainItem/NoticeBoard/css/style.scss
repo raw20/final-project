@@ -2,13 +2,37 @@ $bgColor: #dde3f6;
 $deepColor: #6f76c1;
 $lightColor: #e6e0ec;
 
+
 .table_pagination {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
-  width: 20vw;
+  width: 300px;
   padding-top: 25px;
   margin: auto;
+  .PrevButton{
+    width: 11px;
+    height: 18px;
+    font-size: 0;
+    text-indent: -9999px;
+    background: url(/public/img/left.png) no-repeat center / cover;
+    cursor: pointer;
+    &:disabled{
+      background: url(/public/img/left-dis.png) no-repeat center / cover;
+    }
+  }
+    .NextButton{
+      width: 11px;
+      height: 18px;
+      font-size: 0;
+      text-indent: -9999px;
+      cursor: pointer;
+      background: url(/public/img/right.png) no-repeat center / cover;
+      &:disabled{
+        background: url(/public/img/right-dis.png) no-repeat center / cover;
+      }
+  }
   .page_link {
     color: #ccc;
     font-size: 18px;
@@ -22,6 +46,7 @@ $lightColor: #e6e0ec;
     }
   }
 }
+
 .notice-btn {
   width: 140px;
   height: 50px;

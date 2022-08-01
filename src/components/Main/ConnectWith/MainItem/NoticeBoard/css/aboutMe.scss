@@ -5,6 +5,7 @@ $lightColor: #e6e0ec;
 @include desktop {
   .aboutMe_area {
     width: 85%;
+    height: 100%;
     margin: 0 auto;
     animation: fadein 2s;
     .aboutMe_table_area {

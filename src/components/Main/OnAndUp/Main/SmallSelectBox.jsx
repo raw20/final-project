@@ -10,10 +10,11 @@ function SmallSelectBox({options, placeholder}) {
     const customStyles = {
         control: (provided, state) => ({
             backgroundColor: '#6f76c1',
-            borderRadius: state.menuIsOpen ? '10px 10px 0px 0px' : 10,
+            borderRadius: state.menuIsOpen ? '20px 20px 0px 0px' : 20,
             display: 'flex',
             color: '#fff',
-            height: 30
+            height: 50,
+            fontSize: 14,
         }),
         dropdownIndicator: (provided, state) => ({
             ...provided,
@@ -24,11 +25,12 @@ function SmallSelectBox({options, placeholder}) {
         }),
         menu: (provided, state) => ({
             backgroundColor: '#6f76c1',
-            borderRadius: '0px 0px 10px 10px',
+            borderRadius: '0px 0px 20px 20px',
             color: '#fff',
         }),
         option: (provided, state) => ({
-            height: 30,
+            height: 35,
+            fontSize: 14,
             color: state.isFocused ? '#f9c153' : null,
         }),
     }

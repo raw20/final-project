@@ -31,6 +31,7 @@ function NoticeTable({ posts, copyPosts, setPosts }) {
             postsPerPage={postsPerPage}
             totalPosts={posts.length}
             paginate={setCurrentPage}
+            page={currentPage}
           ></TablePagenation>
         </>
       ) : null}
