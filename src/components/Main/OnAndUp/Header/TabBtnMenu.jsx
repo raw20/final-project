@@ -19,6 +19,9 @@ function TabBtnMenu() {
   }, []);
   return (
     <div className="btn-menu-wrap">
+      <NavLink to={-1} className="goback">
+        <AiFillCloseSquare />
+      </NavLink>
       <div className="btn-menu">
         <ul className="btn-menu-item">
           {item.map((item, index) => (
@@ -57,13 +60,10 @@ function TabBtnMenu() {
           ))}
         </ul>
       </div>
-      <NavLink to={-1} className="goback">
-        <AiFillCloseSquare />
-      </NavLink>
+      <span className="img-balloon">열기구</span>
       <NavLink to={`/`} className="homepage">
         Chemiverse Connect With ▶
       </NavLink>
-      <span className="img-balloon">열기구</span>
     </div>
   );
 }

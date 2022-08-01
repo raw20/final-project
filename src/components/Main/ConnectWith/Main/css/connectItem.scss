@@ -170,6 +170,9 @@ $lightColor: #e6e0ec;
   }
 }
 @include tablet {
+  .app{
+    padding-bottom: 0;
+   }
   .link-item {
     width: 100%;
     height: 100%;

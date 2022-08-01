@@ -108,11 +108,6 @@ $textgray:#aeaeba;
   body {
     height: 100%;
   }
-  .App {
-    position: relative;
-    min-height: 100%;
-    padding-bottom: 100px;
-  }
   .ft-wrapper.off {
     display: none;
   }
@@ -121,9 +116,6 @@ $textgray:#aeaeba;
     padding: 20px;
     box-sizing: border-box;
     background-color: #fff;
-    position: absolute;
-    bottom: 0;
-    left: 0;
     height: 100px;
   }
 
@@ -205,11 +197,6 @@ $textgray:#aeaeba;
   body {
     height: 100%;
   }
-  .App {
-    position: relative;
-    min-height: 100%;
-    padding-bottom: 200px;
-  }
   .ft-wrapper.off {
     display: none;
   }
@@ -219,8 +206,6 @@ $textgray:#aeaeba;
     padding: 0 20px;
     box-sizing: border-box;
     background-color: #fff;
-    position: absolute;
-    bottom: 0;
   }
   .ft-inner {
     padding: 10px 0;
