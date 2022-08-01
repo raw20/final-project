@@ -40,8 +40,8 @@
     "onAndUpItemAddress": "chemistory",
     "onAndUpSubAddress": ["0", "1", "2", "3"],
     "menu": "Chemi Story",
-    "explanation": "컨텐츠 설명글",
-    "dep": ["Chemi Stroy란?", "작성하기", "성찰저널", "자기계발목표"],
+    "explanation": "chemistory의 목적과 자기 생각을 쓸 수 있는 공간",
+    "dep": ["Chemi Stroy란?", "작성하기", "성찰저널", "자기개발목표"],
     "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa24292b2-7499-4b47-a7bf-b5aa9d639be1%2F%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%83%E1%85%A1%E1%86%AB.png?table=block&id=45cdd1ef-030e-4fc2-8c30-f002011f029a&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
   {
@@ -49,7 +49,7 @@
     "onAndUpItemAddress": "mentoring",
     "onAndUpSubAddress": ["0", "1", "2"],
     "menu": "멘토링",
-    "explanation": "컨텐츠 설명글",
+    "explanation": "멘토링의 계획과 활동을 작성하는 공간",
     "dep": ["멘토링이란?", "계획서작성", "활동내용"],
     "img": "https://goldenrod-stamp-a75.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8be7244c-1707-40d6-b9ad-598f7bcd1168%2F%E1%84%86%E1%85%A6%E1%86%AB%E1%84%90%E1%85%A9%E1%84%85%E1%85%B5%E1%86%BC.png?table=block&id=86aec234-3a5d-44e9-93f1-29ade8fe0d35&spaceId=7f4267ab-a988-4305-8667-b4a51382a7da&width=2000&userId=&cache=v2"
   },
