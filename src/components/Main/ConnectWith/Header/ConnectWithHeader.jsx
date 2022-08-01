@@ -2,13 +2,19 @@ import React, { useEffect, useState } from "react";
 import "./css/header.css";
 import { Link, NavLink } from "react-router-dom";
 import { IoCaretForwardOutline } from "react-icons/io5";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { headerGnbOpcity, onAndUp } from "../../../../app/headerStateSlice";
 function ConnectWithHeader({ opacity, LoginAuth }) {
   const [item, setItem] = useState([]);
   const connenctWithMenuData = "/db/connenctWithMenuData.json";
   const dispatch = useDispatch();
+  const headerType = useSelector((state) => state.headerLayout.opacity);
 
+  const typeArry = [
+    "connectwith-header off",
+    "connectwith-header",
+    "connectwith-header none",
+  ];
   useEffect(() => {
     (async () => {
       const response = await fetch(connenctWithMenuData);
@@ -18,11 +24,7 @@ function ConnectWithHeader({ opacity, LoginAuth }) {
     })();
   }, []);
   return (
-    <div
-      className={
-        opacity === "0" ? "connectwith-header off" : "connectwith-header"
-      }
-    >
+    <div className={typeArry[parseInt(headerType)]}>
       <Link
         to="/"
         className="logo"

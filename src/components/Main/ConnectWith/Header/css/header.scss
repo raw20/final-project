@@ -15,7 +15,9 @@ $deepColor: #6f76c1;
     justify-content: space-between;
     align-items: center;
     z-index: 2000;
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+      Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+      "Noto Sans KR", "Malgun Gothic", sans-serif;
     color: $deepColor;
 
     .logo {
@@ -73,6 +75,9 @@ $deepColor: #6f76c1;
   .connectwith-header.off {
     background-color: rgba(255, 255, 255, 0);
   }
+  .connectwith-header.none {
+    display: none;
+  }
 }
 @include tablet {
   .connectwith-header {
@@ -87,7 +92,9 @@ $deepColor: #6f76c1;
     justify-content: space-between;
     align-items: center;
     z-index: 2000;
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+      Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+      "Noto Sans KR", "Malgun Gothic", sans-serif;
     color: $deepColor;
 
     .logo {
@@ -145,6 +152,9 @@ $deepColor: #6f76c1;
   .connectwith-header.off {
     background-color: rgba(255, 255, 255, 0);
   }
+  .connectwith-header.none {
+    display: none;
+  }
 }
 @include mobile {
   .connectwith-header {
@@ -159,7 +169,9 @@ $deepColor: #6f76c1;
     justify-content: space-between;
     align-items: center;
     z-index: 2000;
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+      Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+      "Noto Sans KR", "Malgun Gothic", sans-serif;
     color: $deepColor;
 
     .logo {
@@ -194,5 +206,8 @@ $deepColor: #6f76c1;
   }
   .connectwith-header.off {
     background-color: #fff;
+  }
+  .connectwith-header.none {
+    display: none;
   }
 }

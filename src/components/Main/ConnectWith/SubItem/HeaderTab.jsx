@@ -1,11 +1,17 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { setFooterDisplay } from "../../../../app/footerStateSlice";
+import { headerGnbOpcity } from "../../../../app/headerStateSlice";
 import "./css/HeaderTab.css";
 
 function HeaderTab() {
   const [item, setItem] = useState([]);
   const itemData = "/db/connenctWithMenuData.json";
+  const dispatch = useDispatch();
+  dispatch(headerGnbOpcity("2"));
+  dispatch(setFooterDisplay("off"));
   useEffect(() => {
     (async () => {
       const response = await fetch(itemData);
