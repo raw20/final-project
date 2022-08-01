@@ -1,13 +1,17 @@
 import React from "react";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { countView } from "../../../../../app/detailSlice";
 import AboutMeDetail from "./AboutMeDetail";
 import TableSearchBarTwo from "./TableSearchBarTwo";
 const AboutMeTableList = ({ posts, totalPosts, content, setContent }) => {
   const [index, setIndex] = useState();
   const dispatch = useDispatch();
-  const likeValue = useSelector((state) => state.item.data);
+  let today = new Date();
+  let year = String(today.getFullYear());
+  let month = String(today.getMonth() + 1).padStart(2, "0");
+  let date = String(today.getDate()).padStart(2, "0");
+  const todays = `${year}.${month}.${date}`;
   function onClick(index) {
     setContent(false);
     setIndex(index);
@@ -55,9 +59,15 @@ const AboutMeTableList = ({ posts, totalPosts, content, setContent }) => {
                       {posts.writer === "교육담당자" ? "필독" : posts.id}
                     </td>
                     <td className="td-writer">{posts.writer}</td>
-                    <td className="td-title" onClick={() => onClick(index)}>
-                      {posts.title}
-                    </td>
+                    {todays === posts.date ? (
+                      <td className="td-title" onClick={() => onClick(index)}>
+                        {posts.title} <span className="new-title">new</span>
+                      </td>
+                    ) : (
+                      <td className="td-title" onClick={() => onClick(index)}>
+                        {posts.title}
+                      </td>
+                    )}
                     <td className="td-views">{posts.views}</td>
                     <td className="td-date"> {posts.date}</td>
                     <td className="td-like"> {posts.like}</td>

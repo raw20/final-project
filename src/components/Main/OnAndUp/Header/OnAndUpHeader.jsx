@@ -7,7 +7,7 @@ import { IoLogInOutline } from "react-icons/io5";
 import { IoLogOutOutline } from "react-icons/io5";
 import { useSelector } from "react-redux";
 
-function OnAndUpHeader({ opacity, LoginAuth, setLoginAuth }) {
+function OnAndUpHeader({ LoginAuth, setLoginAuth }) {
   const navigate = useNavigate();
   const goToLogin = () => {
     navigate("/chemiverseOnUp/login");
@@ -66,7 +66,9 @@ function OnAndUpHeader({ opacity, LoginAuth, setLoginAuth }) {
                         dep: item.dep,
                         address: item.onAndUpItemAddress,
                       }}
-                      className={({ isActive }) => (isActive ? "item-menu on" : "item-menu")}
+                      className={({ isActive }) =>
+                        isActive ? "item-menu on" : "item-menu"
+                      }
                     >
                       {ele}
                     </NavLink>

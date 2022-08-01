@@ -35,7 +35,6 @@ function OnAndUpItemForm() {
           <img src={`${item[id]?.img}`} alt={item[id]?.menu} />
         </div>
         <div className="item-text">
-          {" "}
           <div className="item-location">
             {tabIndex === undefined
               ? `Chemiverse On&Up ▶ ${item[id]?.menu} ▶ ${item[id]?.dep[0]} `

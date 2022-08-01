@@ -42,6 +42,15 @@
   .aboutMe_area .aboutMe_table_area .aboutMe_table td:nth-child(3):hover {
     color: #6f76c1;
   }
+  .aboutMe_area .aboutMe_table_area .aboutMe_table td:nth-child(3) .new-title {
+    width: 40px;
+    height: 20px;
+    background-color: #6f76c1;
+    margin-left: 0.5rem;
+    font-size: 0.6rem;
+    color: #fff;
+    border-radius: 5px;
+  }
 }
 @media (min-width: 758px) and (max-width: 1023px) {
   .aboutMe_area {
@@ -49,6 +58,15 @@
   }
   .aboutMe_area .aboutMe_table {
     word-break: keep-all;
+  }
+  .aboutMe_area .aboutMe_table .new-title {
+    width: 40px;
+    height: 20px;
+    background-color: #6f76c1;
+    margin-left: 0.5rem;
+    font-size: 0.6rem;
+    color: #fff;
+    border-radius: 5px;
   }
 }
 @media (min-width: 335px) and (max-width: 757px) {
@@ -85,6 +103,15 @@
     width: 100%;
     padding: 9px;
     font-size: 14px;
+  }
+  .aboutMe_area .aboutMe_table_area .aboutMe_table .td-title .new-title {
+    width: 40px;
+    height: 20px;
+    background-color: #6f76c1;
+    margin-left: 0.5rem;
+    font-size: 0.6rem;
+    color: #fff;
+    border-radius: 5px;
   }
   .aboutMe_area .aboutMe_table_area .aboutMe_table .td-views {
     display: none;

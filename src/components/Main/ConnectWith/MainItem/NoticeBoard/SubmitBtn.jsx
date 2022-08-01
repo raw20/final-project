@@ -17,7 +17,7 @@ function SubmitBtn({
   let today = new Date();
   let year = String(today.getFullYear());
   let month = String(today.getMonth() + 1).padStart(2, "0");
-  let date = String(today.getDate());
+  let date = String(today.getDate()).padStart(2, "0");
 
   function convertBoolean() {
     alert("게시글 저장완료");
