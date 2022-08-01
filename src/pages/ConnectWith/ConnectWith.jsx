@@ -3,6 +3,7 @@ import ConnectItem from "../../components/Main/ConnectWith/Main/ConnectItem";
 import { useDispatch } from "react-redux";
 import { headerGnbOpcity } from "../../app/headerStateSlice";
 import "./css/connectwith.css";
+import { setFooterDisplay } from "../../app/footerStateSlice";
 
 function ConnectWith() {
   const [data, setData] = useState([]);
@@ -14,8 +15,9 @@ function ConnectWith() {
       const response = await fetch(connenctWithMenuData);
       const json = await response.json();
       setData(json);
+      dispatch(headerGnbOpcity("0"));
+      dispatch(setFooterDisplay("off"));
     })();
-    dispatch(headerGnbOpcity("0"));
   }, []);
 
   return (

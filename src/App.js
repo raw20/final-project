@@ -107,9 +107,8 @@ function App() {
           <Route path="/chemiverseOnUp/profile" element={<Profile />} />
           <Route path="/chemiverseOnUp/tab" element={<TabBtnMenu />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
-      <Footer />
       <div className="search-box">
         <input
           type="text"

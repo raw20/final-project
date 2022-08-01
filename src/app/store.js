@@ -7,6 +7,7 @@ import userSlice from "./userSlice";
 import aboutMeWriteSlice from "./aboutMeWriteSlice";
 import detailSlice from "./detailSlice";
 import searchTableSlice from "./searchTableSlice";
+import footerStateSlice from "./footerStateSlice";
 
 const persistConfig = {
   key: "root",
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   aboutMeWriter: aboutMeWriteSlice,
   item: detailSlice,
   table: searchTableSlice,
+  footer: footerStateSlice,
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 const store = configureStore({

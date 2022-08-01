@@ -5,6 +5,7 @@ import content from "./css/content.css";
 import { login } from "../../../../../app/userSlice";
 import userData from "../../../../../userData.json";
 import { headerGnbOpcity } from "../../../../../app/headerStateSlice";
+import { setFooterDisplay } from "../../../../../app/footerStateSlice";
 
 const Login = ({ setLoginAuth }) => {
   const [error, setError] = useState(false);
@@ -13,6 +14,7 @@ const Login = ({ setLoginAuth }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   dispatch(headerGnbOpcity("2"));
+  dispatch(setFooterDisplay("off"));
 
   /*  const loginSubmit = (e) => {
      // e.preventDefault();
