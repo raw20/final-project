@@ -14,12 +14,14 @@ function ReviewEdit({ isNew, setIsNew, saveReviewData}) {
     const [EditorData, setEditorData] = useState({});
     const history = useNavigate();
     const MySwal = withReactContent(Swal);
+    const ID = useLocation().pathname.slice(-8,-7);
     const mID = useLocation().pathname.slice(-6,-5);
+
     var newDatas = datas; 
 
     useEffect(() => {
         datas && datas.map((el, index, data) => {
-            if(mID == el.id) {
+            if(ID == el.ID && mID == el.mID) {
                 setContent(datas[index].content)
                 setIsNew(false);
             }
@@ -28,26 +30,31 @@ function ReviewEdit({ isNew, setIsNew, saveReviewData}) {
         window.scrollTo(0, 0);
       }, []);
 
+    function tmpSaveReviewData() {
+        if (window.confirm('저장하시겠습니까?')) {
+            var flag = 0;
+            datas && datas.map((el, index, data) => {
+                if(ID == el.ID && mID == el.mID) {
+                    newDatas[index].content = EditorData.content;
+                    newDatas[index].isTmp = 1;
+                    flag = 1;
+                }
+            })
+        }
+    }
+    
     function saveReviewData() {
-
-        MySwal.fire(<p>저장되었습니다.</p>);
-        Swal.fire({
-            title: '제출하시겠습니까?',
-            text: "제출 후 수정 가능합니다.",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: '승인',
-            cancelButtonText: '취소',
-            reverseButtons: true, // 버튼 순서 거꾸로
-            
-          }).then((result) => {
-            if (result.isConfirmed) {
+        console.log('EditorData.content',EditorData.content)
+        if (EditorData.content == undefined) {
+            alert('내용을 입력해주세요!');
+        }
+        else {
+            if (window.confirm('제출하시겠습니까?')) {
                 var flag = 0;
                 datas && datas.map((el, index, data) => {
-                    if(mID == el.id) {
+                    if(ID == el.ID && mID == el.mID) {
                         newDatas[index].content = EditorData.content;
+                        newDatas[index].isTmp = 0;
                         flag = 1;
                     }
                 })
@@ -55,18 +62,15 @@ function ReviewEdit({ isNew, setIsNew, saveReviewData}) {
                 if (flag === 0) {
                     newDatas = [
                         ...newDatas,
-                        EditorData
+                        { ...EditorData, isTmp: 0 }
                     ]
                 }
                 setItem("reviewData",newDatas);
                 history('../'+mID);
-                Swal.fire(
-                    '제출하였습니다.',
-                    '클릭시 화면이 이동됩니다.',
-                    'success'
-                )
+                alert('제출하였습니다.')
             }
-          })
+        }
+     
     }
 
     return (
@@ -75,13 +79,13 @@ function ReviewEdit({ isNew, setIsNew, saveReviewData}) {
                 <RiArrowGoBackLine size="20"/>
                 <div style={{ marginLeft: 10 }}>뒤로가기</div>
             </div>
-            <Editor id={mID} data={ content } setEditorData={setEditorData} />
-            <div className='detail_practice_btnArea'>
-                <div className="submitBtnArea_save">
-                        <button className='tempSaveBtn' onClick={saveReviewData}>저장하기</button>
+            <Editor ID={ID} mID={mID} data={ content } setEditorData={setEditorData} />
+            <div className='save_btnArea'>
+                <div>
+                        <button className='tmpSaveBtn' onClick={tmpSaveReviewData}>저장하기</button>
                 </div>
-                <div className="submitBtnArea">
-                    <button className='submitBtn' onClick={saveReviewData}>제출하기</button>
+                <div>
+                    <button className='saveBtn' onClick={saveReviewData}>제출하기</button>
                 </div>
             </div>
         </div>

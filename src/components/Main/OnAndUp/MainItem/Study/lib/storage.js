@@ -5,3 +5,7 @@ export function setItem(key,value){
 export function getItem(key){
     return JSON.parse(localStorage.getItem(key));
 }
+
+export function removeItem(key){
+    return JSON.parse(localStorage.removeItem(key));
+}

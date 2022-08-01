@@ -5,6 +5,9 @@ import Modal from 'react-modal';
 import { Link, useParams, useLocation, useNavigate } from "react-router-dom";
 import YouTube from "react-youtube";
 import { RiArrowGoBackLine } from "react-icons/ri";
+import { Markup } from 'interweave';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 import { Swiper, SwiperSlide } from "swiper/react"; 
 import SwiperCore, { Pagination, Navigation, Autoplay} from "swiper/core";
 
@@ -18,7 +21,9 @@ function ModuleDetail({ isNew, setIsNew }) {
     const [cardNewsModalIsOpen, setCardNewsModalIsOpen] = useState(false);
     const [microLearningModalIsOpen, setMicroLearningModalIsOpen] = useState(false);
     const [moduleInfo, setModuleInfo] = useState({});
-    const [content, setContent] = useState('');
+    const MySwal = withReactContent(Swal);
+    const [isTmp, setIsTmp] = useState(2);
+    const [content, setContent] = useState('작성하기 버튼을 눌러 느낀 점을 적어보세요!');
     const history = useNavigate();
 
     const ID = useLocation().pathname.slice(-3,-2);
@@ -34,7 +39,6 @@ function ModuleDetail({ isNew, setIsNew }) {
         })();
     },[]);
 
-
     const [datas, setDatas] = useState(getItem('reviewData') || []);
 
     useEffect(() => {
@@ -42,8 +46,10 @@ function ModuleDetail({ isNew, setIsNew }) {
         if (datas.length > 0) {
             datas.map((el, index, data) => {
                 
-                if(mID == el.id) {
+                if(ID == el.ID && mID == el.mID) {
                     setIsNew(false);
+                    setIsTmp(datas[index].isTmp);
+                    console.log(datas[index].isTmp)
                     tmpContent = datas[index].content;
                     tmpContent = tmpContent.replace('</p>','');
                     tmpContent = tmpContent.replace('<p>','');
@@ -78,7 +84,15 @@ function ModuleDetail({ isNew, setIsNew }) {
         playerVars: {
           autoplay: 1,
         },
-      };
+    };
+
+    const embedYoutubeOpts = {
+        width: "100%",
+        height: "300px",
+        playerVars: {
+            autoplay: 0,
+        },
+    };
 
     const sliderRef = useRef(null);
 
@@ -92,13 +106,29 @@ function ModuleDetail({ isNew, setIsNew }) {
       sliderRef.current.swiper.slideNext();
     }, []);
 
+    function deleteData() {
+        if(window.confirm('삭제하시겠습니까')) {
+            const newDatas = [...datas] ;
+            if (datas.length > 0) {
+                datas.map((el, index, data) => {
+                    if(ID == el.ID && mID == el.mID) {
+                        newDatas.splice(index,1)
+                    }
+                });
+            }
+            setItem("reviewData",newDatas);
+            alert('삭제하였습니다.');
+            history(0);
+        }
+    }
+    
     return (
         <>
-            <div className="backButton" onClick={ () => { history('../') }}> 
-                <RiArrowGoBackLine size="20"/>
-                <div style={{ marginLeft: 10 }}>뒤로가기</div>
-            </div>
             <div className="detail_container">
+                <div className="backButton" onClick={ () => { history('../') }}> 
+                    <RiArrowGoBackLine size="20"/>
+                    <div style={{ marginLeft: 10 }}>뒤로가기</div>
+                </div>
                 <div className="aboutCompany_detail_summary">
                     <img src={moduleInfo.card_image}></img>
                     <div className="aboutCompany_detail_text">
@@ -120,12 +150,80 @@ function ModuleDetail({ isNew, setIsNew }) {
                         <div className="detail_cardNews_title">학습 (마이크로러닝/카드뉴스)</div>   
                         <div className="detail_content">
                             <div className="detail_content_cardNews" onClick={handleCardNewsModal}>
+                                <Swiper  
+                                    className="embed_modal_swiper_name"
+                                    slidesPerView={1}
+                                    loop={true}
+                                    loopFillGroupWithBlank={true}
+                                    pagination={{
+                                      clickable: true,
+                                      el: '.about-page'
+                                    }}
+                                    autoplay={{
+                                      delay: 5000,
+                                      disableOnInteraction: false,
+                                    }}
+                                    modules={[Autoplay, Pagination, Navigation]}
+                                    breakpoints={{
+                                        335: {
+                                          slidesPerView: 1
+                                        },
+                                        757: {
+                                          slidesPerView: 2,
+                                          spaceBetween: 20,
+                                        }
+                                      }}
+                                >
+                                    <SwiperSlide>
+                                        <img id="1" src="/img/img-cardnews01.png" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="2" src="/img/img-cardnews02.png"/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="3" src="/img/img-cardnews03.png"/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="4" src="/img/img-cardnews04.png" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="5" src="/img/img-cardnews05.png"/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="6" src="/img/img-cardnews06.png"/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="7" src="/img/img-cardnews07.png" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="8" src="/img/img-cardnews08.png"/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="9" src="/img/img-cardnews09.png"/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="10" src="/img/img-cardnews10.png" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="11" src="/img/img-cardnews11.png"/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="12" src="/img/img-cardnews12.png"/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="13" src="/img/img-cardnews13.png"/>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img id="14" src="/img/img-cardnews14.png"/>
+                                    </SwiperSlide>
+                                </Swiper>
                                 <img className="detail_content_cardNews_img" src='/img/img-cardnews01.png'></img>
                                 <div className="detail_content_cardNews_title">카드뉴스</div>
                             </div>
                             <div className="detail_content_microLearning" onClick={handleMicroLearningModal}>
-                                <img className="detail_content_cardNews_img" src='/img/cardNews1.png'></img>
-                                <div className="detail_content_cardNews_title">마이크로러닝</div>
+                                <YouTube className="embedYoutube" videoId={videoCode} opts={embedYoutubeOpts} />
+                                <img className="detail_content_microLearning_img" src='/img/modalimg.jpg'></img>
+                                <div className="detail_content_microLearning_title">마이크로러닝</div>
                             </div>
                         </div>
                     </div>
@@ -135,14 +233,22 @@ function ModuleDetail({ isNew, setIsNew }) {
                             <div className="detail_practice_desc">오늘 배운 내용에 대해 Review하며 배운 점, 느낀 점, 성찰할 점 등에 대해 자유롭게 적어봅시다.</div>   
                         </div>   
                         <div className="detail_practice_textArea">
-                            { content }
+                            { isTmp == 0 ?
+                                <Markup content={content} />
+                                : '작성하기 버튼을 눌러 느낀 점을 적어보세요!' 
+                            }
                         </div>   
                         <div className="detail_practice_btnArea" to='edit'>   
-                            <Link to="#">   
-                                <button className='deleteBtn'>삭제하기</button>   
-                            </Link>   
+                            { isTmp == 0 ? 
+                                    <Link to="#">   
+                                        <button className='deleteBtn' onClick={deleteData}>삭제하기</button>   
+                                    </Link>   
+                                :
+                                null
+
+                            }
                             <Link to="edit">   
-                                <button className='writeBtn'>작성하기</button>   
+                                <button className='writeBtn'>{ isTmp == 0 ? '수정하기' : '작성하기' }</button>   
                             </Link>   
                         </div>
                     </div>
@@ -202,6 +308,19 @@ function ModuleDetail({ isNew, setIsNew }) {
                             loop = {true}
                             autoplay={{ delay: 2000 }}
                             spaceBetween= {20}
+                            breakpoints={{
+                                // when window width is >= 640px
+                                335: {
+                                  slidesPerView: 1,
+                                },
+                                // when window width is >= 768px
+                                758: {
+                                  slidesPerView: 2,
+                                },
+                                1024: {
+                                    slidesPerView: 3,
+                                  },
+                              }}
                         >
                             <SwiperSlide>
                                 <img id="1" src="/img/img-cardnews01.png" />
@@ -265,10 +384,10 @@ function ModuleDetail({ isNew, setIsNew }) {
                     },
                     content: {
                         position: "absolute",
-                        top: "150px",
-                        left: "25%",
-                        width: "50%",
-                        height: "60%",
+                        top: "130px",
+                        left: "20%",
+                        width: "60%",
+                        height: "65%",
                         border: "1px solid #ccc",
                         background: "#fff",
                         overflow: "auto",

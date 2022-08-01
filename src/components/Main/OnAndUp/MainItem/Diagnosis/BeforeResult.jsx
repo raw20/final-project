@@ -1,6 +1,8 @@
 import React,{ useEffect, useState } from 'react';
 import ReactApexChart from "react-apexcharts";
 
+import ChartComp from './ChartComp';
+
 function BeforeResult(props) {
     const [data, setData] = useState({});
     const [item, setItem] = useState([]);
@@ -110,6 +112,7 @@ function BeforeResult(props) {
                         <div className='beforeResult_abilityResult_box_title'>자기관리</div>
                     </div>
                 </div>
+
                 <div className='beforeResult_analysisBox'>
                     <ul>
                         <span className='beforeResult_analysisBox_title'>나와 맞는 mbti(하위 3개 영역 대신 넣음) </span>
