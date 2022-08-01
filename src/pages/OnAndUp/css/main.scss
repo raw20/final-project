@@ -8,7 +8,7 @@ $lightColor: #e6e0ec;
     height: 100vh;
     padding-top: 7rem;
     background-color: $bgColor;
-    .mobile-slider{
+    .mobile-slider {
       display: none;
     }
     .main {
@@ -86,7 +86,7 @@ $lightColor: #e6e0ec;
             left: 280px;
             .main-item-list-rectangle {
               top: -92px;
-              left: -30px;
+              left: -20px;
             }
           }
           .main-item-list:nth-child(2) {
@@ -103,7 +103,7 @@ $lightColor: #e6e0ec;
             top: 250px;
             left: 660px;
             .main-item-list-rectangle {
-              top: -70px;
+              top: -80px;
               right: -10px;
             }
           }
@@ -119,7 +119,7 @@ $lightColor: #e6e0ec;
           .main-item-list:nth-child(5) {
             //케미스트리 (hover 영역)
             top: 350px;
-            right: 190px;
+            right: 180px;
             .main-item-list-rectangle {
               top: -70px;
               right: 15px;
@@ -130,8 +130,8 @@ $lightColor: #e6e0ec;
             top: 350px;
             right: 0px;
             .main-item-list-rectangle {
-              top: -80px;
-              left: 10px;
+              top: -100px;
+              left: 0px;
             }
           }
           .main-item-list:nth-child(7) {
@@ -158,14 +158,14 @@ $lightColor: #e6e0ec;
   }
 }
 @include tablet {
-  .main{
+  .main {
     display: none;
   }
-  .mobile-slider{
+  .mobile-slider {
     background-color: $bgColor;
     padding: 30px 0 0 0;
     width: 100%;
-    .onandup-swiper-box{
+    .onandup-swiper-box {
       height: 100vh;
       .swiper {
         width: 100%;
@@ -190,22 +190,21 @@ $lightColor: #e6e0ec;
         background-repeat: no-repeat;
       }
     }
-    }
+  }
   .connect-with-btn {
     background-color: aqua;
   }
 }
 
-
 @include mobile {
-  .main{
+  .main {
     display: none;
   }
-  .mobile-slider{
+  .mobile-slider {
     background-color: $bgColor;
     padding: 30px 0 0 0;
     width: 100%;
-    .onandup-swiper-box{
+    .onandup-swiper-box {
       height: 100vh;
       .swiper {
         width: 100%;
@@ -230,7 +229,7 @@ $lightColor: #e6e0ec;
         background-repeat: no-repeat;
       }
     }
-    }
+  }
   .connect-with-btn {
     background-color: aqua;
   }
