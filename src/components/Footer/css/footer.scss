@@ -3,6 +3,7 @@
 @include desktop {
   html,
   body {
+    height: 100%;
   }
   .ft-wrapper.off {
     display: none;
@@ -10,12 +11,23 @@
       display: none;
     }
   }
+  .App {
+    min-height: 100%;
+    position: relative;
+  }
+  .item-form {
+    margin-top: 100px;
+    padding-bottom: 200px;
+  }
   .ft-wrapper {
     width: 100%;
-    padding: 0 50px;
+    padding: 0 10%;
     box-sizing: border-box;
     background-color: #fff;
     height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   .ft-inner {
     display: flex;
@@ -26,10 +38,6 @@
     position: relative;
     padding-bottom: 20px;
     max-width: 1300px;
-    margin: 0 auto;
-    .company {
-      margin: 0 30px;
-    }
     .info {
       margin: 0 50px;
     }
@@ -56,7 +64,6 @@
     display: flex;
     margin-top: 30px;
     align-items: flex-start;
-    justify-content: center;
     color: #656565;
   }
 
