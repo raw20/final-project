@@ -31,7 +31,7 @@ function ConnectWthItemForm() {
           {/* img */}
           <div className="connectwith-item-text">
             <div className="connectwith-item-location">
-              {`Connect With Me ▶ ${item[id]?.title} `}
+              {`Chemiverse Connect With▶ ${item[id]?.title} `}
             </div>
             <div className="connectwith-item-title">
               {item[id]?.title}
