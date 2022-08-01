@@ -109,6 +109,7 @@ function App() {
         </Routes>
         {/* <Footer /> */}
       </BrowserRouter>
+      <Footer />
       <div className="search-box">
         <input
           type="text"
