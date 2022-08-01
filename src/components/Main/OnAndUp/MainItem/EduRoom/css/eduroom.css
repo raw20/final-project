@@ -1,4 +1,6 @@
 .edu_wrap {
+  margin-top: 100px;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

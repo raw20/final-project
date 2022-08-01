@@ -15,25 +15,25 @@ function BoardDetail({ posts, setContent }) {
 	}
 
 	return (
-		<div className="aboutMe-wrap">
-			<div className="aboutMe-header">
-				<div className="aboutMe-category">{posts.category}</div>
-				<h1 className="aboutMe-title"> {posts.title}</h1>
+		<div className="b-aboutMe-wrap">
+			<div className="b-aboutMe-header">
+				<div className="b-aboutMe-category">{posts.category}</div>
+				<h1 className="b-aboutMe-title"> {posts.title}</h1>
 			</div>
 
-			<div className="aboutMe-main">
-				<div className="aboutMe-sub">
-					<p className="aboutMe-date">작성일 : {posts.date}</p>
-					<p className="aboutMe-views">조회수 : 0</p>
-					<p className="aboutMe-like">좋아요 : {likeValue}</p>
+			<div className="b-aboutMe-main">
+				<div className="b-aboutMe-sub">
+					<p className="b-aboutMe-date">작성일 : {posts.date}</p>
+					<p className="b-aboutMe-views">조회수 : 0</p>
+					<p className="b-aboutMe-like">좋아요 : {likeValue}</p>
 				</div>
-				<div className="aboutMe-img">
+				<div className="b-aboutMe-img">
 					<img src={posts.content_img} alt={posts.id} />
-					<div className="aboutMe-text">{posts.content_text}</div>
+					<div className="b-aboutMe-text">{posts.content_text}</div>
 				</div>
 			</div>
-			<div className="aboutMe-footer">
-				<div className="aboutMe-file">첨부파일 {posts.file}</div>
+			<div className="b-aboutMe-footer">
+				<div className="b-aboutMe-file">첨부파일 {posts.file}</div>
 				<button className="notice-btn" onClick={() => setContent(true)}>
 					목록보기
 				</button>

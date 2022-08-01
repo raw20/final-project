@@ -10,7 +10,7 @@ $lightColor: #e6e0ec;
     box-sizing: border-box;
     .item-inner {
       overflow-wrap: break-word;
-      max-width: 80%;
+      max-width: 90%;
       //height: 80vw;
       margin: 1.875rem auto;
       padding: 3.125rem 1.875rem;
@@ -72,12 +72,13 @@ $lightColor: #e6e0ec;
         }
       }
       .tab-btn-area {
-        width: 65%;
+        width: 70%;
         height: auto;
         display: flex;
+        justify-content: space-between;
         margin: 15rem auto 50px;
         .tab-btn {
-          width: 150px;
+          width: calc(25% - 30px);
           height: 50px;
           color: #111;
           background-color: #fff;
@@ -126,7 +127,7 @@ $lightColor: #e6e0ec;
     box-sizing: border-box;
     .item-inner {
       overflow-wrap: break-word;
-      max-width: 80%;
+      max-width: 86%;
       //height: 150vw;
       margin: 1.875rem auto;
       padding: 3.125rem 1.875rem;
@@ -187,12 +188,14 @@ $lightColor: #e6e0ec;
         }
       }
       .tab-btn-area {
-        width: 65%;
+        width: 90%;
         height: auto;
         display: flex;
-        margin: 15rem auto 50px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 100px auto;
         .tab-btn {
-          width: 150px;
+          width: calc(25% - 20px);
           height: 50px;
           color: #111;
           background-color: #fff;
@@ -244,7 +247,7 @@ $lightColor: #e6e0ec;
       max-width: 80%;
       //height: 80vw;
       margin: 1.875rem auto;
-      padding: 2.125rem 1.875rem;
+      padding: 2.125rem 10px;
       border-radius: 20px;
       background: #fff;
       position: relative;
@@ -304,8 +307,8 @@ $lightColor: #e6e0ec;
       }
       .item-box {
         max-width: 100%;
-        margin: 0 auto;
-        padding: 50px 30px;
+        margin: 30px auto;
+        padding: 30px 5px;
         //height: 100vh;
         border-radius: 20px;
         background: #ffffff;
@@ -314,7 +317,7 @@ $lightColor: #e6e0ec;
   }
   .menuSelect {
     display:block;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     &__indicator svg {
         fill: #fff;

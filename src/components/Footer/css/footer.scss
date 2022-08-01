@@ -1,4 +1,6 @@
 @import "./mixin";
+$textgray:#aeaeba;
+
 
 @include desktop {
   html,
@@ -11,13 +13,8 @@
       display: none;
     }
   }
-  .App {
-    min-height: 100%;
-    position: relative;
-  }
   .item-form {
     margin-top: 100px;
-    padding-bottom: 200px;
   }
   .ft-wrapper {
     width: 100%;
@@ -25,9 +22,6 @@
     box-sizing: border-box;
     background-color: #fff;
     height: 200px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
   }
   .ft-inner {
     display: flex;
@@ -38,6 +32,7 @@
     position: relative;
     padding-bottom: 20px;
     max-width: 1300px;
+    color: $textgray;
     .info {
       margin: 0 50px;
     }
@@ -54,7 +49,7 @@
   }
 
   .ft-company-info {
-    color: #656565;
+    color: $textgray;
     letter-spacing: -0.5px;
     line-height: 18px;
     font-weight: 440;
@@ -64,7 +59,7 @@
     display: flex;
     margin-top: 30px;
     align-items: flex-start;
-    color: #656565;
+    color: $textgray;
   }
 
   .certification-award1 {
@@ -140,6 +135,7 @@
     width: 100%;
     box-sizing: border-box;
     position: relative;
+    color: $textgray;
     .company {
       margin: 0 10px;
     }
@@ -159,7 +155,7 @@
   }
 
   .ft-company-info {
-    color: #656565;
+    color: $textgray;
     letter-spacing: -0.5px;
     line-height: 18px;
     font-weight: 440;
@@ -170,7 +166,7 @@
     margin-top: 30px;
     align-items: flex-start;
     justify-content: center;
-    color: #656565;
+    color: $textgray;
   }
 
   .certification-award1 {
@@ -231,6 +227,7 @@
     width: 100%;
     box-sizing: border-box;
     position: relative;
+    color: $textgray;
     .info {
       margin: 10px 0;
     }
@@ -245,7 +242,7 @@
   }
 
   .ft-company-info {
-    color: #656565;
+    color: $textgray;
     letter-spacing: -0.5px;
     line-height: 18px;
     font-weight: 440;
@@ -256,7 +253,7 @@
     margin-top: 30px;
     align-items: flex-start;
     justify-content: center;
-    color: #656565;
+    color: $textgray;
   }
 
   .certification-award1 {

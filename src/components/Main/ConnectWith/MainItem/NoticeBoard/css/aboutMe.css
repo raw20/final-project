@@ -1,6 +1,7 @@
 @media (min-width: 1024px) {
   .aboutMe_area {
     width: 85%;
+    height: 100%;
     margin: 0 auto;
     -webkit-animation: fadein 2s;
             animation: fadein 2s;
