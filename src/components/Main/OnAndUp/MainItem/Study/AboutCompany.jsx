@@ -23,6 +23,8 @@ function AboutCompany(props) {
         { value: '3', label: '자기관리', address: 'study' }
     ]
 
+   // removeItem("reviewData")
+
     return (
         <>
             <SmallSelectBox options={options} placeholder={"회사이해"} />

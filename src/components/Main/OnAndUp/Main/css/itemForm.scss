@@ -110,6 +110,9 @@ $lightColor: #e6e0ec;
       }
     }
   }
+  .menuSelect {
+    display:none;
+  }
 }
 @include tablet {
   .item-form {
@@ -190,6 +193,9 @@ $lightColor: #e6e0ec;
       }
     }
   }
+  .menuSelect {
+    display:none;
+  }
 }
 @include mobile {
   .item-form {
@@ -268,6 +274,47 @@ $lightColor: #e6e0ec;
         border-radius: 20px;
         background: #ffffff;
       }
+    }
+  }
+  .item-form .item-inner .tab-btn-area {
+    display: none !important;
+  }
+
+  .menuSelect {
+    display:block;
+    margin-bottom: 30px;
+
+    &__indicator svg {
+        fill: #fff;
+    }
+
+    &__menu:before {
+        content: "";
+        display: block;
+        width: 80%;
+        margin: auto;
+        border-bottom: 1px solid #fff;
+      }
+
+    &__option {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    &__single-value {
+        color: #fff !important;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        transform: translate(18px);
+    }
+    &__placeholder {
+        color: #fff !important;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        margin-left: 36px;
+        transform: translate(18px);
     }
   }
 }

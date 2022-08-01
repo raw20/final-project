@@ -3,15 +3,15 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { getItem } from '../lib/storage';
 
-function Editor({ id, data, setEditorData }) {
+function Editor({ ID, mID, data, setEditorData }) {
 
     function handleChange(EditorData) {
-        setEditorData({ id: parseInt(id), content: EditorData})
+        setEditorData({ ID: parseInt(ID), mID: parseInt(mID), content: EditorData })
     }
 
     return (
         <>
-        <div style={{ marginTop: 50 }}>
+        <div>
             <CKEditor
                 editor={ ClassicEditor }
                 data= { data }

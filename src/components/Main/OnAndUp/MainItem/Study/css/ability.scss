@@ -17,6 +17,7 @@
 .module_box {
     width: 1000px;
     height: 300px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -39,15 +40,31 @@
     :hover {
         .module_card_hover {
             width: 100%;
-            height: 150px;
-            transform: translate(0, -150px);
-            transition: all ease 0.05s;
+            height: 170px;
+            transform: translate(0, -170px);
+            transition: all ease 0.5s;
+            visibility: visible;
+            
+        }
+
+        .module_card_hover_text {
+            visibility: visible;
+            padding: 0 30px;
+            margin-top: 50px;
+            color: #fff;
+            line-height: 1.2;
+            transform: translate(0, 0);
+            transition: all ease-in-out 0.3s;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            opacity: 1;
         }
     }
 }
 .module_cardImg {
     width: 100%;
     height: 100%;
+    position: relative;
 
     .cardImg_background {
         width: 100%;
@@ -64,17 +81,26 @@
 .module_card_hover {
     position: absolute;
     width: 100%;
-    left: -30px;
-    height: 50px;
+    height: 30px;
     background-color: rgb(111, 118, 193, 0.5);
-    z-index: 5;
-    border-radius: 100%;
-
+    z-index: 3;
+    border-radius: 60% 50% 0 0;
+}
+.module_card_hover_text {
+    opacity: 0;
+    margin-top: 50px;
+    font-size: 15px;
+    left: -40%;
+    padding: 0 30px;
 }
 .module_cardTitle_txt{
     padding: 16px;
     width: 100%;
     box-sizing: border-box;
+    z-index: 5;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    
     .module_cardTitle {
         font-size: 15px;
         color: rgb(111, 118, 193);
@@ -123,7 +149,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 150px;
+    margin-bottom: 130px;
 
     .detail_cardNews_title {
         padding-left: 5px;
@@ -138,6 +164,7 @@
         display: flex;
     }
     .detail_content_cardNews {
+        position: relative;
         width: 30%;
         margin-right: 3%;
         cursor: pointer;
@@ -147,18 +174,20 @@
         }
     }
     .detail_content_microLearning {
+        position: relative;
         width: 70%;
         cursor: pointer;
         img{
             box-shadow: 0px 11px 23px -9px rgb(0 0 0 / 38%);
         }
     }
-    .detail_content_cardNews_img {
+    .detail_content_cardNews_img, .detail_content_microLearning_img{
         width: 100%;
+        min-width: 300px;
         height: 320px;
         border-radius: 15px;
     }
-    .detail_content_cardNews_title {
+    .detail_content_cardNews_title, .detail_content_microLearning_title {
         width: 100%;
         text-align: center;
         font-size: 15px;
@@ -192,14 +221,15 @@
     }
 
     .detail_practice_textArea {
-        width: 100%;
-        height: 100px;
+        width: auto;
+        height: auto;
         border-radius: 10px;
         box-shadow: 1px 1px 5px 3px #ddd;
         margin-bottom: 15px;
+        padding: 30px;
     }
 
-    .deleteBtn, .tempSaveBtn {
+    .deleteBtn, .tmpSaveBtn {
         min-width: 130px;
         width: 6.843vw;
         height: 25px;
@@ -215,7 +245,7 @@
         display: flex;
         justify-content: flex-end;
     }
-    .writeBtn {
+    .writeBtn, .saveBtn {
         min-width: 130px;
         width: 6.843vw;
         height: 25px;
@@ -225,24 +255,17 @@
         cursor: pointer;
     }
 }
-.submitBtnArea {
+.save_btnArea {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     padding-top: 20px;
 }
-.submitBtn {
-    width: 70px;
-    height: 25px;
-    border-radius: 3px;
-    background-color: rgb(111, 118, 193);
-    color: #fff;
-}
 .aboutCompany_detail_summary {
     width: 100%;
     height: 100%;
     display: flex;
-    margin: 50px 0 150px;
+    margin: 50px 0 130px;
 
     img {
         width: 30%;
@@ -324,11 +347,27 @@
         }
     }
 }
+.embed_modal_swiper_name{
+    display:none;
+    
+    .swiper-slide {
+        height: auto;
+        cursor: pointer;
+    
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+}
 .modal_swiper_name {
     width: 80%;
     margin: auto;
     height: 300px;
     background-color: #fff;
+    border-radius: 0px 11px 23px -9px rgb(0 0 0 / 38%);
+    box-shadow: 1px 1px 5px 3px #ddd;
 
 .swiper-slide {
     height: 250px;
@@ -337,6 +376,7 @@
     img {
         width: 100%;
         height: 100%;
+        border-radius: 10px;
     }
 }
 }
@@ -383,10 +423,20 @@
         color: rgb(61, 68, 143);
     }
 }
+.ck-editor__editable {
+    max-height: 300px;
+    min-height: 300px;
+}
+.embedYoutube {
+    display: none;
+}
 @media (min-width: 335px) and (max-width: 757px) {
     .item-form .item-inner .item-box{padding: 0 !important}
     .module_card{
         width: 100%
+    }
+    .module_card_hover, .module_card_hover_text {
+        display: none;
     }
     .module_box{
         justify-content: center;
@@ -415,10 +465,20 @@
     .detail_content{
         flex-wrap: wrap;
         flex-direction: column;
-        .detail_content_cardNews_img{
-            width: 100%;
-            height: auto;
+        .detail_content_cardNews_img {
+            display:none;
         }
+        .detail_content_microLearning_img{
+            display:none;
+        }
+    }
+    .embedYoutube {
+        display: block;
+        height: 300px;
+    }
+    .embed_modal_swiper_name {
+        display: block;
+        box-shadow: 0px 11px 23px -9px rgb(0 0 0 / 38%)
     }
     .detail_container{
         padding: 0;
@@ -458,12 +518,26 @@
             }
         }
         .detail_practice_desc {margin-bottom: 16px;}
-        .detail_practice_textArea {margin-bottom: 20px;}
     }
     .detail_cardNews{
         margin-bottom: 50px;
         .detail_content_cardNews_title{margin-top: 15px;}
     }
+    .save_btnArea {
+        flex-direction: column;    
+        align-items: flex-end;
+        div{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        a{
+            width: 100%;
+            text-align: right;
+        }
+    }
+    .backButton{padding-bottom: 20px;}
+    .detail_practice .deleteBtn, .detail_practice .tmpSaveBtn{width: 100%;}
+    .detail_practice .writeBtn, .detail_practice .saveBtn{width: 100%;}
 }
 
 @media (min-width: 758px) and (max-width: 1023px) {
@@ -481,6 +555,9 @@
     .item-form .item-inner .tab-btn-area  .tab-btn{
         margin-top: 10px !important;
         width: 48% !important;
+    }
+    .module_card_hover, .module_card_hover_text {
+        display: none;
     }
     .module_card{
         display: flex;
@@ -531,6 +608,7 @@
             width: calc(70% - 20px);
         }
     }
+    .backButton{padding-bottom: 20px;}
 }
 
 @media (min-width: 1024px) {

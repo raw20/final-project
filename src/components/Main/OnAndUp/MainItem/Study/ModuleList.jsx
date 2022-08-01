@@ -35,6 +35,9 @@ function ModuleList({moduleID, setModuleItem}) {
                                             <div className='cardImg_background'>
                                                 <img className="module_Img" src={`${el.card_image}`}></img>
                                             </div>
+                                            <div className="module_card_hover">
+                                                <div className="module_card_hover_text">{el.mconcept}</div>
+                                            </div>
                                         </div>
                                         <div className='module_cardTitle_txt'>
                                             <div className="module_cardTitle">{el.mtitle}</div>
@@ -48,20 +51,22 @@ function ModuleList({moduleID, setModuleItem}) {
                 {
                     moduleData && moduleData.map((el,index) => {
                         return (
-                                <Link key={index} to={`${index+1}`}>
-                                    <div className="module_card">
-                                        <div className='module_cardImg'>
-                                            <div className='cardImg_background'>
-                                                <img className="module_Img" src={`${el.card_image}`}></img>
-                                            </div>
-                                            {/* <div className="module_card_hover"></div> */}
-                                        </div>
-                                        <div className='module_cardTitle_txt'>
-                                            <div className="module_cardTitle">{el.mtitle}</div>
-                                            <div className='module_cardTitle_sub'>{el.mgoal}</div>
-                                        </div>
+                            <Link key={index} to={`${index+1}`}>
+                            <div className="module_card">
+                                <div className='module_cardImg'>
+                                    <div className='cardImg_background'>
+                                        <img className="module_Img" src={`${el.card_image}`}></img>
                                     </div>
-                                </Link>
+                                    <div className="module_card_hover">
+                                        <div className="module_card_hover_text">{el.mconcept}</div>
+                                    </div>
+                                </div>
+                                <div className='module_cardTitle_txt'>
+                                    <div className="module_cardTitle">{el.mtitle}</div>
+                                    <div className='module_cardTitle_sub'>{el.mgoal}</div>
+                                </div>
+                            </div>
+                        </Link>
                         )
                     })
                 }
