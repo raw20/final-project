@@ -21,8 +21,8 @@ const Login = ({ setLoginAuth }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // 입력을 안 한 경우
-    if (id.length == 0 || password.length == 0) {
-      return alert("아이디와 비밀번호를 입력하세요.");
+    if (id.length === 0 || password.length === 0) {
+      alert("아이디와 비밀번호를 입력하세요.");
     }
 
     const user = userData.find((user) => user.id === id);
