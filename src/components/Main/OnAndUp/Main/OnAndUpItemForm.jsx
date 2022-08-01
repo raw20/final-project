@@ -6,6 +6,7 @@ import "./css/itemForm.css";
 import "../../ConnectWith/MainItem/NoticeBoard/css/noticeBoard.css";
 import { useEffect } from "react";
 import { headerGnbOpcity } from "../../../../app/headerStateSlice";
+import { setFooterDisplay } from "../../../../app/footerStateSlice";
 
 function OnAndUpItemForm() {
   const [tabIndex, setTabIndex] = useState();
@@ -22,6 +23,7 @@ function OnAndUpItemForm() {
       setItem(json);
     })();
     dispatch(headerGnbOpcity("1"));
+    dispatch(setFooterDisplay("on"));
   }, []);
   console.log(id);
   function currentIndex(index) {

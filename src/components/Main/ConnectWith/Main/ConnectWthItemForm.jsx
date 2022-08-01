@@ -4,6 +4,7 @@ import { Outlet, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import "./css/itemForm.css";
 import { headerGnbOpcity } from "../../../../app/headerStateSlice";
+import { setFooterDisplay } from "../../../../app/footerStateSlice";
 
 function ConnectWthItemForm() {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ function ConnectWthItemForm() {
       setItem(json);
     })();
     dispatch(headerGnbOpcity("1"));
+    dispatch(setFooterDisplay("on"));
   });
   return (
     <div className="connectwith-item-form">

@@ -6,7 +6,8 @@ import { useDispatch } from "react-redux";
 import { connectWith } from "../../app/headerStateSlice";
 import { FiSearch } from "react-icons/fi";
 import { headerGnbOpcity } from "../../app/headerStateSlice";
-import OnAndUpMobileSlider from "./OnAndUpMobileSlider"
+import OnAndUpMobileSlider from "./OnAndUpMobileSlider";
+import { setFooterDisplay } from "../../app/footerStateSlice";
 
 function OnAndUp() {
   const [data, setData] = useState([]);
@@ -17,6 +18,7 @@ function OnAndUp() {
     const json = await (await fetch(onAndUpMenuData)).json();
     setData(json);
     dispatch(headerGnbOpcity("0"));
+    dispatch(setFooterDisplay("off"));
   }
   useEffect(() => {
     getMainData();
@@ -47,7 +49,8 @@ function OnAndUp() {
           />
           <FiSearch />
         </div>
-      </div>{/* main */}
+      </div>
+      {/* main */}
       <div className="mobile-slider">
         <OnAndUpMobileSlider />
       </div>

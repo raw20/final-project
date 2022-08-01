@@ -1,7 +1,9 @@
 @media (min-width: 1024px) {
-  html,
-body {
-    height: 100%;
+  .ft-wrapper.off {
+    display: none;
+  }
+  .ft-wrapper.off .ft-inner {
+    display: none;
   }
   .App {
     position: relative;
@@ -101,6 +103,9 @@ body {
     padding-bottom: 100px;
   }
   .ft-wrapper {
+    display: none;
+  }
+  .ft-wrapper {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -180,6 +185,9 @@ body {
     position: relative;
     min-height: 100%;
     padding-bottom: 200px;
+  }
+  .ft-wrapper {
+    display: none;
   }
   .ft-wrapper {
     width: 100%;
