@@ -1,20 +1,34 @@
 import React from 'react';
 import RevoCalendar from 'revo-calendar';
 
-const DemoApp = () => {
+const Calendar = () => {
   const events = [
     {
-      name: "M1 선배와 관계 형성과 팔로워십",
+      name: "M2 선배와 관계 형성과 팔로워십",
       date: Date.now(),
       extra: {
         text: "10:00 - 12:00 ZOOM"
       }
     },  
     {
-      name: "M1 선배와 관계 형성과 팔로워십",
-      date: "Date.now()",
+      name: "M1 신입사원의 매너",
+      date: "2022-08-15",
       extra: {
-        text: "10:00 - 12:00 ZOOM"
+        text: "ZOOM"
+      }
+    },
+    {
+      name: "M4 조직 커뮤니케이션 스킬",
+      date: "2022-08-15",
+      extra: {
+        text: "webex"
+      }
+    },
+    {
+      name: "M8 셀프 리더십 스킬",
+      date: "2022-08-09",
+      extra: {
+        text: "zep"
       }
     }
   ]
@@ -50,7 +64,7 @@ const DemoApp = () => {
       textColor="#5a5a5a"
       indicatorColor="orange"
       openDetailsOnDateSelection={true}
-      onePanelAtATime={true}
+      onePanelAtATime={false}
       sidebarWidth={120}
       detailWidth={320}
 
@@ -59,4 +73,4 @@ const DemoApp = () => {
   );
 };
 
-export default DemoApp;
+export default Calendar;

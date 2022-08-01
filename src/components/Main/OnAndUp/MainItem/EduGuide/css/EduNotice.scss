@@ -70,7 +70,7 @@ $textgray: #aeaeba;
           color: $textgray;
         }
       }
-      .main {
+      .edu-detail-main {
         text-align: center;
         padding: 30px;
         box-sizing: border-box;
@@ -101,11 +101,34 @@ $textgray: #aeaeba;
 
   .edu_pagination {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     text-align: center;
     width: 300px;
     padding-top: 25px;
     margin: auto;
+    .PrevButton{
+      width: 11px;
+      height: 18px;
+      font-size: 0;
+      text-indent: -9999px;
+      background: url(/public/img/left.png) no-repeat center / cover;
+      cursor: pointer;
+      &:disabled{
+        background: url(/public/img/left-dis.png) no-repeat center / cover;
+      }
+    }
+      .NextButton{
+        width: 11px;
+        height: 18px;
+        font-size: 0;
+        text-indent: -9999px;
+        cursor: pointer;
+        background: url(/public/img/right.png) no-repeat center / cover;
+        &:disabled{
+          background: url(/public/img/right-dis.png) no-repeat center / cover;
+        }
+    }
     .page_link {
       color: #ccc;
       font-size: 18px;

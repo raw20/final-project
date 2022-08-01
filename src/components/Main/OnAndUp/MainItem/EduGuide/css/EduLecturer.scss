@@ -51,7 +51,7 @@ $textdarkgray: #8d8d99;
             }
           }
         }
-        .module_box{
+        .lecturer_module_box{
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -223,7 +223,7 @@ $textdarkgray: #8d8d99;
           margin: 0px !important;
         }
       }
-      .module_box{
+      .lecturer_module_box{
         .contents-type {
           background-color: $bgColor;
           .type-tab {
@@ -283,7 +283,7 @@ $textdarkgray: #8d8d99;
         .career_box{
           font-size: 12px;
         }
-        .module_box{
+        .lecturer_module_box{
           .contents-type {
             background-color: $bgColor;
             .type-tab {

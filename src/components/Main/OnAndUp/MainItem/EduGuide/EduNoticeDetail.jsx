@@ -10,7 +10,7 @@ const EduNoticeDetail = ({lists,setContent}) => {
         </div>
         <p className='date'>{lists.date}</p>
       </div>
-      <div className="main">
+      <div className="edu-detail-main">
         <div className="img_box">
           <img src={lists.content_img} alt={lists.id} />
         </div>

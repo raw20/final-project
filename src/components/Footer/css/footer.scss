@@ -10,18 +10,12 @@
       display: none;
     }
   }
-  .App {
-    position: relative;
-    min-height: 100%;
-  }
   .ft-wrapper {
     width: 100%;
     padding: 0 50px;
     box-sizing: border-box;
     background-color: #fff;
     height: 200px;
-    position: absolute;
-    bottom: 0;
   }
   .ft-inner {
     display: flex;
@@ -230,8 +224,6 @@
     width: 100%;
     box-sizing: border-box;
     position: relative;
-    .company {
-    }
     .info {
       margin: 10px 0;
     }

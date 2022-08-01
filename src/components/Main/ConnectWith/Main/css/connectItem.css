@@ -55,22 +55,22 @@
     width: 40px;
     height: 40px;
     left: 10%;
-    -webkit-animation-duration: 3.5s;
-            animation-duration: 3.5s;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
   }
   .link-item .item-list .bubble:nth-child(2) {
     width: 20px;
     height: 20px;
     left: 20%;
-    -webkit-animation-duration: 2.5s;
-            animation-duration: 2.5s;
+    -webkit-animation-duration: 1.8s;
+            animation-duration: 1.8s;
   }
   .link-item .item-list .bubble:nth-child(3) {
     width: 50px;
     height: 50px;
     left: 35%;
-    -webkit-animation-duration: 3.5s;
-            animation-duration: 3.5s;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
     -webkit-animation-delay: 0.5s;
             animation-delay: 0.5s;
   }
@@ -78,22 +78,22 @@
     width: 80px;
     height: 80px;
     left: 50%;
-    -webkit-animation-duration: 4.5s;
-            animation-duration: 4.5s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
   }
   .link-item .item-list .bubble:nth-child(5) {
     width: 35px;
     height: 35px;
     left: 55%;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
   }
   .link-item .item-list .bubble:nth-child(6) {
     width: 45px;
     height: 45px;
     left: 65%;
-    -webkit-animation-duration: 3.5s;
-            animation-duration: 3.5s;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
     -webkit-animation-delay: 0.5s;
             animation-delay: 0.5s;
   }
@@ -101,15 +101,15 @@
     width: 90px;
     height: 90px;
     left: 70%;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
   }
   .link-item .item-list .bubble:nth-child(8) {
     width: 25px;
     height: 25px;
     left: 80%;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-delay: 0.5s;
             animation-delay: 0.5s;
   }
@@ -117,21 +117,21 @@
     width: 15px;
     height: 15px;
     left: 70%;
-    -webkit-animation-duration: 2.5s;
-            animation-duration: 2.5s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
   }
   .link-item .item-list .bubble:nth-child(10) {
     width: 90px;
     height: 90px;
     left: 25%;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
     -webkit-animation-delay: 0.5s;
             animation-delay: 0.5s;
   }
   @-webkit-keyframes rise {
     0% {
-      bottom: -100px;
+      bottom: 30px;
       transform: translateX(0);
     }
     50% {
@@ -144,7 +144,7 @@
   }
   @keyframes rise {
     0% {
-      bottom: -100px;
+      bottom: 30px;
       transform: translateX(0);
     }
     50% {
