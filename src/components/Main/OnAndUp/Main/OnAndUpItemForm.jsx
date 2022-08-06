@@ -15,7 +15,6 @@ function OnAndUpItemForm() {
   const onAndUpMenuData = "/db/onAndUpMenuData.json";
   const { id } = useParams();
   const depName = item[id]?.dep.map((li) => li);
-  console.log(depName);
   useEffect(() => {
     (async () => {
       const response = await fetch(onAndUpMenuData);
@@ -25,7 +24,6 @@ function OnAndUpItemForm() {
     dispatch(headerGnbOpcity("1"));
     dispatch(setFooterDisplay("on"));
   }, []);
-  console.log(id);
   function currentIndex(index) {
     setTabIndex(index);
   }
@@ -45,27 +43,28 @@ function OnAndUpItemForm() {
           <div className="item-title">{item[id] ? item[id]?.menu : null}</div>
           <div className="item-contents">
             {item[id] ? item[id]?.explanation : null}
-          </div></div>
-          {item[id]?.menu !== "교육장 이동" ? (
-            <ul className="tab-btn-area">
-              {item[id]?.onAndUpSubAddress.map((ele, index) => (
-                <NavLink
-                  to={`/chemiverseOnUp/${item[id]?.id}/${item[id]?.onAndUpItemAddress}/${index}`}
-                  className={({ isActive }) =>
-                    isActive ? "tab-btn on" : "tab-btn"
-                  }
+          </div>
+        </div>
+        {item[id]?.menu !== "교육장 이동" ? (
+          <ul className="tab-btn-area">
+            {item[id]?.onAndUpSubAddress.map((ele, index) => (
+              <NavLink
+                to={`/chemiverseOnUp/${item[id]?.id}/${item[id]?.onAndUpItemAddress}/${index}`}
+                className={({ isActive }) =>
+                  isActive ? "tab-btn on" : "tab-btn"
+                }
+              >
+                <li
+                  className="tab-btn-list"
+                  key={index}
+                  onClick={() => currentIndex(index)}
                 >
-                  <li
-                    className="tab-btn-list"
-                    key={index}
-                    onClick={() => currentIndex(index)}
-                  >
-                    {depName[index]}
-                  </li>
-                </NavLink>
-              ))}
-            </ul>
-          ) : null}
+                  {depName[index]}
+                </li>
+              </NavLink>
+            ))}
+          </ul>
+        ) : null}
 
         <div className="item-box">
           <Outlet />
