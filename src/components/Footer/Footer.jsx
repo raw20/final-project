@@ -18,7 +18,7 @@ const Footer = () => {
             <p>대표자 : 김정문</p>
           </div>
           <div className="ft-company-info">
-            <h>Tel. 02)538-2221 / Fax. 02)538-6996</h>
+            <h2>Tel. 02)538-2221 / Fax. 02)538-6996</h2>
             <p></p>
             <p className="email">E-mail : help@exc.co.kr</p>
             <p>개인정보책임관리자 : 김세환</p>

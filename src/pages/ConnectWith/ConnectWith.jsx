@@ -25,7 +25,7 @@ function ConnectWith() {
       <div className="connect-main">
         <ul className="connect">
           {data.map((cnData) => (
-            <ConnectItem key={cnData.id} data={cnData} />
+            <ConnectItem key={cnData?.id} data={cnData} />
           ))}
         </ul>
       </div>

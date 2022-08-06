@@ -24,27 +24,26 @@ function ConnectItem({ data }) {
           }}
         >
           <div className="title">{data.title}</div>
-          {data.contents.split("\n").map((line) => {
+          {data.contents.split("\n").map((line, index) => {
             return (
-              <div className="content">
+              <div className="content" key={index}>
                 {line}
                 <br />
               </div>
             );
           })}
-          <section class="sticky">
-            <div class="bubbles">
-              <div class="bubble"></div>
-              <div class="bubble"></div>
-              <div class="bubble"></div>
-              <div class="bubble"></div>
-              <div class="bubble"></div>
-              <div class="bubble"></div>
-              <div class="bubble"></div>
-              <div class="bubble"></div>
-              <div class="bubble"></div>
-              <div class="bubble"></div>
-              
+          <section className="sticky">
+            <div className="bubbles">
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
             </div>
           </section>
           <div className="img">

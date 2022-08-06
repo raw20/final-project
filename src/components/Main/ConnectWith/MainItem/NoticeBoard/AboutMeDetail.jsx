@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import "./css/style.css";
 import "./css/aboutMeDetail.css";
 import { MdFavorite } from "react-icons/md";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addLike } from "../../../../../app/detailSlice";
 
-function AboutMeDetail({ posts, setContent, id }) {
+function AboutMeDetail({ posts, setContent }) {
   const favListColor = [{ color: "#f20" }, { color: "#ccc" }];
   const [likes, setLikes] = useState("1");
-  const likeValue = useSelector((state) => state.item.likes);
   const dispatch = useDispatch();
   function handlerLikeFnc(e) {
     e.preventDefault();
@@ -47,9 +46,9 @@ function AboutMeDetail({ posts, setContent, id }) {
           <img src={posts.content_img} alt={posts.id} />
           <div className="aboutMe-text">{posts.content_text}</div>
           <button className="tab-like" onClick={handlerLikeFnc}>
-          좋아요
-          <MdFavorite className="heart" style={favListColor[likes]} />
-        </button>
+            좋아요
+            <MdFavorite className="heart" style={favListColor[likes]} />
+          </button>
         </div>
       </div>
       <div className="aboutMe-footer">
