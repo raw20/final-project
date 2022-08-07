@@ -15,14 +15,14 @@ function OnAndUpItemForm() {
   const onAndUpMenuData = "/db/onAndUpMenuData.json";
   const { id } = useParams();
   const depName = item[id]?.dep.map((li) => li);
+  dispatch(headerGnbOpcity("1"));
+  dispatch(setFooterDisplay("on"));
   useEffect(() => {
     (async () => {
       const response = await fetch(onAndUpMenuData);
       const json = await response.json();
       setItem(json);
     })();
-    dispatch(headerGnbOpcity("1"));
-    dispatch(setFooterDisplay("on"));
   }, []);
   function currentIndex(index) {
     setTabIndex(index);
