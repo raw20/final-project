@@ -42,6 +42,12 @@
 메인페이지와 상세페이지(환영인사, 회사소개, 입사전 체크사항, 게시판)으로 구성되어 있습니다.
  ### 메인페이지
  ![ezgif-2-60605f5bef](https://user-images.githubusercontent.com/62588402/187383063-76474e95-664b-4a6a-9b2a-ac7bc74583d0.gif)
+ ### 환영인사
+ ![ezgif-2-ac0965a1da](https://user-images.githubusercontent.com/62588402/187383583-0a45b140-82cb-43cf-b32c-544b2822a670.gif)
+ ### 회사소개
  
+ ### 입사전 체크사항
+ 
+ ### 게시판
 ## On&Up 페이지
 
