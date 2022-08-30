@@ -16,11 +16,15 @@
 
 ## 사용된 기술
  HTML
+ 
  Scss
+ 
  JavaScript
+ 
  Redux-Toolkit
  
  ## 개발 환경
  VSC
+ 
  Git
  
