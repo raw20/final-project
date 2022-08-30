@@ -46,7 +46,7 @@
  ![ezgif-2-60605f5bef](https://user-images.githubusercontent.com/62588402/187383063-76474e95-664b-4a6a-9b2a-ac7bc74583d0.gif)
  
  ### 환영인사
- ![ezgif-2-ac0965a1da](https://user-images.githubusercontent.com/62588402/187383583-0a45b140-82cb-43cf-b32c-544b2822a670.gif)
+![c1](https://user-images.githubusercontent.com/62588402/187388307-7d9b23ee-487b-45a9-9e19-3487f0860c75.JPG)
  
  ### 회사소개
  ![ezgif-2-ab3d121e1e](https://user-images.githubusercontent.com/62588402/187383932-96c4e04f-ceda-45db-a515-5435b4ff98e5.gif)
@@ -64,7 +64,7 @@
 입사 후 신입 사원 교육을 담당하는 페이지입니다.
 메인페이지와 7가지의 상세페이지, 회원정보가 담긴 마이페이지로 구성되어있습니다.
 ### 교육장 이동
-제작중..
+![e1](https://user-images.githubusercontent.com/62588402/187388126-696330cd-3670-4625-80d4-97e066639cc9.JPG)
 ### 교육 안내
 제작중..
 ### 진단
