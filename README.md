@@ -46,7 +46,7 @@
  ![ezgif-2-60605f5bef](https://user-images.githubusercontent.com/62588402/187383063-76474e95-664b-4a6a-9b2a-ac7bc74583d0.gif)
  
  ### 환영인사
-![c1](https://user-images.githubusercontent.com/62588402/187388307-7d9b23ee-487b-45a9-9e19-3487f0860c75.JPG)
+![e1](https://user-images.githubusercontent.com/62588402/187389404-7416014b-76ce-40fc-9e87-a1fc1fa56cba.JPG)
  
  ### 회사소개
  ![e2](https://user-images.githubusercontent.com/62588402/187389005-a1191c5e-b480-4315-b9ad-3df9ed91d693.JPG)
