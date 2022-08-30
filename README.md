@@ -49,12 +49,14 @@
 ![c1](https://user-images.githubusercontent.com/62588402/187388307-7d9b23ee-487b-45a9-9e19-3487f0860c75.JPG)
  
  ### 회사소개
+ ![e2](https://user-images.githubusercontent.com/62588402/187389005-a1191c5e-b480-4315-b9ad-3df9ed91d693.JPG)
  ![ezgif-2-ab3d121e1e](https://user-images.githubusercontent.com/62588402/187383932-96c4e04f-ceda-45db-a515-5435b4ff98e5.gif)
  
  ### 입사전 체크사항
 ![e3](https://user-images.githubusercontent.com/62588402/187388598-ac690bc7-9b49-4917-b302-bf4338040dd0.JPG)
 
  ### 게시판
+![e4](https://user-images.githubusercontent.com/62588402/187389201-bcaafbbc-db41-4bf4-a51c-e8ba331d2f7a.JPG)
 ![ezgif-2-9889762507](https://user-images.githubusercontent.com/62588402/187384386-213279f8-b3e8-4651-b7e9-2e1854341942.gif)
 ![ezgif-2-99d62523c7](https://user-images.githubusercontent.com/62588402/187384398-83859c95-e022-4090-a5fe-d96c124f7e49.gif)
 
