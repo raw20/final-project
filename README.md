@@ -59,7 +59,7 @@
 ![ezgif-2-99d62523c7](https://user-images.githubusercontent.com/62588402/187384398-83859c95-e022-4090-a5fe-d96c124f7e49.gif)
 
 ## 로그인 페이지
-on&Up 페이지는 로그인 성공시 이동할 수 있는 사이트이므로 로그인 상태가 아니라면 on&up 페이지 대신 로그인 페이지로 이동됩니다.
+![ezgif-2-5df06bbd33](https://user-images.githubusercontent.com/62588402/187386976-3a8be11e-c3e9-4def-afac-61a977a5e77a.gif)
 ## On&Up 페이지
 입사 후 신입 사원 교육을 담당하는 페이지입니다.
 메인페이지와 7가지의 상세페이지, 회원정보가 담긴 마이페이지로 구성되어있습니다.
