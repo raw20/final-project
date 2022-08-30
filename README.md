@@ -45,9 +45,12 @@
  ### 환영인사
  ![ezgif-2-ac0965a1da](https://user-images.githubusercontent.com/62588402/187383583-0a45b140-82cb-43cf-b32c-544b2822a670.gif)
  ### 회사소개
- 
+ ![ezgif-2-ab3d121e1e](https://user-images.githubusercontent.com/62588402/187383932-96c4e04f-ceda-45db-a515-5435b4ff98e5.gif)
  ### 입사전 체크사항
- 
+ ![ezgif-2-b36daf1427](https://user-images.githubusercontent.com/62588402/187384119-6d6435d4-6619-4a6f-b941-b6c7c91366cb.gif)
  ### 게시판
+![ezgif-2-9889762507](https://user-images.githubusercontent.com/62588402/187384386-213279f8-b3e8-4651-b7e9-2e1854341942.gif)
+![ezgif-2-99d62523c7](https://user-images.githubusercontent.com/62588402/187384398-83859c95-e022-4090-a5fe-d96c124f7e49.gif)
+
 ## On&Up 페이지
 
