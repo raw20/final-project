@@ -15,16 +15,29 @@
 - 정찬욱 : 
 
 ## 사용된 기술
- HTML
+ - HTML
  
- Scss
+ - Scss
  
- JavaScript
+ - JavaScript
  
- Redux-Toolkit
+ - Redux-Toolkit
+
+ - React
+
+- JsonServer
  
  ## 개발 환경
- VSC
+ - VSC
  
- Git
- 
+ - Git
+
+## 배포
+- netlify
+
+## 컴포넌트 구성
+
+## ConnectWith 페이지
+
+## On&Up 페이지
+
