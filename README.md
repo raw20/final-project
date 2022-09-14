@@ -12,7 +12,7 @@
 
 - 임가을 :
 
-- 정찬욱 : 
+- 정찬욱 : 전체적인 컴포넌트 틀 구현, coneect with, on&up 메인화면, 게시판 CRUD, 조회수, 좋아요 게시글 검색기능, 반응형, Redux store 세팅 및 state
 
 ## 사용된 기술
  - HTML
