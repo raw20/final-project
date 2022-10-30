@@ -1,4 +1,4 @@
-import React, { useState, useId, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import content from "./css/content.css";
@@ -63,7 +63,7 @@ const Login = ({ setLoginAuth }) => {
             <input
               type="id"
               id="loginId"
-              placeholder="아이디"
+              placeholder="아이디 = user01"
               value={id}
               onChange={(e) => setId(e.target.value)}
             />
@@ -74,7 +74,7 @@ const Login = ({ setLoginAuth }) => {
             <input
               type="password"
               id="userPass"
-              placeholder="비밀번호"
+              placeholder="비밀번호 = 1234"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
